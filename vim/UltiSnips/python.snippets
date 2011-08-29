@@ -1,0 +1,195 @@
+snippet #! "#!"
+#!/usr/bin/env python
+endsnippet
+
+snippet imp "imp"
+import ${1:module}
+endsnippet
+
+snippet docs "docs"
+'''
+File: ${1:`!v Filename('$1.py', 'foo.py')`}
+Author: ${2:`!v g:snips_author`}
+Description: ${3}
+'''
+endsnippet
+
+snippet wh "wh"
+while ${1:condition}:
+	${2:# code...}
+endsnippet
+
+snippet dowh "dowh"
+while True:
+	${1:# code...}
+	if ${2:condition}:
+		break
+endsnippet
+
+snippet with "with"
+with ${1:expr} as ${2:var}:
+	${3:# code...}
+	${3:# code...}
+endsnippet
+
+snippet cl "cl"
+class ${1:ClassName}(${2:object}):
+	"""${3:docstring for $1}"""
+	def __init__(self, ${4:arg}):
+		${5:super($1, self).__init__()}
+		self.$4 = $4
+		${6}
+endsnippet
+
+snippet def "def"
+def ${1:fname}(${2:`!v indent('.') ? 'self' : ''`}):
+	"""${3:docstring for $1}"""
+	${4:pass}
+endsnippet
+
+snippet deff "deff"
+def ${1:fname}(${2:`!v indent('.') ? 'self' : ''`}):
+	${3}
+endsnippet
+
+snippet defs "defs"
+def ${1:mname}(self, ${2:arg}):
+	${3:pass}
+endsnippet
+
+snippet property "property"
+def ${1:foo}():
+	doc = "${2:The $1 property.}"
+	def fget(self):
+		${3:return self._$1}
+	def fset(self, value):
+		${4:self._$1 = value}
+endsnippet
+
+snippet if "if"
+if ${1:condition}:
+	${2:code...}
+endsnippet
+
+snippet el "el"
+else:
+	${1:code...}
+endsnippet
+
+snippet ei "ei"
+elif ${1:condition}:
+	${2:code...}
+endsnippet
+
+snippet for "for"
+for ${1:item} in ${2:items}
+	${3:code...}
+endsnippet
+
+snippet cutf8 "cutf8"
+# -*- coding: utf-8 -*-
+endsnippet
+
+snippet clatin1 "clatin1"
+# -*- coding: latin-1 -*-
+endsnippet
+
+snippet cascii "cascii"
+# -*- coding: ascii -*-
+endsnippet
+
+snippet ld "ld"
+${1:var} = lambda ${2:vars} : ${3:action}
+endsnippet
+
+snippet . "."
+self.
+endsnippet
+
+snippet try "Try/Except"
+try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+endsnippet
+
+snippet try "Try/Except/Else"
+try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+else:
+	${5:pass}
+endsnippet
+
+snippet try "Try/Except/Finally"
+try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+finally:
+	${5:pass}
+endsnippet
+
+snippet try "Try/Except/Else/Finally"
+try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+else:
+	${5:pass}
+finally:
+	${6:pass}
+endsnippet
+
+snippet ifmain "ifmain" b
+if __name__ == '__main__':
+	${1:main()}$0
+endsnippet
+
+snippet _ "_"
+__${1:init}__${2}
+endsnippet
+
+snippet pdb "pdb"
+import pdb; pdb.set_trace()
+endsnippet
+
+snippet ipdb "ipdb"
+import ipdb; ipdb.set_trace()
+endsnippet
+
+snippet pdbbb "pdbbb"
+import pdbpp; pdbpp.set_trace()
+endsnippet
+
+snippet pudb "pudb"
+import pudb; pudb.set_trace()
+endsnippet
+
+snippet gpl "gpl"
+# ${1:Name}
+# Copyright (C) `!v strftime("%Y")` ${2:Author}
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+${3:#code}
+endsnippet
+
+snippet " """
+"""
+${1:doc}
+"""
+endsnippet
+
+
