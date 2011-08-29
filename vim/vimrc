@@ -501,7 +501,7 @@ inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 " we don't want the completion menu to auto pop-up when we are in text files
-let g:neocomplcache_lock_buffer_name_pattern = '\.txt'
+let g:neocomplcache_lock_buffer_name_pattern = '\v(\.md|\.txt)'
 
 " we don't use the neocomplcache snippet support; we use ultisnips instead
 let g:neocomplcache_snippets_disable_runtime_snippets = 1
