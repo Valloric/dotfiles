@@ -25,9 +25,12 @@ Bundle 'gmarik/vundle'
 Bundle 'Valloric/vim-valloric-colorscheme'
 Bundle 'Valloric/vim-valloric-statusline'
 Bundle 'L9'
+" most xolox plugins currently have this problem:
+" https://github.com/xolox/vim-shell/issues/3
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-shell'
+Bundle 'xolox/vim-pyref'
 " Seems more active than tpope/vim-surround
 Bundle 'anyakichi/vim-surround'
 "Bundle 'rson/vim-conque'
