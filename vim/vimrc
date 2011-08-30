@@ -68,6 +68,9 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'robgleeson/hammer.vim'
 Bundle 'tpope/vim-git'
 Bundle 'IndexedSearch'
+Bundle 'mileszs/ack.vim'
+" my fork makes sure the quickfix window is always full-width
+Bundle 'Valloric/QFixToggle'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            General settings                             "
@@ -165,6 +168,7 @@ set undodir=~/tmp,/var/tmp,/tmp,$TEMP
 set tags=./.tags,.tags
 
 " replace the default grep program with ack
+" also install this plugin https://github.com/mileszs/ack.vim
 "set grepprg=ack-grep
 
 " makes the screen blink instead of using the system bell
@@ -363,10 +367,10 @@ noremap <leader>bb <c-^>
 " switching to the previous one
 noremap <leader>bq <c-^> :bd #<cr>
 
-" When pressing <leader>cd switch to the directory of the open buffer
+" Switch to the directory of the open buffer
 noremap <leader>cd :cd %:p:h<cr>
 
-" pressing <leader>ss will toggle and untoggle spell checking
+" Toggle and untoggle spell checking
 noremap <leader>ss :setlocal spell! spelllang=en_us<cr>
 
 " spelling shortcuts using <leader>
@@ -557,4 +561,16 @@ let g:EasyMotion_leader_key = '<Leader>e'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 noremap <f8> :w<cr>:Hammer<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                ack.vim                                  "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               QFixToggle                                "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+noremap <silent> <leader>q :QFix<CR>
 
