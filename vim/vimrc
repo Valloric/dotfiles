@@ -25,8 +25,6 @@ Bundle 'gmarik/vundle'
 Bundle 'Valloric/vim-valloric-colorscheme'
 Bundle 'Valloric/vim-valloric-statusline'
 Bundle 'L9'
-" most xolox plugins currently have this problem:
-" https://github.com/xolox/vim-shell/issues/3
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-shell'
@@ -163,8 +161,10 @@ set shortmess=a
 set dir=~/tmp,/var/tmp,/tmp,$TEMP
 set undodir=~/tmp,/var/tmp,/tmp,$TEMP
 
-" look for tag def in a ".tags" file in the dir of the current file, then in a
-" ".tags" file of the vim current dir
+" Look for tag def in a ".tags" file in the dir of the current file, then in a
+" ".tags" file of the vim current dir.
+" This works great with the easytags plugin which will auto-update the local
+" tags file of file's folder and also create it if it's not already there.
 set tags=./.tags,.tags
 
 " replace the default grep program with ack
