@@ -37,7 +37,8 @@ Bundle 'Lokaltog/vim-easymotion'
 " needed for snipmate
 "Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'matchit.zip'
-Bundle 'scrooloose/nerdcommenter'
+" We're using tcomment
+" Bundle 'scrooloose/nerdcommenter'
 Bundle 'indentpython.vim'
 Bundle 'python.vim'
 Bundle 'python_match.vim'
@@ -56,10 +57,9 @@ Bundle 'godlygeek/tabular'
 Bundle 'taglist.vim'
 Bundle 'YankRing.vim'
 Bundle 'scrooloose/nerdtree'
-" there's a crashing bug in current gundo.vim, it's fixed in my fork
-"Bundle 'sjl/gundo.vim'
-Bundle 'Valloric/gundo.vim'
-Bundle 'mru.vim'
+Bundle 'sjl/gundo.vim'
+" we're trying out FuzzyFinder's MRU search
+"Bundle 'mru.vim'
 Bundle 'bufexplorer.zip'
 " requires compilation
 Bundle 'git://git.wincent.com/command-t.git'
@@ -69,10 +69,23 @@ Bundle 'IndexedSearch'
 Bundle 'mileszs/ack.vim'
 " my fork makes sure the quickfix window is always full-width
 Bundle 'Valloric/QFixToggle'
+Bundle 'abudden/TagHighlight'
+Bundle 'Valloric/vim-operator-highlight'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'bufkill.vim'
+Bundle 'FuzzyFinder'
+Bundle 'FSwitch'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            General settings                             "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Home away from home. We store some config files and snippets here and the
+" whole dotfiles dir is a git repo.
+set rtp+=$HOME/dotfiles/vim
+
+" for testing out custom vim scripts
+set rtp+=$HOME/vim_test,$HOME/vim_test/after
 
 " TODO: we should take what we need from these files and then not use the
 " anymore
@@ -88,7 +101,7 @@ colorscheme valloric    " sets the colorscheme
 set background=dark     " enable for dark terminals
 "set nowrap              " don't wrap lines
 set scrolloff=2         " 2 lines above/below cursor when scrolling
-set number              " show line numbers
+set relativenumber      " show line numbers
 set showmatch           " show matching bracket (briefly jump)
 set matchtime=2         " reduces matching paren blink time from the 5[00]ms def
 set showmode            " show mode in status bar (insert/replace/...)
@@ -161,11 +174,10 @@ set shortmess=a
 set dir=~/tmp,/var/tmp,/tmp,$TEMP
 set undodir=~/tmp,/var/tmp,/tmp,$TEMP
 
-" Look for tag def in a ".tags" file in the dir of the current file, then in a
-" ".tags" file of the vim current dir.
-" This works great with the easytags plugin which will auto-update the local
-" tags file of file's folder and also create it if it's not already there.
-set tags=./.tags,.tags
+" Look for tag def in a "tags" file in the dir of the current file, then for
+" that same file in every folder above the folder of the current file, until the
+" root.
+set tags=./tags;/
 
 " replace the default grep program with ack
 " also install this plugin https://github.com/mileszs/ack.vim
@@ -209,6 +221,9 @@ set colorcolumn=+1
 
 " options for formatting text; see :h formatoptions
 set formatoptions=tcroqn
+
+" Add the unnamed register to the clipboard
+set clipboard+=unnamed
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           More involved tweaks                          "
@@ -356,15 +371,8 @@ noremap <leader>j <c-w>j
 noremap <m-j> 15gj
 noremap <m-k> 15gk
 
-" Use the arrows for something useful
-noremap <right> :bn<cr>
-noremap <left> :bp<cr>
-
-" Switches to the previous buffer that was shown in the current window
-noremap <leader>bb <c-^>
-
-" Same as the previous command, but also closes the current buffer before
-" switching to the previous one
+" Switches to the previous buffer that was shown in the current window, but also
+" closes the current buffer before switching to the previous one
 noremap <leader>bq <c-^> :bd #<cr>
 
 " Switch to the directory of the open buffer
@@ -398,7 +406,7 @@ noremap <c-f> <c-r>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let MRU_Max_Entries = 400
-noremap <leader>f :MRU<CR>
+"noremap <leader>f :MRU<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              BufExplorer                                "
@@ -410,12 +418,15 @@ noremap <leader>o :BufExplorer<cr>
 "                               Command-T                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:CommandTMaxHeight = 30
+let g:CommandTMaxHeight          = 30
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
+let g:CommandTSelectNextMap      = [ '<down>', 'j' ]
+let g:CommandTSelectPrevMap      = [ '<up>', 'k' ]
+
 set wildignore+=*.o,*.obj,.git,*.pyc
-noremap <leader>t :CommandT<cr>
-noremap <leader>n :CommandTBuffer<cr>
-noremap <leader>' :CommandTFlush<cr>
+nnoremap <leader>t :CommandT<cr>
+nnoremap <leader>n :CommandTBuffer<cr>
+nnoremap <leader>' :CommandTFlush<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Gundo                                   "
@@ -523,6 +534,7 @@ let g:UltiSnipsExpandTrigger       = "<m-s>"
 let g:UltiSnipsListSnippets        = "<c-m-s>"
 let g:UltiSnipsJumpForwardTrigger  = "<m-h>"
 let g:UltiSnipsJumpBackwardTrigger = "<m-t>"
+let g:snips_author                 = 'Strahinja Markovic'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                SuperTab                                 "
@@ -543,6 +555,9 @@ let g:easytags_dynamic_files = 1
 
 " ctags will now also list members of C++ classes and structs
 let g:easytags_include_members = 1
+
+" we don't use easytags for tag highlighting, we use TagHighlight for that
+let g:easytags_auto_highlight = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  tmru                                   "
@@ -573,4 +588,45 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 noremap <silent> <leader>q :QFix<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                bufkill                                  "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use the arrows for something useful
+" :BB switches to the previous buffer shown in the current window, :BF switches
+" to the next one; it's like a buffer history for every window
+noremap <right> :BF<cr>
+noremap <left> :BB<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                              fuzzyfinder                                "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" This turns on the mrufile and mrucmd modes
+let g:fuf_modesDisable    = []
+let g:fuf_mrufile_maxItem = 1000
+let g:fuf_mrucmd_maxItem  = 400
+let g:fuf_file_exclude    = '\v\~$|\.(o|exe|dll|bak|class|meta|lock|orig|jar|swp)$|/test/data\.|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
+
+nnoremap <Leader>fm :FufMruFile<CR>
+nnoremap <Leader>fc :FufMruCmd<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                fswitch                                  "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" A "companion" file is a .cpp file to an .h file and vice versa
+
+" Opens the companion file in the current window
+nnoremap <Leader>sh :FSHere<cr>
+
+" Opens the companion file in the window to the left (window needs to exist)
+" This is actually a duplicate of the :FSLeft command which for some reason
+" doesn't work.
+nnoremap <Leader>sl :call FSwitch('%', 'wincmd l')<cr>
+
+" Creates a new window on the left and opens the companion file in it
+nnoremap <Leader>sv :FSSplitLeft<cr>
+
 
