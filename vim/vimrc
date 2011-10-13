@@ -80,6 +80,14 @@ Bundle 'FSwitch'
 "                            General settings                             "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" This file will be read at the end of the vimrc
+let google_path = $HOME . '/google/google_vim_settings.vim'
+let at_google   = 0
+if filereadable( google_path )
+    let at_google = 1
+endif
+
+
 " Home away from home. We store some config files and snippets here and the
 " whole dotfiles dir is a git repo.
 set rtp+=$HOME/dotfiles/vim
@@ -222,8 +230,6 @@ set colorcolumn=+1
 " options for formatting text; see :h formatoptions
 set formatoptions=tcroqn
 
-" Add the unnamed register to the clipboard
-set clipboard+=unnamed
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           More involved tweaks                          "
@@ -393,7 +399,7 @@ noremap <leader>su z=
 
 " Remaps the redo action so that it's closer to undo
 " Don't forget, this is for a dvorak layout
-noremap <c-f> <c-r>
+noremap <c-u> <c-r>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -630,3 +636,12 @@ nnoremap <Leader>sl :call FSwitch('%', 'wincmd l')<cr>
 nnoremap <Leader>sv :FSSplitLeft<cr>
 
 
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                              VIMRC OVERRIDE                             "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if at_google
+    exec 'source ' . google_path
+endif
