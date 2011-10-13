@@ -80,14 +80,6 @@ Bundle 'FSwitch'
 "                            General settings                             "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" This file will be read at the end of the vimrc
-let google_path = $HOME . '/google/google_vim_settings.vim'
-let at_google   = 0
-if filereadable( google_path )
-    let at_google = 1
-endif
-
-
 " Home away from home. We store some config files and snippets here and the
 " whole dotfiles dir is a git repo.
 set rtp+=$HOME/dotfiles/vim
@@ -642,6 +634,8 @@ nnoremap <Leader>sv :FSSplitLeft<cr>
 "                              VIMRC OVERRIDE                             "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if at_google
+" If we are at our google workstation, then do some things differently
+let google_path = $HOME . '/google/google_vim_settings.vim'
+if filereadable( google_path )
     exec 'source ' . google_path
 endif
