@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 git config --global user.name "Strahinja Markovic"
 
@@ -23,4 +23,8 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 
 git config --global diff.tool vimdiff
 git config --global difftool.prompt false
+
+script_dir="$( cd "$( dirname "$0" )" && pwd )"
+
+git config --global alias.meld "!$script_dir/bin/git-meld/git-meld.pl"
 
