@@ -21,7 +21,7 @@ git config --global alias.sub submodule
 
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
-git config --global diff.tool vimdiff
+git config --global diff.tool gvimdiff
 git config --global difftool.prompt false
 
 script_dir="$( cd "$( dirname "$0" )" && pwd )"
