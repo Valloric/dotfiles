@@ -24,9 +24,9 @@ branch_color ()
                 # we color the branch name green if there are no unstanged
                 # changes, and red if there are some
                 color=""
-                if git diff --quiet 2>/dev/null >&2 
+                if git diff --quiet 2>/dev/null >&2
                 then
-                        color="${c_green}" 
+                        color="${c_green}"
                 else
                         color=${c_red}
                 fi
