@@ -36,7 +36,17 @@ branch_color ()
         echo -ne $color
 }
 
-PS1='[\[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\]] \u@\[${c_red}\]\w\[${c_sgr0}\]: '
+branch_display ()
+{
+  if [ $(parse_git_branch) ]
+  then
+    echo -ne "[$(branch_color)$(parse_git_branch)${c_sgr0}] "
+  else
+    echo ""
+  fi
+}
+
+PS1='$(branch_display)\u@\[${c_red}\]\w\[${c_sgr0}\]: '
 
 # We want bash to be case-insensitive for tab completion
 bind 'set completion-ignore-case on'
