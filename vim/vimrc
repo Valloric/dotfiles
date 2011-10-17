@@ -357,6 +357,9 @@ nnoremap k gk
 vnoremap Q gq
 nnoremap Q gqap
 
+" This is quit all
+noremap <Leader>q :qa<cr>
+
 " key bindings for quickly moving between windows
 " h left, l right, k up, j down
 noremap <leader>h <c-w>h
@@ -589,7 +592,7 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 "                               QFixToggle                                "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-noremap <silent> <leader>q :QFix<CR>
+noremap <silent> <leader>z :QFix<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                bufkill                                  "
