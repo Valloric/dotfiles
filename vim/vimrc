@@ -557,6 +557,10 @@ let g:easytags_include_members = 1
 " we don't use easytags for tag highlighting, we use TagHighlight for that
 let g:easytags_auto_highlight = 0
 
+if has("gui_macvim")
+    let g:easytags_cmd = '/usr/local/bin/ctags'
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  tmru                                   "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
