@@ -26,6 +26,11 @@ git config --global color.ui true
 git config --global diff.tool gvimdiff
 git config --global difftool.prompt false
 
+# This converts CRLF endings to LF endings on Mac & Lin and also keeps them in
+# the repo, but for Windows checkouts it converts LF to CRLF (and back to LF on
+# commits)
+git config --global core.autocrlf input
+
 script_dir="$( cd "$( dirname "$0" )" && pwd )"
 
 git config --global alias.meld "!$script_dir/bin/git-meld/git-meld.pl"
