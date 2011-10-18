@@ -634,6 +634,15 @@ nnoremap <Leader>sl :call FSwitch('%', 'wincmd l')<cr>
 " Creates a new window on the left and opens the companion file in it
 nnoremap <Leader>sv :FSSplitLeft<cr>
 
+" This handles c++ files with the ".cc" extension.
+augroup googleccfiles
+   au!
+   au BufEnter *.cc let b:fswitchdst  = 'h,hxx'
+   au BufEnter *.cc let b:fswitchlocs = 'reg:/src/include/,reg:|src|include/**|,../include'
+
+   au BufEnter *.h  let b:fswitchdst  = 'cpp,cc,c'
+   au BufEnter *.h  let b:fswitchlocs = 'reg:/include/src/,reg:/include.*/src/,../src'
+augroup END
 
 
 
