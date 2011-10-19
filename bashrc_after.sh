@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ -f $HOME/.completion_bash.sh ]; then
-    source $HOME/.completion_bash.sh
+if [[ -f ~/.completion_bash.sh ]]; then
+    source ~/.completion_bash.sh
 fi
 
-if [ -f $HOME/.aliases_bash.sh ]; then
-    source $HOME/.aliases_bash.sh
+if [[ -f ~/.aliases_bash.sh ]]; then
+    source ~/.aliases_bash.sh
 fi
 
 # This is all for the bash prompt; it shows the current git branch
@@ -46,7 +46,7 @@ branch_color ()
 
 branch_display ()
 {
-  if [ $(parse_git_branch) ]
+  if [[ $(parse_git_branch) ]]
   then
     echo -ne "[$(branch_color)$(parse_git_branch)${c_sgr0}] "
   else
