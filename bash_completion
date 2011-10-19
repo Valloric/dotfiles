@@ -1,4 +1,9 @@
 #!/bin/bash
 
-source /etc/bash_completion.d/git
+if [ -f $HOME/.git-completion.bash ]; then
+    source $HOME/.git-completion.bash
+else
+    source /etc/bash_completion.d/git
+fi
+
 

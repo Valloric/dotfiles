@@ -34,3 +34,5 @@ then
     ln -s /usr/local/bin/mvim ~/bin/gvim
 fi
 
+source gitconfig_setup.sh
+
