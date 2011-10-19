@@ -59,8 +59,7 @@ PS1='$(branch_display)\u@\[${c_red}\]\w\[${c_sgr0}\]: '
 # We want bash to be case-insensitive for tab completion
 bind 'set completion-ignore-case on'
 
-# for macs, we should do export EDITOR="mvim -f"
-# and gvim otherwise
-
+# TODO: this actually needs to be a bit more elaborate
+export EDITOR="gvim -f"
 export PATH=$PATH:$HOME/bin
 
