@@ -4,13 +4,13 @@
 script_dir="$( cd "$( dirname "$0" )" && pwd )"
 
 # add bashrc_after to bashrc if it's not there already
-if ! grep -q bashrc_after ~/.bashrc
+if ! grep -q bashrc_after.sh ~/.bashrc
 then
-  echo "source $script_dir/bashrc_after" >> ~/.bashrc
+  echo "source $script_dir/bashrc_after.sh" >> ~/.bashrc
 fi
 
 # add links to our other files if there are not there already
-for file in bash_aliases bash_completion
+for file in aliases_bash.sh completion_bash.sh
 do
   if [ ! -a ~/.$file ]
   then
