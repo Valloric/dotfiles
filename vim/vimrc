@@ -324,8 +324,8 @@ nnoremap ' `
 nnoremap ` '
 
 " These create newlines like o and O but stay in normal mode
-nnoremap <silent> zj o<Esc>
-nnoremap <silent> zk O<Esc>
+nnoremap <silent> zj o<Esc>k
+nnoremap <silent> zk O<Esc>j
 
 " Keep search matches in the middle of the window.
 " zz centers the screen on the cursor, zv unfolds any fold if the cursor
