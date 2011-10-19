@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if [ -f $HOME/.completion_bash.sh ]; then
+    source $HOME/.completion_bash.sh
+fi
+
+if [ -f $HOME/.aliases_bash.sh ]; then
+    source $HOME/.aliases_bash.sh
+fi
+
 # This is all for the bash prompt; it shows the current git branch
 c_cyan=`tput setaf 6`
 c_red=`tput setaf 1`
