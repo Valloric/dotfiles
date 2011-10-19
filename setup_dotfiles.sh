@@ -32,6 +32,7 @@ then
     ln -s /usr/local/bin/mvim ~/bin/vimdiff
     ln -s /usr/local/bin/mvim ~/bin/vim
     ln -s /usr/local/bin/mvim ~/bin/gvim
+    ln -s /usr/local/bin/mvim ~/bin/vi
 fi
 
 source gitconfig_setup.sh
