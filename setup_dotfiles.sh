@@ -5,7 +5,7 @@ script_dir="$( cd "$( dirname "$0" )" && pwd )"
 
 # add bashrc_after to bashrc if it's not there already
 # the grep expression means "if the string IS NOT found in the file"
-if [[ ! -f ~/.bashrc || $( grep -q bashrc_after.sh ~/.bashrc ) ]]
+if [[ ! -f ~/.bashrc || $( grep -q bashrc_after.sh ~/.bashrc ; echo $? ) ]]
 then
   echo "source $script_dir/bashrc_after.sh" >> ~/.bashrc
 fi
@@ -17,7 +17,8 @@ platform=$(uname)
 if [[ $platform == *Darwin* ]]
 then
   # the grep expression means "if the string IS NOT found in the file"
-  if [[ ! -f ~/.bash_profile || $( grep -q bashrc_after.sh ~/.bash_profile ) ]]
+  if [[ ! -f ~/.bash_profile || $( grep -q bashrc_after.sh ~/.bash_profile ;
+    echo $? ) ]]
   then
     echo "source $script_dir/bashrc_after.sh" >> ~/.bash_profile
   fi
