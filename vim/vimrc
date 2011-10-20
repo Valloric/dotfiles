@@ -631,6 +631,9 @@ nnoremap <Leader>sh :FSHere<cr>
 " doesn't work.
 nnoremap <Leader>sl :call FSwitch('%', 'wincmd l')<cr>
 
+" Same as above, only opens it in window to the right
+nnoremap <Leader>sr :call FSwitch('%', 'wincmd r')<cr>
+
 " Creates a new window on the left and opens the companion file in it
 nnoremap <Leader>sv :FSSplitLeft<cr>
 
