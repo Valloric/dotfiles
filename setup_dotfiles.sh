@@ -3,9 +3,12 @@
 # get the dir of the current script
 script_dir="$( cd "$( dirname "$0" )" && pwd )"
 
+# we flip the return value for grep because it returns 0 on pattern found;
+# also, grep's -q and -s options aren't portable, so we can't use them
+file_found=$( ! grep bashrc_after.sh ~/.bashrc > /dev/null 2>&1 ; echo $?)
+
 # add bashrc_after to bashrc if it's not there already
-# the grep expression means "if the string IS NOT found in the file"
-if [[ ! -f ~/.bashrc || $( grep -q bashrc_after.sh ~/.bashrc ; echo $? ) ]]
+if [[ ! -f ~/.bashrc || ! $file_found ]]
 then
   echo "source $script_dir/bashrc_after.sh" >> ~/.bashrc
 fi
@@ -16,9 +19,11 @@ platform=$(uname)
 # .bash_profile
 if [[ $platform == *Darwin* ]]
 then
-  # the grep expression means "if the string IS NOT found in the file"
-  if [[ ! -f ~/.bash_profile || $( grep -q bashrc_after.sh ~/.bash_profile ;
-    echo $? ) ]]
+  # we flip the return value for grep because it returns 0 on pattern found;
+  # also, grep's -q and -s options aren't portable, so we can't use them
+  file_found=$( ! grep bashrc_after.sh ~/.bash_profile > /dev/null 2>&1 ; echo $?)
+  
+  if [[ ! -f ~/.bash_profile || ! $file_found ]] 
   then
     echo "source $script_dir/bashrc_after.sh" >> ~/.bash_profile
   fi
