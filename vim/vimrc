@@ -75,6 +75,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'bufkill.vim'
 Bundle 'FuzzyFinder'
 Bundle 'FSwitch'
+Bundle 'Shougo/clang_complete'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            General settings                             "
@@ -526,19 +527,14 @@ let g:neocomplcache_lock_buffer_name_pattern = '\v(\.md|\.txt)'
 let g:neocomplcache_snippets_disable_runtime_snippets = 1
 let g:neocomplcache_plugin_disable = { 'snippets_complete':1 }
 
-" Enable heavy omni completion.
-if !exists('g:neocomplcache_omni_patterns')
-  let g:neocomplcache_omni_patterns = {}
-endif
-let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                    clang_complete (neo plugin version)                  "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " This is for shougo's clang_complete plugin for neocomplcache
 " It's at https://github.com/Shougo/clang_complete
 let g:neocomplcache_clang_use_library  = 1
-let g:neocomplcache_clang_library_path = '/home/strahinja/repos/build/Release/lib'
+let g:neocomplcache_clang_library_path = $HOME . '/repos/build/Release/lib'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                UltiSnips                                "
