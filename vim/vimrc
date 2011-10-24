@@ -299,6 +299,11 @@ nnoremap <leader>w :w!<cr>
 
 " <leader>v brings up .vimrc
 " <leader>V reloads it and makes all changes active (file has to be saved first)
+
+if has("unix") && strlen($MYVIMRC) < 1
+  let $MYVIMRC=$HOME . '/.vimrc'
+endif
+
 noremap <leader>v :e! $MYVIMRC<CR>
 noremap <silent> <leader>V :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
