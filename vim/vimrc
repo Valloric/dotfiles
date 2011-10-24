@@ -430,7 +430,7 @@ let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
 let g:CommandTSelectNextMap      = [ '<down>', 'j' ]
 let g:CommandTSelectPrevMap      = [ '<up>', 'k' ]
 
-set wildignore+=*.o,*.obj,.git,*.pyc,READONLY
+set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm
 nnoremap <leader>t :CommandT<cr>
 nnoremap <leader>n :CommandTBuffer<cr>
 nnoremap <leader>' :CommandTFlush<cr>
