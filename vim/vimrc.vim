@@ -31,11 +31,8 @@ Bundle 'xolox/vim-shell'
 Bundle 'xolox/vim-pyref'
 " Seems more active than tpope/vim-surround
 Bundle 'anyakichi/vim-surround'
-"Bundle 'rson/vim-conque'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-easymotion'
-" needed for snipmate
-"Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'matchit.zip'
 " We're using tcomment
 " Bundle 'scrooloose/nerdcommenter'
@@ -50,16 +47,12 @@ Bundle 'tpope/vim-markdown'
 Bundle 'Shougo/neocomplcache'
 " requires compilation
 Bundle 'Shougo/vimproc'
-"Bundle 'tomtom/tmru_vim'
-"Bundle 'ervandew/supertab'
 Bundle 'rygwdn/ultisnips'
 Bundle 'godlygeek/tabular'
 Bundle 'taglist.vim'
 Bundle 'YankRing.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'sjl/gundo.vim'
-" we're trying out FuzzyFinder's MRU search
-"Bundle 'mru.vim'
 Bundle 'bufexplorer.zip'
 " requires compilation
 Bundle 'git://git.wincent.com/command-t.git'
@@ -410,13 +403,6 @@ noremap <c-u> <c-r>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                  MRU                                    "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let MRU_Max_Entries = 400
-"noremap <leader>f :MRU<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              BufExplorer                                "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -582,12 +568,6 @@ let g:easytags_auto_highlight = 0
 if has("gui_macvim")
     let g:easytags_cmd = '/usr/local/bin/ctags'
 endif
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                  tmru                                   "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"map <leader>f :TRecentlyUsedFiles<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               easymotion                                "
