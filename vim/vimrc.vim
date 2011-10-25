@@ -81,11 +81,8 @@ set rtp+=$HOME/dotfiles/vim
 " for testing out custom vim scripts
 set rtp+=$HOME/vim_test,$HOME/vim_test/after
 
-" TODO: we should take what we need from these files and then not use the
-" anymore
-"source $VIMRUNTIME/mswin.vim
-
-" I want my mouse selection to behave like actual mouse selection
+" I want my mouse selection to behave like actual mouse selection. Comically,
+" telling vim to behave mswin does exactly that.
 behave mswin
 
 " TODO: transfer all our custom mapping to our vim_shortcuts file
