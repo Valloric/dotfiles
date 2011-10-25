@@ -22,8 +22,8 @@ then
   # we flip the return value for grep because it returns 0 on pattern found;
   # also, grep's -q and -s options aren't portable, so we can't use them
   file_found=$( ! grep bashrc_after.sh ~/.bash_profile > /dev/null 2>&1 ; echo $?)
-  
-  if [[ ! -f ~/.bash_profile || ! $file_found ]] 
+
+  if [[ ! -f ~/.bash_profile || ! $file_found ]]
   then
     echo "source $script_dir/bashrc_after.sh" >> ~/.bash_profile
   fi
@@ -38,6 +38,11 @@ do
   fi
 done
 
+# special case for vimrc
+if [[ ! -a ~/.vimrc ]]
+then
+  ln -s $script_dir/vim/vimrc.vim ~/.vimrc
+fi
 
 # -p says to create the dir if it doesn't exist already
 mkdir -p $HOME/bin
