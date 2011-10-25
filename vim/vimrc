@@ -670,7 +670,10 @@ augroup END
 "                                vim-git                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Turn on spell checking by default for git commit messages
 au FileType gitcommit setlocal spell! spelllang=en_us
+
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
