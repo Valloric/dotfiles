@@ -666,7 +666,11 @@ augroup googleccfiles
    au BufEnter *.h  let b:fswitchlocs = 'reg:/include/src/,reg:/include.*/src/,../src'
 augroup END
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                vim-git                                  "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+au FileType gitcommit setlocal spell! spelllang=en_us
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
