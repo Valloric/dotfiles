@@ -481,7 +481,7 @@ let Tlist_Show_One_File      = 1 " Only show tags for current buffer
 let Tlist_Enable_Fold_Column = 0 " no fold column (only showing one file)
 
 " toggles the taglist window
-nnoremap <F4> :TlistToggle<cr>
+nnoremap <F4> :TlistToggle<cr><c-w>=
 
 if has("gui_macvim")
     let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
