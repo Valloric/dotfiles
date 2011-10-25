@@ -297,13 +297,14 @@ vnoremap / /\v
 " Fast saving
 nnoremap <leader>w :w!<cr>
 
-" <leader>v brings up .vimrc
-" <leader>V reloads it and makes all changes active (file has to be saved first)
-
+" Sometimes, $MYVIMRC does not get set even though the vimrc is sourced
+" properly. So far, I've only seen this on Linux machines on rare occasions.
 if has("unix") && strlen($MYVIMRC) < 1
   let $MYVIMRC=$HOME . '/.vimrc'
 endif
 
+" <leader>v brings up .vimrc
+" <leader>V reloads it and makes all changes active (file has to be saved first)
 noremap <leader>v :e! $MYVIMRC<CR>
 noremap <silent> <leader>V :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
