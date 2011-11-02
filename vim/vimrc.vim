@@ -653,7 +653,16 @@ augroup END
 " Turn on spell checking by default for git commit messages
 au FileType gitcommit setlocal spell! spelllang=en_us
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                         vim-operator-highlight                          "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+if !exists( 'g:ophigh_filetypes_to_ignore' )
+  let g:ophigh_filetypes_to_ignore = {}
+endif
+
+let g:ophigh_filetypes_to_ignore.markdown = 1
+let g:ophigh_filetypes_to_ignore.conque_term = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
