@@ -69,6 +69,7 @@ Bundle 'bufkill.vim'
 Bundle 'FuzzyFinder'
 Bundle 'FSwitch'
 Bundle 'Shougo/clang_complete'
+Bundle 'rson/vim-conque'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            General settings                             "
