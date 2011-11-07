@@ -36,6 +36,3 @@ git config --global core.autocrlf input
 script_dir="$( cd "$( dirname "$0" )" && pwd )"
 
 git config --global alias.meld "!$script_dir/bin/git-meld/git-meld.pl"
-
-curl -L -o $HOME/.git-completion.bash https://github.com/git/git/raw/master/contrib/completion/git-completion.bash 
-
