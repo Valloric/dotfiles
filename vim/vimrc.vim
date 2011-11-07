@@ -82,6 +82,9 @@ set rtp+=$HOME/dotfiles/vim
 " for testing out custom vim scripts
 set rtp+=$HOME/vim_test,$HOME/vim_test/after
 
+" We want our cross-machine spell file to be used
+set spellfile=$HOME/dotfiles/vim/spell/en.latin1.add
+
 " I want my mouse selection to behave like actual mouse selection. Comically,
 " telling vim to behave mswin does exactly that.
 behave mswin
