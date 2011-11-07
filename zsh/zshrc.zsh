@@ -35,5 +35,7 @@ export EDITOR="gvim -u $HOME/.vimrc -N -U NONE -f"
 export PATH=$PATH:$HOME/bin
 
 # load google-specific stuff
-source $HOME/google/zshrc_google.zsh
-
+gzshrc=$HOME/google/zshrc_google.zsh
+if [[ -a $gzshrc ]] then
+  source $gzshrc
+fi
