@@ -19,6 +19,7 @@ git config --global alias.br branch
 git config --global alias.d difftool
 git config --global alias.sub submodule
 git config --global alias.unstage "reset HEAD"
+git config --global alias.dst "diff --staged"
 
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
