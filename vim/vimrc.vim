@@ -414,8 +414,14 @@ noremap <leader>o :BufExplorer<cr>
 
 let g:CommandTMaxHeight          = 30
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
-let g:CommandTSelectNextMap      = [ '<down>', 'j' ]
-let g:CommandTSelectPrevMap      = [ '<up>', 'k' ]
+
+" MacVim doesn't use tab focus to switch from command-t input field to the file
+" list, so using j and k for next and prev screws everything up. But it does
+" work on linux so let's use it there.
+if has("gui_gtk2")
+    let g:CommandTSelectNextMap  = [ '<down>', 'j' ]
+    let g:CommandTSelectPrevMap  = [ '<up>', 'k' ]
+endif
 
 set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm
 nnoremap <leader>t :CommandT<cr>
