@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -34,4 +33,7 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR="gvim -u $HOME/.vimrc -N -U NONE -f"
 export PATH=$PATH:$HOME/bin
+
+# load google-specific stuff
+source $HOME/google/zshrc_google.zsh
 
