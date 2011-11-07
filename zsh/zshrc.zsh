@@ -1,11 +1,14 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME=""
+#
+# This theme exists ONLY in our custom fork of oh-my-zsh
+ZSH_THEME="valloric"
 
 # Comment this out to disable weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
@@ -27,12 +30,7 @@ plugins=(git osx vundle vi-mode pip brew)
 # linux
 TERM=xterm-256color
 
-ZSH_CUSTOM=$HOME/dotfiles/zsh/custom
-
 source $ZSH/oh-my-zsh.sh
-
-# Source our custom theme
-source $HOME/dotfiles/zsh/valloric.zsh-theme
 
 export EDITOR="gvim -u $HOME/.vimrc -N -U NONE -f"
 export PATH=$PATH:$HOME/bin
