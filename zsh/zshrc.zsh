@@ -29,8 +29,6 @@ plugins=(git osx vundle vi-mode pip brew)
 # linux
 TERM=xterm-256color
 
-source $ZSH/oh-my-zsh.sh
-
 export EDITOR="gvim -u $HOME/.vimrc -N -U NONE -f"
 export PATH=$PATH:$HOME/bin
 
@@ -39,3 +37,5 @@ local gzshrc=$HOME/google/zshrc_google.zsh
 if [[ -a $gzshrc ]] then
   source $gzshrc
 fi
+
+source $ZSH/oh-my-zsh.sh
