@@ -281,6 +281,12 @@ if !exists(":DiffOrig")
     \ | wincmd p | diffthis
 endif
 
+" Sometimes, $MYVIMRC does not get set even though the vimrc is sourced
+" properly. So far, I've only seen this on Linux machines on rare occasions.
+if has("unix") && strlen($MYVIMRC) < 1
+  let $MYVIMRC=$HOME . '/.vimrc'
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            custom mappings                              "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -306,12 +312,6 @@ vnoremap <C-r> "hy:%s/<C-r>h//c<left><left>
 
 " Fast saving
 nnoremap <leader>w :w!<cr>
-
-" Sometimes, $MYVIMRC does not get set even though the vimrc is sourced
-" properly. So far, I've only seen this on Linux machines on rare occasions.
-if has("unix") && strlen($MYVIMRC) < 1
-  let $MYVIMRC=$HOME . '/.vimrc'
-endif
 
 " <leader>v brings up .vimrc
 " <leader>V reloads it and makes all changes active (file has to be saved first)
