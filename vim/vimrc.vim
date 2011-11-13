@@ -376,6 +376,12 @@ nnoremap k gk
 vnoremap Q gq
 nnoremap Q gqap
 
+" $ is 'go to end of line content', ^ is 'go to start of line content'. I use
+" these a lot, but I hate the finger contortions required to press these. They
+" still won't work when supplied to commands as motions!
+nnoremap <Leader>is $
+nnoremap <Leader>ih ^
+
 " This is quit all
 noremap <Leader>q :qa<cr>
 
