@@ -85,10 +85,6 @@ set rtp+=$HOME/vim_test,$HOME/vim_test/after
 " We want our cross-machine spell file to be used
 set spellfile=$HOME/dotfiles/vim/spell/en.latin1.add
 
-" I want my mouse selection to behave like actual mouse selection. Comically,
-" telling vim to behave mswin does exactly that.
-behave mswin
-
 " TODO: transfer all our custom mapping to our vim_shortcuts file
 
 " display settings
@@ -151,7 +147,14 @@ set history=1000        " remember more commands and search history
 set undolevels=1000     " use many levels of undo
 set autoread            " auto read when a file is changed from the outside
 set mouse=a             " enables the mouse in all modes
-"set mouse=v             " use mouse in visual mode (not normal,insert,command,help mode)
+
+" I want my mouse selection to behave like actual mouse selection. Comically,
+" telling vim to behave mswin does exactly that.
+" OTOH, this sets selection=exclusive, which breaks UltiSnips...
+" behave mswin
+
+" Right-click on selection should bring up a menu
+set mousemodel=popup_setpos
 
 " this removes the toolbar from the gui
 set guioptions-=T
