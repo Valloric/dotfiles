@@ -289,6 +289,13 @@ let mapleader=" "
 nnoremap / /\v
 vnoremap / /\v
 
+" With this map, we can select some text in visual mode and by invoking the map,
+" have the selection automatically filled in as the search text and the cursor
+" placed in the position for typing the replacement text. Also, this will ask
+" for confirmation before it replaces any instance of the search text in the
+" file.
+vnoremap <C-r> "hy:%s/<C-r>h//c<left><left>
+
 " Fast saving
 nnoremap <leader>w :w!<cr>
 
