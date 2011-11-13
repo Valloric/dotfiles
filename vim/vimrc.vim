@@ -243,8 +243,9 @@ autocmd BufReadPost *
     \   exe "normal! g`\"" |
     \ endif
 
-" automatically delete trailing Dos-returns, whitespace
-autocmd BufRead * silent! %s/[\r \t]\+$//
+" Automatically delete trailing DOS-returns and whitespace on file open and
+" write.
+autocmd BufRead,BufWritePre,FileWritePre * silent! %s/[\r \t]\+$//
 
 " this maximizes the gvim window on startup
 if has("gui_win32")
