@@ -224,7 +224,9 @@ set formatoptions=tcroqn
 " can now use <m-x> or similar as maps. This is buffer local, and it can easily
 " be turned off when necessary (for instance, when we want to input special
 " characters) with :set nomacmeta.
-set macmeta
+if has("gui_macvim")
+  set macmeta
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           More involved tweaks                          "
