@@ -13,6 +13,12 @@ then
   ln -s $script_dir/vim/vimrc.vim ~/.vimrc
 fi
 
+if [[ ! -a ~/.config/terminator/config ]]
+then
+  mkdir -p ~/.config/terminator
+  ln -s $script_dir/terminator/config ~/.config/terminator/config
+fi
+
 # -p says to create the dir if it doesn't exist already
 mkdir -p $HOME/bin
 

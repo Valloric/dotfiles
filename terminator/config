@@ -1,0 +1,15 @@
+[global_config]
+  focus = system
+  window_state = maximise
+
+[profiles]
+  [[default]]
+    use_system_font = False
+    font = Consolas 11
+    background_color = "#000000" # A comment
+    foreground_color = "#00FF00" # Note that hex colour values must be quoted
+    color_scheme = green_on_black
+    scrollback_infinite = True
+    cursor_blink = True
+  # custom_command = "echo \"foo#bar\"" #Final comment - this will work as expected.
+
