@@ -291,10 +291,8 @@ endif
 
 " Highlight Class and Function names
 fun! s:HighlightFunctionsAndClasses()
-  syn match    cCustomParen    "(" contains=cParen,cCppParen
-  syn match    cCustomFunc     "\w\+\s*\((\)\@=" contains=cCustomParen
-  syn match    cCustomScope    "::"
-  syn match    cCustomClass    "\w\+\s*\(::\)\@=" contains=cCustomScope
+  syn match    cCustomFunc     "\w\+\s*\((\)\@="
+  syn match    cCustomClass    "\w\+\s*\(::\)\@="
 
   hi def link cCustomFunc  Function
   hi def link cCustomClass Function
