@@ -298,6 +298,9 @@ fun! s:HighlightFunctionsAndClasses()
   hi def link cCustomClass Function
 endfunction
 
+" TODO: this should:
+" a) not be called for every filetype
+" b) be in a separate plugin
 au Syntax * call s:HighlightFunctionsAndClasses()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
