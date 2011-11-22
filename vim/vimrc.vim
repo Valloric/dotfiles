@@ -289,6 +289,19 @@ if has("unix") && strlen($MYVIMRC) < 1
   let $MYVIMRC=$HOME . '/.vimrc'
 endif
 
+" Highlight Class and Function names
+fun! s:HighlightFunctionsAndClasses()
+  syn match    cCustomParen    "(" contains=cParen,cCppParen
+  syn match    cCustomFunc     "\w\+\s*(" contains=cCustomParen
+  syn match    cCustomScope    "::"
+  syn match    cCustomClass    "\w\+\s*::" contains=cCustomScope
+
+  hi def link cCustomFunc  Function
+  hi def link cCustomClass Function
+endfunction
+
+au Syntax * call s:HighlightFunctionsAndClasses()
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            custom mappings                              "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
