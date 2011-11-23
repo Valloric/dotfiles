@@ -642,7 +642,11 @@ noremap <f8> :w<cr>:Hammer<CR>
 "                                ack.vim                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+if has("gui_macvim")
+  let g:ackprg="ack -H --nocolor --nogroup --column"
+else
+  let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               QFixToggle                                "
