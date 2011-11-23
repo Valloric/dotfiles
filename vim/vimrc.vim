@@ -177,10 +177,6 @@ set undodir=~/tmp,/var/tmp,/tmp,$TEMP
 " root.
 set tags=./tags;/
 
-" replace the default grep program with ack
-" also install this plugin https://github.com/mileszs/ack.vim
-"set grepprg=ack-grep
-
 " makes the screen blink instead of using the system bell
 "set visualbell
 
