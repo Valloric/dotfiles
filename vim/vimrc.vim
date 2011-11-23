@@ -596,15 +596,6 @@ let g:UltiSnipsJumpBackwardTrigger = "<m-t>"
 let g:snips_author                 = 'Strahinja Markovic'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                SuperTab                                 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" make SuperTab completion context-sensitive
-let g:SuperTabDefaultCompletionType = "context"
-" makes the longest match highlighted by default
-let g:SuperTabLongestHighlight = 1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                easytags                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
