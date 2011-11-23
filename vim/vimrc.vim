@@ -364,6 +364,12 @@ nnoremap <leader>g g<c-]>
 nnoremap <silent> zj o<Esc>k
 nnoremap <silent> zk O<Esc>j
 
+" Now we don't have to move our fingers so far when we want to scroll through
+" the command history; also, don't forget the q: command (see :h q: for more
+" info)
+cnoremap <c-j> <down>
+cnoremap <c-k> <up>
+
 " Keep search matches in the middle of the window.
 " zz centers the screen on the cursor, zv unfolds any fold if the cursor
 " suddenly appears inside a fold.
