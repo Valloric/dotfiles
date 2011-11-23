@@ -289,6 +289,20 @@ if has("unix") && strlen($MYVIMRC) < 1
   let $MYVIMRC=$HOME . '/.vimrc'
 endif
 
+" Highlight Class and Function names
+fun! s:HighlightFunctionsAndClasses()
+  syn match    cCustomFunc     "\w\+\s*\((\)\@="
+  syn match    cCustomClass    "\w\+\s*\(::\)\@="
+
+  hi def link cCustomFunc  Function
+  hi def link cCustomClass Function
+endfunction
+
+" TODO: this should:
+" a) not be called for every filetype
+" b) be in a separate plugin
+au Syntax * call s:HighlightFunctionsAndClasses()
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            custom mappings                              "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
