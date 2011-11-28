@@ -470,7 +470,7 @@ if has("gui_gtk2")
     let g:CommandTSelectPrevMap  = [ '<up>', 'k' ]
 endif
 
-set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm
+set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*
 nnoremap <leader>t :CommandT<cr>
 nnoremap <leader>n :CommandTBuffer<cr>
 nnoremap <leader>' :CommandTFlush<cr>
