@@ -80,7 +80,7 @@ Bundle 'rson/vim-conque'
 set rtp+=$HOME/dotfiles/vim
 
 " for testing out custom vim scripts
-set rtp+=$HOME/vim_test,$HOME/vim_test/after
+set rtp+=$HOME/vim_test,$HOME/vim_test/after,$HOME/Dropbox/vim_test,$HOME/Dropbox/vim_test/after
 
 " We want our cross-machine spell file to be used
 set spellfile=$HOME/dotfiles/vim/spell/en.latin1.add
