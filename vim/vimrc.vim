@@ -70,6 +70,9 @@ Bundle 'FuzzyFinder'
 Bundle 'FSwitch'
 Bundle 'Shougo/clang_complete'
 Bundle 'rson/vim-conque'
+" requires that pyflakes (the app) is installed; we use kevinw's fork of
+" pyflakes from https://github.com/kevinw/pyflakes
+Bundle 'kevinw/pyflakes-vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            General settings                             "
