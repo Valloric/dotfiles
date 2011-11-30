@@ -47,3 +47,6 @@ if [[ -a $gzshrc ]] then
 fi
 
 source $ZSH/oh-my-zsh.sh
+
+# This turns of zsh's "helpful" autocorrect feature
+unsetopt correct_all
