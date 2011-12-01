@@ -431,6 +431,10 @@ noremap <leader>j <c-w>j
 noremap <m-j> 15gj
 noremap <m-k> 15gk
 
+" on macs the alt key is inconvenient to press, so let's also map to ctrl
+noremap <c-j> 15gj
+noremap <c-k> 15gk
+
 " Switches to the previous buffer that was shown in the current window, but also
 " closes the current buffer before switching to the previous one
 noremap <leader>bq <c-^> :bd #<cr>
