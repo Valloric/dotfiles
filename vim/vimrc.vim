@@ -605,6 +605,7 @@ let g:neocomplcache_clang_library_path = $HOME . '/repos/build/Release/lib'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " we can't use <tab> as our snippet key since we use that with neocomplcache
+let g:UltiSnipsSnippetsDir         = $HOME . '/dotfiles/vim/UltiSnips'
 let g:UltiSnipsExpandTrigger       = "<m-s>"
 let g:UltiSnipsListSnippets        = "<c-m-s>"
 let g:UltiSnipsJumpForwardTrigger  = "<m-h>"
