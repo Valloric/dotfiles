@@ -228,6 +228,14 @@ if has("gui_macvim")
   set macmeta
 endif
 
+" UltiSnips is missing a setf trigger for snippets on BufEnter
+autocmd BufEnter *.snippets setf snippets
+
+" In UltiSnips snippet files, we want actual tabs instead of spaces for indents.
+" US will use those tabs and convert them to spaces if expandtab is set when the
+" user wants to insert the snippet.
+autocmd FileType snippets set noexpandtab
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           More involved tweaks                          "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
