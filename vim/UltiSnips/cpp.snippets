@@ -1,0 +1,39 @@
+
+snippet class "class .. (class)"
+class ${1:`!p snip.rv = snip.basename or "name"`}
+{
+public:
+	${1/(\w+).*/$1/}(${2:arguments});
+	virtual ~${1/(\w+).*/$1/}();
+
+private:
+	${0:/* data */}
+};
+endsnippet
+
+snippet map "std::map (map)"
+std::map<${1:key}, ${2:value}> ${3:temp};
+endsnippet
+
+snippet vec "std::vector (v)"
+std::vector<${1:char}> ${3:temp};
+endsnippet
+
+snippet mfun "member func"
+${1:void} ${2:`!p snip.rv = snip.basename`}::${3:Func}($4)
+{
+	$0
+}
+endsnippet
+
+snippet hfun "header func"
+${1:void} ${3:Func}($4);
+endsnippet
+
+snippet nsp "namespace .. (namespace)" !
+namespace${1/.+/ /m}${1:`!p snip.rv = snip.basename or "name"`}
+{
+	$0
+}${1/.+/ \/\/ namespace /m}$1
+endsnippet
+
