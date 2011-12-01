@@ -705,10 +705,10 @@ nnoremap <Leader>sv :FSSplitLeft<cr>
 augroup googleccfiles
    au!
    au BufEnter *.cc let b:fswitchdst  = 'h,hxx'
-   au BufEnter *.cc let b:fswitchlocs = 'reg:/src/include/,reg:|src|include/**|,../include'
+   au BufEnter *.cc let b:fswitchlocs = './,reg:/src/include/,reg:|src|include/**|,../include'
 
    au BufEnter *.h  let b:fswitchdst  = 'cpp,cc,c'
-   au BufEnter *.h  let b:fswitchlocs = 'reg:/include/src/,reg:/include.*/src/,../src'
+   au BufEnter *.h  let b:fswitchlocs = './,reg:/include/src/,reg:/include.*/src/,../src'
 augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
