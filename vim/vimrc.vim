@@ -129,6 +129,8 @@ set smartcase           " but become case sensitive if you type uppercase charac
 "set smartindent         " smart auto indenting
 set autoindent          " on new lines, match indent of previous line
 set copyindent          " copy the previous indentation on autoindenting
+set cindent							" smart indenting for c-like code
+set cino=b1,g0,N-s,t0,(0,W4  " see :h cinoptions-values
 set smarttab            " smart tab handling for indenting
 set magic               " change the way backslashes are used in search patterns
 set bs=indent,eol,start " Allow backspacing over everything in insert mode
@@ -486,7 +488,7 @@ if has("gui_gtk2")
     let g:CommandTSelectPrevMap  = [ '<up>', 'k' ]
 endif
 
-set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*
+set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*,CMakeFiles
 nnoremap <leader>t :CommandT<cr>
 nnoremap <leader>n :CommandTBuffer<cr>
 nnoremap <leader>' :CommandTFlush<cr>
