@@ -271,7 +271,7 @@ if has("gui_win32")
     au GUIEnter * simalt ~x
 else
     " this maximizes on linux
-    set lines=999 columns=999
+    au GUIEnter * set lines=999 columns=999
 endif
 
 " Sets a font for the GUI
