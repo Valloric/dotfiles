@@ -23,7 +23,6 @@ filetype plugin indent on
 
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/vim-valloric-colorscheme'
-Bundle 'Valloric/vim-valloric-statusline'
 Bundle 'L9'
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-session'
@@ -44,12 +43,12 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tomtom/tlib_vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-fugitive'
 Bundle 'Shougo/neocomplcache'
 " requires compilation
 Bundle 'Shougo/vimproc'
 Bundle 'rygwdn/ultisnips'
 Bundle 'godlygeek/tabular'
-Bundle 'taglist.vim'
 Bundle 'YankRing.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'sjl/gundo.vim'
@@ -73,6 +72,8 @@ Bundle 'rson/vim-conque'
 " requires that pyflakes (the app) is installed; we use kevinw's fork of
 " pyflakes from https://github.com/kevinw/pyflakes
 Bundle 'kevinw/pyflakes-vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'majutsushi/tagbar'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            General settings                             "
@@ -530,24 +531,6 @@ function! YRRunAfterMaps()
 endfunction
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                taglist                                  "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let Tlist_Exit_OnlyWindow    = 1 " exit if taglist is last window open
-let Tlist_Show_One_File      = 1 " Only show tags for current buffer
-let Tlist_Enable_Fold_Column = 0 " no fold column (only showing one file)
-
-" toggles the taglist window
-nnoremap <F4> :TlistToggle<cr><c-w>=
-
-if has("gui_macvim")
-    let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-endif
-
-" the minimum width of the taglist window
-let Tlist_WinWidth=40
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                session                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " you also need to run :SaveSession once to create the default.vim session that
@@ -731,6 +714,22 @@ endif
 let g:ophigh_filetypes_to_ignore.markdown    = 1
 let g:ophigh_filetypes_to_ignore.qf          = 1 " This is for the quickfix window
 let g:ophigh_filetypes_to_ignore.conque_term = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                              vim powerline                              "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:Powerline_cache_file = $HOME . '/tmp/Powerline.cache'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                tagbar                                   "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:tagbar_left = 1
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+let g:tagbar_sort = 0
+
+nnoremap <F4> :TagbarToggle<cr><c-w>=
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
