@@ -30,6 +30,7 @@ plugins=(git osx vundle vi-mode pip brew)
 TERM=xterm-256color
 
 export EDITOR="gvim -u $HOME/.vimrc -N -U NONE -f"
+export P4DIFF="meld"
 export PATH=$PATH:$HOME/bin
 
 platform=$(uname)

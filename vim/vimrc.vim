@@ -274,7 +274,7 @@ if has("gui_win32")
     au GUIEnter * simalt ~x
 else
     " this maximizes on linux
-    set lines=999 columns=999
+    au GUIEnter * set lines=999 columns=999
 endif
 
 " Sets a font for the GUI
@@ -313,6 +313,32 @@ endfunction
 " a) not be called for every filetype
 " b) be in a separate plugin
 au Syntax * call s:HighlightFunctionsAndClasses()
+
+
+" TODO: split this into separate plugin
+function! VisualSearch(direction) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", '\\/.*$^~[]')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+    if a:direction == 'b'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'gv'
+        execute "Ack " . l:pattern . ' %'
+    elseif a:direction == 'f'
+        execute "normal /" . l:pattern . "^M"
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
+
+"Basically you press * or # to search for the current selection
+vnoremap <silent> * :call VisualSearch('f')<CR>
+vnoremap <silent> # :call VisualSearch('b')<CR>
+vnoremap <silent> gv :call VisualSearch('gv')<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            custom mappings                              "
@@ -714,6 +740,7 @@ endif
 let g:ophigh_filetypes_to_ignore.markdown    = 1
 let g:ophigh_filetypes_to_ignore.qf          = 1 " This is for the quickfix window
 let g:ophigh_filetypes_to_ignore.conque_term = 1
+let g:ophigh_filetypes_to_ignore.diff        = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              vim powerline                              "
