@@ -753,8 +753,10 @@ let g:Powerline_cache_file = $HOME . '/tmp/Powerline.cache'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:tagbar_left = 1
-let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 let g:tagbar_sort = 0
+if has("gui_macvim")
+  let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+endif
 
 nnoremap <F4> :TagbarToggle<cr><c-w>=
 
