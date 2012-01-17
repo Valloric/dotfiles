@@ -26,8 +26,9 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 
 git config --global color.ui true
 
-git config --global diff.tool gvimdiff
+git config --global diff.tool meld
 git config --global difftool.prompt false
+git config --global merge.tool p4merge
 
 # This converts CRLF endings to LF endings on Mac & Lin and also keeps them in
 # the repo, but for Windows checkouts it converts LF to CRLF (and back to LF on

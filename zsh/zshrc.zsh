@@ -31,7 +31,7 @@ TERM=xterm-256color
 
 export EDITOR="gvim -u $HOME/.vimrc -N -U NONE -f"
 export P4DIFF="meld"
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$HOME/bin/p4v/bin
 
 platform=$(uname)
 
