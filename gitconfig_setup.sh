@@ -30,6 +30,9 @@ git config --global diff.tool meld
 git config --global difftool.prompt false
 git config --global merge.tool p4merge
 
+# With this, "git pull --rebase" is the default form of pull
+git config --global branch.autosetuprebase always
+
 # This converts CRLF endings to LF endings on Mac & Lin and also keeps them in
 # the repo, but for Windows checkouts it converts LF to CRLF (and back to LF on
 # commits)

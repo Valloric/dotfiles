@@ -33,7 +33,22 @@ endsnippet
 snippet nsp "namespace .. (namespace)" !
 namespace${1/.+/ /m}${1:`!p snip.rv = snip.basename or "name"`}
 {
-	$0
+$0
 }${1/.+/ \/\/ namespace /m}$1
 endsnippet
+
+snippet uns "unnamed namespace" !
+namespace
+{
+$0
+} // unnamed namespace
+endsnippet
+
+snippet fori "for int loop (fori)"
+for ( ${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2} )
+{
+	${0:/* code */}
+}
+endsnippet
+
 
