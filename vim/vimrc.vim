@@ -71,7 +71,7 @@ Bundle 'Shougo/clang_complete'
 Bundle 'rson/vim-conque'
 " requires that pyflakes (the app) is installed; we use kevinw's fork of
 " pyflakes from https://github.com/kevinw/pyflakes
-Bundle 'kevinw/pyflakes-vim'
+" Bundle 'kevinw/pyflakes-vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'majutsushi/tagbar'
 
@@ -130,7 +130,7 @@ set smartcase           " but become case sensitive if you type uppercase charac
 "set smartindent         " smart auto indenting
 set autoindent          " on new lines, match indent of previous line
 set copyindent          " copy the previous indentation on autoindenting
-set cindent							" smart indenting for c-like code
+set cindent             " smart indenting for c-like code
 set cino=b1,g0,N-s,t0,(0,W4  " see :h cinoptions-values
 set smarttab            " smart tab handling for indenting
 set magic               " change the way backslashes are used in search patterns
@@ -163,8 +163,15 @@ set mouse=a             " enables the mouse in all modes
 " Right-click on selection should bring up a menu
 set mousemodel=popup_setpos
 
-" this removes the toolbar from the gui
+" With this, the gui now doesn't have the toolbar, the left and right
+" scrollbars and the menu.
 set guioptions-=T
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+set guioptions-=m
+set guioptions-=M
 
 " this makes sure that shell scripts are highlighted
 " as bash scripts and not sh scripts
@@ -741,6 +748,7 @@ let g:ophigh_filetypes_to_ignore.markdown    = 1
 let g:ophigh_filetypes_to_ignore.qf          = 1 " This is for the quickfix window
 let g:ophigh_filetypes_to_ignore.conque_term = 1
 let g:ophigh_filetypes_to_ignore.diff        = 1
+let g:ophigh_filetypes_to_ignore.html        = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              vim powerline                              "
