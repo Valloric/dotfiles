@@ -23,7 +23,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx vundle vi-mode pip brew)
+plugins=(git osx vundle pip brew)
 
 # Every terminal we use supports 256 colors; iTerm2 on Mac and gnome-terminal on
 # linux
