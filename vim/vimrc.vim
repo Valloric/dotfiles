@@ -97,7 +97,6 @@ colorscheme valloric    " sets the colorscheme
 set background=dark     " enable for dark terminals
 "set nowrap              " don't wrap lines
 set scrolloff=2         " 2 lines above/below cursor when scrolling
-set relativenumber      " show line numbers
 set showmatch           " show matching bracket (briefly jump)
 set matchtime=2         " reduces matching paren blink time from the 5[00]ms def
 set showmode            " show mode in status bar (insert/replace/...)
