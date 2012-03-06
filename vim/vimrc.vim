@@ -748,6 +748,7 @@ let g:ophigh_filetypes_to_ignore.qf          = 1 " This is for the quickfix wind
 let g:ophigh_filetypes_to_ignore.conque_term = 1
 let g:ophigh_filetypes_to_ignore.diff        = 1
 let g:ophigh_filetypes_to_ignore.html        = 1
+let g:ophigh_filetypes_to_ignore.xml         = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              vim powerline                              "
