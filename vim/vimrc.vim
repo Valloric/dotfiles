@@ -245,6 +245,11 @@ autocmd BufEnter *.snippets setf snippets
 " user wants to insert the snippet.
 autocmd FileType snippets set noexpandtab
 
+let google_path = $HOME . '/google/google_vim_settings.vim'
+if filereadable( google_path )
+  let at_google = 1
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           More involved tweaks                          "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -720,12 +725,16 @@ nnoremap <Leader>sv :FSSplitLeft<cr>
 
 " This handles c++ files with the ".cc" extension.
 augroup googleccfiles
-   au!
-   au BufEnter *.cc let b:fswitchdst  = 'h,hxx'
-   au BufEnter *.cc let b:fswitchlocs = './,reg:/src/include/,reg:|src|include/**|,../include'
+  au!
+  au BufEnter *.cc let b:fswitchdst  = 'h,hxx'
+  au BufEnter *.cc let b:fswitchlocs = './,reg:/src/include/,reg:|src|include/**|,../include'
 
-   au BufEnter *.h  let b:fswitchdst  = 'cpp,cc,c'
-   au BufEnter *.h  let b:fswitchlocs = './,reg:/include/src/,reg:/include.*/src/,../src'
+  if !at_google
+    au BufEnter *.h  let b:fswitchdst  = 'cpp,cc,c'
+  else
+    au BufEnter *.h  let b:fswitchdst  = 'cc,cpp,c'
+  endif
+  au BufEnter *.h  let b:fswitchlocs = './,reg:/include/src/,reg:/include.*/src/,../src'
 augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -780,7 +789,6 @@ let vimpager_use_gvim = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " If we are at our google workstation, then do some things differently
-let google_path = $HOME . '/google/google_vim_settings.vim'
-if filereadable( google_path )
+if at_google
     exec 'source ' . google_path
 endif
