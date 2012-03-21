@@ -119,7 +119,7 @@ set listchars=tab:▸\ ,eol:¬
 " the possible matches; see :h completeopt
 set completeopt=menu,menuone,longest,preview
 
-set switchbuf=useopen,usetab,newtab
+set switchbuf=useopen,usetab
 
 " editor settings
 set ignorecase          " case insensitive searching
