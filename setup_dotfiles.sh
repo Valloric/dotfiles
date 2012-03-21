@@ -13,6 +13,11 @@ then
   ln -s $script_dir/vim/vimrc.vim ~/.vimrc
 fi
 
+if [[ ! -a ~/.gdbrc ]]
+then
+  ln -s $script_dir/misc/gdbrc ~/.gdbrc
+fi
+
 if [[ ! -a ~/.config/terminator/config ]]
 then
   mkdir -p ~/.config/terminator
