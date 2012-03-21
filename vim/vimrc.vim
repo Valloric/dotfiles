@@ -248,6 +248,8 @@ autocmd FileType snippets set noexpandtab
 let google_path = $HOME . '/google/google_vim_settings.vim'
 if filereadable( google_path )
   let at_google = 1
+else
+  let at_google = 0
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
