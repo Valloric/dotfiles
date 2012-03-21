@@ -33,6 +33,10 @@ git config --global merge.tool p4merge
 # With this, "git pull --rebase" is the default form of pull
 git config --global branch.autosetuprebase always
 
+# This makes sure that push pushes only the current branch, and pushes it to the
+# same branch pull would pull from
+git config --global push.default upstream
+
 # This converts CRLF endings to LF endings on Mac & Lin and also keeps them in
 # the repo, but for Windows checkouts it converts LF to CRLF (and back to LF on
 # commits)
