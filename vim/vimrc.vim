@@ -154,10 +154,10 @@ set undolevels=1000     " use many levels of undo
 set autoread            " auto read when a file is changed from the outside
 set mouse=a             " enables the mouse in all modes
 
-" I want my mouse selection to behave like actual mouse selection. Comically,
-" telling vim to behave mswin does exactly that.
-" OTOH, this sets selection=exclusive, which breaks UltiSnips...
-" behave mswin
+" toggles vim's paste mode; when we want to paste something into vim from a
+" different application, turning on paste mode prevents the insertion of extra
+" whitespace
+set pastetoggle=<F7>
 
 " Right-click on selection should bring up a menu
 set mousemodel=popup_setpos
