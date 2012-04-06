@@ -119,7 +119,7 @@ set listchars=tab:▸\ ,eol:¬
 " the possible matches; see :h completeopt
 set completeopt=menu,menuone,longest,preview
 
-set switchbuf=useopen,usetab,newtab
+set switchbuf=useopen,usetab
 
 " editor settings
 set ignorecase          " case insensitive searching
@@ -248,6 +248,8 @@ autocmd FileType snippets set noexpandtab
 let google_path = $HOME . '/google/google_vim_settings.vim'
 if filereadable( google_path )
   let at_google = 1
+else
+  let at_google = 0
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -758,6 +760,7 @@ let g:ophigh_filetypes_to_ignore.conque_term = 1
 let g:ophigh_filetypes_to_ignore.diff        = 1
 let g:ophigh_filetypes_to_ignore.html        = 1
 let g:ophigh_filetypes_to_ignore.css         = 1
+let g:ophigh_filetypes_to_ignore.xml         = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              vim powerline                              "
