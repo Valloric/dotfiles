@@ -18,6 +18,11 @@ then
   ln -s $script_dir/misc/gdbrc ~/.gdbrc
 fi
 
+if [[ ! -a ~/.gitignore_global ]]
+then
+  ln -s $script_dir/misc/gitignore_global ~/.gitignore_global
+fi
+
 if [[ ! -a ~/.config/terminator/config ]]
 then
   mkdir -p ~/.config/terminator
