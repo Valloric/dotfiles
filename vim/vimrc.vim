@@ -80,7 +80,7 @@ Bundle 'majutsushi/tagbar'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " for testing out custom vim scripts
-set rtp+=$HOME/vim_test,$HOME/vim_test/after,$HOME/Dropbox/vim_test,$HOME/Dropbox/vim_test/after
+set rtp+=$HOME/vim_test,$HOME/vim_test/after,$HOME/repos/YouCompleteMe
 
 " Home away from home. We store some config files and snippets here and the
 " whole dotfiles dir is a git repo. Should be the last entry in rtp (for
