@@ -634,7 +634,7 @@ let g:UltiSnipsExpandTrigger       = "<m-s>"
 let g:UltiSnipsListSnippets        = "<c-m-s>"
 let g:UltiSnipsJumpForwardTrigger  = "<m-h>"
 let g:UltiSnipsJumpBackwardTrigger = "<m-t>"
-let g:snips_author                 = 'Strahinja Markovic'
+let g:snips_author                 = 'Strahinja Val Markovic'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                easytags                                 "
