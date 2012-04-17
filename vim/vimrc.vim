@@ -286,8 +286,10 @@ if has("gui_win32")
     " this maximizes on windows
     au GUIEnter * simalt ~x
 else
-    " this maximizes on linux
-    au GUIEnter * set lines=999 columns=999
+    " this maximizes on linux, but not when in vimdiff mode
+    if !&diff
+      au GUIEnter * set lines=999 columns=999
+    endif
 endif
 
 " Sets a font for the GUI
