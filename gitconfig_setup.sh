@@ -26,7 +26,7 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 
 git config --global color.ui true
 
-git config --global diff.tool meld
+git config --global diff.tool gvimdiff
 git config --global difftool.prompt false
 git config --global merge.tool p4merge
 
