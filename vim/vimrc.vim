@@ -74,6 +74,9 @@ Bundle 'rson/vim-conque'
 " Bundle 'kevinw/pyflakes-vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'majutsushi/tagbar'
+" has a ftplugin folder with xml.vim in it; symlinking html.vim and xhtml.vim
+" from that folder to that xml.vim is a good idea
+Bundle 'nistude/xmledit'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            General settings                             "
@@ -524,8 +527,8 @@ let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
 " list, so using j and k for next and prev screws everything up. But it does
 " work on linux so let's use it there.
 if has("gui_gtk2")
-    let g:CommandTSelectNextMap  = [ '<down>', 'j' ]
-    let g:CommandTSelectPrevMap  = [ '<up>', 'k' ]
+    let g:CommandTSelectNextMap  = [ '<down>' ]
+    let g:CommandTSelectPrevMap  = [ '<up>' ]
 endif
 
 set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*,CMakeFiles
@@ -681,6 +684,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 noremap <silent> <leader>z :QFix<CR>
+let g:QFixToggle_Height = 25
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                bufkill                                  "
@@ -761,6 +765,8 @@ let g:ophigh_filetypes_to_ignore.diff        = 1
 let g:ophigh_filetypes_to_ignore.html        = 1
 let g:ophigh_filetypes_to_ignore.css         = 1
 let g:ophigh_filetypes_to_ignore.xml         = 1
+let g:ophigh_filetypes_to_ignore.sh          = 1
+let g:ophigh_filetypes_to_ignore.bash        = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              vim powerline                              "
@@ -787,6 +793,12 @@ nnoremap <F4> :TagbarToggle<cr><c-w>=
 " vimpager is actually not a plugin but a shell file
 " https://github.com/rkitover/vimpager
 let vimpager_use_gvim = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               delimitMate                               "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+au FileType html,xhtml let b:delimitMate_matchpairs = "(:),[:],{:}"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
