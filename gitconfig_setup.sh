@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git config --global user.name "Strahinja Markovic"
+git config --global user.name "Strahinja Val Markovic"
 
 current_email=$(git config --global --get user.email)
 
@@ -26,7 +26,7 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 
 git config --global color.ui true
 
-git config --global diff.tool meld
+git config --global diff.tool gvimdiff
 git config --global difftool.prompt false
 git config --global merge.tool p4merge
 
@@ -45,3 +45,5 @@ git config --global core.autocrlf input
 script_dir="$( cd "$( dirname "$0" )" && pwd )"
 
 git config --global alias.meld "!$script_dir/bin/git-meld/git-meld.pl"
+
+git config --global core.excludesfile ~/.gitignore_global

@@ -83,7 +83,7 @@ Bundle 'nistude/xmledit'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " for testing out custom vim scripts
-set rtp+=$HOME/vim_test,$HOME/vim_test/after,$HOME/Dropbox/vim_test,$HOME/Dropbox/vim_test/after
+set rtp+=$HOME/vim_test,$HOME/vim_test/after,$HOME/repos/YouCompleteMe
 
 " Home away from home. We store some config files and snippets here and the
 " whole dotfiles dir is a git repo. Should be the last entry in rtp (for
@@ -289,8 +289,10 @@ if has("gui_win32")
     " this maximizes on windows
     au GUIEnter * simalt ~x
 else
-    " this maximizes on linux
-    au GUIEnter * set lines=999 columns=999
+    " this maximizes on linux, but not when in vimdiff mode
+    if !&diff
+      au GUIEnter * set lines=999 columns=999
+    endif
 endif
 
 " Sets a font for the GUI
@@ -637,7 +639,7 @@ let g:UltiSnipsExpandTrigger       = "<m-s>"
 let g:UltiSnipsListSnippets        = "<c-m-s>"
 let g:UltiSnipsJumpForwardTrigger  = "<m-h>"
 let g:UltiSnipsJumpBackwardTrigger = "<m-t>"
-let g:snips_author                 = 'Strahinja Markovic'
+let g:snips_author                 = 'Strahinja Val Markovic'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                easytags                                 "
