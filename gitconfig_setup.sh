@@ -20,7 +20,7 @@ git config --global alias.d difftool
 git config --global alias.h help
 git config --global alias.sub submodule
 git config --global alias.unstage "reset HEAD"
-git config --global alias.unshelve "shelve pop"
+git config --global alias.unstash "stash pop"
 git config --global alias.dst "diff --staged"
 git config --global alias.cp "cherry-pick"
 
