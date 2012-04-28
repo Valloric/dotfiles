@@ -35,10 +35,12 @@ export PATH=$PATH:$HOME/bin:$HOME/bin/p4v/bin
 
 platform=$(uname)
 
-# This makes our PATH visible to GUI apps
 if [[ $platform == *Darwin* ]]
 then
+  # This makes our PATH visible to GUI apps
   launchctl setenv PATH $PATH
+  # Brew paths over system paths
+  export PATH=:/usr/local/bin:/usr/local/sbin:$PATH
 fi
 
 # load google-specific stuff
