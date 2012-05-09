@@ -17,8 +17,10 @@ git config --global alias.co checkout
 git config --global alias.ci commit
 git config --global alias.br branch
 git config --global alias.d difftool
+git config --global alias.h help
 git config --global alias.sub submodule
 git config --global alias.unstage "reset HEAD"
+git config --global alias.unstash "stash pop"
 git config --global alias.dst "diff --staged"
 git config --global alias.cp "cherry-pick"
 
@@ -30,8 +32,13 @@ git config --global diff.tool gvimdiff
 git config --global difftool.prompt false
 git config --global merge.tool p4merge
 
-# With this, "git pull --rebase" is the default form of pull
+# With this, "git pull --rebase" is the default form of pull FOR NEWLY CREATED
+# BRANCHES; for branches created before this config option is set, pull.rebase
+# true handles that
 git config --global branch.autosetuprebase always
+
+# "git pull --rebase" is now the default for pull no matter what
+git config --global pull.rebase true
 
 # This makes sure that push pushes only the current branch, and pushes it to the
 # same branch pull would pull from

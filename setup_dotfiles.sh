@@ -38,11 +38,20 @@ platform=$(uname)
 if [[ $platform == *Darwin* ]]
 then
   # symlinks for mvim
-  ln -s /usr/local/bin/mvim ~/bin/gvimdiff
-  ln -s /usr/local/bin/mvim ~/bin/vimdiff
-  ln -s /usr/local/bin/mvim ~/bin/vim
-  ln -s /usr/local/bin/mvim ~/bin/gvim
-  ln -s /usr/local/bin/mvim ~/bin/vi
+  if [[ -a ~/bin/mvim ]]
+  then
+    ln -s ~/bin/mvim ~/bin/gvimdiff
+    ln -s ~/bin/mvim ~/bin/vimdiff
+    ln -s ~/bin/mvim ~/bin/vim
+    ln -s ~/bin/mvim ~/bin/gvim
+    ln -s ~/bin/mvim ~/bin/vi
+  else
+    ln -s /usr/local/bin/mvim ~/bin/gvimdiff
+    ln -s /usr/local/bin/mvim ~/bin/vimdiff
+    ln -s /usr/local/bin/mvim ~/bin/vim
+    ln -s /usr/local/bin/mvim ~/bin/gvim
+    ln -s /usr/local/bin/mvim ~/bin/vi
+  fi
 elif [[ -a ~/google/google_vim_settings.vim ]]
 then
   ln -s ~/bin/vim ~/bin/gvim
