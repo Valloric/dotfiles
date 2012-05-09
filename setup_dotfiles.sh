@@ -43,6 +43,13 @@ then
   ln -s /usr/local/bin/mvim ~/bin/vim
   ln -s /usr/local/bin/mvim ~/bin/gvim
   ln -s /usr/local/bin/mvim ~/bin/vi
+elif [[ -a ~/google/google_vim_settings.vim ]]
+then
+  ln -s ~/bin/vim ~/bin/gvim
+  ln -s ~/bin/vim ~/bin/vi
+  ln -s ~/bin/vim ~/bin/gvimdiff
+  ln -s ~/bin/vim ~/bin/vimdiff
+  ln -s ~/bin/vim ~/bin/view
 fi
 
 source $script_dir/gitconfig_setup.sh
