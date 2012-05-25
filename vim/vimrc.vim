@@ -598,7 +598,8 @@ vnoremap <Leader>a= :Tabularize /=<CR>
 "                             neocomplcache                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:neocomplcache_enable_at_startup       = 1
+" Using YouCompleteMe now instead of neo
+let g:neocomplcache_enable_at_startup       = 0
 let g:neocomplcache_enable_smart_case       = 1
 let g:neocomplcache_enable_fuzzy_completion = 1
 let g:neocomplcache_min_syntax_length       = 3
