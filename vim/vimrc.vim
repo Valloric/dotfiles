@@ -11,9 +11,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Enable detection, plugins and indenting in one step
-filetype plugin indent on
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                          Vundle configuration                           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -44,9 +41,6 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Shougo/neocomplcache'
-" requires compilation
-Bundle 'Shougo/vimproc'
 Bundle 'rygwdn/ultisnips'
 Bundle 'godlygeek/tabular'
 Bundle 'YankRing.vim'
@@ -67,7 +61,6 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'bufkill.vim'
 Bundle 'FuzzyFinder'
 Bundle 'FSwitch'
-Bundle 'Shougo/clang_complete'
 Bundle 'rson/vim-conque'
 " requires that pyflakes (the app) is installed; we use kevinw's fork of
 " pyflakes from https://github.com/kevinw/pyflakes
@@ -77,6 +70,11 @@ Bundle 'majutsushi/tagbar'
 " has a ftplugin folder with xml.vim in it; symlinking html.vim and xhtml.vim
 " from that folder to that xml.vim is a good idea
 Bundle 'nistude/xmledit'
+Bundle 'helino/vim-json'
+
+" Enable detection, plugins and indenting in one step
+" This needs to come AFTER the Bundle commands!
+filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            General settings                             "
@@ -289,10 +287,7 @@ if has("gui_win32")
     " this maximizes on windows
     au GUIEnter * simalt ~x
 else
-    " this maximizes on linux, but not when in vimdiff mode
-    if !&diff
-      au GUIEnter * set lines=999 columns=999
-    endif
+    au GUIEnter * set lines=999 columns=999
 endif
 
 " Sets a font for the GUI
@@ -593,42 +588,6 @@ let g:session_directory       = '~/tmp/vim/sessions'
 " equals signs; useful for when we have several lines of declarations
 nnoremap <Leader>a= :Tabularize /=<CR>
 vnoremap <Leader>a= :Tabularize /=<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             neocomplcache                               "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Using YouCompleteMe now instead of neo
-let g:neocomplcache_enable_at_startup       = 0
-let g:neocomplcache_enable_smart_case       = 1
-let g:neocomplcache_enable_fuzzy_completion = 1
-let g:neocomplcache_min_syntax_length       = 3
-
-" <CR>: close popup and save indent.
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-" this makes tab cycle through all the completion options
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h>  neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS>   neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-" we don't want the completion menu to auto pop-up when we are in text files
-let g:neocomplcache_lock_buffer_name_pattern = '\v(\.md|\.txt)'
-
-" we don't use the neocomplcache snippet support; we use ultisnips instead
-let g:neocomplcache_snippets_disable_runtime_snippets = 1
-let g:neocomplcache_plugin_disable = { 'snippets_complete':1 }
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                    clang_complete (neo plugin version)                  "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" This is for shougo's clang_complete plugin for neocomplcache
-" It's at https://github.com/Shougo/clang_complete
-let g:neocomplcache_clang_use_library  = 1
-let g:neocomplcache_clang_library_path = $HOME . '/repos/build/Release/lib'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                UltiSnips                                "
