@@ -29,3 +29,5 @@ LGPLv3
 CLI
 WebSpam
 validator
+IWYU
+checkdeps
