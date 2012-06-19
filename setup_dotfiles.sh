@@ -13,6 +13,11 @@ then
   ln -s $script_dir/vim/vimrc.vim ~/.vimrc
 fi
 
+if [[ ! -a ~/.tmux.conf ]]
+then
+  ln -s $script_dir/misc/tmux.conf ~/.tmux.conf
+fi
+
 if [[ ! -a ~/.gdbrc ]]
 then
   ln -s $script_dir/misc/gdbrc ~/.gdbrc
