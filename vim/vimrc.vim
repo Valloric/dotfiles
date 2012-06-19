@@ -51,7 +51,7 @@ Bundle 'bufexplorer.zip'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'robgleeson/hammer.vim'
 Bundle 'tpope/vim-git'
-Bundle 'IndexedSearch'
+" Bundle 'IndexedSearch'
 Bundle 'mileszs/ack.vim'
 " my fork makes sure the quickfix window is always full-width
 Bundle 'Valloric/QFixToggle'
