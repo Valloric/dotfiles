@@ -13,10 +13,6 @@ then
   ln -s $script_dir/vim/vimrc.vim ~/.vimrc
 fi
 
-if [[ ! -a ~/.tmux.conf ]]
-then
-  ln -s $script_dir/misc/tmux.conf ~/.tmux.conf
-fi
 
 if [[ ! -a ~/.gdbrc ]]
 then
@@ -67,4 +63,5 @@ then
 fi
 
 source $script_dir/gitconfig_setup.sh
+source $script_dir/tmux/tmux_setup.sh
 
