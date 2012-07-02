@@ -719,24 +719,6 @@ augroup END
 au FileType gitcommit setlocal spell! spelllang=en_us
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                         vim-operator-highlight                          "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-if !exists( 'g:ophigh_filetypes_to_ignore' )
-  let g:ophigh_filetypes_to_ignore = {}
-endif
-
-let g:ophigh_filetypes_to_ignore.markdown    = 1
-let g:ophigh_filetypes_to_ignore.qf          = 1 " This is for the quickfix window
-let g:ophigh_filetypes_to_ignore.conque_term = 1
-let g:ophigh_filetypes_to_ignore.diff        = 1
-let g:ophigh_filetypes_to_ignore.html        = 1
-let g:ophigh_filetypes_to_ignore.css         = 1
-let g:ophigh_filetypes_to_ignore.xml         = 1
-let g:ophigh_filetypes_to_ignore.sh          = 1
-let g:ophigh_filetypes_to_ignore.bash        = 1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              vim powerline                              "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
