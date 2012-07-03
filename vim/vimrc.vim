@@ -313,8 +313,8 @@ endif
 
 " Highlight Class and Function names
 fun! s:HighlightFunctionsAndClasses()
-  syn match    cCustomFunc     "\w\+\s*\((\)\@="
-  syn match    cCustomClass    "\w\+\s*\(::\)\@="
+  syn match cCustomFunc  "\w\+\s*\((\)\@="
+  syn match cCustomClass "\w\+\s*\(::\)\@="
 
   hi def link cCustomFunc  Function
   hi def link cCustomClass Function
@@ -396,7 +396,7 @@ inoremap <c-w> <c-g>u<c-w>
 
 " This command will allow us to save a file we don't have permission to save
 " *after* we have already opened it. Super useful.
-cmap w!! w !sudo tee % >/dev/null
+cnoremap w!! w !sudo tee % >/dev/null
 
 " Swap implementations of ` and ' jump to markers
 " By default, ' jumps to the marked line, ` jumps to the marked line and
@@ -494,11 +494,6 @@ noremap <leader>sn ]s
 noremap <leader>sp [s
 noremap <leader>sa zg
 noremap <leader>su z=
-
-" Remaps the redo action so that it's closer to undo
-" Don't forget, this is for a dvorak layout
-noremap <c-u> <c-r>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       ***  HERE BE PLUGINS  ***                         "
