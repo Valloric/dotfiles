@@ -95,10 +95,9 @@ set spellfile=$HOME/dotfiles/vim/spell/en.latin1.add
 
 " TODO: transfer all our custom mapping to our vim_shortcuts file
 
-" display settings
+" DISPLAY SETTINGS
 colorscheme valloric    " sets the colorscheme
 set background=dark     " enable for dark terminals
-"set nowrap              " don't wrap lines
 set scrolloff=2         " 2 lines above/below cursor when scrolling
 set showmatch           " show matching bracket (briefly jump)
 set matchtime=2         " reduces matching paren blink time from the 5[00]ms def
@@ -115,16 +114,15 @@ set winaltkeys=no       " turns of the Alt key bindings to the gui menu
 " completion options so you can complete the file without further keys
 set wildmode=longest,list,full
 set wildmenu            " completion with menu
-" This changes the def display of tab and CR chars in list mode
+" This changes the default display of tab and CR chars in list mode
 set listchars=tab:▸\ ,eol:¬
 
 " The "longest" option makes completion insert the longest prefix of all
 " the possible matches; see :h completeopt
 set completeopt=menu,menuone,longest,preview
-
 set switchbuf=useopen,usetab
 
-" editor settings
+" EDITOR SETTINGS
 set ignorecase          " case insensitive searching
 set smartcase           " but become case sensitive if you type uppercase characters
 " this can cause problems with other filetypes
@@ -150,7 +148,9 @@ set laststatus=2        " the statusline is now always shown
 set fileformat=unix     " file mode is unix
 set fileformats=unix,dos,mac   " detects unix, dos, mac file formats in that order
 
-set viminfo='20,\"500   " remember copy registers after quitting in the .viminfo file -- 20 jump links, regs up to 500 lines'
+set viminfo='20,\"500   " remember copy registers after quitting in the .viminfo
+                        " file -- 20 jump links, regs up to 500 lines'
+
 set hidden              " allows making buffers hidden even with unsaved changes
 set history=1000        " remember more commands and search history
 set undolevels=1000     " use many levels of undo
@@ -165,8 +165,8 @@ set pastetoggle=<F7>
 " Right-click on selection should bring up a menu
 set mousemodel=popup_setpos
 
-" With this, the gui now doesn't have the toolbar, the left and right
-" scrollbars and the menu.
+" With this, the gui (gvim and macvim) now doesn't have the toolbar, the left
+" and right scrollbars and the menu.
 set guioptions-=T
 set guioptions-=l
 set guioptions-=L
@@ -192,9 +192,6 @@ set undodir=~/tmp,/var/tmp,/tmp,$TEMP
 " that same file in every folder above the folder of the current file, until the
 " root.
 set tags=./tags;/
-
-" makes the screen blink instead of using the system bell
-"set visualbell
 
 " turns off all error bells, visual or otherwise
 set noerrorbells visualbell t_vb=
