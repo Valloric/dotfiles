@@ -210,12 +210,8 @@ set cmdheight=2
 
 " allow backspace and cursor keys to cross line boundaries
 set whichwrap+=<,>,h,l
-
-" make the splitters between windows be blank
-set fillchars=vert:\ ,stl:\ ,stlnc:\
-
-set nohlsearch          " do not highlight searched phrases
-set incsearch           " but do highlight as you type you search phrase
+set nohlsearch          " do not highlight searched-for phrases
+set incsearch           " ...but do highlight-as-I-type the search string
 set gdefault            " this makes search/replace global by default
 
 " enforces a specified line-length and auto inserts hard line breaks when we
