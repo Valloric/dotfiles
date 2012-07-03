@@ -203,7 +203,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 " none of these should be word dividers, so make them not be
-set iskeyword+=_,$,@,%,#,-
+set iskeyword+=_,$,@,%,#
 
 " Number of screen lines to use for the command-line
 set cmdheight=2
