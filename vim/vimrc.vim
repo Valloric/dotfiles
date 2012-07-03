@@ -31,7 +31,6 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'matchit.zip'
 " We're using tcomment
-" Bundle 'scrooloose/nerdcommenter'
 Bundle 'indentpython.vim'
 Bundle 'python.vim'
 Bundle 'python_match.vim'
@@ -72,6 +71,8 @@ Bundle 'majutsushi/tagbar'
 Bundle 'nistude/xmledit'
 Bundle 'helino/vim-json'
 Bundle 'skammer/vim-css-color'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'groenewege/vim-less'
 
 " Enable detection, plugins and indenting in one step
 " This needs to come AFTER the Bundle commands!
