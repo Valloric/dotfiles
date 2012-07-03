@@ -268,9 +268,9 @@ endif
 " Also don't do it when the mark is in the first line, that is the default
 " position when opening a file.
 autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+      \ if line("'\"") > 1 && line("'\"") <= line("$") |
+      \   exe "normal! g`\"" |
+      \ endif
 
 " Automatically delete trailing DOS-returns and whitespace on file open and
 " write.
@@ -292,20 +292,18 @@ endif
 
 " Sets a font for the GUI
 if has("gui_gtk2")
-    set guifont=Consolas\ 11
+  set guifont=Consolas\ 11
 elseif has("gui_macvim")
-    set guifont=Consolas:h14
+  " My Mac has a fairly high DPI so the font needs to be bigger
+  set guifont=Consolas:h14
 elseif has("gui_win32")
-    set guifont=Consolas:h11
+  set guifont=Consolas:h11
 end
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-    \ | wincmd p | diffthis
-endif
+command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+      \ | wincmd p | diffthis
 
 " Sometimes, $MYVIMRC does not get set even though the vimrc is sourced
 " properly. So far, I've only seen this on Linux machines on rare occasions.
