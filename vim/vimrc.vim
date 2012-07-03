@@ -259,7 +259,6 @@ if has("multi_byte")
   endif
   set encoding=utf-8
   setglobal fileencoding=utf-8
-  "setglobal bomb
   set fileencodings=ucs-bom,utf-8,latin1
 endif
 
@@ -286,7 +285,7 @@ else
   " are in vimdiff mode. The reason is that if we run this in those
   " circumstances, one of the vertical splits in vimdiff mode will get all the
   " width.
-  if !&diff || !has("gui_macvim")
+  if !( &diff && has("gui_macvim") )
     au GUIEnter * set lines=999 columns=999
   endif
 endif
