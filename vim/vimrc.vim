@@ -41,7 +41,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-fugitive'
-Bundle 'rygwdn/ultisnips'
+Bundle 'SirVer/ultisnips'
 Bundle 'godlygeek/tabular'
 Bundle 'YankRing.vim'
 Bundle 'scrooloose/nerdtree'
@@ -71,6 +71,7 @@ Bundle 'majutsushi/tagbar'
 " from that folder to that xml.vim is a good idea
 Bundle 'nistude/xmledit'
 Bundle 'helino/vim-json'
+Bundle 'skammer/vim-css-color'
 
 " Enable detection, plugins and indenting in one step
 " This needs to come AFTER the Bundle commands!
@@ -749,6 +750,12 @@ let vimpager_use_gvim = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 au FileType html,xhtml let b:delimitMate_matchpairs = "(:),[:],{:}"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                              vim-css-color                              "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
