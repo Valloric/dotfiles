@@ -73,6 +73,7 @@ Bundle 'helino/vim-json'
 Bundle 'skammer/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
+Bundle 'mattn/zencoding-vim'
 
 " Enable detection, plugins and indenting in one step
 " This needs to come AFTER the Bundle commands!
@@ -638,7 +639,7 @@ endif
 "                               QFixToggle                                "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-noremap <silent> <leader>z :QFix<CR>
+noremap <silent> <leader>u :QFix<CR>
 let g:QFixToggle_Height = 25
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -742,6 +743,15 @@ au FileType html,xhtml let b:delimitMate_matchpairs = "(:),[:],{:}"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:cssColorVimDoNotMessMyUpdatetime = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                              zencoding-vim                              "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:user_zen_leader_key = '<c-n>'
+let g:user_zen_settings = {
+      \  'indentation' : '  '
+      \}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
