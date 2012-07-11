@@ -74,6 +74,18 @@ Bundle 'skammer/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
 Bundle 'mattn/zencoding-vim'
+Bundle 'xolox/vim-notes'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                           pre-filetype tweaks                           "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" these are for the xmledit plugin
+let xml_use_xhtml = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                        turn on filetype plugins                         "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Enable detection, plugins and indenting in one step
 " This needs to come AFTER the Bundle commands!
