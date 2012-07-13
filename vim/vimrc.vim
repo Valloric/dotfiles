@@ -76,6 +76,8 @@ Bundle 'groenewege/vim-less'
 Bundle 'mattn/zencoding-vim'
 Bundle 'xolox/vim-notes'
 
+" TODO: use the Splice plugin (for Vim as mergetool)
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           pre-filetype tweaks                           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
