@@ -54,3 +54,12 @@ script_dir="$( cd "$( dirname "$0" )" && pwd )"
 git config --global alias.meld "!$script_dir/bin/git-meld/git-meld.pl"
 
 git config --global core.excludesfile ~/.gitignore_global
+
+platform=$(uname)
+
+if [[ $platform == *Darwin* ]]
+then
+  # git config --global merge.tool splice
+  # git config --global mergetool.splice.cmd "gvim -f \$BASE \$LOCAL \$REMOTE \$MERGED -c 'SpliceInit'"
+  # git config --global mergetool.splice.trustExitCode true
+fi

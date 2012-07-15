@@ -39,7 +39,8 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tomtom/tlib_vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-fugitive'
+" conflicts with splice.vim
+" Bundle 'tpope/vim-fugitive'
 Bundle 'SirVer/ultisnips'
 Bundle 'godlygeek/tabular'
 Bundle 'YankRing.vim'
@@ -75,8 +76,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
 Bundle 'mattn/zencoding-vim'
 Bundle 'xolox/vim-notes'
-
-" TODO: use the Splice plugin (for Vim as mergetool)
+Bundle 'sjl/splice.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           pre-filetype tweaks                           "
@@ -301,7 +301,7 @@ else
   " circumstances, one of the vertical splits in vimdiff mode will get all the
   " width.
   if !( &diff && has("gui_macvim") )
-    au GUIEnter * set lines=999 columns=999
+    " au GUIEnter * set lines=999 columns=999
   endif
 endif
 

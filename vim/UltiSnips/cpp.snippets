@@ -51,4 +51,22 @@ for ( ${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2} )
 }
 endsnippet
 
+snippet ss "std::string"
+std::string $0
+endsnippet
 
+snippet ssr "std::string"
+const std::string &$0
+endsnippet
+
+snippet sv "std::vector"
+std::vector< ${1:std::string} > $2
+endsnippet
+
+snippet svr "std::vector"
+const std::vector< ${1:std::string} > &$2
+endsnippet
+
+snippet sd "std::"
+std::
+endsnippet
