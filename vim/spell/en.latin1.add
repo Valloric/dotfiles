@@ -33,3 +33,4 @@ IWYU
 checkdeps
 datatype
 markovic
+deserialize

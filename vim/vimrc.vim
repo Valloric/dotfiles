@@ -39,8 +39,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tomtom/tlib_vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'tpope/vim-markdown'
-" conflicts with splice.vim
-" Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-fugitive'
 Bundle 'SirVer/ultisnips'
 Bundle 'godlygeek/tabular'
 Bundle 'YankRing.vim'
@@ -76,7 +75,8 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
 Bundle 'mattn/zencoding-vim'
 Bundle 'xolox/vim-notes'
-Bundle 'sjl/splice.vim'
+" Problems with fugitive, re-evalute when upstream fixes the issue
+" Bundle 'sjl/splice.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           pre-filetype tweaks                           "
@@ -84,6 +84,16 @@ Bundle 'sjl/splice.vim'
 
 " these are for the xmledit plugin
 let xml_use_xhtml = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                           reset vimrc augroup                           "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" We reset the vimrc augroup. Autocommands are added to this group throught the
+" file
+augroup vimrc
+  autocmd!
+augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                        turn on filetype plugins                         "
@@ -210,7 +220,7 @@ set tags=./tags;/
 
 " turns off all error bells, visual or otherwise
 set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
+autocmd vimrc GUIEnter * set visualbell t_vb=
 
 " Switch syntax highlighting on, when the terminal has colors
 if &t_Co > 2 || has("gui_running")
@@ -249,12 +259,12 @@ if has("gui_macvim")
 endif
 
 " UltiSnips is missing a setf trigger for snippets on BufEnter
-autocmd BufEnter *.snippets setf snippets
+autocmd vimrc BufEnter *.snippets setf snippets
 
 " In UltiSnips snippet files, we want actual tabs instead of spaces for indents.
 " US will use those tabs and convert them to spaces if expandtab is set when the
 " user wants to insert the snippet.
-autocmd FileType snippets set noexpandtab
+autocmd vimrc FileType snippets set noexpandtab
 
 let google_path = $HOME . '/google/google_vim_settings.vim'
 if filereadable( google_path )
@@ -277,31 +287,33 @@ if has("multi_byte")
   set fileencodings=ucs-bom,utf-8,latin1
 endif
 
-" When editing a file, always jump to the last known cursor position.
-" Don't do it when the position is invalid or when inside an event handler
-" (happens when dropping a file on gvim).
-" Also don't do it when the mark is in the first line, that is the default
-" position when opening a file.
-autocmd BufReadPost *
-      \ if line("'\"") > 1 && line("'\"") <= line("$") |
-      \   exe "normal! g`\"" |
-      \ endif
+augroup vimrc
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  " Also don't do it when the mark is in the first line, that is the default
+  " position when opening a file.
+  autocmd BufReadPost *
+        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \   exe "normal! g`\"" |
+        \ endif
 
-" Automatically delete trailing DOS-returns and whitespace on file open and
-" write.
-autocmd BufRead,BufWritePre,FileWritePre * silent! %s/[\r \t]\+$//
+  " Automatically delete trailing DOS-returns and whitespace on file open and
+  " write.
+  autocmd BufRead,BufWritePre,FileWritePre * silent! %s/[\r \t]\+$//
+augroup END
 
 " this maximizes the gvim window on startup
 if has("gui_win32")
   " this maximizes on windows
-  au GUIEnter * simalt ~x
+  au vimrc GUIEnter * simalt ~x
 else
   " We want to maximize gvim always EXCEPT when we are running in Macvim AND we
   " are in vimdiff mode. The reason is that if we run this in those
   " circumstances, one of the vertical splits in vimdiff mode will get all the
   " width.
   if !( &diff && has("gui_macvim") )
-    " au GUIEnter * set lines=999 columns=999
+    " au vimrc GUIEnter * set lines=999 columns=999
   endif
 endif
 
@@ -338,7 +350,7 @@ endfunction
 " TODO: this should:
 " a) not be called for every filetype
 " b) be in a separate plugin
-au Syntax * call s:HighlightFunctionsAndClasses()
+au vimrc Syntax * call s:HighlightFunctionsAndClasses()
 
 
 " TODO: split this into separate plugin
@@ -718,7 +730,7 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Turn on spell checking by default for git commit messages
-au FileType gitcommit setlocal spell! spelllang=en_us
+au vimrc FileType gitcommit setlocal spell! spelllang=en_us
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              vim powerline                              "
@@ -750,7 +762,7 @@ let vimpager_use_gvim = 1
 "                               delimitMate                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-au FileType html,xhtml let b:delimitMate_matchpairs = "(:),[:],{:}"
+au vimrc FileType html,xhtml let b:delimitMate_matchpairs = "(:),[:],{:}"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              vim-css-color                              "
