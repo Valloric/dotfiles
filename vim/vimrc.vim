@@ -21,7 +21,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/vim-valloric-colorscheme'
 Bundle 'L9'
-Bundle 'xolox/vim-easytags'
+" Tends to slow down the UI...
+" Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-shell'
 Bundle 'xolox/vim-pyref'
@@ -77,6 +78,8 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'xolox/vim-notes'
 " Problems with fugitive, re-evalute when upstream fixes the issue
 " Bundle 'sjl/splice.vim'
+" TODO: switch to upstream syntastic once our changes are upstreamed
+Bundle 'Valloric/syntastic'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           pre-filetype tweaks                           "
@@ -784,6 +787,13 @@ let g:user_zen_settings = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:notes_directory = '~/notes'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                syntastic                                "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
