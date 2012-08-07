@@ -49,7 +49,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'bufexplorer.zip'
 " requires compilation
 Bundle 'git://git.wincent.com/command-t.git'
-" Bundle 'robgleeson/hammer.vim'
+Bundle 'matthias-guenther/hammer.vim'
 Bundle 'tpope/vim-git'
 " Bundle 'IndexedSearch'
 Bundle 'mileszs/ack.vim'
