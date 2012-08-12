@@ -652,7 +652,10 @@ let g:EasyMotion_leader_key = '<Leader>e'
 "                                 hammer                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-noremap <f8> :w<cr>:Hammer<CR>
+" This makes sure that the browser is opened in the background
+let g:HAMMER_BROWSER_ARGS = '-g'
+
+nnoremap <leader>m :w<cr>:Hammer<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                ack.vim                                  "
