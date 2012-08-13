@@ -797,6 +797,13 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                              YouCompleteMe                              "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" This is only here so that it can be easily turned off while testing
+let g:ycm_filetype_completion_enabled = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
