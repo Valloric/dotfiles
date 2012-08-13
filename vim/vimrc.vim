@@ -311,12 +311,10 @@ if has("gui_win32")
   " this maximizes on windows
   au vimrc GUIEnter * simalt ~x
 else
-  " We want to maximize gvim always EXCEPT when we are running in Macvim AND we
-  " are in vimdiff mode. The reason is that if we run this in those
-  " circumstances, one of the vertical splits in vimdiff mode will get all the
-  " width.
-  if !( &diff && has("gui_macvim") )
-    " au vimrc GUIEnter * set lines=999 columns=999
+  " We never maximize in macvim. We rely on it remembering the window size
+  " itself.
+  if !has("gui_macvim")
+    au vimrc GUIEnter * set lines=999 columns=999
   endif
 endif
 
