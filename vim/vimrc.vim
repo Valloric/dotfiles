@@ -666,10 +666,10 @@ nnoremap <leader>m :w<cr>:Hammer<cr>
 "                                ack.vim                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if has("gui_macvim")
-  let g:ackprg="ack -H --nocolor --nogroup --column"
-else
-  let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+if executable('ack-grep')
+  let g:ackprg = "ack-grep -H --nocolor --nogroup --column"
+elseif executable('ack')
+  let g:ackprg = "ack -H --nocolor --nogroup --column"
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
