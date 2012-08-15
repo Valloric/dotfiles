@@ -523,6 +523,13 @@ noremap <leader>sp [s
 noremap <leader>sa zg
 noremap <leader>su z=
 
+" Using '<' and '>' in visual mode to shift code by a tab-width left/right by
+" default exits visuad mode. With this mapping we remain in visual mode after
+" such an operation.
+vnoremap < <gv
+vnoremap > >gv
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       ***  HERE BE PLUGINS  ***                         "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
