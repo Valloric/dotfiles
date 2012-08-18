@@ -80,6 +80,10 @@ Bundle 'xolox/vim-notes'
 " Bundle 'sjl/splice.vim'
 " TODO: switch to upstream syntastic once our changes are upstreamed
 Bundle 'Valloric/syntastic'
+Bundle 'Valloric/ListToggle'
+Bundle 'Valloric/Vim-Jinja2-Syntax'
+Bundle 'othree/html5.vim'
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           pre-filetype tweaks                           "
@@ -673,11 +677,12 @@ elseif executable('ack')
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                               QFixToggle                                "
+"                               ListToggle                                "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-noremap <silent> <leader>u :QFix<CR>
-let g:QFixToggle_Height = 25
+let g:lt_location_list_toggle_map = '<leader>i'
+let g:lt_quickfix_list_toggle_map = '<leader>u'
+let g:lt_height = 25
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                bufkill                                  "
