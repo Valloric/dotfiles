@@ -80,6 +80,10 @@ Bundle 'xolox/vim-notes'
 " Bundle 'sjl/splice.vim'
 " TODO: switch to upstream syntastic once our changes are upstreamed
 Bundle 'Valloric/syntastic'
+Bundle 'Valloric/ListToggle'
+Bundle 'Valloric/Vim-Jinja2-Syntax'
+Bundle 'othree/html5.vim'
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           pre-filetype tweaks                           "
@@ -523,6 +527,13 @@ noremap <leader>sp [s
 noremap <leader>sa zg
 noremap <leader>su z=
 
+" Using '<' and '>' in visual mode to shift code by a tab-width left/right by
+" default exits visuad mode. With this mapping we remain in visual mode after
+" such an operation.
+vnoremap < <gv
+vnoremap > >gv
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       ***  HERE BE PLUGINS  ***                         "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -659,18 +670,19 @@ nnoremap <leader>m :w<cr>:Hammer<cr>
 "                                ack.vim                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if has("gui_macvim")
-  let g:ackprg="ack -H --nocolor --nogroup --column"
-else
-  let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+if executable('ack-grep')
+  let g:ackprg = "ack-grep -H --nocolor --nogroup --column"
+elseif executable('ack')
+  let g:ackprg = "ack -H --nocolor --nogroup --column"
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                               QFixToggle                                "
+"                               ListToggle                                "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-noremap <silent> <leader>u :QFix<CR>
-let g:QFixToggle_Height = 25
+let g:lt_location_list_toggle_map = '<leader>i'
+let g:lt_quickfix_list_toggle_map = '<leader>u'
+let g:lt_height = 25
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                bufkill                                  "
@@ -802,6 +814,7 @@ let g:syntastic_warning_symbol = '⚠'
 
 " This is only here so that it can be easily turned off while testing
 let g:ycm_filetype_completion_enabled = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
