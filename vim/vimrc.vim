@@ -55,7 +55,6 @@ Bundle 'tpope/vim-git'
 Bundle 'mileszs/ack.vim'
 " my fork makes sure the quickfix window is always full-width
 Bundle 'Valloric/QFixToggle'
-Bundle 'abudden/TagHighlight'
 Bundle 'Valloric/vim-operator-highlight'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'bufkill.vim'
