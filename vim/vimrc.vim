@@ -92,8 +92,8 @@ let xml_use_xhtml = 1
 "                           reset vimrc augroup                           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" We reset the vimrc augroup. Autocommands are added to this group throught the
-" file
+" We reset the vimrc augroup. Autocommands are added to this group throughout
+" the file
 augroup vimrc
   autocmd!
 augroup END
@@ -297,7 +297,7 @@ augroup vimrc
   " Also don't do it when the mark is in the first line, that is the default
   " position when opening a file.
   autocmd BufReadPost *
-        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \ if line("'\"") > 1 && line("'\"") <= line("$") && !&diff |
         \   exe "normal! g`\"" |
         \ endif
 
