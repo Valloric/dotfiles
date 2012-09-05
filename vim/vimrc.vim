@@ -31,7 +31,6 @@ Bundle 'anyakichi/vim-surround'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'matchit.zip'
-" We're using tcomment
 Bundle 'indentpython.vim'
 Bundle 'python.vim'
 Bundle 'python_match.vim'
@@ -66,9 +65,7 @@ Bundle 'rson/vim-conque'
 " Bundle 'kevinw/pyflakes-vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'majutsushi/tagbar'
-" has a ftplugin folder with xml.vim in it; symlinking html.vim and xhtml.vim
-" from that folder to that xml.vim is a good idea
-Bundle 'nistude/xmledit'
+Bundle 'Valloric/xmledit'
 Bundle 'helino/vim-json'
 Bundle 'skammer/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
