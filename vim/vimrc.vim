@@ -786,7 +786,7 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 "                              zencoding-vim                              "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:user_zen_leader_key = '<c-n>'
+let g:user_zen_leader_key = '<c-b>'
 let g:user_zen_settings = {
       \  'indentation' : '  '
       \}
