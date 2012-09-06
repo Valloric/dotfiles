@@ -52,17 +52,12 @@ Bundle 'matthias-guenther/hammer.vim'
 Bundle 'tpope/vim-git'
 " Bundle 'IndexedSearch'
 Bundle 'mileszs/ack.vim'
-" my fork makes sure the quickfix window is always full-width
-Bundle 'Valloric/QFixToggle'
 Bundle 'Valloric/vim-operator-highlight'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'bufkill.vim'
 Bundle 'FuzzyFinder'
 Bundle 'FSwitch'
 Bundle 'rson/vim-conque'
-" requires that pyflakes (the app) is installed; we use kevinw's fork of
-" pyflakes from https://github.com/kevinw/pyflakes
-" Bundle 'kevinw/pyflakes-vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'majutsushi/tagbar'
 Bundle 'Valloric/xmledit'
