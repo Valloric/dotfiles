@@ -74,6 +74,7 @@ Bundle 'Valloric/syntastic'
 Bundle 'Valloric/ListToggle'
 Bundle 'Valloric/Vim-Jinja2-Syntax'
 Bundle 'othree/html5.vim'
+Bundle 'Valloric/vim-indent-guides'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -800,6 +801,13 @@ let g:syntastic_warning_symbol = '⚠'
 " This is only here so that it can be easily turned off while testing
 let g:ycm_filetype_completion_enabled = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                            vim-indent-guides                            "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_color_change_percent = 7
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
