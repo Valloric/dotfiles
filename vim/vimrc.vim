@@ -20,8 +20,6 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'L9'
-" Tends to slow down the UI...
-" Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-shell'
 Bundle 'xolox/vim-pyref'
@@ -619,24 +617,6 @@ let g:UltiSnipsListSnippets        = "<c-m-s>"
 let g:UltiSnipsJumpForwardTrigger  = "<m-h>"
 let g:UltiSnipsJumpBackwardTrigger = "<m-t>"
 let g:snips_author                 = 'Strahinja Val Markovic'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                easytags                                 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" this makes the easytags plugin use project/folder specific tag files instead
-" of just dumping everything inside the main tag file
-let g:easytags_dynamic_files = 1
-
-" ctags will now also list members of C++ classes and structs
-let g:easytags_include_members = 1
-
-" we don't use easytags for tag highlighting, we use TagHighlight for that
-let g:easytags_auto_highlight = 0
-
-if has("gui_macvim")
-    let g:easytags_cmd = '/usr/local/bin/ctags'
-endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               easymotion                                "
