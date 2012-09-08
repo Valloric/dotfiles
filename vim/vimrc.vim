@@ -31,7 +31,6 @@ Bundle 'anyakichi/vim-surround'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'matchit.zip'
-Bundle 'indentpython.vim'
 Bundle 'python.vim'
 Bundle 'python_match.vim'
 Bundle 'Rename'
@@ -76,6 +75,7 @@ Bundle 'Valloric/Vim-Jinja2-Syntax'
 Bundle 'othree/html5.vim'
 Bundle 'Valloric/vim-indent-guides'
 Bundle 'Valloric/MatchTagAlways'
+Bundle 'Valloric/python-indent'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
