@@ -19,7 +19,6 @@ call vundle#rc()
 " the plugin's Bundle command.
 
 Bundle 'gmarik/vundle'
-Bundle 'Valloric/vim-valloric-colorscheme'
 Bundle 'L9'
 " Tends to slow down the UI...
 " Bundle 'xolox/vim-easytags'
@@ -51,7 +50,6 @@ Bundle 'matthias-guenther/hammer.vim'
 Bundle 'tpope/vim-git'
 " Bundle 'IndexedSearch'
 Bundle 'mileszs/ack.vim'
-Bundle 'Valloric/vim-operator-highlight'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'bufkill.vim'
 Bundle 'FuzzyFinder'
@@ -59,23 +57,25 @@ Bundle 'FSwitch'
 Bundle 'rson/vim-conque'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'majutsushi/tagbar'
-Bundle 'Valloric/xmledit'
 Bundle 'helino/vim-json'
 Bundle 'skammer/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
 Bundle 'mattn/zencoding-vim'
 Bundle 'xolox/vim-notes'
+Bundle 'othree/html5.vim'
 " Problems with fugitive, re-evalute when upstream fixes the issue
 " Bundle 'sjl/splice.vim'
 " TODO: switch to upstream syntastic once our changes are upstreamed
 Bundle 'Valloric/syntastic'
+Bundle 'Valloric/xmledit'
+Bundle 'Valloric/vim-valloric-colorscheme'
 Bundle 'Valloric/ListToggle'
 Bundle 'Valloric/Vim-Jinja2-Syntax'
-Bundle 'othree/html5.vim'
 Bundle 'Valloric/vim-indent-guides'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'Valloric/python-indent'
+Bundle 'Valloric/vim-operator-highlight'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
