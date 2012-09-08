@@ -75,6 +75,7 @@ Bundle 'Valloric/ListToggle'
 Bundle 'Valloric/Vim-Jinja2-Syntax'
 Bundle 'othree/html5.vim'
 Bundle 'Valloric/vim-indent-guides'
+Bundle 'Valloric/MatchTagAlways'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -514,7 +515,7 @@ noremap <leader>sa zg
 noremap <leader>su z=
 
 " Using '<' and '>' in visual mode to shift code by a tab-width left/right by
-" default exits visuad mode. With this mapping we remain in visual mode after
+" default exits visual mode. With this mapping we remain in visual mode after
 " such an operation.
 vnoremap < <gv
 vnoremap > >gv
