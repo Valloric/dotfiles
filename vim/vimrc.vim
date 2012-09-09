@@ -33,6 +33,8 @@ Bundle 'Valloric/python-indent'
 " TODO: switch to upstream syntastic once our changes are upstreamed
 Bundle 'Valloric/syntastic'
 Bundle 'Valloric/vim-indent-guides'
+" Requires extra binaries; see docs
+Bundle 'Valloric/vim-instant-markdown'
 Bundle 'Valloric/vim-operator-highlight'
 Bundle 'Valloric/vim-valloric-colorscheme'
 Bundle 'Valloric/xmledit'
