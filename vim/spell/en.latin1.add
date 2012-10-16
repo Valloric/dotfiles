@@ -35,3 +35,5 @@ datatype
 markovic
 deserialize
 screenshot
+memmove
+memcpy
