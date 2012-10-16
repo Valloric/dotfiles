@@ -20,6 +20,7 @@ call vundle#rc()
 
 Bundle 'FSwitch'
 Bundle 'FuzzyFinder'
+Bundle 'JesseKPhillips/d.vim'
 Bundle 'L9'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
@@ -339,8 +340,10 @@ endif
 fun! s:HighlightFunctionsAndClasses()
   syn match cCustomFunc  "\w\+\s*\((\)\@="
   syn match cCustomClass "\w\+\s*\(::\)\@="
+  syn match cCustomDFunc "\w\+\s*\(!.\{-}(\)\@="
 
   hi def link cCustomFunc  Function
+  hi def link cCustomDFunc Function
   hi def link cCustomClass Function
 endfunction
 
@@ -798,6 +801,12 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_color_change_percent = 7
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             MatchTagAlways                              "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:mta_use_matchparen_group = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
