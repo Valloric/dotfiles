@@ -397,6 +397,9 @@ autocmd vimrc FileType markdown setlocal spell! spelllang=en_us
 " our <leader> will be the space key
 let mapleader=" "
 
+" our <localleader> will be the '-' key
+let maplocalleader="-"
+
 " this makes vim's regex engine "not stupid"
 " see :h magic
 nnoremap / /\v
@@ -792,7 +795,7 @@ let g:syntastic_warning_symbol = '⚠'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " This is only here so that it can be easily turned off while testing
-let g:ycm_filetype_completion_enabled = 1
+let g:ycm_filetype_specific_completion_to_disable = {'cpp': 1, 'c': 1}
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
