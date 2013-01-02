@@ -42,7 +42,6 @@ Bundle 'Valloric/xmledit'
 Bundle 'YankRing.vim'
 " Seems more active than tpope/vim-surround
 Bundle 'anyakichi/vim-surround'
-Bundle 'bufexplorer.zip'
 Bundle 'bufkill.vim'
 " requires compilation
 Bundle 'git://git.wincent.com/command-t.git'
@@ -60,7 +59,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'othree/html5.vim'
 Bundle 'python.vim'
 Bundle 'python_match.vim'
-Bundle 'rson/vim-conque'
 Bundle 'scrooloose/nerdtree'
 Bundle 'sjl/gundo.vim'
 " Problems with fugitive, re-evalute when upstream fixes the issue
@@ -75,7 +73,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'xolox/vim-notes'
 Bundle 'xolox/vim-pyref'
 Bundle 'xolox/vim-session'
-Bundle 'xolox/vim-shell'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
