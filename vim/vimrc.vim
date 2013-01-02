@@ -337,20 +337,32 @@ if has("unix") && strlen($MYVIMRC) < 1
 endif
 
 " Highlight Class and Function names
-fun! s:HighlightFunctionsAndClasses()
-  syn match cCustomFunc  "\w\+\s*\((\)\@="
-  syn match cCustomClass "\w\+\s*\(::\)\@="
-  syn match cCustomDFunc "\w\+\s*\(!.\{-}(\)\@="
+function! s:HighlightFunctionsAndClasses()
+  syn match cCustomFunc      "\w\+\s*\((\)\@="
+  syn match cCustomClass     "\w\+\s*\(::\)\@="
+  syn match cCustomDFunc     "\w\+\s*\(!.\{-}(\)\@="
+  syn match cCustomDFuncUFCS ".\w\+\s*\(!.\{-}\)\@="
 
-  hi def link cCustomFunc  Function
-  hi def link cCustomDFunc Function
-  hi def link cCustomClass Function
+  hi def link cCustomFunc      Function
+  hi def link cCustomDFunc     Function
+  hi def link cCustomDFuncUFCS Function
+  hi def link cCustomClass     Function
+endfunction
+
+" Highlight Class and Function names, D specific
+function! s:HighlightDFunctionsAndClasses()
+  syn match cCustomDFunc     "\w\+\s*\(!.\{-}(\)\@="
+  syn match cCustomDFuncUFCS ".\w\+\s*\(!.\{-}\)\@="
+
+  hi def link cCustomDFunc     Function
+  hi def link cCustomDFuncUFCS Function
 endfunction
 
 " TODO: this should:
 " a) not be called for every filetype
 " b) be in a separate plugin
 au vimrc Syntax * call s:HighlightFunctionsAndClasses()
+au vimrc Syntax d call s:HighlightDFunctionsAndClasses()
 
 
 " TODO: split this into separate plugin
