@@ -804,7 +804,7 @@ let g:syntastic_warning_symbol = '⚠'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " This is only here so that it can be easily turned off while testing
-let g:ycm_filetype_specific_completion_to_disable = {'cpp': 1, 'c': 1}
+let g:ycm_filetype_specific_completion_to_disable = {}
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -826,5 +826,6 @@ let g:mta_use_matchparen_group = 0
 
 " If we are at our google workstation, then do some things differently
 if at_google
-    exec 'source ' . google_path
+  let g:ycm_filetype_specific_completion_to_disable = {'cpp': 1, 'c': 1}
+  exec 'source ' . google_path
 endif
