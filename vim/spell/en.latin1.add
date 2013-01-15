@@ -40,7 +40,7 @@ memcpy
 templating
 HTML5
 codebase
-textarea/!
+textarea
 CodeMirror
 API
 bork
@@ -50,3 +50,4 @@ Malkiel
 underperform
 Lowenstein
 underperform
+precomputation
