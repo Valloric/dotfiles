@@ -32,7 +32,6 @@ Bundle 'Valloric/MatchTagAlways'
 Bundle 'Valloric/Vim-Jinja2-Syntax'
 Bundle 'Valloric/python-indent'
 " TODO: switch to upstream syntastic once our changes are upstreamed
-Bundle 'Valloric/syntastic'
 Bundle 'Valloric/vim-indent-guides'
 " Requires extra binaries; see docs
 Bundle 'Valloric/vim-instant-markdown'
@@ -60,6 +59,7 @@ Bundle 'othree/html5.vim'
 Bundle 'python.vim'
 Bundle 'python_match.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 " Problems with fugitive, re-evalute when upstream fixes the issue
 " Bundle 'sjl/splice.vim'
