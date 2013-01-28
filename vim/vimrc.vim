@@ -141,7 +141,7 @@ set listchars=tab:▸\ ,eol:¬
 
 " The "longest" option makes completion insert the longest prefix of all
 " the possible matches; see :h completeopt
-set completeopt=menu,menuone,longest,preview
+set completeopt=menu,menuone,longest
 set switchbuf=useopen,usetab
 
 " EDITOR SETTINGS
@@ -803,8 +803,6 @@ let g:syntastic_warning_symbol = '⚠'
 "                              YouCompleteMe                              "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" This is only here so that it can be easily turned off while testing
-let g:ycm_filetype_specific_completion_to_disable = {}
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -826,6 +824,6 @@ let g:mta_use_matchparen_group = 0
 
 " If we are at our google workstation, then do some things differently
 if at_google
-  let g:ycm_filetype_specific_completion_to_disable = {'cpp': 1, 'c': 1}
+  " let g:ycm_filetype_specific_completion_to_disable = {'cpp': 1, 'c': 1}
   exec 'source ' . google_path
 endif
