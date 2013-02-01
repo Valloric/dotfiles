@@ -31,7 +31,6 @@ Bundle 'Valloric/ListToggle'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'Valloric/Vim-Jinja2-Syntax'
 Bundle 'Valloric/python-indent'
-" TODO: switch to upstream syntastic once our changes are upstreamed
 Bundle 'Valloric/vim-indent-guides'
 " Requires extra binaries; see docs
 Bundle 'Valloric/vim-instant-markdown'
@@ -105,7 +104,7 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " for testing out custom vim scripts
-set rtp+=$HOME/vim_test,$HOME/vim_test/after,$HOME/repos/YouCompleteMe
+set rtp+=$HOME/vim_test,$HOME/vim_test/after,$HOME/repos/YouCompleteMe,$HOME/repos/syntastic
 
 " Home away from home. We store some config files and snippets here and the
 " whole dotfiles dir is a git repo. Should be the last entry in rtp (for
