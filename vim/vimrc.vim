@@ -768,7 +768,7 @@ let vimpager_use_gvim = 1
 "                               delimitMate                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-au vimrc FileType html,xhtml let b:delimitMate_matchpairs = "(:),[:],{:}"
+au vimrc FileType html,xhtml,markdown let b:delimitMate_matchpairs = "(:),[:],{:}"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              vim-css-color                              "
