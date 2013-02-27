@@ -652,7 +652,9 @@ let g:EasyMotion_leader_key = '<Leader>e'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " This makes sure that the browser is opened in the background
-let g:HAMMER_BROWSER_ARGS = '-g'
+if has("gui_macvim")
+  let g:HAMMER_BROWSER_ARGS = '-g'
+endif
 
 nnoremap <leader>m :w<cr>:Hammer<cr>
 
