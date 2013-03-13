@@ -663,11 +663,11 @@ nnoremap <leader>m :w<cr>:Hammer<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if executable('ag')
-  let g:ackprg = "ag -H --nocolor --nogroup --column"
+  let g:ackprg = "ag --nocolor --nogroup --column"
 elseif executable('ack-grep')
-  let g:ackprg = "ack-grep -H --nocolor --nogroup --column"
+  let g:ackprg = "ack-grep --nocolor --nogroup --column"
 elseif executable('ack')
-  let g:ackprg = "ack -H --nocolor --nogroup --column"
+  let g:ackprg = "ack --nocolor --nogroup --column"
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
