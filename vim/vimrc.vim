@@ -662,7 +662,9 @@ nnoremap <leader>m :w<cr>:Hammer<cr>
 "                                ack.vim                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if executable('ack-grep')
+if executable('ag')
+  let g:ackprg = "ag -H --nocolor --nogroup --column"
+elseif executable('ack-grep')
   let g:ackprg = "ack-grep -H --nocolor --nogroup --column"
 elseif executable('ack')
   let g:ackprg = "ack -H --nocolor --nogroup --column"
