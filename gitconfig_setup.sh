@@ -22,6 +22,8 @@ git config --global alias.sub submodule
 git config --global alias.unstage "reset HEAD"
 git config --global alias.unstash "stash pop"
 git config --global alias.dst "diff --staged"
+git config --global alias.dc "!git diff | cdiff -s"
+git config --global alias.dcs "!git diff --staged | cdiff -s"
 git config --global alias.cp "cherry-pick"
 
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
