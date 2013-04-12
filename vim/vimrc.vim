@@ -801,6 +801,7 @@ let g:notes_directory = '~/notes'
 
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_always_populate_loc_list = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              YouCompleteMe                              "
@@ -808,8 +809,12 @@ let g:syntastic_warning_symbol = '⚠'
 
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_extra_conf_globlist = ['~/repos/*']
+let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
 
 nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
+nnoremap <leader>pg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>pd :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            vim-indent-guides                            "
