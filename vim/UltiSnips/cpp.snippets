@@ -1,7 +1,6 @@
 
 snippet class "class .. (class)"
-class ${1:`!p snip.rv = snip.basename or "name"`}
-{
+class ${1:`!p snip.rv = snip.basename or "name"`} {
 public:
 	${1/(\w+).*/$1/}(${2:arguments});
 	virtual ~${1/(\w+).*/$1/}();
@@ -20,8 +19,7 @@ std::vector<${1:char}> ${3:temp};
 endsnippet
 
 snippet mfun "member func"
-${1:void} ${2:`!p snip.rv = snip.basename`}::${3:Func}($4)
-{
+${1:void} ${2:`!p snip.rv = snip.basename`}::${3:Func}($4) {
 	$0
 }
 endsnippet
@@ -31,22 +29,19 @@ ${1:void} ${3:Func}($4);
 endsnippet
 
 snippet nsp "namespace .. (namespace)" !
-namespace${1/.+/ /m}${1:`!p snip.rv = snip.basename or "name"`}
-{
+namespace${1/.+/ /m}${1:`!p snip.rv = snip.basename or "name"`} {
 $0
 }${1/.+/ \/\/ namespace /m}$1
 endsnippet
 
 snippet uns "unnamed namespace" !
-namespace
-{
+namespace {
 $0
-} // unnamed namespace
+}  // unnamed namespace
 endsnippet
 
 snippet fori "for int loop (fori)"
-for ( ${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2} )
-{
+for ( ${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2} ) {
 	${0:/* code */}
 }
 endsnippet
