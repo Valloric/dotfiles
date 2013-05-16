@@ -793,7 +793,7 @@ let g:user_zen_settings = {
 "                                vim-notes                                "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:notes_directory = '~/notes'
+let g:notes_directories = ['~/notes']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                syntastic                                "
