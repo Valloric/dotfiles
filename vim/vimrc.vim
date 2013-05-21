@@ -164,6 +164,7 @@ set softtabstop=2
 set shiftround          " makes indenting a multiple of shiftwidth
 set expandtab           " turn a tab into spaces
 set laststatus=2        " the statusline is now always shown
+set noshowmode          " hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 " misc settings
 set fileformat=unix     " file mode is unix
@@ -629,7 +630,7 @@ vnoremap <Leader>a= :Tabularize /=<CR>
 "                                UltiSnips                                "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" we can't use <tab> as our snippet key since we use that with neocomplcache
+" we can't use <tab> as our snippet key since we use that with YouCompleteMe
 let g:UltiSnipsSnippetsDir         = $HOME . '/dotfiles/vim/UltiSnips'
 let g:UltiSnipsExpandTrigger       = "<m-s>"
 let g:UltiSnipsListSnippets        = "<c-m-s>"
