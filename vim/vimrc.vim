@@ -336,12 +336,8 @@ endif
 function! s:HighlightFunctionsAndClasses()
   syn match cCustomFunc      "\w\+\s*\((\)\@="
   syn match cCustomClass     "\w\+\s*\(::\)\@="
-  syn match cCustomDFunc     "\w\+\s*\(!.\{-}(\)\@="
-  syn match cCustomDFuncUFCS ".\w\+\s*\(!.\{-}\)\@="
 
   hi def link cCustomFunc      Function
-  hi def link cCustomDFunc     Function
-  hi def link cCustomDFuncUFCS Function
   hi def link cCustomClass     Function
 endfunction
 
