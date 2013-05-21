@@ -23,7 +23,7 @@ Bundle 'FuzzyFinder'
 Bundle 'JesseKPhillips/d.vim'
 Bundle 'L9'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Bundle 'Raimondi/delimitMate'
 Bundle 'Rename'
 Bundle 'SirVer/ultisnips'
@@ -313,12 +313,12 @@ endif
 
 " Sets a font for the GUI
 if has("gui_gtk2")
-  set guifont=Consolas\ 11
+  set guifont=Consolas\ For\ Powerline\ 11
 elseif has("gui_macvim")
   " My Mac has a fairly high DPI so the font needs to be bigger
-  set guifont=Consolas:h14
+  set guifont=Consolas\ For\ Powerline:h14
 elseif has("gui_win32")
-  set guifont=Consolas:h11
+  set guifont=Consolas\ For\ Powerline:h11
 end
 
 " Convenient command to see the difference between the current buffer and the
@@ -738,11 +738,6 @@ augroup END
 " Turn on spell checking by default for git commit messages
 au vimrc FileType gitcommit setlocal spell! spelllang=en_us
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                              vim powerline                              "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:Powerline_cache_file = $HOME . '/tmp/Powerline.cache'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                tagbar                                   "
