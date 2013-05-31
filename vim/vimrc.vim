@@ -165,7 +165,7 @@ set softtabstop=2
 set shiftround          " makes indenting a multiple of shiftwidth
 set expandtab           " turn a tab into spaces
 set laststatus=2        " the statusline is now always shown
-set noshowmode          " hide the default mode text (e.g. -- INSERT -- below the statusline)
+set noshowmode          " don't show the mode ("-- INSERT --") at the bottom
 
 " misc settings
 set fileformat=unix     " file mode is unix
