@@ -625,6 +625,8 @@ let g:session_directory       = '~/tmp/vim/sessions'
 " equals signs; useful for when we have several lines of declarations
 nnoremap <Leader>a= :Tabularize /=<CR>
 vnoremap <Leader>a= :Tabularize /=<CR>
+nnoremap <Leader>a, :Tabularize /,/l0r1<CR>
+vnoremap <Leader>a, :Tabularize /,/l0r1<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                UltiSnips                                "
