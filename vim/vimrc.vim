@@ -57,7 +57,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'othree/html5.vim'
 Bundle 'python.vim'
 Bundle 'python_match.vim'
-Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 " Problems with fugitive, re-evalute when upstream fixes the issue
@@ -298,16 +297,6 @@ if has("multi_byte")
 endif
 
 augroup vimrc
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  " Also don't do it when the mark is in the first line, that is the default
-  " position when opening a file.
-  autocmd BufReadPost *
-        \ if line("'\"") > 1 && line("'\"") <= line("$") && !&diff |
-        \   exe "normal! g`\"" |
-        \ endif
-
   " Automatically delete trailing DOS-returns and whitespace on file open and
   " write.
   autocmd BufRead,BufWritePre,FileWritePre * silent! %s/[\r \t]\+$//
@@ -334,11 +323,6 @@ elseif has("gui_macvim")
 elseif has("gui_win32")
   set guifont=Consolas\ For\ Powerline:h11
 end
-
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-      \ | wincmd p | diffthis
 
 " Sometimes, $MYVIMRC does not get set even though the vimrc is sourced
 " properly. So far, I've only seen this on Linux machines on rare occasions.
@@ -558,12 +542,6 @@ vnoremap > >gv
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                              BufExplorer                                "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-noremap <leader>o :BufExplorer<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               Command-T                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -590,17 +568,6 @@ nnoremap <leader>' :CommandTFlush<cr>
 " f5 toggles the Gundo plugin window
 nnoremap <F5> :GundoToggle<CR>
 let g:gundo_width=80
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                NERDTree                                 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" toggles the nerdtree window
-nnoremap <F3> :NERDTreeToggle<cr>
-
-" This makes the dir of the current file the root of the nerdtree;
-" in effect, it re-centers the nerdtree on the current file's folder.
-nnoremap <F2> :NERDTreeFind<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                yankring                                 "
@@ -846,6 +813,5 @@ let g:mta_use_matchparen_group = 0
 
 " If we are at our google workstation, then do some things differently
 if at_google
-  " let g:ycm_filetype_specific_completion_to_disable = {'cpp': 1, 'c': 1}
   exec 'source ' . google_path
 endif
