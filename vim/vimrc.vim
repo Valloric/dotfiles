@@ -245,7 +245,7 @@ set textwidth=80
 set colorcolumn=+1
 
 " options for formatting text; see :h formatoptions
-set formatoptions=tcroqn
+set formatoptions=tcroqnj
 
 if v:version >= 704
   " The new Vim regex engine is currently slooooow as hell which makes syntax
