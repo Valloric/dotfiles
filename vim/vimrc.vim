@@ -23,7 +23,7 @@ Bundle 'FuzzyFinder'
 Bundle 'JesseKPhillips/d.vim'
 Bundle 'L9'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
+Bundle 'bling/vim-airline'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Rename'
 Bundle 'SirVer/ultisnips'
@@ -801,6 +801,12 @@ nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
 nnoremap <leader>pg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>pd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                Airline                                  "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:airline_powerline_fonts = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            vim-indent-guides                            "
