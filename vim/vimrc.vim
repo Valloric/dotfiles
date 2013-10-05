@@ -624,10 +624,10 @@ vnoremap <Leader>a, :Tabularize /,/l0r1<CR>
 
 " we can't use <tab> as our snippet key since we use that with YouCompleteMe
 let g:UltiSnipsSnippetsDir         = $HOME . '/dotfiles/vim/UltiSnips'
-let g:UltiSnipsExpandTrigger       = "<m-s>"
+let g:UltiSnipsExpandTrigger       = "<c-s>"
 let g:UltiSnipsListSnippets        = "<c-m-s>"
-let g:UltiSnipsJumpForwardTrigger  = "<m-h>"
-let g:UltiSnipsJumpBackwardTrigger = "<m-t>"
+let g:UltiSnipsJumpForwardTrigger  = "<right>"
+let g:UltiSnipsJumpBackwardTrigger = "<left>"
 let g:snips_author                 = 'Strahinja Val Markovic'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -674,8 +674,8 @@ let g:lt_height = 25
 " Use the arrows for something useful
 " :BB switches to the previous buffer shown in the current window, :BF switches
 " to the next one; it's like a buffer history for every window
-noremap <right> :BF<cr>
-noremap <left> :BB<cr>
+" noremap <right> :BF<cr>
+" noremap <left> :BB<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              fuzzyfinder                                "
