@@ -625,7 +625,13 @@ vnoremap <Leader>a, :Tabularize /,/l0r1<CR>
 
 " we can't use <tab> as our snippet key since we use that with YouCompleteMe
 let g:UltiSnipsSnippetsDir         = $HOME . '/dotfiles/vim/UltiSnips'
-let g:UltiSnipsExpandTrigger       = "<c-s>"
+if has("gui_macvim")
+  " Ctrl conflicts with "Dvorak-Qwerty Command"
+  let g:UltiSnipsExpandTrigger       = "<m-s>"
+else
+  " Alt conflicts with Xmonad
+  let g:UltiSnipsExpandTrigger       = "<c-s>"
+endif
 let g:UltiSnipsListSnippets        = "<c-m-s>"
 let g:UltiSnipsJumpForwardTrigger  = "<right>"
 let g:UltiSnipsJumpBackwardTrigger = "<left>"
