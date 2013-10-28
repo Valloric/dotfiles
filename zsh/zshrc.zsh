@@ -53,3 +53,6 @@ source $ZSH/oh-my-zsh.sh
 
 # This turns of zsh's "helpful" autocorrect feature
 unsetopt correct_all
+
+# Commands prefixed with a space don't go into history
+setopt HIST_IGNORE_SPACE
