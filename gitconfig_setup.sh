@@ -30,9 +30,11 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 
 git config --global color.ui true
 
-git config --global diff.tool gvimdiff
+git config --global diff.tool kdiff3
 git config --global difftool.prompt false
-git config --global merge.tool p4merge
+git config --global merge.tool kdiff3
+
+git config --global alias.ks "difftool -y -t Kaleidoscope"
 
 # With this, "git pull --rebase" is the default form of pull FOR NEWLY CREATED
 # BRANCHES; for branches created before this config option is set, pull.rebase
