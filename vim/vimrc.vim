@@ -55,6 +55,7 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'mileszs/ack.vim'
 Bundle 'othree/html5.vim'
+Bundle 'othree/eregex.vim'
 Bundle 'python.vim'
 Bundle 'python_match.vim'
 Bundle 'scrooloose/syntastic'
@@ -421,7 +422,9 @@ vnoremap / /\v
 " placed in the position for typing the replacement text. Also, this will ask
 " for confirmation before it replaces any instance of the search text in the
 " file.
-vnoremap <C-r> "hy:%s/<C-r>h//c<left><left>
+" NOTE: We're using %S here instead of %s; the capital S version comes from the
+" eregex.vim plugin and uses Perl-style regular expressions.
+vnoremap <C-r> "hy:%S/<C-r>h//c<left><left>
 
 " Fast saving
 nnoremap <leader>w :w!<cr>
@@ -829,6 +832,15 @@ let g:indent_guides_color_change_percent = 7
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:mta_use_matchparen_group = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 eregex                                  "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:eregex_default_enable = 0
+
+" Toggles '/' to mean eregex search or normal Vim search
+nnoremap <leader>/ :call eregex#toggle()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
