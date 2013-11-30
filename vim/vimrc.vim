@@ -42,7 +42,7 @@ Bundle 'YankRing.vim'
 Bundle 'anyakichi/vim-surround'
 Bundle 'bufkill.vim'
 " requires compilation
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'wincent/Command-T'
 Bundle 'gmarik/vundle'
 Bundle 'godlygeek/tabular'
 Bundle 'groenewege/vim-less'
