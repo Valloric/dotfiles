@@ -289,6 +289,12 @@ autocmd vimrc BufEnter *.snippets setf snippets
 " user wants to insert the snippet.
 autocmd vimrc FileType snippets set noexpandtab
 
+" The stupid python filetype plugin overrides our settings!
+autocmd vimrc FileType python
+      \ set tabstop=2 |
+      \ set shiftwidth=2 |
+      \ set softtabstop=2
+
 let google_path = $HOME . '/google/google_vim_settings.vim'
 let at_google = filereadable( google_path )
 
