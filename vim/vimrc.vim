@@ -403,6 +403,7 @@ autocmd vimrc FileType text,markdown,gitcommit set nocindent
 
 autocmd vimrc FileType markdown setlocal spell! spelllang=en_us
 
+au vimrc BufReadCmd *.epub call zip#Browse( expand( "<amatch>" ) )
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            custom mappings                              "
