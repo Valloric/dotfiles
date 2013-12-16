@@ -39,8 +39,12 @@ if [[ $platform == *Darwin* ]]
 then
   # This makes our PATH visible to GUI apps
   launchctl setenv PATH $PATH
+
   # Brew paths over system paths
-  export PATH=:/usr/local/bin:/usr/local/sbin:$PATH
+  export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+  # NPM binaries on PATH as well
+  export PATH=/usr/local/share/npm/bin:$PATH
 fi
 
 # load google-specific stuff
