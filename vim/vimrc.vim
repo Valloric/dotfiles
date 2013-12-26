@@ -180,6 +180,7 @@ set history=1000        " remember more commands and search history
 set undolevels=1000     " use many levels of undo
 set autoread            " auto read when a file is changed from the outside
 set mouse=a             " enables the mouse in all modes
+set foldlevelstart=99   " all folds open by default
 
 " toggles vim's paste mode; when we want to paste something into vim from a
 " different application, turning on paste mode prevents the insertion of extra
