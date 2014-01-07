@@ -36,6 +36,15 @@ git config --global merge.tool kdiff3
 
 git config --global alias.ks "difftool -y -t Kaleidoscope"
 
+# This gives us 'ours', 'base', and 'theirs', instead of just 'ours' and
+# 'theirs'. More details:
+#   http://psung.blogspot.com/2011/02/reducing-merge-headaches-git-meets.html
+git config --global merge.conflictstyle diff3
+
+# Prevents us from having to do merge resolution for things we've already
+# resolved before; see http://git-scm.com/blog/2010/03/08/rerere.html
+git config --global rerere.enabled true
+
 # With this, "git pull --rebase" is the default form of pull FOR NEWLY CREATED
 # BRANCHES; for branches created before this config option is set, pull.rebase
 # true handles that
