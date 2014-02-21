@@ -654,6 +654,11 @@ let g:snips_author                 = 'Strahinja Val Markovic'
 
 let g:EasyMotion_leader_key = '<Leader>e'
 
+" Provides the equivalent of <Leader>s, which is forwards/backwards search for a
+" character.
+" has to be 'nmap', 'noremap' doesn't work
+nmap s <Plug>(easymotion-s)
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 hammer                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
