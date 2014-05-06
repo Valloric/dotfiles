@@ -1,0 +1,4 @@
+:set splitorientation=vertical
+:set arrowstyle=long
+:set ignorecase
+:set tabstop=2
