@@ -32,8 +32,6 @@ Plugin 'Valloric/MatchTagAlways'
 Plugin 'Valloric/Vim-Jinja2-Syntax'
 Plugin 'Valloric/python-indent'
 Plugin 'Valloric/vim-indent-guides'
-" Requires extra binaries; see docs
-Plugin 'Valloric/vim-instant-markdown'
 Plugin 'Valloric/vim-operator-highlight'
 Plugin 'Valloric/vim-valloric-colorscheme'
 Plugin 'Valloric/xmledit'
@@ -63,6 +61,8 @@ Plugin 'sjl/gundo.vim'
 " Problems with fugitive, re-evalute when upstream fixes the issue
 " Plugin 'sjl/splice.vim'
 Plugin 'skammer/vim-css-color'
+" Requires extra binaries; see docs
+Plugin 'suan/vim-instant-markdown'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
@@ -857,6 +857,14 @@ let g:eregex_default_enable = 0
 
 " Toggles '/' to mean eregex search or normal Vim search
 nnoremap <leader>/ :call eregex#toggle()<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                          vim-instant-markdown                           "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:instant_markdown_autostart = 0
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
