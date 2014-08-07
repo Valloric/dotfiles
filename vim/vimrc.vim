@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"mm""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                preamble                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -68,6 +68,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-repeat'
+" requires compilation
+Plugin 'wincent/Command-T'
 Plugin 'wikimatze/hammer.vim'
 Plugin 'wting/rust.vim'
 Plugin 'xolox/vim-misc'
