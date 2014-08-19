@@ -109,10 +109,6 @@ filetype plugin indent on
 
 " for testing out custom vim scripts
 set rtp+=$HOME/vim_test,$HOME/vim_test/after,$HOME/repos/YouCompleteMe
-" set rtp+=$HOME/vim_test,$HOME/vim_test/after,/usr/lib/youcompleteme
-let g:ycm_global_ycm_extra_conf = '/usr/lib/youcompleteme/ycm_extra_conf.py'
-" let g:ycm_global_ycm_extra_conf = '/usr/local/google/home/strahinja/local_googrepos/ycm/google3/third_party/YouCompleteMe/ycm_extra_conf.py'
-
 
 " Home away from home. We store some config files and snippets here and the
 " whole dotfiles dir is a git repo. Should be the last entry in rtp (for
@@ -829,8 +825,6 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_min_num_identifier_candidate_chars = 4
 let g:ycm_extra_conf_globlist = ['~/repos/*']
 let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
-" let g:ycm_server_use_vim_stdout = 1
-" let g:ycm_server_log_level = 'debug'
 
 nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
 nnoremap <leader>pg :YcmCompleter GoTo<CR>
