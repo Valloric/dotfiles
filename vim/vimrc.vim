@@ -570,15 +570,16 @@ vnoremap > >gv
 "                               Command-T                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:CommandTMaxHeight          = 30
+let g:CommandTMaxHeight = 30
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
+let g:CommandTFileScanner = 'find'
 
 " MacVim doesn't use tab focus to switch from command-t input field to the file
 " list, so using j and k for next and prev screws everything up. But it does
 " work on linux so let's use it there.
 if has("gui_gtk2")
-    let g:CommandTSelectNextMap  = [ '<down>' ]
-    let g:CommandTSelectPrevMap  = [ '<up>' ]
+    let g:CommandTSelectNextMap = [ '<down>' ]
+    let g:CommandTSelectPrevMap = [ '<up>' ]
 endif
 
 set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*,CMakeFiles
