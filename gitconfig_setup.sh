@@ -68,3 +68,8 @@ git config --global alias.meld "!$script_dir/bin/git-meld/git-meld.pl"
 
 git config --global core.excludesfile ~/.gitignore_global
 
+# Forces the use of SSH instead of HTTPS for any URLs that point to github.
+# This means that if a repo uses "https://github/..." for "origin", we will
+# automatically use SSH. No more password prompts!
+git config --global url.ssh://git@github.com/.insteadOf https://github.com/
+
