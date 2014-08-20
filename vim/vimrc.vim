@@ -573,6 +573,13 @@ vnoremap > >gv
 let g:CommandTMaxHeight = 30
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
 let g:CommandTFileScanner = 'find'
+let g:CommandTTraverseSCM = 'pwd'
+
+set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*,CMakeFiles
+
+" This appears to be necessary; command-t doesn't appear to be falling back to
+" wildignore on its own.
+let g:CommandTWildIgnore=&wildignore
 
 " MacVim doesn't use tab focus to switch from command-t input field to the file
 " list, so using j and k for next and prev screws everything up. But it does
@@ -582,7 +589,6 @@ if has("gui_gtk2")
     let g:CommandTSelectPrevMap = [ '<up>' ]
 endif
 
-set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*,CMakeFiles
 nnoremap <leader>t :CommandT<cr>
 nnoremap <leader>n :CommandTBuffer<cr>
 nnoremap <leader>' :CommandTFlush<cr>
