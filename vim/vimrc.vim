@@ -31,7 +31,6 @@ Plugin 'Valloric/ListToggle'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'Valloric/Vim-Jinja2-Syntax'
 Plugin 'Valloric/python-indent'
-Plugin 'Valloric/vim-indent-guides'
 Plugin 'Valloric/vim-operator-highlight'
 Plugin 'Valloric/vim-valloric-colorscheme'
 Plugin 'Valloric/xmledit'
@@ -40,6 +39,7 @@ Plugin 'YankRing.vim'
 Plugin 'anyakichi/vim-surround'
 Plugin 'bufkill.vim'
 Plugin 'cespare/vim-toml'
+Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'gmarik/vundle'
 Plugin 'godlygeek/tabular'
 Plugin 'groenewege/vim-less'
@@ -50,6 +50,7 @@ Plugin 'matchit.zip'
 Plugin 'mattn/emmet-vim'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'mileszs/ack.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'othree/html5.vim'
 Plugin 'othree/eregex.vim'
 Plugin 'python.vim'
@@ -569,18 +570,25 @@ vnoremap > >gv
 "                               Command-T                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:CommandTMaxHeight          = 30
+let g:CommandTMaxHeight = 30
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
+let g:CommandTFileScanner = 'find'
+let g:CommandTTraverseSCM = 'pwd'
+
+set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*,CMakeFiles
+
+" This appears to be necessary; command-t doesn't appear to be falling back to
+" wildignore on its own.
+let g:CommandTWildIgnore=&wildignore
 
 " MacVim doesn't use tab focus to switch from command-t input field to the file
 " list, so using j and k for next and prev screws everything up. But it does
 " work on linux so let's use it there.
 if has("gui_gtk2")
-    let g:CommandTSelectNextMap  = [ '<down>' ]
-    let g:CommandTSelectPrevMap  = [ '<up>' ]
+    let g:CommandTSelectNextMap = [ '<down>' ]
+    let g:CommandTSelectPrevMap = [ '<up>' ]
 endif
 
-set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*,CMakeFiles
 nnoremap <leader>t :CommandT<cr>
 nnoremap <leader>n :CommandTBuffer<cr>
 nnoremap <leader>' :CommandTFlush<cr>
