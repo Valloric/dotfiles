@@ -8,8 +8,8 @@ set nocompatible
 filetype off
 
 " Setup vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                          Vundle configuration                           "
@@ -77,6 +77,7 @@ Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-pyref'
 Plugin 'xolox/vim-session'
 
+call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           pre-filetype tweaks                           "
