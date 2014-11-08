@@ -830,7 +830,7 @@ let g:syntastic_python_flake8_args = '--select=F,C9 --max-complexity=10'
 let g:syntastic_mode_map = {
        \ "mode": "active",
        \ "active_filetypes": [],
-       \ "passive_filetypes": ["dart"] }
+       \ "passive_filetypes": ["dart", "html"] }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              YouCompleteMe                              "
