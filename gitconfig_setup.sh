@@ -64,7 +64,7 @@ git config --global core.autocrlf input
 
 script_dir="$( cd "$( dirname "$0" )" && pwd )"
 
-git config --global alias.meld "!$script_dir/bin/git-meld/git-meld.pl"
+git config --global alias.meld "difftool --tool=meld --dir-diff -y"
 
 git config --global core.excludesfile ~/.gitignore_global
 
