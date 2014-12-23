@@ -303,6 +303,12 @@ autocmd vimrc FileType python
       \ set shiftwidth=2 |
       \ set softtabstop=2
 
+" The stupid rust filetype plugin overrides our settings!
+autocmd vimrc FileType rust
+      \ set tabstop=2 |
+      \ set shiftwidth=2 |
+      \ set softtabstop=2
+
 let google_path = $HOME . '/google/google_vim_settings.vim'
 let at_google = filereadable( google_path )
 
