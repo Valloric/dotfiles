@@ -42,6 +42,8 @@ Plugin 'cespare/vim-toml'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'gmarik/vundle'
 Plugin 'godlygeek/tabular'
+" For markdown preview
+Plugin 'greyblake/vim-preview'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'helino/vim-json'
