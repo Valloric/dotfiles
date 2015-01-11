@@ -309,7 +309,8 @@ autocmd vimrc FileType python
 autocmd vimrc FileType rust
       \ set tabstop=2 |
       \ set shiftwidth=2 |
-      \ set softtabstop=2
+      \ set softtabstop=2 |
+      \ set textwidth=80
 
 let google_path = $HOME . '/google/google_vim_settings.vim'
 let at_google = filereadable( google_path )
