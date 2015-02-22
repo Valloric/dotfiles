@@ -587,7 +587,7 @@ let g:CommandTFileScanner = 'find'
 let g:CommandTTraverseSCM = 'pwd'
 
 set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*
-set wildignore+=CMakeFiles,packages/*,**/packages/*
+set wildignore+=CMakeFiles,packages/*,**/packages/*,**/node_modules/*
 
 " This appears to be necessary; command-t doesn't appear to be falling back to
 " wildignore on its own.
