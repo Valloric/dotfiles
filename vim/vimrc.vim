@@ -42,7 +42,7 @@ Plugin 'cespare/vim-toml'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'gmarik/vundle'
 Plugin 'godlygeek/tabular'
-" For markdown preview
+" For markdown preview; call :Preview to open rendered in browser
 Plugin 'greyblake/vim-preview'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
@@ -73,7 +73,6 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-repeat'
 " requires compilation
 Plugin 'wincent/Command-T'
-Plugin 'wikimatze/hammer.vim'
 Plugin 'wting/rust.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
@@ -684,15 +683,16 @@ let g:EasyMotion_leader_key = '<Leader>e'
 nmap s <Plug>(easymotion-s)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                 hammer                                  "
+"                              vim-preview                                "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" This makes sure that the browser is opened in the background
-if has("gui_macvim")
-  let g:HAMMER_BROWSER_ARGS = '-g'
+" This forces vim-preview to use the default browser on linux; it already uses
+" 'open' on Mac.
+if has("unix")
+  let g:PreviewBrowsers = "xdg-open"
 endif
 
-nnoremap <leader>m :w<cr>:Hammer<cr>
+" Use :Preview command to open in browser!
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                ack.vim                                  "
