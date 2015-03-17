@@ -1,0 +1,29 @@
+URxvt.background: Black
+URxvt.foreground: Green
+URxvt.cursorBlink: true
+URxvt.depth: 32
+
+# We use tmux and thus don't need this
+URxvt.saveLines: 0
+
+# Font setup
+URxvt.font: xft:Consolas:size=11
+URxvt.scrollBar: false
+URxvt.alt-font-width: true
+URxvt.letterSpace: -2
+URxvt.lineSpace: 0
+URxvt.allow_bold: false
+
+# For clickable urls
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: xdg-open
+URxvt.matcher.button: 1
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       none
+! Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.autohint:   true
+Xft.hintstyle:  hintfull
+! Xft.hintstyle:  hintslight
