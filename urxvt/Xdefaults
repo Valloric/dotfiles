@@ -3,6 +3,10 @@ URxvt.foreground: Green
 URxvt.cursorBlink: true
 URxvt.depth: 32
 
+# Location of custom Perl extensions
+# ./urxvt_setup.sh will fill in PATH_TO_PERL_EXT
+URxvt.perl-lib: PATH_TO_PERL_EXT
+
 # We use tmux and thus don't need this
 URxvt.saveLines: 0
 
@@ -15,9 +19,18 @@ URxvt.lineSpace: 0
 URxvt.allow_bold: false
 
 # For clickable urls
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,clipboard
 URxvt.urlLauncher: xdg-open
 URxvt.matcher.button: 1
+
+# For clipboard
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+! URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
+# Needed for Shift-Control-V above to work
+URxvt.iso14755: False
 
 Xft.dpi:        96
 Xft.antialias:  true

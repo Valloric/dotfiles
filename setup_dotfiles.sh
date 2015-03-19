@@ -75,4 +75,5 @@ fi
 
 source $script_dir/gitconfig_setup.sh
 source $script_dir/tmux/tmux_setup.sh
+source $script_dir/urxvt/urxvt_setup.sh
 
