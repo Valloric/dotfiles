@@ -8,16 +8,10 @@ then
   ln -s $script_dir/zsh/zshrc.zsh ~/.zshrc
 fi
 
-if [[ ! -a ~/.Xdefaults ]]
-then
-  ln -s $script_dir/urxvt/Xdefaults ~/.Xdefaults
-fi
-
 if [[ ! -a ~/.vimrc ]]
 then
   ln -s $script_dir/vim/vimrc.vim ~/.vimrc
 fi
-
 
 if [[ ! -a ~/.gdbrc ]]
 then
