@@ -582,7 +582,17 @@ vnoremap > >gv
 
 let g:CommandTMaxHeight = 30
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
-let g:CommandTFileScanner = 'find'
+
+" If we're at_google, then use the ruby finder because that will not traverse
+" directories matched by wildignore. The 'find' scanner will only filter out
+" paths matching wildignore *AFTER* enumerating all the paths, which is when
+" some dirs are mapped to the network.
+if at_google
+  let g:CommandTFileScanner = 'ruby'
+else
+  let g:CommandTFileScanner = 'find'
+endif
+
 let g:CommandTTraverseSCM = 'pwd'
 
 set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*
