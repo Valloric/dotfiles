@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # get the dir of the current script
-script_dir="$( cd "$( dirname "$0" )" && pwd )"
+script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 # we flip the return value for grep because it returns 0 on pattern found;
 # also, grep's -q and -s options aren't portable, so we can't use them

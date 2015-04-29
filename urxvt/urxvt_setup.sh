@@ -2,7 +2,7 @@
 
 set -e
 
-script_dir="$( cd "$( dirname "$0" )" && pwd )"
+script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 cp -f $script_dir/Xdefaults ~/.Xdefaults
 
