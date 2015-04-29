@@ -645,7 +645,7 @@ endfunction
 " you also need to run :SaveSession once to create the default.vim session that
 " will then be autoloaded/saved from then on
 
-let g:session_autoload        = 'yes'
+let g:session_autoload        = 'no'
 let g:session_autosave        = 'yes'
 let g:session_default_to_last = 'yes'
 let g:session_directory       = '~/tmp/vim/sessions'
