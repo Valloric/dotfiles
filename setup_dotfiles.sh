@@ -35,6 +35,12 @@ then
   ln -s $script_dir/terminator/config ~/.config/terminator/config
 fi
 
+if [[ ! -a ~/.config/redshift.conf ]]
+then
+  mkdir -p ~/.config
+  ln -s $script_dir/redshift/redshift.conf ~/.config/redshift.conf
+fi
+
 # -p says to create the dir if it doesn't exist already
 mkdir -p $HOME/bin
 
