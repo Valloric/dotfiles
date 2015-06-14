@@ -3,6 +3,8 @@ URxvt.foreground: Green
 URxvt.cursorBlink: true
 URxvt.depth: 32
 
+URxvt.geometry: 200x70
+
 # Location of custom Perl extensions
 # ./urxvt_setup.sh will fill in PATH_TO_PERL_EXT
 URxvt.perl-lib: PATH_TO_PERL_EXT
