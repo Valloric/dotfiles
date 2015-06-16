@@ -64,7 +64,7 @@ then
     ln -s /usr/local/bin/mvim ~/bin/gvim
     ln -s /usr/local/bin/mvim ~/bin/vi
   fi
-elif [[ -a ~/google/google_vim_settings.vim ]]
+elif [[ -a ~/bin/vim ]]
 then
   ln -s ~/bin/vim ~/bin/gvim
   ln -s ~/bin/vim ~/bin/vi
