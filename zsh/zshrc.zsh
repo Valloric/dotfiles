@@ -60,3 +60,9 @@ unsetopt correct_all
 
 # Commands prefixed with a space don't go into history
 setopt HIST_IGNORE_SPACE
+
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Set up RVM so "rvm use 2.0.0" works
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
