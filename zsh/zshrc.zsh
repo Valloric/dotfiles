@@ -64,5 +64,7 @@ setopt HIST_IGNORE_SPACE
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
 
+export SVN_EDITOR="gvim"
+
 # Set up RVM so "rvm use 2.0.0" works
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
