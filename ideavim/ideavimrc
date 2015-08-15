@@ -1,0 +1,5 @@
+imap ,. <Esc>
+vmap ,. <Esc>
+
+vmap Q gq
+nmap Q gqap

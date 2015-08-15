@@ -18,6 +18,11 @@ then
   ln -s $script_dir/misc/gdbrc ~/.gdbrc
 fi
 
+if [[ ! -a ~/.ideavimrc ]]
+then
+  ln -s $script_dir/ideavim/ideavimrc ~/.ideavimrc
+fi
+
 if [[ ! -a ~/.cgdb/cgdbrc ]]
 then
   mkdir ~/.cgdb
