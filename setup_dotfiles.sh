@@ -18,11 +18,6 @@ then
   ln -s $script_dir/misc/gdbrc ~/.gdbrc
 fi
 
-if [[ ! -a ~/.ideavimrc ]]
-then
-  ln -s $script_dir/intellij/ideavimrc ~/.ideavimrc
-fi
-
 if [[ ! -a ~/.cgdb/cgdbrc ]]
 then
   mkdir ~/.cgdb
@@ -78,8 +73,8 @@ then
   ln -s ~/bin/vim ~/bin/view
 fi
 
-source $script_dir/gitconfig_setup.sh
-source $script_dir/tmux/tmux_setup.sh
-source $script_dir/urxvt/urxvt_setup.sh
-source $script_dir/intellij/intellij_setup.sh
+$script_dir/gitconfig_setup.sh
+$script_dir/tmux/tmux_setup.sh
+$script_dir/urxvt/urxvt_setup.sh
+$script_dir/intellij/intellij_setup.sh
 
