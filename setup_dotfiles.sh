@@ -20,7 +20,7 @@ fi
 
 if [[ ! -a ~/.ideavimrc ]]
 then
-  ln -s $script_dir/ideavim/ideavimrc ~/.ideavimrc
+  ln -s $script_dir/intellij/ideavimrc ~/.ideavimrc
 fi
 
 if [[ ! -a ~/.cgdb/cgdbrc ]]

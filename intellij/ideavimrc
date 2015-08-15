@@ -1,0 +1,15 @@
+set ignorecase
+set smartcase
+
+let mapleader = " "
+
+imap ,. <Esc>
+vmap ,. <Esc>
+
+vmap Q gq
+nmap Q gqap
+
+nmap <leader>h <c-w>h
+nmap <leader>l <c-w>l
+nmap <leader>k <c-w>k
+nmap <leader>j <c-w>j
