@@ -1,0 +1,13 @@
+<application>
+  <component name="XDebuggerSettings">
+    <data-views />
+    <general />
+    <debuggers>
+      <debugger id="scala_debugger">
+        <configuration>
+          <option name="DO_NOT_DISPLAY_STREAMS" value="false" />
+        </configuration>
+      </debugger>
+    </debuggers>
+  </component>
+</application>

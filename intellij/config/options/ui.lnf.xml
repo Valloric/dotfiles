@@ -1,0 +1,6 @@
+<application>
+  <component name="UISettings">
+    <option name="SHOW_MEMORY_INDICATOR" value="true" />
+    <option name="EDITOR_TAB_PLACEMENT" value="0" />
+  </component>
+</application>
