@@ -1,15 +1,33 @@
 set ignorecase
 set smartcase
 
+" Integrate with system clipboard
+set clipboard=unnamedplus,unnamed
+
 let mapleader = " "
 
 imap ,. <Esc>
 vmap ,. <Esc>
 
+" Use Q for formatting the current paragraph (or visual selection)
 vmap Q gq
 nmap Q gqap
 
+" key bindings for quickly moving between windows
+" h left, l right, k up, j down
 nmap <leader>h <c-w>h
 nmap <leader>l <c-w>l
 nmap <leader>k <c-w>k
 nmap <leader>j <c-w>j
+
+nmap <leader>pg :action GotoDeclaration<cr>
+nmap <leader>b :action Back<cr>
+nmap <leader>f :action Forward<cr>
+
+nmap <leader>t :action GotoFile<cr>
+nmap <leader>c :action GotoClass<cr>
+
+" Won't work in visual mode (with vmap) for some reason.
+" Use default map of <c-/> for that.
+nmap gcc :action CommentByLineComment<cr>
+
