@@ -27,6 +27,10 @@ nmap <leader>f :action Forward<cr>
 nmap <leader>t :action GotoFile<cr>
 nmap <leader>c :action GotoClass<cr>
 
+" IdeaVim uses 'a' for alt instead of Vim's 'm'
+nmap <a-j> 15gj
+nmap <a-k> 15gk
+
 " Won't work in visual mode (with vmap) for some reason.
 " Use default map of <c-/> for that.
 nmap gcc :action CommentByLineComment<cr>
