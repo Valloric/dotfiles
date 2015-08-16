@@ -18,6 +18,12 @@ then
   ln -s $script_dir/misc/gdbrc ~/.gdbrc
 fi
 
+if [[ ! -a ~/.gradle/gradle.properties ]]
+then
+  mkdir ~/.gradle
+  ln -s $script_dir/gradle/gradle.properties ~/.gradle/gradle.properties
+fi
+
 if [[ ! -a ~/.cgdb/cgdbrc ]]
 then
   mkdir ~/.cgdb
