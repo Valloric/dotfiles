@@ -16,3 +16,9 @@ then
   ln -s $script_dir/config ~/.IdeaIC14/config
 fi
 
+mkdir -p ~/.IntelliJIdea14
+
+if [[ ! -a ~/.IntelliJIdea14/config ]]
+then
+  ln -s $script_dir/config ~/.IntelliJIdea14/config
+fi
