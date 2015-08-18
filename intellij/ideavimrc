@@ -27,6 +27,7 @@ nmap <leader>f :action Forward<cr>
 nmap <leader>t :action GotoFile<cr>
 nmap <leader>c :action GotoClass<cr>
 nmap <leader>ns :action GotoSymbol<cr>
+nmap <leader>nm :action FileStructurePopup<cr>
 
 " IdeaVim uses 'a' for alt instead of Vim's 'm'
 nmap <a-j> 15gj
