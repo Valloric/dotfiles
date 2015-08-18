@@ -479,10 +479,6 @@ cnoremap w!! w !sudo tee % >/dev/null
 nnoremap ' `
 nnoremap ` '
 
-" g<c-]> is jump to tag if there's only one matching tag, but show list of
-" options when there is more than one definition
-nnoremap <leader>g g<c-]>
-
 " These create newlines like o and O but stay in normal mode
 nnoremap <silent> zj o<Esc>k
 nnoremap <silent> zk O<Esc>j
@@ -861,7 +857,7 @@ let g:ycm_extra_conf_globlist = ['~/repos/*']
 let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
 
 nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
-nnoremap <leader>pg :YcmCompleter GoTo<CR>
+nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>pd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
 
