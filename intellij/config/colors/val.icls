@@ -202,6 +202,11 @@
         <option name="FOREGROUND" value="f2ff" />
       </value>
     </option>
+    <option name="EXECUTIONPOINT_ATTRIBUTES">
+      <value>
+        <option name="BACKGROUND" value="142947" />
+      </value>
+    </option>
     <option name="HTML_ENTITY_REFERENCE">
       <value>
         <option name="FOREGROUND" value="a9b7c6" />
