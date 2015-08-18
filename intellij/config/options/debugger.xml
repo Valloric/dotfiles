@@ -3,9 +3,9 @@
     <data-views />
     <general />
     <debuggers>
-      <debugger id="scala_debugger">
+      <debugger id="javascript">
         <configuration>
-          <option name="DO_NOT_DISPLAY_STREAMS" value="false" />
+          <custom-object-presentation />
         </configuration>
       </debugger>
     </debuggers>

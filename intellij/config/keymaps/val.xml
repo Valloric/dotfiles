@@ -1,4 +1,7 @@
 <keymap version="1" name="val" parent="Default for XWin">
+  <action id="ReformatCode">
+    <keyboard-shortcut first-keystroke="control alt R" />
+  </action>
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="shift alt ENTER" />
   </action>
