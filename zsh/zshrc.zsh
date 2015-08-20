@@ -47,10 +47,10 @@ then
   export PATH=/usr/local/share/npm/bin:$PATH
 fi
 
-# load google-specific stuff
-local gzshrc=$HOME/google/zshrc_google.zsh
-if [[ -a $gzshrc ]] then
-  source $gzshrc
+# load company-specific stuff
+local comp_zshrc=$HOME/linkedin/zshrc_linkedin.zsh
+if [[ -a $comp_zshrc ]] then
+  source $comp_zshrc
 fi
 
 source $ZSH/oh-my-zsh.sh
