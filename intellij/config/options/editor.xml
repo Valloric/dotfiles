@@ -3,6 +3,8 @@
     <option name="USE_SOFT_WRAPS" value="MAIN_EDITOR" />
     <option name="USE_CUSTOM_SOFT_WRAP_INDENT" value="true" />
     <option name="CUSTOM_SOFT_WRAP_INDENT" value="2" />
+    <option name="IS_VIRTUAL_SPACE" value="true" />
+    <option name="SHOW_QUICK_DOC_ON_MOUSE_OVER_ELEMENT" value="true" />
     <option name="IS_ALL_SOFTWRAPS_SHOWN" value="true" />
   </component>
   <component name="XmlEditorOptions">

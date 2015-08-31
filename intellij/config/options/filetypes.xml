@@ -3,6 +3,8 @@
     <ignoreFiles list="*.hprof;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.bundle;.git;.hg;.svn;.tox;CVS;RCS;SCCS;__pycache__;_svn;rcs;vssver.scc;vssver2.scc;" />
     <extensionMap>
       <mapping ext="pdsc" type="JSON" />
+      <mapping ext="spring" type="XML" />
+      <mapping ext="src" type="XML" />
     </extensionMap>
   </component>
 </application>
