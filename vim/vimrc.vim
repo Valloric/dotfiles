@@ -48,14 +48,15 @@ Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'helino/vim-json'
 Plugin 'honza/vim-snippets'
+Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'matchit.zip'
 Plugin 'mattn/emmet-vim'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'mileszs/ack.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'othree/html5.vim'
 Plugin 'othree/eregex.vim'
+Plugin 'othree/html5.vim'
 Plugin 'python.vim'
 Plugin 'python_match.vim'
 Plugin 'scrooloose/syntastic'
@@ -72,12 +73,13 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-repeat'
 " requires compilation
-Plugin 'wincent/Command-T'
+" Plugin 'wincent/Command-T'
 Plugin 'wting/rust.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-pyref'
 Plugin 'xolox/vim-session'
+
 
 call vundle#end()
 
@@ -292,6 +294,9 @@ autocmd vimrc BufEnter *.snippets setf snippets
 
 " .tpl files are HTML for us
 autocmd vimrc BufEnter *.tpl setf html
+
+" .acl files are YAML
+autocmd vimrc BufEnter *.acl setf yaml
 
 " In UltiSnips snippet files, we want actual tabs instead of spaces for indents.
 " US will use those tabs and convert them to spaces if expandtab is set when the
@@ -606,9 +611,31 @@ if has("gui_gtk2")
     let g:CommandTSelectPrevMap = [ '<up>' ]
 endif
 
-nnoremap <leader>t :CommandT<cr>
-nnoremap <leader>n :CommandTBuffer<cr>
-nnoremap <leader>' :CommandTFlush<cr>
+" nnoremap <leader>t :CommandT<cr>
+" nnoremap <leader>n :CommandTBuffer<cr>
+" nnoremap <leader>' :CommandTFlush<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 ctrlp                                   "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:ctrlp_map = '<leader>t'
+nnoremap <leader>n :CtrlPMRU<cr>
+nnoremap <leader>' :CtrlClearCache<cr>
+
+" Use Vim's cwd
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30'
+
+" Faster indexing of files; requires having ag (AKA the_silver_searcher)
+" installed.
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Gundo                                   "
