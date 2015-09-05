@@ -25,10 +25,6 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git osx vundle pip brew)
 
-# Every terminal we use supports 256 colors; iTerm2 on Mac and gnome-terminal on
-# linux
-TERM=xterm-256color
-
 export EDITOR="gvim -u $HOME/.vimrc -N -U NONE -f"
 export P4DIFF="meld"
 export PATH=$PATH:$HOME/bin:$HOME/bin/p4v/bin
@@ -77,3 +73,12 @@ export SVN_EDITOR="gvim"
 
 # Set up RVM so "rvm use 2.0.0" works
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# FZF setup; https://github.com/junegunn/fzf
+export FZF_DEFAULT_OPTS="
+--extended
+--color fg:252,bg:233,hl:67,fg+:252,bg+:235,hl+:81
+--color info:144,prompt:161,spinner:135,pointer:135,marker:118
+"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
