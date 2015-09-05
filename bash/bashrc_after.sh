@@ -62,3 +62,5 @@ bind 'set completion-ignore-case on'
 export EDITOR="gvim -u $HOME/.vimrc -N -U NONE -f"
 export PATH=$PATH:$HOME/bin
 
+# No duplicates in command history
+export HISTCONTROL=ignoreboth:erasedups
