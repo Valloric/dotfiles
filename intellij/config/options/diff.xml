@@ -10,6 +10,16 @@
       <entry key="Default">
         <PlaceSettings />
       </entry>
+      <entry key="TestsFiledAssertions">
+        <PlaceSettings />
+      </entry>
+    </option>
+  </component>
+  <component name="SvnDiffSettings">
+    <option name="PLACES_MAP">
+      <entry key="Default">
+        <PlaceSettings />
+      </entry>
     </option>
   </component>
   <component name="TextDiffSettings">
@@ -28,6 +38,9 @@
         <PlaceSettings>
           <option name="USE_SOFT_WRAPS" value="true" />
         </PlaceSettings>
+      </entry>
+      <entry key="TestsFiledAssertions">
+        <PlaceSettings />
       </entry>
     </option>
   </component>
