@@ -28,3 +28,4 @@ intellij/config/options/stubIndex.xml
 intellij/config/options/vim_settings.xml
 intellij/config/options/web-browsers.xml
 intellij/config/options/debugger.renderers.xml
+intellij/config/options/fileEditorProviderManager.xml
