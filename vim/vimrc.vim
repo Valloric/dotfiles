@@ -298,6 +298,9 @@ autocmd vimrc BufEnter *.tpl setf html
 " .acl files are YAML
 autocmd vimrc BufEnter *.acl setf yaml
 
+" .gradle files are Groovy
+autocmd vimrc BufEnter *.gradle setf groovy
+
 " In UltiSnips snippet files, we want actual tabs instead of spaces for indents.
 " US will use those tabs and convert them to spaces if expandtab is set when the
 " user wants to insert the snippet.
