@@ -82,3 +82,5 @@ export FZF_DEFAULT_OPTS="
 "
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.LESS_TERMCAP ] && source ~/.LESS_TERMCAP
+
