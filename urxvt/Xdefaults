@@ -16,7 +16,7 @@ URxvt.saveLines: 0
 URxvt.font: xft:Consolas:size=11
 URxvt.scrollBar: false
 URxvt.alt-font-width: true
-URxvt.letterSpace: -2
+URxvt.letterSpace: -1
 URxvt.lineSpace: 0
 URxvt.allow_bold: false
 
