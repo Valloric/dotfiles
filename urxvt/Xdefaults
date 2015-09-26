@@ -1,3 +1,8 @@
+! CAREFUL! DO NOT PUT SINGLE OR DOUBLE QUOTES IN COMMENTS!
+! You can ensure that your Xdefaults file parses correctly with:
+!   xrdb -n ~/.Xdefaults 2>&1 >/dev/null
+! If that does not show an error, you are good.
+
 URxvt.background: Black
 URxvt.foreground: Green
 URxvt.cursorBlink: true
@@ -5,14 +10,14 @@ URxvt.depth: 32
 
 URxvt.geometry: 200x70
 
-# Location of custom Perl extensions
-# ./urxvt_setup.sh will fill in PATH_TO_PERL_EXT
+! Location of custom Perl extensions
+! ./urxvt_setup.sh will fill in PATH_TO_PERL_EXT
 URxvt.perl-lib: PATH_TO_PERL_EXT
 
-# We use tmux and thus don't need this
+! We use tmux and thus do not need this
 URxvt.saveLines: 0
 
-# Font setup
+! Font setup
 URxvt.font: xft:Consolas:size=11
 URxvt.scrollBar: false
 URxvt.alt-font-width: true
@@ -20,18 +25,18 @@ URxvt.letterSpace: -1
 URxvt.lineSpace: 0
 URxvt.allow_bold: false
 
-# For clickable urls
+! For clickable urls
 URxvt.perl-ext-common: default,matcher,clipboard
 URxvt.urlLauncher: xdg-open
 URxvt.matcher.button: 1
 
-# For clipboard
+! For clipboard
 URxvt.keysym.M-c:   perl:clipboard:copy
 URxvt.keysym.M-v:   perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 ! URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 
-# Needed for Shift-Control-V above to work
+! Needed for Shift-Control-V above to work
 URxvt.iso14755: False
 
 Xft.dpi:        96
