@@ -43,13 +43,13 @@ then
   export PATH=/usr/local/share/npm/bin:$PATH
 fi
 
+source $ZSH/oh-my-zsh.sh
+
 # load company-specific stuff
 local comp_zshrc=$HOME/linkedin/zshrc_linkedin.zsh
 if [[ -a $comp_zshrc ]] then
   source $comp_zshrc
 fi
-
-source $ZSH/oh-my-zsh.sh
 
 # This turns of zsh's "helpful" autocorrect feature
 unsetopt correct_all
