@@ -2,48 +2,63 @@
 ! You can ensure that your Xdefaults file parses correctly with:
 !   xrdb -n ~/.Xdefaults 2>&1 >/dev/null
 ! If that does not show an error, you are good.
+!
+! RELOADING CONFIGURATION:
+! Changing this file will not do anything (even with urxvt restart) without
+!   xrdb -load ~/.Xdefaults
+! You can query the state of loaded config with
+!   xrdb -query
 
-URxvt.background: Black
-URxvt.foreground: Green
-URxvt.cursorBlink: true
-URxvt.depth: 32
+URxvt*.background: Black
+URxvt*.foreground: Green
+URxvt*.cursorBlink: true
+URxvt*.depth: 32
 
-URxvt.geometry: 200x70
+URxvt*.geometry: 200x70
 
 ! Location of custom Perl extensions
-! ./urxvt_setup.sh will fill in PATH_TO_PERL_EXT
-URxvt.perl-lib: PATH_TO_PERL_EXT
+! ./urxvt_setup.sh will fill in /home/valloric/dotfiles/urxvt/perl-extensions
+URxvt*.perl-lib: /home/valloric/dotfiles/urxvt/perl-extensions
 
 ! We use tmux and thus do not need this
-URxvt.saveLines: 0
+URxvt*.saveLines: 0
 
 ! Font setup
-URxvt.font: xft:Consolas:size=11
-URxvt.scrollBar: false
-URxvt.alt-font-width: true
-URxvt.letterSpace: -1
-URxvt.lineSpace: 0
-URxvt.allow_bold: false
+URxvt*.font: xft:Consolas:size=11
+URxvt*.scrollBar: false
+URxvt*.alt-font-width: true
+URxvt*.letterSpace: -1
+URxvt*.lineSpace: 0
+URxvt*.allow_bold: false
 
 ! For clickable urls
-URxvt.perl-ext-common: default,matcher,clipboard
-URxvt.urlLauncher: xdg-open
-URxvt.matcher.button: 1
+URxvt*.perl-ext-common: default,matcher,clipboard
+URxvt*.urlLauncher: xdg-open
+URxvt*.matcher.button: 1
 
 ! For clipboard
-URxvt.keysym.M-c:   perl:clipboard:copy
-URxvt.keysym.M-v:   perl:clipboard:paste
-URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-! URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt*.keysym.M-c:   perl:clipboard:copy
+URxvt*.keysym.M-v:   perl:clipboard:paste
+URxvt*.keysym.M-C-v: perl:clipboard:paste_escaped
+! URxvt*.keysym.Shift-Control-V: perl:clipboard:paste
 
 ! Needed for Shift-Control-V above to work
-URxvt.iso14755: False
+URxvt*.iso14755: False
 
+! NOTE: These values can be overidden by display managers. XFCE will by default
+! override these settings with data from this file:
+!   /etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
+! Deleting the offending lines DOES NOT fix the problem.
+! You can change these values with xfce4-settings-editor, in the xsettings
+! section.
+! Verify the final state after restart with: xrdb -query
 Xft.dpi:        96
 Xft.antialias:  true
 Xft.rgba:       none
+! This screws up letterspacing for some reason (even with letterSpace: -1).
+! The value must be none.
 ! Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.autohint:   true
-Xft.hintstyle:  hintfull
-! Xft.hintstyle:  hintslight
+! Xft.hintstyle:  hintfull
+Xft.hintstyle:  hintslight
