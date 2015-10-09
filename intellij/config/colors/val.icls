@@ -256,7 +256,9 @@
       </value>
     </option>
     <option name="STATIC_METHOD_ATTRIBUTES">
-      <value />
+      <value>
+        <option name="FOREGROUND" value="ffca00" />
+      </value>
     </option>
     <option name="Scala Immutable Collection">
       <value>

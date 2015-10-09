@@ -4,6 +4,7 @@
     <extensionMap>
       <mapping ext="pdsc" type="JSON" />
       <mapping ext="avsc" type="JSON" />
+      <mapping pattern="junk" type="PLAIN_TEXT" />
       <mapping ext="fabric" type="XML" />
       <mapping ext="spring" type="XML" />
       <mapping ext="src" type="XML" />
