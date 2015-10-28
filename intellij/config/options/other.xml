@@ -54,6 +54,7 @@
     <option name="SKIP_CLASSLOADERS" value="true" />
     <option name="RUN_HOTSWAP_AFTER_COMPILE" value="RunHotswapAsk" />
     <option name="COMPILE_BEFORE_HOTSWAP" value="true" />
+    <option name="WATCH_RETURN_VALUES" value="true" />
     <filter>
       <option name="PATTERN" value="com.sun.*" />
       <option name="ENABLED" value="true" />
