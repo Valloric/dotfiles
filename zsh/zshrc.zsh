@@ -26,6 +26,9 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git osx vundle pip brew)
 
 export EDITOR="gvim -u $HOME/.vimrc -N -U NONE -f"
+export SVN_EDITOR="$EDITOR"
+export VISUAL="$EDITOR"
+
 export P4DIFF="meld"
 export PATH=$PATH:$HOME/bin:$HOME/bin/p4v/bin
 
@@ -68,8 +71,6 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
-
-export SVN_EDITOR="gvim"
 
 # Set up RVM so "rvm use 2.0.0" works
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
