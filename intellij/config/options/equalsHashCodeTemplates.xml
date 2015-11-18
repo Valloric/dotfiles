@@ -1,0 +1,5 @@
+<application>
+  <component name="EqualsHashCodeTemplates">
+    <option name="defaultTempalteName" value="java.util.Objects.equals and hashCode (java 7+) equals" />
+  </component>
+</application>
