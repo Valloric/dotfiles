@@ -624,7 +624,7 @@ endif
 
 let g:ctrlp_map = '<leader>t'
 nnoremap <leader>n :CtrlPMRU<cr>
-nnoremap <leader>' :CtrlClearCache<cr>
+nnoremap <leader>' :CtrlPClearCache<cr>
 
 " Use Vim's cwd
 let g:ctrlp_working_path_mode = 0
