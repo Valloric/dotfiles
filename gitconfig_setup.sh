@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git config --global user.name "Strahinja Val Markovic"
+git config --global user.name "Val Markovic"
 
 current_email=$(git config --global --get user.email)
 
