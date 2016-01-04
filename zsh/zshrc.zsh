@@ -25,7 +25,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git osx vundle pip brew)
 
-export EDITOR="gvim -u $HOME/.vimrc -N -U NONE -f"
+export EDITOR="vim -u $HOME/.vimrc -N -U NONE -f"
 export SVN_EDITOR="$EDITOR"
 export VISUAL="$EDITOR"
 
