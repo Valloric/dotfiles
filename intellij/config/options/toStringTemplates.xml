@@ -1,0 +1,13 @@
+<application>
+  <component name="ToStringTemplates">
+    <option name="defaultTempalteName" value="MoreObjects.toStringHelper" />
+    <option name="templates">
+      <list>
+        <TemplateResource>
+          <option name="fileName" value="MoreObjects.toStringHelper" />
+          <option name="template" value="public java.lang.String toString() {&#10;return com.google.common.base.MoreObjects.toStringHelper(this)&#10;#foreach ($member in $members)&#10;.add(&quot;$member.name&quot;, $member.accessor)&#10;#end&#10;.toString();&#10;}&#10;" />
+        </TemplateResource>
+      </list>
+    </option>
+  </component>
+</application>
