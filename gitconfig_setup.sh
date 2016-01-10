@@ -71,3 +71,9 @@ git config --global core.excludesfile ~/.gitignore_global
 # automatically use SSH. No more password prompts!
 git config --global url.ssh://git@github.com/.insteadOf https://github.com/
 
+# Makes "git stash show" display a diff by default
+git config --global stash.showPatch true
+
+# Makes rebasing stash any dirty changes before running rebase, and then
+# unstashes them afterwards.
+git config --global rebase.autostash true
