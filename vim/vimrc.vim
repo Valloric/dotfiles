@@ -731,6 +731,8 @@ if has("unix")
   let g:PreviewBrowsers = "xdg-open"
 endif
 
+let g:PreviewMarkdownFences = 1
+
 " Use :Preview command to open in browser!
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -888,6 +890,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_min_num_identifier_candidate_chars = 4
 let g:ycm_extra_conf_globlist = ['~/repos/*']
 let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
+let g:ycm_rust_src_path = $HOME . '/repos/rust/src'
 
 nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
 nnoremap <leader>g :YcmCompleter GoTo<CR>

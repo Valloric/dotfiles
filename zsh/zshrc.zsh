@@ -85,3 +85,6 @@ export FZF_DEFAULT_OPTS="
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.LESS_TERMCAP ] && source ~/.LESS_TERMCAP
 
+
+# added by travis gem
+[ -f /home/valloric/.travis/travis.sh ] && source /home/valloric/.travis/travis.sh

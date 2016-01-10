@@ -5,6 +5,8 @@ set -e
 script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 platform=$(uname)
 
+# TODO: remove links for version 14 when you stop using it
+
 if [[ ! -a ~/.ideavimrc ]]
 then
   ln -s $script_dir/ideavimrc ~/.ideavimrc
@@ -29,10 +31,24 @@ else
     ln -s $script_dir/config ~/.IdeaIC14/config
   fi
 
+  mkdir -p ~/.IdeaIC15
+
+  if [[ ! -a ~/.IdeaIC15/config ]]
+  then
+    ln -s $script_dir/config ~/.IdeaIC15/config
+  fi
+
   mkdir -p ~/.IntelliJIdea14
 
   if [[ ! -a ~/.IntelliJIdea14/config ]]
   then
     ln -s $script_dir/config ~/.IntelliJIdea14/config
+  fi
+
+  mkdir -p ~/.IntelliJIdea15
+
+  if [[ ! -a ~/.IntelliJIdea15/config ]]
+  then
+    ln -s $script_dir/config ~/.IntelliJIdea15/config
   fi
 fi
