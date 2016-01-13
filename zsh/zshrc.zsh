@@ -30,7 +30,7 @@ export SVN_EDITOR="$EDITOR"
 export VISUAL="$EDITOR"
 
 export P4DIFF="meld"
-export PATH=$PATH:$HOME/bin:$HOME/bin/p4v/bin
+export PATH=$HOME/bin:$PATH:$HOME/bin/p4v/bin
 
 platform=$(uname)
 
