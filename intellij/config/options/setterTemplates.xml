@@ -1,0 +1,5 @@
+<application>
+  <component name="SetterTemplates">
+    <option name="defaultTempalteName" value="Builder" />
+  </component>
+</application>
