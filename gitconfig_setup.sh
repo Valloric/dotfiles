@@ -77,3 +77,10 @@ git config --global stash.showPatch true
 # Makes rebasing stash any dirty changes before running rebase, and then
 # unstashes them afterwards.
 git config --global rebase.autostash true
+
+# Make git use the system-default web browser.
+if [[ $(uname) == *Darwin* ]]; then
+  git config --global web.browser open
+else
+  git config --global web.browser xdg-open
+fi

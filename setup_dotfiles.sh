@@ -50,10 +50,8 @@ fi
 # -p says to create the dir if it doesn't exist already
 mkdir -p $HOME/bin
 
-platform=$(uname)
-
 # Naturally, macvim needs to be installed for this to work
-if [[ $platform == *Darwin* ]]
+if [[ $(uname) == *Darwin* ]]
 then
   # symlinks for mvim
   if [[ -a ~/bin/mvim ]]
