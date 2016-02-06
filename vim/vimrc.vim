@@ -642,6 +642,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .hg
       \ --ignore .DS_Store
       \ --ignore "**/*.pyc"
+      \ --ignore BoostParts
       \ -g ""'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
