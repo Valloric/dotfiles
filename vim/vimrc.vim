@@ -877,7 +877,9 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args = '--select=F,C9 --max-complexity=10'
+let g:syntastic_python_flake8_args = '--max-line-length=80 ' .
+      \ '--max-complexity=10 --ignore=E111,E114,E121,E125,E126,E127,E128,E129,' .
+      \ 'E131,E133,E201,E202,E203,E211,E221,E222,E241,E251,E261,E303,E402,W503'
 
 let g:syntastic_mode_map = {
        \ "mode": "active",
