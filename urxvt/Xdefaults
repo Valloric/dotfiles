@@ -27,7 +27,7 @@ URxvt*.saveLines: 0
 URxvt*.font: xft:Consolas:size=11
 URxvt*.scrollBar: false
 URxvt*.alt-font-width: true
-URxvt*.letterSpace: -1
+URxvt*.letterSpace: -2
 URxvt*.lineSpace: 0
 URxvt*.allow_bold: false
 
@@ -54,10 +54,11 @@ URxvt*.iso14755: False
 ! Verify the final state after restart with: xrdb -query
 Xft.dpi:        96
 Xft.antialias:  true
-Xft.rgba:       none
-! This screws up letterspacing for some reason (even with letterSpace: -1).
-! The value must be none.
-! Xft.rgba:       rgb
+! This can screw up letterspacing for some reason (even with letterSpace: -1).
+! Setting it to none fixes the problem, but screws up font-rendering
+! system-wide. The correct solution is to leave it to rgb, but instead use
+! letterSpace -2 above.
+Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.autohint:   true
 ! Xft.hintstyle:  hintfull
