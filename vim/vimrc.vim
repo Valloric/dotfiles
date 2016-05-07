@@ -306,6 +306,9 @@ autocmd vimrc BufEnter *.gradle setf groovy
 " .pdsc files are JSON
 autocmd vimrc BufEnter *.pdsc setf json
 
+" .conf files are conf
+autocmd vimrc BufEnter *.conf setf conf
+
 " In UltiSnips snippet files, we want actual tabs instead of spaces for indents.
 " US will use those tabs and convert them to spaces if expandtab is set when the
 " user wants to insert the snippet.
