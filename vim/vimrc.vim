@@ -40,7 +40,8 @@ Plugin 'YankRing.vim'
 Plugin 'anyakichi/vim-surround'
 Plugin 'bufkill.vim'
 Plugin 'cespare/vim-toml'
-Plugin 'ctrlpvim/ctrlp.vim'
+" Has *terrible* path ranking, switching back to Command-T
+" Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'gmarik/vundle'
 Plugin 'godlygeek/tabular'
@@ -75,7 +76,7 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-repeat'
 " requires compilation
-" Plugin 'wincent/Command-T'
+Plugin 'wincent/Command-T'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-pyref'
@@ -618,17 +619,17 @@ if has("gui_gtk2")
     let g:CommandTSelectPrevMap = [ '<up>' ]
 endif
 
-" nnoremap <leader>t :CommandT<cr>
-" nnoremap <leader>n :CommandTBuffer<cr>
-" nnoremap <leader>' :CommandTFlush<cr>
+nnoremap <leader>t :CommandT<cr>
+nnoremap <leader>n :CommandTBuffer<cr>
+nnoremap <leader>' :CommandTFlush<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 ctrlp                                   "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:ctrlp_map = '<leader>t'
-nnoremap <leader>n :CtrlPMRU<cr>
-nnoremap <leader>' :CtrlPClearCache<cr>
+" let g:ctrlp_map = '<leader>t'
+" nnoremap <leader>n :CtrlPMRU<cr>
+" nnoremap <leader>' :CtrlPClearCache<cr>
 
 " Use Vim's cwd
 let g:ctrlp_working_path_mode = 0
