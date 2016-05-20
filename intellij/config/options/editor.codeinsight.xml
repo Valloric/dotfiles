@@ -4,6 +4,12 @@
     <option name="COMPLETION_CASE_SENSITIVE" value="2" />
     <option name="OPTIMIZE_IMPORTS_ON_THE_FLY" value="true" />
     <option name="ADD_UNAMBIGIOUS_IMPORTS_ON_THE_FLY" value="true" />
+    <EXCLUDED_PACKAGE NAME="com.google.common.base.Optional" />
+    <EXCLUDED_PACKAGE NAME="com.linkedin.common.Urn" />
+    <EXCLUDED_PACKAGE NAME="com.linkedin.resourceidentity.urn.Urn" />
     <EXCLUDED_PACKAGE NAME="edu.emory.mathcs" />
+    <EXCLUDED_PACKAGE NAME="org.hamcrest.MatcherAssert.assertThat" />
+    <EXCLUDED_PACKAGE NAME="org.junit.Assert.assertThat" />
+    <EXCLUDED_PACKAGE NAME="org.testng.annotations.Optional" />
   </component>
 </application>

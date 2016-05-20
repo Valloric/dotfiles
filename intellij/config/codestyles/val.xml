@@ -35,9 +35,14 @@
     </indentOptions>
   </codeStyleSettings>
   <codeStyleSettings language="JAVA">
+    <option name="ALIGN_MULTILINE_CHAINED_METHODS" value="true" />
     <option name="ALIGN_MULTILINE_PARAMETERS_IN_CALLS" value="true" />
     <option name="CALL_PARAMETERS_WRAP" value="5" />
+    <option name="CALL_PARAMETERS_LPAREN_ON_NEXT_LINE" value="true" />
     <option name="METHOD_PARAMETERS_WRAP" value="5" />
+    <option name="METHOD_CALL_CHAIN_WRAP" value="5" />
+    <option name="FOR_STATEMENT_WRAP" value="5" />
+    <option name="ASSIGNMENT_WRAP" value="1" />
     <indentOptions>
       <option name="INDENT_SIZE" value="2" />
       <option name="CONTINUATION_INDENT_SIZE" value="4" />

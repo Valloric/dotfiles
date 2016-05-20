@@ -30,3 +30,10 @@ intellij/config/options/web-browsers.xml
 intellij/config/options/debugger.renderers.xml
 intellij/config/options/fileEditorProviderManager.xml
 intellij/config/options/usageView.xml
+intellij/config/options/window.state.xml
+intellij/config/port.lock
+intellij/config/checkstyle/**
+intellij/config/codestyles/linkedin-codestyle.xml
+intellij/config/li-idea.json
+intellij/config/li-spelling/**
+

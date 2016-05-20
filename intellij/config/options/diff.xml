@@ -1,4 +1,5 @@
 <application>
+  <component name="DiffManager" COMPARISON_POLICY="Ignore spaces" />
   <component name="DiffSettings">
     <option name="PLACES_MAP">
       <entry key="ChangesView">
@@ -30,7 +31,9 @@
   <component name="SvnDiffSettings">
     <option name="PLACES_MAP">
       <entry key="Default">
-        <PlaceSettings />
+        <PlaceSettings>
+          <option name="SPLITTER_PROPORTION" value="0.9404284" />
+        </PlaceSettings>
       </entry>
     </option>
   </component>
@@ -50,6 +53,9 @@
         <PlaceSettings>
           <option name="USE_SOFT_WRAPS" value="true" />
         </PlaceSettings>
+      </entry>
+      <entry key="Merge">
+        <PlaceSettings />
       </entry>
       <entry key="TestsFiledAssertions">
         <PlaceSettings />
