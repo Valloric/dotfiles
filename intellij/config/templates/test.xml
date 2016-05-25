@@ -1,0 +1,13 @@
+<templateSet group="test">
+  <template name="test" value="@Test&#10;public void $testName$() throws Exception {&#10;  $END$&#10;}" description="new TestNG test" toReformat="false" toShortenFQNames="true">
+    <variable name="testName" expression="" defaultValue="testName" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="before" value="@BeforeMethod&#10;public void setup() throws Exception {&#10;  $END$&#10;}" description="@Before setup method" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>
