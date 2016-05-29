@@ -83,4 +83,5 @@ $script_dir/urxvt/urxvt_setup.sh
 $script_dir/intellij/intellij_setup.sh
 $script_dir/less/less_setup.sh
 $script_dir/compton/compton_setup.sh
+$script_dir/emacs/emacs_setup.sh
 
