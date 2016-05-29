@@ -285,6 +285,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   )
 
 (defun dotspacemacs/user-config ()
+
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration.
@@ -404,6 +405,17 @@ remove the comment characters from that line before joining."
   (setq-default browse-url-browser-function 'browse-url-generic
                 browse-url-generic-program "google-chrome")
 
+  ;; Highlight all function calls in all programming modes.
+  (add-hook
+   'prog-mode-hook
+   (lambda ()
+     (font-lock-add-keywords
+      nil
+      '(("\\<\\([_a-zA-Z][_a-zA-Z0-9]*\\)(" 1 'font-lock-function-name-face)))
+     ))
+
+  ;; *.zsh files now use sh-mode as major mode
+  (add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; PLUGIN CONFIG
