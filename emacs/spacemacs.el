@@ -2,6 +2,7 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+;;; Code:
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration.
 You should not put any user code in this function besides modifying the variable
@@ -42,8 +43,14 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(highlight-operators
-                                      key-chord
+                                      ;; Great function for learning about what
+                                      ;; the major mode supports. Also has
+                                      ;; discover-my-mode for minor modes.
+                                      discover-my-major
                                       fill-column-indicator
+                                      toml-mode
+                                      rust-mode
+                                      flycheck-rust
                                       company-ycmd
                                       flycheck-ycmd
                                       ycmd)
@@ -109,8 +116,6 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(spacemacs-dark
                          monokai
-                         spacemacs-light
-                         solarized-light
                          solarized-dark
                          leuven
                          zenburn)
@@ -342,7 +347,7 @@ remove the comment characters from that line before joining."
                  "\\s<" ; comment-start char as per syntax table
                  "\\|" (substring comment-start 0 1) ; first char of `comment-start'
                  "\\|" "\\s-")) ; extra spaces
-          (delete-forward-char 1)))))
+          (delete-char 1)))))
 
   (define-key evil-normal-state-map (kbd "J") 'val/join-lines)
 
@@ -395,6 +400,11 @@ remove the comment characters from that line before joining."
   ;; editing a symlink. Yes Emacs, I do want to open the file.
   (setq vc-follow-symlinks t)
 
+  ;; Chrome as default browser
+  (setq-default browse-url-browser-function 'browse-url-generic
+                browse-url-generic-program "google-chrome")
+
+
   ;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; PLUGIN CONFIG
   ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -403,12 +413,12 @@ remove the comment characters from that line before joining."
   (setq-default helm-mode-fuzzy-match t)
   (setq-default helm-completion-in-region-fuzzy-match t)
 
-  ;; fill-column-indicator (visual indicator line at 80 colums) config
-  (setq-default fci-rule-color "#3B3A32")
   ;; Workaround to force fci-mode on globally.
   (define-globalized-minor-mode global-fci-mode fci-mode
     (lambda () (fci-mode 1)))
   (global-fci-mode 1)
+  ;; fill-column-indicator (visual indicator line at 80 colums) config
+  (setq-default fci-rule-color "#3B3A32")
 
   ;; Set up operator highlight.
   (add-hook 'prog-mode-hook
@@ -452,11 +462,20 @@ remove the comment characters from that line before joining."
   (set-variable 'ycmd-parse-conditions
                 '(save new-line mode-enabled idle-change buffer-focus))
 
+  ;; Enable flycheck (syntastic equiv)
+  (global-flycheck-mode)
+  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
+  (set-variable 'flycheck-display-errors-delay 0.4)
+
   ;; I don't know why emacs-ycmd sets up ycmd for python syntax checking; ycmd
   ;; doesn't support it! (I'd know.)
   (add-hook 'python-mode-hook
             (lambda () (add-to-list 'flycheck-disabled-checkers 'ycmd)))
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
