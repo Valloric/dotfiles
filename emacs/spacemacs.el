@@ -49,11 +49,11 @@ values."
                                       ycmd)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
-                                    ;; kills search highlight persisting after
-                                    ;; search
+                                    ;; Prevents search highlight persisting
+                                    ;; after search.
                                     evil-search-highlight-persist
-                                    ;; stops emacsclient starting with last
-                                    ;; buffer; now starts with scratch buffer
+                                    ;; Stops emacsclient starting with last
+                                    ;; buffer; now starts with scratch buffer.
                                     persp-mode)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
