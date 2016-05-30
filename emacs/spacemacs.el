@@ -28,7 +28,10 @@ values."
      emacs-lisp
      git
      markdown
+     yaml
      colors
+     javascript
+     html
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -335,6 +338,9 @@ you should place your code here."
   ;; Makes spc-spc use avy-goto-char instead of avy-goto-word
   (spacemacs/set-leader-keys "SPC" 'avy-goto-char)
 
+  ;; ycmd goto-anything
+  (spacemacs/set-leader-keys "og" 'ycmd-goto)
+
   (defun val/join-lines ()
     "Join the following line onto the current one.
 If the current line is a comment and the next line is also a comment,
@@ -405,6 +411,9 @@ remove the comment characters from that line before joining."
   ;; editing a symlink. Yes Emacs, I do want to open the file.
   (setq vc-follow-symlinks t)
 
+  ;; Min number of lines to keep below/above the cursor in view.
+  (setq-default scroll-margin 3)
+
   ;; Chrome as default browser
   (setq-default browse-url-browser-function 'browse-url-generic
                 browse-url-generic-program "google-chrome")
@@ -420,6 +429,26 @@ remove the comment characters from that line before joining."
 
   ;; *.zsh files now use sh-mode as major mode
   (add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
+
+  ;; The below defadvice calls modify searching with '/' so that it recenters
+  ;; the screen after each jump.
+  (defadvice
+      evil-search-forward
+      (after evil-search-forward-recenter activate)
+    (recenter))
+  (ad-activate 'evil-search-forward)
+
+  (defadvice
+      evil-search-next
+      (after evil-search-next-recenter activate)
+    (recenter))
+  (ad-activate 'evil-search-next)
+
+  (defadvice
+      evil-search-previous
+      (after evil-search-previous-recenter activate)
+    (recenter))
+  (ad-activate 'evil-search-previous)
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; PLUGIN CONFIG
@@ -477,8 +506,12 @@ remove the comment characters from that line before joining."
   (set-variable 'ycmd-global-modes 'all)
   (set-variable 'ycmd-parse-conditions
                 '(save new-line mode-enabled idle-change buffer-focus))
+  (set-variable 'ycmd-rust-src-path "/home/valloric/repos/rust/src")
 
-  ;; Enable flycheck (syntastic equiv)
+  ;; rust-mode by default sets 4.
+  (set-variable 'rust-indent-offset 2)
+
+  ;; Enable flycheck (syntastic equiv).
   (global-flycheck-mode)
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
   (set-variable 'flycheck-display-errors-delay 0.4)
@@ -488,8 +521,15 @@ remove the comment characters from that line before joining."
   (add-hook 'python-mode-hook
             (lambda () (add-to-list 'flycheck-disabled-checkers 'ycmd)))
 
-  ;; Turn on git commit syntax highlighting
+  ;; Turn on git commit syntax highlighting.
   (global-git-commit-mode)
+  ;; Always spell-check for commit messages.
+  (add-hook 'git-commit-mode-hook 'turn-on-flyspell)
+  ;; Don't save cursor position in git commit messages, it's never useful.
+  (add-hook 'git-commit-mode-hook (lambda () (toggle-save-place 0)))
+
+  ;; Turn on tildes as markers for end of file.
+  (global-vi-tilde-fringe-mode)
   )
 
 ;; Local Variables:
