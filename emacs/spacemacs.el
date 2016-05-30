@@ -484,6 +484,8 @@ remove the comment characters from that line before joining."
   (add-hook 'python-mode-hook
             (lambda () (add-to-list 'flycheck-disabled-checkers 'ycmd)))
 
+  ;; Turn on git commit syntax highlighting
+  (global-git-commit-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
