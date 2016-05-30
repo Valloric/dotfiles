@@ -31,7 +31,7 @@ export VISUAL="$EDITOR"
 export GIT_EDITOR="$EDITOR"
 
 export P4DIFF="meld"
-export PATH=$HOME/bin:$PATH:$HOME/bin/p4v/bin
+export PATH=$HOME/bin:$PATH:$HOME/bin/p4v/bin:$HOME/.cargo/bin
 
 platform=$(uname)
 
