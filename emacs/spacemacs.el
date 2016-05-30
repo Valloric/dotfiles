@@ -25,7 +25,6 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
-     better-defaults
      emacs-lisp
      git
      markdown
@@ -263,6 +262,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (custom-set-variables
    '(spacemacs-theme-custom-colors
      '((base . "#ffffff")
+       (var . "#ffffff")
        (bg1 . "#000000")
        (comment-bg . "#000000")
        (comment . "#13c100")
@@ -282,6 +282,10 @@ before packages are loaded. If you are unsure, you should try in setting them in
    ;; explanation. (That's a lie, I just don't know how to. :))
    '(helm-follow-mode-persistent t)
    )
+
+  ;; Darker background for current line
+  (custom-set-faces
+   '(hl-line ((t (:background "#0f0f0f")))))
   )
 
 (defun dotspacemacs/user-config ()
@@ -488,8 +492,8 @@ remove the comment characters from that line before joining."
   (global-git-commit-mode)
   )
 
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
+;; Do not write anything past this comment. This is where Emacs will
+;; auto-generate custom variable definitions.
