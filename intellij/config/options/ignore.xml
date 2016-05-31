@@ -1,21 +1,21 @@
 <application>
   <component name="IgnoreSettings" missingGitignore="true" ignoredFileStatus="true" outerIgnoreRules="true" settingsFixed="true">
     <languages>
-      <language id="Bazaar" NEW_FILE="true" ENABLE="true" />
-      <language id="Chef" NEW_FILE="true" ENABLE="false" />
-      <language id="Cvs" NEW_FILE="true" ENABLE="true" />
-      <language id="Darcs" NEW_FILE="true" ENABLE="true" />
-      <language id="Docker" NEW_FILE="true" ENABLE="false" />
-      <language id="Floobits" NEW_FILE="true" ENABLE="false" />
-      <language id="Fossil" NEW_FILE="true" ENABLE="true" />
-      <language id="Git" NEW_FILE="true" ENABLE="true" />
-      <language id="JSHint" NEW_FILE="true" ENABLE="false" />
-      <language id="Mercurial" NEW_FILE="true" ENABLE="true" />
-      <language id="Monotone" NEW_FILE="true" ENABLE="true" />
-      <language id="Nodemon" NEW_FILE="true" ENABLE="false" />
-      <language id="Npm" NEW_FILE="true" ENABLE="false" />
-      <language id="Perforce" NEW_FILE="true" ENABLE="true" />
-      <language id="Team Foundation" NEW_FILE="true" ENABLE="true" />
+      <language id="Bazaar" ENABLE="true" NEW_FILE="true" />
+      <language id="Chef" ENABLE="false" NEW_FILE="true" />
+      <language id="Cvs" ENABLE="true" NEW_FILE="true" />
+      <language id="Darcs" ENABLE="true" NEW_FILE="true" />
+      <language id="Docker" ENABLE="false" NEW_FILE="true" />
+      <language id="Floobits" ENABLE="false" NEW_FILE="true" />
+      <language id="Fossil" ENABLE="true" NEW_FILE="true" />
+      <language id="Git" ENABLE="true" NEW_FILE="true" />
+      <language id="JSHint" ENABLE="false" NEW_FILE="true" />
+      <language id="Mercurial" ENABLE="true" NEW_FILE="true" />
+      <language id="Monotone" ENABLE="true" NEW_FILE="true" />
+      <language id="Nodemon" ENABLE="false" NEW_FILE="true" />
+      <language id="Npm" ENABLE="false" NEW_FILE="true" />
+      <language id="Perforce" ENABLE="true" NEW_FILE="true" />
+      <language id="Team Foundation" ENABLE="true" NEW_FILE="true" />
     </languages>
     <userTemplates>
       <template name="Example user template">### Example user template
