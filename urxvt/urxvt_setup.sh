@@ -17,3 +17,4 @@ cp -f $script_dir/Xdefaults ~/.Xresources
 
 perl_ext=$script_dir/perl-extensions
 perl -i -p -e "s!PATH_TO_PERL_EXT!$perl_ext!ig" ~/.Xdefaults
+perl -i -p -e "s!PATH_TO_PERL_EXT!$perl_ext!ig" ~/.Xresources
