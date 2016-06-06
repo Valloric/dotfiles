@@ -474,6 +474,7 @@ remove the comment characters from that line before joining."
               (set-face-foreground 'highlight-operators-face "cyan")
               ))
   (add-hook 'emacs-lisp-mode-hook (lambda () (highlight-operators-mode -1)))
+  (add-hook 'json-mode-hook (lambda () (highlight-operators-mode -1)))
 
   (custom-set-faces
    ;; All parens/braces/brackets start with cyan color; further nesting changes
