@@ -36,6 +36,7 @@ git config --global difftool.prompt false
 git config --global merge.tool kdiff3
 
 git config --global alias.ks "difftool -y -t Kaleidoscope"
+git config --global alias.meld "difftool --tool=meld --dir-diff -y"
 
 # This gives us 'ours', 'base', and 'theirs', instead of just 'ours' and
 # 'theirs'. More details:
@@ -62,8 +63,6 @@ git config --global push.default upstream
 # the repo, but for Windows checkouts it converts LF to CRLF (and back to LF on
 # commits)
 git config --global core.autocrlf input
-
-git config --global alias.meld "difftool --tool=meld --dir-diff -y"
 
 git config --global core.excludesfile ~/.gitignore_global
 
