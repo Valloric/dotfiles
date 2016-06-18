@@ -79,6 +79,17 @@ git config --global stash.showPatch true
 # unstashes them afterwards.
 git config --global rebase.autostash true
 
+# When editing the commit message, git will now always include a diff of the
+# changes below the message area (the diff does NOT become part of the commit
+# message, it's only there for information).
+git config --global commit.verbose true
+
+# Number of concurrent submodule fetches
+git config --global submodule.fetchJobs 8
+
+# Prettier diffs
+git config --global diff.compactionHeuristic true
+
 # Make git use the system-default web browser.
 if [[ $(uname) == *Darwin* ]]; then
   git config --global web.browser open
