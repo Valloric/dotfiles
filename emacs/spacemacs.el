@@ -331,6 +331,10 @@ you should place your code here."
   (define-key evil-normal-state-map (kbd ";") 'evil-ex)
   (define-key evil-normal-state-map (kbd ":") 'evil-repeat-find-char)
 
+  ;; Q reformats paragraphs to fit within 80 lines
+  (define-key evil-normal-state-map (kbd "Q") 'fill-paragraph)
+  (define-key evil-visual-state-map (kbd "Q") 'fill-paragraph)
+
   ;; Makes j and k behave like gj and gk (visual line navigation)
   (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
   (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
