@@ -419,12 +419,11 @@ remove the comment characters from that line before joining."
                 browse-url-generic-program "google-chrome")
 
   ;; Highlight all function calls in all programming modes.
-  (add-hook
-   'prog-mode-hook
+  (add-hook 'prog-mode-hook
    (lambda ()
      (font-lock-add-keywords
       nil
-      '(("\\<\\([_a-zA-Z][_a-zA-Z0-9]*\\)(" 1 'font-lock-function-name-face)))
+      '(("\\([_a-zA-Z][_a-zA-Z0-9]*\\)(" 1 'font-lock-function-name-face)))
      ))
 
   ;; *.zsh files now use sh-mode as major mode
