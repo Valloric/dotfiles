@@ -86,6 +86,8 @@ export FZF_DEFAULT_OPTS="
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.LESS_TERMCAP ] && source ~/.LESS_TERMCAP
 
+# needed for gpg-agent to work right
+export GPG_TTY=$(tty)
 
 # added by travis gem
 [ -f /home/valloric/.travis/travis.sh ] && source /home/valloric/.travis/travis.sh

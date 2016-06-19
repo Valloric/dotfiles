@@ -20,13 +20,13 @@ fi
 
 if [[ ! -a ~/.gradle/gradle.properties ]]
 then
-  mkdir ~/.gradle
+  mkdir -p ~/.gradle
   ln -s $script_dir/gradle/gradle.properties ~/.gradle/gradle.properties
 fi
 
 if [[ ! -a ~/.cgdb/cgdbrc ]]
 then
-  mkdir ~/.cgdb
+  mkdir -p ~/.cgdb
   ln -s $script_dir/misc/cgdbrc ~/.cgdb/cgdbrc
 fi
 
@@ -84,4 +84,4 @@ $script_dir/intellij/intellij_setup.sh
 $script_dir/less/less_setup.sh
 $script_dir/compton/compton_setup.sh
 $script_dir/emacs/emacs_setup.sh
-
+$script_dir/gpg/gpg_setup.sh
