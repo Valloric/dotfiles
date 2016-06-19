@@ -384,6 +384,17 @@ remove the comment characters from that line before joining."
   ;; < and > indent by this many chars
   (setq-default evil-shift-width 2)
 
+  ;; always indent with spaces, never tabs
+  (setq-default indent-tabs-mode nil)
+
+  ;; indent with 2 spaces
+  (setq-default tab-width 2)
+  (defvaralias 'c-basic-offset 'tab-width)
+  (defvaralias 'cperl-indent-level 'tab-width)
+  (defvaralias 'sh-basic-offset 'tab-width)
+  (defvaralias 'sh-indentation 'tab-width)
+  (defvaralias 'rust-indent-offset 'tab-width)
+
   ;; 80 colums for wrapping
   (setq-default fill-column 80)
   ;; Hard-wrap at 80 columns on for _everything_
@@ -511,9 +522,6 @@ remove the comment characters from that line before joining."
   (set-variable 'ycmd-parse-conditions
                 '(save new-line mode-enabled idle-change buffer-focus))
   (set-variable 'ycmd-rust-src-path "/home/valloric/repos/rust/src")
-
-  ;; rust-mode by default sets 4.
-  (set-variable 'rust-indent-offset 2)
 
   ;; Enable flycheck (syntastic equiv).
   (global-flycheck-mode)
