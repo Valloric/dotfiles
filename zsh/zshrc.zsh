@@ -74,7 +74,7 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # -i turns on "smartcase" search by default
-export LESS="-i"
+export LESS="-iR"
 
 # Set up RVM so "rvm use 2.0.0" works
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
