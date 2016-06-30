@@ -384,7 +384,7 @@ remove the comment characters from that line before joining."
   ;; < and > indent by this many chars
   (setq-default evil-shift-width 2)
 
-  ;; always indent with spaces, never tabs
+  ;; Always indent with spaces, never tabs
   (setq-default indent-tabs-mode nil)
 
   ;; indent with 2 spaces
@@ -399,6 +399,13 @@ remove the comment characters from that line before joining."
   (setq-default fill-column 80)
   ;; Hard-wrap at 80 columns on for _everything_
   (setq-default auto-fill-function 'do-auto-fill)
+
+  ;; Soft-wrap (visual wrap) always for long lines that don't fit on the screen
+  (global-visual-line-mode 1)
+
+  ;; Ensure that soft-wrap uses markers to show a line was wrapped
+  (setq-default visual-line-fringe-indicators
+                '(left-curly-arrow right-curly-arrow))
 
   ;; Make emacsclient start maximized
   (add-to-list 'default-frame-alist '(fullscreen . fullboth))
