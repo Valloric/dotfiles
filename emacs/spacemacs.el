@@ -444,6 +444,9 @@ remove the comment characters from that line before joining."
   ;; *.zsh files now use sh-mode as major mode
   (add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
 
+  ;; *.avsc files now use json-mode as major mode
+  (add-to-list 'auto-mode-alist '("\\.avsc\\'" . json-mode))
+
   ;; The below defadvice calls modify searching with '/' so that it recenters
   ;; the screen after each jump.
   (defadvice
