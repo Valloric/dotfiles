@@ -12,4 +12,5 @@
     <EXCLUDED_PACKAGE NAME="org.junit.Assert.assertThat" />
     <EXCLUDED_PACKAGE NAME="org.testng.annotations.Optional" />
   </component>
+  <component name="DaemonCodeAnalyzerSettings" profile="val" />
 </application>
