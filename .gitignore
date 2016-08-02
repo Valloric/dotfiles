@@ -31,9 +31,13 @@ intellij/config/options/debugger.renderers.xml
 intellij/config/options/fileEditorProviderManager.xml
 intellij/config/options/usageView.xml
 intellij/config/options/window.state.xml
+intellij/config/options/proxy.settings.pwd
+intellij/config/fileTemplates/internal/**
+intellij/config/extensions/**
 intellij/config/port.lock
 intellij/config/checkstyle/**
 intellij/config/codestyles/linkedin-codestyle.xml
 intellij/config/li-idea.json
 intellij/config/li-spelling/**
-
+intellij/config/li-options-backup/**
+intellij/config/li-options-backup/**

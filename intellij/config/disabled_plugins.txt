@@ -1,6 +1,7 @@
-com.intellij.uiDesigner
-org.jetbrains.android
 DevKit
-org.jetbrains.idea.eclipse
-XSLT-Debugger
 XPathView
+XSLT-Debugger
+com.intellij.uiDesigner
+net.nicoulaj.idea.markdown
+org.jetbrains.android
+org.jetbrains.idea.eclipse

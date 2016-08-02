@@ -12,9 +12,9 @@ fi
 
 if [[ $platform == *Darwin* ]]
 then
-  if [[ ! -a ~/Library/Preferences/IntelliJIdea14 ]]
+  if [[ ! -a ~/Library/Preferences/IntelliJIdea15 ]]
   then
-    ln -s $script_dir/config ~/Library/Preferences/IntelliJIdea14
+    ln -s $script_dir/config ~/Library/Preferences/IntelliJIdea15
   fi
 else
   mkdir -p ~/.IdeaIC15
@@ -29,5 +29,12 @@ else
   if [[ ! -a ~/.IntelliJIdea15/config ]]
   then
     ln -s $script_dir/config ~/.IntelliJIdea15/config
+  fi
+
+  mkdir -p ~/.IntelliJIdeaLI2
+
+  if [[ ! -a ~/.IntelliJIdeaLI2/config ]]
+  then
+    ln -s $script_dir/config ~/.IntelliJIdeaLI2/config
   fi
 fi

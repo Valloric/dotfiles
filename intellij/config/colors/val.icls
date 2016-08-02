@@ -1,6 +1,6 @@
 <scheme name="val" version="142" parent_scheme="Darcula">
   <option name="LINE_SPACING" value="1.0" />
-  <option name="EDITOR_FONT_SIZE" value="14" />
+  <option name="EDITOR_FONT_SIZE" value="15" />
   <console-font>
     <option name="EDITOR_FONT_NAME" value="Source Code Pro" />
     <option name="EDITOR_FONT_SIZE" value="14" />
@@ -9,7 +9,7 @@
     <option name="EDITOR_FONT_NAME" value="SourceCodePro-Regular" />
     <option name="EDITOR_FONT_SIZE" value="14" />
   </console-font>
-  <option name="EDITOR_FONT_NAME" value="Source Code Pro" />
+  <option name="EDITOR_FONT_NAME" value="Consolas" />
   <colors>
     <option name="CARET_ROW_COLOR" value="171717" />
     <option name="CONSOLE_BACKGROUND_KEY" value="0" />
@@ -150,6 +150,9 @@
         <option name="FOREGROUND" value="ffa600" />
       </value>
     </option>
+    <option name="DEFAULT_IDENTIFIER">
+      <value />
+    </option>
     <option name="DEFAULT_INSTANCE_FIELD">
       <value>
         <option name="FOREGROUND" value="d1baec" />
@@ -263,9 +266,7 @@
         <option name="FOREGROUND" value="ca47ff" />
       </value>
     </option>
-    <option name="JAVA_COMMA" baseAttributes="DEFAULT_COMMA" />
     <option name="JAVA_KEYWORD" baseAttributes="DEFAULT_KEYWORD" />
-    <option name="JAVA_SEMICOLON" baseAttributes="DEFAULT_SEMICOLON" />
     <option name="JAVA_VALID_STRING_ESCAPE" baseAttributes="DEFAULT_VALID_STRING_ESCAPE" />
     <option name="KOTLIN_DYNAMIC_FUNCTION_CALL">
       <value>
@@ -319,7 +320,6 @@
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
-    <option name="STATIC_FINAL_FIELD_ATTRIBUTES" baseAttributes="STATIC_FIELD_ATTRIBUTES" />
     <option name="STATIC_METHOD_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="ffca00" />

@@ -1,6 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <application>
   <component name="Git.Application.Settings">
-    <option name="myPathToGit" value="git" />
-    <option name="SSH_EXECUTABLE" value="IDEA_SSH" />
+    <option name="myPathToGit" value="/export/apps/xtools/bin/git" />
+  <option name="SSH_EXECUTABLE" value="IDEA_SSH" />
   </component>
 </application>

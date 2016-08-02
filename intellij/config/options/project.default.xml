@@ -1,6 +1,18 @@
 <application>
   <component name="ProjectManager">
     <defaultProject>
+      <component name="CheckStyle-IDEA">
+        <option name="configuration">
+          <map>
+            <entry key="active-configuration" value="LOCAL_FILE:/home/vmarkovi/.IntelliJIdeaLI2/config/checkstyle/linkedin-checkstyle.xml:LinkedIn Style" />
+            <entry key="check-nonjava-files" value="false" />
+            <entry key="check-test-classes" value="false" />
+            <entry key="location-1" value="LOCAL_FILE:/home/vmarkovi/.IntelliJIdeaLI2/config/checkstyle/linkedin-checkstyle.xml:LinkedIn Style" />
+            <entry key="suppress-errors" value="true" />
+            <entry key="thirdparty-classpath" value="" />
+          </map>
+        </option>
+      </component>
       <component name="CompilerConfiguration">
         <resourceExtensions />
         <wildcardResourcePatterns>
@@ -101,7 +113,7 @@
         <ConfirmationsSetting value="0" id="Add" />
         <ConfirmationsSetting value="0" id="Remove" />
       </component>
-      <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+      <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8.0_72" project-jdk-type="JavaSDK" />
       <component name="PropertiesComponent">
         <property name="settings.editor.selected.configurable" value="fileTemplates" />
         <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -190,6 +202,13 @@
           <method />
         </configuration>
       </component>
+      <component name="ScalaSbtSettings">
+        <option name="customLauncherEnabled" value="true" />
+        <option name="customLauncherPath" value="$USER_HOME$/.sbt/liplay/sbt-launch.jar" />
+        <option name="maximumHeapSize" value="2048" />
+        <option name="vmParameters" value="-Dplay.version=2.2.4.1 -DartifactoryUrl=http://dev-artifactory.corp.linkedin.com:8081/artifactory -Dsbt.boot.properties=.sbt/liplay/sbt.boot.properties -Dplay.home=.sbt/liplay/framework -Dsbt.parser.simple=true" />
+      </component>
+      <component name="SpellCheckerSettings" BundledDictionaries="0" Dictionaries="0" Folder0="$APPLICATION_CONFIG_DIR$/li-spelling" Folders="1" />
       <component name="VcsContentAnnotationSettings">
         <option name="myLimit" value="2678400000" />
       </component>
