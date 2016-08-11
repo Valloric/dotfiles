@@ -27,9 +27,6 @@
             <id />
           </State>
           <State>
-            <id>CollectionsScala</id>
-          </State>
-          <State>
             <id>Abstraction issuesJava</id>
           </State>
           <State>
@@ -55,6 +52,9 @@
           </State>
           <State>
             <id>CoffeeScript</id>
+          </State>
+          <State>
+            <id>CollectionsScala</id>
           </State>
           <State>
             <id>Control FlowGroovy</id>
@@ -215,15 +215,15 @@
             <id />
           </State>
           <State>
-            <id>Java</id>
+            <id>Declaration redundancyJava</id>
           </State>
           <State>
-            <id>Threading issuesJava</id>
+            <id>Java</id>
           </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>AccessToStaticFieldLockedOnInstance</id>
+            <id>WeakerAccess</id>
           </State>
         </selected-state>
       </profile-state>
