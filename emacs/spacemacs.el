@@ -433,6 +433,9 @@ remove the comment characters from that line before joining."
   ;; editing a symlink. Yes Emacs, I do want to open the file.
   (setq vc-follow-symlinks t)
 
+  ;; Sentences do not end with two spaces.
+  (setq sentence-end-double-space nil)
+
   ;; Min number of lines to keep below/above the cursor in view.
   (setq-default scroll-margin 3)
 
