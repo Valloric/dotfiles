@@ -304,6 +304,9 @@ you should place your code here."
   ;; CUSTOM MAPS
   ;;;;;;;;;;;;;;;;;;;;;;;;;
 
+  ;; These maps won't make any sense until you realize I'm using the Dvorak
+  ;; keyboard layout.
+
   (define-key evil-normal-state-map (kbd "M-j") (kbd "15j"))
   (define-key evil-normal-state-map (kbd "M-k") (kbd "15k"))
 
