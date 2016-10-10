@@ -52,6 +52,7 @@ values."
                                       fill-column-indicator
                                       toml-mode
                                       rust-mode
+                                      pig-mode
                                       flycheck-rust
                                       company-ycmd
                                       flycheck-ycmd
