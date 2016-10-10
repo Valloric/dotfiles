@@ -1,11 +1,15 @@
 <keymap version="1" name="val" parent="Default for XWin">
   <action id="ContextHelp" />
+  <action id="Coverage">
+    <keyboard-shortcut first-keystroke="shift f11" />
+  </action>
   <action id="Generate">
     <keyboard-shortcut first-keystroke="alt i" />
   </action>
   <action id="ReformatCode">
     <keyboard-shortcut first-keystroke="ctrl alt r" />
   </action>
+  <action id="ShowBookmarks" />
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="shift alt enter" />
   </action>

@@ -1,5 +1,6 @@
 <application>
   <component name="NotificationConfiguration">
     <notification groupId="Framework Detection" displayType="NONE" />
+    <notification groupId="Gradle Notification Group" displayType="NONE" />
   </component>
 </application>

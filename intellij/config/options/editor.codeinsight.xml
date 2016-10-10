@@ -1,15 +1,26 @@
 <application>
   <component name="CodeInsightSettings">
-    <option name="AUTO_POPUP_JAVADOC_INFO" value="true" />
+    <option name="AUTO_POPUP_PARAMETER_INFO" value="false" />
     <option name="COMPLETION_CASE_SENSITIVE" value="2" />
     <option name="OPTIMIZE_IMPORTS_ON_THE_FLY" value="true" />
     <option name="ADD_UNAMBIGIOUS_IMPORTS_ON_THE_FLY" value="true" />
+    <EXCLUDED_PACKAGE NAME="com.google.api.client.repackaged" />
+    <EXCLUDED_PACKAGE NAME="com.google.api.client.util.Preconditions" />
     <EXCLUDED_PACKAGE NAME="com.google.common.base.Optional" />
+    <EXCLUDED_PACKAGE NAME="com.google.gson.internal" />
     <EXCLUDED_PACKAGE NAME="com.linkedin.common.Urn" />
     <EXCLUDED_PACKAGE NAME="com.linkedin.resourceidentity.urn.Urn" />
+    <EXCLUDED_PACKAGE NAME="com.sun.javaws.JnlpxArgs.verify" />
     <EXCLUDED_PACKAGE NAME="edu.emory.mathcs" />
+    <EXCLUDED_PACKAGE NAME="javafx.beans.binding.Bindings.when" />
+    <EXCLUDED_PACKAGE NAME="org.assertj.core.api.AssertionsForClassTypes.assertThat" />
+    <EXCLUDED_PACKAGE NAME="org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy" />
+    <EXCLUDED_PACKAGE NAME="org.assertj.core.api.Java6Assertions.assertThat" />
+    <EXCLUDED_PACKAGE NAME="org.assertj.core.api.Java6Assertions.assertThatThrownBy" />
+    <EXCLUDED_PACKAGE NAME="org.assertj.core.util.Preconditions" />
     <EXCLUDED_PACKAGE NAME="org.hamcrest.MatcherAssert.assertThat" />
     <EXCLUDED_PACKAGE NAME="org.junit.Assert.assertThat" />
     <EXCLUDED_PACKAGE NAME="org.testng.annotations.Optional" />
   </component>
+  <component name="DaemonCodeAnalyzerSettings" profile="val" />
 </application>

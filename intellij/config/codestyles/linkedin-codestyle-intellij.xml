@@ -24,6 +24,7 @@
     </value>
   </option>
   <option name="FIELD_NAME_PREFIX" value="_" />
+  <option name="USE_SINGLE_CLASS_IMPORTS" value="false" />
   <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="1000" />
   <option name="NAMES_COUNT_TO_USE_IMPORT_ON_DEMAND" value="5" />
   <option name="IMPORT_LAYOUT_TABLE">
@@ -33,6 +34,8 @@
       <package name="" withSubpackages="true" static="true" />
     </value>
   </option>
+  <option name="RIGHT_MARGIN" value="80" />
+  <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="true" />
   <option name="ENABLE_JAVADOC_FORMATTING" value="false" />
   <option name="JD_ADD_BLANK_AFTER_PARM_COMMENTS" value="true" />
   <option name="JD_ADD_BLANK_AFTER_RETURN" value="true" />
