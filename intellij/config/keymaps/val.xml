@@ -25,4 +25,5 @@
   <action id="SwitchUp">
     <keyboard-shortcut first-keystroke="shift alt up" />
   </action>
+  <action id="VimPluginToggle" />
 </keymap>
