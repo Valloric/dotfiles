@@ -10,31 +10,23 @@ then
   ln -s $script_dir/ideavimrc ~/.ideavimrc
 fi
 
-if [[ $platform == *Darwin* ]]
-then
-  if [[ ! -a ~/Library/Preferences/IntelliJIdea15 ]]
+declare -a names=("IntellijIdea15" "IdeaIC15" "IntellijIdea2016.2" "IntellijIdeaLI2")
+
+for name in "${names[@]}"
+do
+  if [[ $platform == *Darwin* ]]
   then
-    ln -s $script_dir/config ~/Library/Preferences/IntelliJIdea15
+    if [[ ! -a ~/Library/Preferences/$name ]]
+    then
+      ln -s $script_dir/config ~/Library/Preferences/$name
+    fi
+  else
+    mkdir -p ~/.$name
+
+    if [[ ! -a ~/.$name/config ]]
+    then
+      ln -s $script_dir/config ~/.$name/config
+    fi
   fi
-else
-  mkdir -p ~/.IdeaIC15
+done
 
-  if [[ ! -a ~/.IdeaIC15/config ]]
-  then
-    ln -s $script_dir/config ~/.IdeaIC15/config
-  fi
-
-  mkdir -p ~/.IntelliJIdea15
-
-  if [[ ! -a ~/.IntelliJIdea15/config ]]
-  then
-    ln -s $script_dir/config ~/.IntelliJIdea15/config
-  fi
-
-  mkdir -p ~/.IntelliJIdeaLI2
-
-  if [[ ! -a ~/.IntelliJIdeaLI2/config ]]
-  then
-    ln -s $script_dir/config ~/.IntelliJIdeaLI2/config
-  fi
-fi
