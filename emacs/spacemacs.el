@@ -511,6 +511,7 @@ remove the comment characters from that line before joining."
    ;; All parens/braces/brackets start with cyan color; further nesting changes
    ;; color.
    '(rainbow-delimiters-depth-1-face ((t (:foreground "cyan"))))
+   '(web-mode-css-property-name-face ((t (:foreground "#68A145"))))
    )
 
   ;; Rainbow mode! (CSS color declarations use the color background.)
