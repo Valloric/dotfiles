@@ -481,6 +481,15 @@ remove the comment characters from that line before joining."
     (recenter))
   (ad-activate 'evil-search-previous)
 
+  ;; Makes emacs write "customization" changes (which I never use) into a
+  ;; separate file and not this one. Also prevent errors if that file doesn't
+  ;; exist.
+  (setq custom-file "~/.emacs.d/custom.el")
+  (load custom-file 'noerror)
+
+  ;; Turn on tildes as markers for end of file.
+  (global-vi-tilde-fringe-mode)
+
   ;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; PLUGIN CONFIG
   ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -557,9 +566,6 @@ remove the comment characters from that line before joining."
   (add-hook 'git-commit-mode-hook 'turn-on-flyspell)
   ;; Don't save cursor position in git commit messages, it's never useful.
   (add-hook 'git-commit-mode-hook (lambda () (toggle-save-place 0)))
-
-  ;; Turn on tildes as markers for end of file.
-  (global-vi-tilde-fringe-mode)
   )
 
 ;; Local Variables:
