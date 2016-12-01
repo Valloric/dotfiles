@@ -88,6 +88,7 @@ git config --global submodule.fetchJobs 8
 
 # Prettier diffs
 git config --global diff.compactionHeuristic true
+git config --global diff.indentHeuristic on
 
 # Make git use the system-default web browser.
 if [[ $(uname) == *Darwin* ]]; then
