@@ -213,6 +213,11 @@
   <inspection_tool class="WaitOrAwaitWithoutTimeout" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="WaitWhileHoldingTwoLocks" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="WaitWithoutCorrespondingNotify" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="WeakerAccess" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="SUGGEST_PACKAGE_LOCAL_FOR_MEMBERS" value="false" />
+    <option name="SUGGEST_PACKAGE_LOCAL_FOR_TOP_CLASSES" value="false" />
+    <option name="SUGGEST_PRIVATE_FOR_INNERS" value="false" />
+  </inspection_tool>
   <inspection_tool class="WhileLoopSpinsOnField" enabled="true" level="WARNING" enabled_by_default="true">
     <option name="ignoreNonEmtpyLoops" value="false" />
   </inspection_tool>

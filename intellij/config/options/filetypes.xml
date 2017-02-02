@@ -1,9 +1,10 @@
 <application>
-  <component name="FileTypeManager" version="16">
+  <component name="FileTypeManager" version="17">
     <extensionMap>
       <mapping ext="avsc" type="JSON" />
       <mapping ext="pdsc" type="JSON" />
       <mapping pattern="junk" type="PLAIN_TEXT" />
+      <mapping pattern="EntityMetadataEvent.avsc" type="PLAIN_TEXT" />
       <mapping ext="spring" type="XML" />
       <mapping ext="fabric" type="XML" />
       <mapping ext="src" type="XML" />
