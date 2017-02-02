@@ -47,6 +47,12 @@ then
   ln -s $script_dir/redshift/redshift.conf ~/.config/redshift.conf
 fi
 
+if [[ ! -a ~/.config/alacritty.yml ]]
+then
+  mkdir -p ~/.config
+  ln -s $script_dir/alacritty/alacritty.yml ~/.config/alacritty.yml
+fi
+
 # -p says to create the dir if it doesn't exist already
 mkdir -p $HOME/bin
 
