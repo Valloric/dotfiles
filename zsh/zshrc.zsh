@@ -76,6 +76,11 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # -i turns on "smartcase" search by default
 export LESS="-iR"
 
+# This needs to be set for xclip, GUI emacs etc to work correctly; it informs
+# them which X server to talk to. This should be set by default if everything is
+# working correctly, but life is mean so sometimes it isn't.
+export DISPLAY=":0"
+
 # Set up RVM so "rvm use 2.0.0" works
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
