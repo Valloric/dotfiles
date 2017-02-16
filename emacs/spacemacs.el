@@ -51,6 +51,8 @@ values."
                                       ;; discover-my-mode for minor modes.
                                       discover-my-major
                                       fill-column-indicator
+                                      gradle-mode
+                                      groovy-mode
                                       toml-mode
                                       rust-mode
                                       pig-mode
