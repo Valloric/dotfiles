@@ -1,6 +1,8 @@
 <application>
   <component name="NotificationConfiguration">
+    <notification groupId="Dev Server Update Notifications" displayType="NONE" />
     <notification groupId="Framework Detection" displayType="NONE" />
     <notification groupId="Gradle Notification Group" displayType="NONE" />
+    <notification groupId="IGNORE_GROUP" displayType="NONE" />
   </component>
 </application>

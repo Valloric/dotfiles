@@ -13,27 +13,12 @@
           </map>
         </option>
       </component>
-      <component name="CompilerConfiguration">
-        <resourceExtensions />
-        <wildcardResourcePatterns>
-          <entry name="!?*.java" />
-          <entry name="!?*.form" />
-          <entry name="!?*.class" />
-          <entry name="!?*.groovy" />
-          <entry name="!?*.scala" />
-          <entry name="!?*.flex" />
-          <entry name="!?*.kt" />
-          <entry name="!?*.clj" />
-          <entry name="!?*.aj" />
-        </wildcardResourcePatterns>
-        <annotationProcessing>
-          <profile default="true" name="Default" enabled="false">
-            <processorPath useClasspath="true" />
-          </profile>
-        </annotationProcessing>
-      </component>
       <component name="Encoding">
         <file url="PROJECT" charset="UTF-8" />
+      </component>
+      <component name="InspectionProjectProfileManager">
+        <option name="PROJECT_PROFILE" />
+        <version value="1.0" />
       </component>
       <component name="MavenImportPreferences">
         <option name="generalSettings">
@@ -103,17 +88,7 @@
           </profile-state>
         </entry>
       </component>
-      <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-        <OptionsSetting value="true" id="Add" />
-        <OptionsSetting value="true" id="Remove" />
-        <OptionsSetting value="true" id="Checkout" />
-        <OptionsSetting value="true" id="Update" />
-        <OptionsSetting value="true" id="Status" />
-        <OptionsSetting value="true" id="Edit" />
-        <ConfirmationsSetting value="0" id="Add" />
-        <ConfirmationsSetting value="0" id="Remove" />
-      </component>
-      <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8.0_72" project-jdk-type="JavaSDK" />
+      <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8.0_72" project-jdk-type="JavaSDK" />
       <component name="PropertiesComponent">
         <property name="settings.editor.selected.configurable" value="fileTemplates" />
         <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -204,9 +179,9 @@
       </component>
       <component name="ScalaSbtSettings">
         <option name="customLauncherEnabled" value="true" />
-        <option name="customLauncherPath" value="$USER_HOME$/.sbt/liplay/sbt-launch.jar" />
+        <option name="customLauncherPath" value="$USER_HOME$/.sbt/liplay/activator-launch-1.3.2.jar" />
         <option name="maximumHeapSize" value="2048" />
-        <option name="vmParameters" value="-Dplay.version=2.2.4.1 -DartifactoryUrl=http://dev-artifactory.corp.linkedin.com:8081/artifactory -Dsbt.boot.properties=.sbt/liplay/sbt.boot.properties -Dplay.home=.sbt/liplay/framework -Dsbt.parser.simple=true" />
+        <option name="vmParameters" value="-Dplay.version=2.4 -DartifactoryUrl=http://dev-artifactory.corp.linkedin.com:8081/artifactory -Dsbt.boot.properties=/home/vmarkovi/.sbt/liplay/sbt.boot.properties -Dplay.home=/home/vmarkovi/.sbt/liplay/framework -Dsbt.parser.simple=true" />
       </component>
       <component name="SpellCheckerSettings" BundledDictionaries="0" Dictionaries="0" Folder0="$APPLICATION_CONFIG_DIR$/li-spelling" Folders="1" />
       <component name="VcsContentAnnotationSettings">

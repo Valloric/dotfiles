@@ -32,6 +32,10 @@ intellij/config/options/fileEditorProviderManager.xml
 intellij/config/options/usageView.xml
 intellij/config/options/window.state.xml
 intellij/config/options/proxy.settings.pwd
+intellij/config/options/applicationLibraries.xml
+intellij/config/options/li.multiproducts.xml
+intellij/config/options/packages.xml
+intellij/config/options/conda_packages.xml
 intellij/config/fileTemplates/internal/**
 intellij/config/extensions/**
 intellij/config/port.lock

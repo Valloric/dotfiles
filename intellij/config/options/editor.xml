@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <application>
   <component name="EditorSettings">
     <option name="USE_SOFT_WRAPS" value="MAIN_EDITOR" />
@@ -9,6 +8,7 @@
     <option name="ARE_LINE_NUMBERS_SHOWN" value="false" />
     <option name="SHOW_BREADCRUMBS" value="false" />
     <option name="IS_ALL_SOFTWRAPS_SHOWN" value="true" />
+    <option name="SHOW_PARAMETER_NAME_HINTS" value="false" />
   </component>
   <component name="XmlEditorOptions">
     <option name="showCssInlineColorPreview" value="true" />
