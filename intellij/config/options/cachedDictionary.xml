@@ -6,6 +6,7 @@
       <w>deserializing</w>
       <w>followfeed</w>
       <w>interdependencies</w>
+      <w>migrator</w>
       <w>pson</w>
       <w>recommender</w>
       <w>retryer</w>
@@ -17,6 +18,7 @@
       <w>timeline</w>
       <w>timelines</w>
       <w>uscp</w>
+      <w>versioning</w>
       <w>vmarkovi</w>
       <w>zalgo</w>
     </words>

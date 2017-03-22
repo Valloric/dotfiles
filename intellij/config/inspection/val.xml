@@ -50,6 +50,10 @@
     <option name="ignoreMethodCalls" value="false" />
   </inspection_tool>
   <inspection_tool class="DynamicRegexReplaceableByCompiledPattern" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="EmptyStatementBody" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="m_reportEmptyBlocks" value="true" />
+    <option name="commentsAreContent" value="true" />
+  </inspection_tool>
   <inspection_tool class="EmptySynchronizedStatement" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="EqualsAndHashcode" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="EqualsHashCodeCalledOnUrl" enabled="true" level="WARNING" enabled_by_default="true" />

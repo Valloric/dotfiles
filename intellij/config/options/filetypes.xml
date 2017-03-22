@@ -1,10 +1,13 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping pattern="LockFreeBloomFilterBenchmark" type="JAVA" />
       <mapping ext="avsc" type="JSON" />
       <mapping ext="pdsc" type="JSON" />
+      <mapping pattern="DUMMY" type="PLAIN_TEXT" />
       <mapping pattern="junk" type="PLAIN_TEXT" />
       <mapping pattern="EntityMetadataEvent.avsc" type="PLAIN_TEXT" />
+      <mapping pattern="BenchmarkList" type="PLAIN_TEXT" />
       <mapping ext="spring" type="XML" />
       <mapping ext="fabric" type="XML" />
       <mapping ext="src" type="XML" />

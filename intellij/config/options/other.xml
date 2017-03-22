@@ -250,7 +250,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>IgnoreResultOfCall</id>
+            <id>EmptyStatementBody</id>
           </State>
         </selected-state>
       </profile-state>
