@@ -546,7 +546,7 @@ remove the comment characters from that line before joining."
   (set-variable 'ycmd-global-config "")
   (set-variable
    'ycmd-server-command
-   '("python" "/home/valloric/repos/YouCompleteMe/third_party/ycmd/ycmd"))
+   '("python3" "/home/valloric/repos/YouCompleteMe/third_party/ycmd/ycmd"))
   (set-variable 'ycmd-extra-conf-whitelist '("~/repos/*"))
   (set-variable 'ycmd-global-modes 'all)
   (set-variable 'ycmd-parse-conditions
@@ -558,10 +558,13 @@ remove the comment characters from that line before joining."
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
   (set-variable 'flycheck-display-errors-delay 0.4)
 
-  ;; I don't know why emacs-ycmd sets up ycmd for python syntax checking; ycmd
-  ;; doesn't support it! (I'd know.)
   (add-hook 'python-mode-hook
-            (lambda () (add-to-list 'flycheck-disabled-checkers 'ycmd)))
+            (lambda ()
+              ;; Python-mode overrides our indent settings
+              (setq python-indent 2)
+              ;; I don't know why emacs-ycmd sets up ycmd for python syntax
+              ;; checking; ycmd doesn't support it! (I'd know.)
+              (add-to-list 'flycheck-disabled-checkers 'ycmd)))
 
   ;; Turn on git commit syntax highlighting.
   (global-git-commit-mode)
