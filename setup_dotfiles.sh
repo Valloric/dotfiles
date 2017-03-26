@@ -53,6 +53,11 @@ then
   ln -s $script_dir/alacritty/alacritty.yml ~/.config/alacritty.yml
 fi
 
+if [[ ! -a ~/.flake8rc ]]
+then
+  ln -s $script_dir/misc/flake8rc ~/.flake8rc
+fi
+
 # -p says to create the dir if it doesn't exist already
 mkdir -p $HOME/bin
 
