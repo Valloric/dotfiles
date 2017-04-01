@@ -55,7 +55,7 @@ if [[ -a $comp_zshrc ]] then
   source $comp_zshrc
 fi
 
-# This turns of zsh's "helpful" autocorrect feature
+# This turns off zsh's "helpful" autocorrect feature
 unsetopt correct_all
 
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
