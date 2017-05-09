@@ -45,3 +45,6 @@ intellij/config/li-idea.json
 intellij/config/li-spelling/**
 intellij/config/li-options-backup/**
 intellij/config/li-options-backup/**
+intellij/config/migration/**
+intellij/config/old.c.kdbx
+intellij/config/pdb.pwd

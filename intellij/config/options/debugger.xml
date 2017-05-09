@@ -1,12 +1,7 @@
 <application>
   <component name="DebuggerSettings">
-    <option name="TRACING_FILTERS_ENABLED" value="true" />
-    <option name="FORCE_CLASSIC_VM" value="true" />
     <option name="SHOW_ALTERNATIVE_SOURCE" value="false" />
-    <option name="SKIP_SYNTHETIC_METHODS" value="true" />
-    <option name="SKIP_CLASSLOADERS" value="true" />
-    <option name="RUN_HOTSWAP_AFTER_COMPILE" value="RunHotswapAsk" />
-    <option name="COMPILE_BEFORE_HOTSWAP" value="true" />
+    <option name="WATCH_RETURN_VALUES" value="true" />
     <filter>
       <option name="PATTERN" value="com.sun.*" />
       <option name="ENABLED" value="true" />
