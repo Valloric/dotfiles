@@ -4,5 +4,6 @@
     <notification groupId="Framework Detection" displayType="NONE" />
     <notification groupId="Gradle Notification Group" displayType="NONE" />
     <notification groupId="IGNORE_GROUP" displayType="NONE" />
+    <notification groupId="Multiproduct Refresh Project" />
   </component>
 </application>
