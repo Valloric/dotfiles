@@ -37,12 +37,12 @@ font:
   bold_style: Bold
   italic_style: Oblique
   # Point size of the font
-  size: 11.0
+  size: 12.0
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
     x: 0.0
-    y: 0.0
+    y: -2.0
 
 # Should display the render timer
 render_timer: false
