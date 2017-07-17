@@ -24,7 +24,7 @@ URxvt*.perl-lib: /home/valloric/dotfiles/urxvt/perl-extensions
 URxvt*.saveLines: 0
 
 ! Font setup
-URxvt*.font: xft:Consolas:size=11
+URxvt*.font: xft:Consolas:size=12
 URxvt*.scrollBar: false
 URxvt*.alt-font-width: true
 URxvt*.letterSpace: -2
