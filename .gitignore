@@ -36,7 +36,9 @@ intellij/config/options/applicationLibraries.xml
 intellij/config/options/li.multiproducts.xml
 intellij/config/options/packages.xml
 intellij/config/options/conda_packages.xml
+intellij/config/options/extensionsRootType.xml
 intellij/config/fileTemplates/internal/**
+intellij/config/installed.txt
 intellij/config/extensions/**
 intellij/config/port.lock
 intellij/config/checkstyle/**

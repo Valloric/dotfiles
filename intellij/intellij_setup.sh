@@ -10,15 +10,10 @@ then
   ln -s $script_dir/ideavimrc ~/.ideavimrc
 fi
 
-declare -a names=("IntelliJIdea15"
-                  "IdeaIC15"
-                  "IntelliJIdea2016.2"
-                  "IntelliJIdea2016.3"
-                  "IntelliJIdea2016.4"
-                  "IntelliJIdeaLI2"
-                  "IntelliJIdeaLI3"
+declare -a names=(
                   "IntelliJIdeaLI4"
                   "IntelliJIdeaLI5"
+                  "IdeaIC2017.2"
                  )
 
 for name in "${names[@]}"

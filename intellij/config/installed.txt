@@ -1,5 +1,0 @@
-com.intellij
-IdeaVIM
-com.linkedin.intellij.dust
-org.intellij.plugins.markdown
-org.intellij.scala
