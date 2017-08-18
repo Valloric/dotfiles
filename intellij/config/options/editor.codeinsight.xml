@@ -23,4 +23,10 @@
     <EXCLUDED_PACKAGE NAME="org.testng.annotations.Optional" />
   </component>
   <component name="DaemonCodeAnalyzerSettings" profile="val" />
+  <component name="JavaCodeFoldingSettings">
+    <option name="collapseOneLineMethods" value="false" />
+  </component>
+  <component name="RsCodeFoldingSettings">
+    <option name="collapsibleOneLineMethods" value="false" />
+  </component>
 </application>
