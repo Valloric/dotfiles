@@ -256,6 +256,10 @@
   <component name="CvsApplicationLevelConfiguration">
     <option name="PATH_TO_PASSWORD_FILE" value="$userdir/.cvspass" />
   </component>
+  <component name="JavaFxSettings">
+    <option name="pathToSceneBuilder" value="/opt/SceneBuilder/SceneBuilder" />
+    <option name="myPathToSceneBuilder" value="/opt/SceneBuilder/SceneBuilder" />
+  </component>
   <component name="RefactoringSettings">
     <option name="MOVE_PREVIEW_USAGES" value="false" />
     <option name="MOVE_INNER_PREVIEW_USAGES" value="false" />
