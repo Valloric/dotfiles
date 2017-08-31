@@ -8,11 +8,15 @@
     <EXCLUDED_PACKAGE NAME="com.google.api.client.util.Preconditions" />
     <EXCLUDED_PACKAGE NAME="com.google.common.base.Optional" />
     <EXCLUDED_PACKAGE NAME="com.google.gson.internal" />
+    <EXCLUDED_PACKAGE NAME="com.google.inject.internal" />
     <EXCLUDED_PACKAGE NAME="com.linkedin.common.Urn" />
+    <EXCLUDED_PACKAGE NAME="com.linkedin.quasar.google" />
     <EXCLUDED_PACKAGE NAME="com.linkedin.resourceidentity.urn.Urn" />
     <EXCLUDED_PACKAGE NAME="com.sun.javaws.JnlpxArgs.verify" />
     <EXCLUDED_PACKAGE NAME="edu.emory.mathcs" />
+    <EXCLUDED_PACKAGE NAME="io.netty.util.internal" />
     <EXCLUDED_PACKAGE NAME="javafx.beans.binding.Bindings.when" />
+    <EXCLUDED_PACKAGE NAME="jersey.repackaged.com.google" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.api.AssertionsForClassTypes.assertThat" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.api.Java6Assertions.assertThat" />
@@ -20,13 +24,8 @@
     <EXCLUDED_PACKAGE NAME="org.assertj.core.util.Preconditions" />
     <EXCLUDED_PACKAGE NAME="org.hamcrest.MatcherAssert.assertThat" />
     <EXCLUDED_PACKAGE NAME="org.junit.Assert.assertThat" />
+    <EXCLUDED_PACKAGE NAME="org.mockito.internal" />
     <EXCLUDED_PACKAGE NAME="org.testng.annotations.Optional" />
   </component>
   <component name="DaemonCodeAnalyzerSettings" profile="val" />
-  <component name="JavaCodeFoldingSettings">
-    <option name="collapseOneLineMethods" value="false" />
-  </component>
-  <component name="RsCodeFoldingSettings">
-    <option name="collapsibleOneLineMethods" value="false" />
-  </component>
 </application>
