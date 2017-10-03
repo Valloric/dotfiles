@@ -401,6 +401,7 @@ remove the comment characters from that line before joining."
   (defvaralias 'sh-basic-offset 'tab-width)
   (defvaralias 'sh-indentation 'tab-width)
   (defvaralias 'rust-indent-offset 'tab-width)
+  (defvaralias 'js-indent-level 'tab-width)
 
   ;; 80 colums for wrapping
   (setq-default fill-column 80)

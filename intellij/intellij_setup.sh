@@ -13,6 +13,7 @@ fi
 declare -a names=(
                   "IntelliJIdeaLI4"
                   "IntelliJIdeaLI5"
+                  "IntelliJIdeaLI6"
                   "IdeaIC2017.2"
                  )
 

@@ -5,16 +5,22 @@
         <option name="configuration">
           <map>
             <entry key="active-configuration" value="LOCAL_FILE:/home/vmarkovi/.IntelliJIdeaLI2/config/checkstyle/linkedin-checkstyle.xml:LinkedIn Style" />
-            <entry key="check-nonjava-files" value="false" />
-            <entry key="check-test-classes" value="false" />
-            <entry key="location-1" value="LOCAL_FILE:/home/vmarkovi/.IntelliJIdeaLI2/config/checkstyle/linkedin-checkstyle.xml:LinkedIn Style" />
+            <entry key="checkstyle-version" value="8.1" />
+            <entry key="location-0" value="BUNDLED:(bundled):Sun Checks" />
+            <entry key="location-1" value="BUNDLED:(bundled):Google Checks" />
+            <entry key="location-2" value="LOCAL_FILE:/home/vmarkovi/.IntelliJIdeaLI2/config/checkstyle/linkedin-checkstyle.xml:LinkedIn Style" />
+            <entry key="scan-before-checkin" value="false" />
+            <entry key="scanscope" value="JavaOnly" />
             <entry key="suppress-errors" value="true" />
-            <entry key="thirdparty-classpath" value="" />
           </map>
         </option>
       </component>
       <component name="Encoding">
         <file url="PROJECT" charset="UTF-8" />
+      </component>
+      <component name="InspectionProjectProfileManager">
+        <option name="PROJECT_PROFILE" />
+        <version value="1.0" />
       </component>
       <component name="ProjectInspectionProfilesVisibleTreeState">
         <entry key="Project Default">
@@ -77,10 +83,9 @@
           </profile-state>
         </entry>
       </component>
-      <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8.0_72" project-jdk-type="JavaSDK" />
+      <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8.0_121" project-jdk-type="JavaSDK" />
       <component name="PropertiesComponent">
         <property name="settings.editor.selected.configurable" value="fileTemplates" />
-        <property name="settings.editor.splitter.proportion" value="0.2" />
         <property name="project.structure.last.edited" value="Project" />
         <property name="project.structure.proportion" value="0.15" />
         <property name="project.structure.side.proportion" value="0.0" />
