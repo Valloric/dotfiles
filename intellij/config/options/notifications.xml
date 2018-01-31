@@ -4,6 +4,7 @@
     <notification groupId="Dev Server Update Notifications" displayType="NONE" />
     <notification groupId="Framework Detection" displayType="NONE" />
     <notification groupId="Gradle Notification Group" displayType="NONE" />
+    <notification groupId="IDE and Plugin Updates" displayType="NONE" shouldLog="false" />
     <notification groupId="IGNORE_GROUP" displayType="NONE" />
     <notification groupId="Multiproduct Refresh Project" />
   </component>

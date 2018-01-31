@@ -4,27 +4,40 @@
     <option name="COMPLETION_CASE_SENSITIVE" value="2" />
     <option name="OPTIMIZE_IMPORTS_ON_THE_FLY" value="true" />
     <option name="ADD_UNAMBIGIOUS_IMPORTS_ON_THE_FLY" value="true" />
+    <EXCLUDED_PACKAGE NAME="com.basistech.com" />
+    <EXCLUDED_PACKAGE NAME="com.basistech.com.google.common.base.Optional" />
+    <EXCLUDED_PACKAGE NAME="com.basistech.rex-je.com.google" />
+    <EXCLUDED_PACKAGE NAME="com.basistech.shaded.dm.com.google" />
+    <EXCLUDED_PACKAGE NAME="com.basistech.shaded.dm.com.google.common.base.Optional" />
     <EXCLUDED_PACKAGE NAME="com.google.api.client.repackaged" />
     <EXCLUDED_PACKAGE NAME="com.google.api.client.util.Preconditions" />
     <EXCLUDED_PACKAGE NAME="com.google.common.base.Optional" />
     <EXCLUDED_PACKAGE NAME="com.google.gson.internal" />
     <EXCLUDED_PACKAGE NAME="com.google.inject.internal" />
     <EXCLUDED_PACKAGE NAME="com.linkedin.common.Urn" />
+    <EXCLUDED_PACKAGE NAME="com.linkedin.events.badge.UpdateType" />
     <EXCLUDED_PACKAGE NAME="com.linkedin.quasar.google" />
     <EXCLUDED_PACKAGE NAME="com.linkedin.resourceidentity.urn.Urn" />
+    <EXCLUDED_PACKAGE NAME="com.sun.javafx.collections.MappingChange.Map" />
     <EXCLUDED_PACKAGE NAME="com.sun.javaws.JnlpxArgs.verify" />
     <EXCLUDED_PACKAGE NAME="com.sun.tools.javac.util.List" />
     <EXCLUDED_PACKAGE NAME="edu.emory.mathcs" />
+    <EXCLUDED_PACKAGE NAME="fj.Function" />
     <EXCLUDED_PACKAGE NAME="fj.data.List" />
     <EXCLUDED_PACKAGE NAME="io.netty.util.internal" />
     <EXCLUDED_PACKAGE NAME="javafx.beans.binding.Bindings.when" />
     <EXCLUDED_PACKAGE NAME="jersey.repackaged.com.google" />
+    <EXCLUDED_PACKAGE NAME="net.bytebuddy.dynamic.DynamicType.Builder.FieldDefinition.Optional" />
+    <EXCLUDED_PACKAGE NAME="net.bytebuddy.dynamic.DynamicType.Builder.MethodDefinition.ImplementationDefinition.Optional" />
+    <EXCLUDED_PACKAGE NAME="org.apache.hadoop.crypto.key.kms.KMSClientProvider.checkNotNull" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.api.AssertionsForClassTypes.assertThat" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.api.Java6Assertions.assertThat" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.api.Java6Assertions.assertThatThrownBy" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.util.Preconditions" />
+    <EXCLUDED_PACKAGE NAME="org.assertj.core.util.VisibleForTesting" />
     <EXCLUDED_PACKAGE NAME="org.hamcrest.MatcherAssert.assertThat" />
+    <EXCLUDED_PACKAGE NAME="org.joda" />
     <EXCLUDED_PACKAGE NAME="org.junit.Assert.assertThat" />
     <EXCLUDED_PACKAGE NAME="org.junit.Test" />
     <EXCLUDED_PACKAGE NAME="org.mockito.internal" />
