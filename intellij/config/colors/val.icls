@@ -1,14 +1,14 @@
 <scheme name="val" version="142" parent_scheme="Darcula">
-  <option name="FONT_SCALE" value="1.1666666" />
+  <option name="FONT_SCALE" value="1.25" />
   <option name="EDITOR_FONT_SIZE" value="15" />
   <option name="EDITOR_FONT_NAME" value="Consolas" />
   <console-font>
     <option name="EDITOR_FONT_NAME" value="Source Code Pro" />
-    <option name="EDITOR_FONT_SIZE" value="15" />
+    <option name="EDITOR_FONT_SIZE" value="16" />
   </console-font>
   <console-font>
-    <option name="EDITOR_FONT_NAME" value="SourceCodePro-Regular" />
-    <option name="EDITOR_FONT_SIZE" value="15" />
+    <option name="EDITOR_FONT_NAME" value="DejaVu Sans Mono" />
+    <option name="EDITOR_FONT_SIZE" value="16" />
   </console-font>
   <colors>
     <option name="CARET_ROW_COLOR" value="171717" />

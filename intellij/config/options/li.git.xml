@@ -1,0 +1,5 @@
+<application>
+  <component name="LIGitSettings">
+    <option name="GIT_PATHNAME" value="$USER_HOME$/bin/git" />
+  </component>
+</application>

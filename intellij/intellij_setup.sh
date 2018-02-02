@@ -11,9 +11,9 @@ then
 fi
 
 declare -a names=(
-                  "IntelliJIdeaLI4"
-                  "IntelliJIdeaLI5"
                   "IntelliJIdeaLI6"
+                  "IntelliJIdeaLI7"
+                  "IntelliJIdeaLI8"
                   "IdeaIC2017.2"
                  )
 
