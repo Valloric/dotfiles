@@ -8,6 +8,11 @@ then
   ln -s $script_dir/zsh/zshrc.zsh ~/.zshrc
 fi
 
+if [[ ! -a ~/.zshenv ]]
+then
+  ln -s $script_dir/zsh/zshenv.zsh ~/.zshenv
+fi
+
 if [[ ! -a ~/.vimrc ]]
 then
   ln -s $script_dir/vim/vimrc.vim ~/.vimrc

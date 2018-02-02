@@ -25,28 +25,6 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git osx vundle pip brew)
 
-export EDITOR="e-wait"
-export SVN_EDITOR="$EDITOR"
-export VISUAL="$EDITOR"
-export GIT_EDITOR="$EDITOR"
-
-export P4DIFF="meld"
-export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.cargo/bin
-
-platform=$(uname)
-
-if [[ $platform == *Darwin* ]]
-then
-  # This makes our PATH visible to GUI apps
-  launchctl setenv PATH $PATH
-
-  # Brew paths over system paths
-  export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-  # NPM binaries on PATH as well
-  export PATH=/usr/local/share/npm/bin:$PATH
-fi
-
 source $ZSH/oh-my-zsh.sh
 
 # load company-specific stuff
@@ -69,9 +47,6 @@ setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
-
-# Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
 
 # -i turns on "smartcase" search by default
 export LESS="-iR"
