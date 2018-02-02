@@ -1,6 +1,7 @@
 tags
 .tags
 .DS_Store
+sublime-text/User/Package*
 intellij/config/plugins/**
 intellij/config/port
 intellij/config/*.key
