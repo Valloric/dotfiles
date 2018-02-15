@@ -1,28 +1,32 @@
 {
-  "font_size": 11,
-  "font_face": "Consolas",
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "wrap_width": 80,
-  "ignored_packages": [],
-  "default_line_ending": "unix",
-  // Exclude files matching the pattern(s) from the project sidebar and fuzzy searches
-  "file_exclude_patterns":
-    [
-      ".DS_Store",
-      "*.scssc"
-    ],
-  // Exclude folders matching the pattern(s) from the project sidebar and fuzzy searches
-  "folder_exclude_patterns":
-    [
-      "tmp",
-      ".git",
-      ".svn"
-    ],
-  "highlight_line": true,
-  "rulers" : [80],
-  "show_full_path": true,
-  "trim_automatic_white_space" : true,
-  "ensure_newline_at_eof_on_save": true,
-  "trim_trailing_white_space_on_save": true
+	"default_line_ending": "unix",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		"*.scssc"
+	],
+	"folder_exclude_patterns":
+	[
+		"tmp",
+		".git",
+		".svn"
+	],
+	"font_face": "Consolas",
+	"font_size": 11,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+	],
+	"rulers":
+	[
+		80
+	],
+	"show_full_path": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"wrap_width": 80,
+  "auto_wrap" : true
 }
