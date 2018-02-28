@@ -66,6 +66,12 @@ fi
 # -p says to create the dir if it doesn't exist already
 mkdir -p $HOME/bin
 
+
+if [[ ! -a ~/git-wip-check ]]
+then
+  ln -s $script_dir/bin/git-wip-check.sh ~/bin/git-wip-check
+fi
+
 # Naturally, macvim needs to be installed for this to work
 if [[ $(uname) == *Darwin* ]]
 then
