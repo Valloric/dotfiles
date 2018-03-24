@@ -67,7 +67,7 @@ fi
 mkdir -p $HOME/bin
 
 
-if [[ ! -a ~/git-wip-check ]]
+if [[ ! -a ~/bin/git-wip-check ]]
 then
   ln -s $script_dir/bin/git-wip-check.sh ~/bin/git-wip-check
 fi
