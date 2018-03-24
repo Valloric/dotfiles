@@ -15,6 +15,7 @@ declare -a names=(
                   "IntelliJIdeaLI7"
                   "IntelliJIdeaLI8"
                   "IdeaIC2017.2"
+                  "IdeaIC2017.3"
                  )
 
 for name in "${names[@]}"
