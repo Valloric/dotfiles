@@ -2,6 +2,7 @@ DevKit
 XPathView
 XSLT-Debugger
 com.intellij.uiDesigner
+mobi.hsz.idea.gitignore
 org.intellij.intelliLang
 org.jetbrains.android
 org.jetbrains.idea.eclipse
