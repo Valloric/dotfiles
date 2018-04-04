@@ -11,27 +11,46 @@ then
 fi
 
 declare -a names=(
-                  "IntelliJIdeaLI6"
-                  "IntelliJIdeaLI7"
                   "IntelliJIdeaLI8"
+                  "IntelliJIdeaLI9"
                   "IdeaIC2017.2"
                   "IdeaIC2017.3"
+                 )
+
+# need to let intellij create these folders in config dir, then delete them,
+# then run our setup.sh
+declare -a folders=(
+                  "codestyles"
+                  "colors"
+                  "extensions"
+                  "fileTemplates"
+                  "inspection"
+                  "keymaps"
+                  "migration"
+                  "options"
+                  "templates"
                  )
 
 for name in "${names[@]}"
 do
   if [[ $platform == *Darwin* ]]
   then
-    if [[ ! -a ~/Library/Preferences/$name ]]
+    if [[ ! -a ~/Library/Preferences/$name/codestyles ]]
     then
-      ln -s $script_dir/config ~/Library/Preferences/$name
+      for folder in "${folders[@]}"
+      do
+        ln -s $script_dir/config/$folder ~/Library/Preferences/$name/$folder
+      done
     fi
   else
-    mkdir -p ~/.$name
+    mkdir -p ~/.$name/config
 
-    if [[ ! -a ~/.$name/config ]]
+    if [[ ! -a ~/.$name/config/codestyles ]]
     then
-      ln -s $script_dir/config ~/.$name/config
+      for folder in "${folders[@]}"
+      do
+        ln -s $script_dir/config/$folder ~/.$name/config/$folder
+      done
     fi
   fi
 done
