@@ -19,6 +19,10 @@
       <component name="Encoding">
         <file url="PROJECT" charset="UTF-8" />
       </component>
+      <component name="InspectionProjectProfileManager">
+        <option name="PROJECT_PROFILE" />
+        <version value="1.0" />
+      </component>
       <component name="ProjectInspectionProfilesVisibleTreeState">
         <entry key="Project Default">
           <profile-state>

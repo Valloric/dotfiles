@@ -218,6 +218,9 @@
             <id>Class structureJava</id>
           </State>
           <State>
+            <id>Data flow issuesJava</id>
+          </State>
+          <State>
             <id>Declaration redundancyJava</id>
           </State>
           <State>
@@ -236,6 +239,9 @@
             <id>Java</id>
           </State>
           <State>
+            <id>LinkedIn</id>
+          </State>
+          <State>
             <id>Memory issuesJava</id>
           </State>
           <State>
@@ -247,7 +253,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>Probable bugsJava</id>
+            <id>BooleanMethodIsAlwaysInverted</id>
           </State>
         </selected-state>
       </profile-state>

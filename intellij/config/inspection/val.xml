@@ -16,6 +16,7 @@
   <inspection_tool class="AwaitNotInLoop" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="AwaitWithoutCorrespondingSignal" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="BigDecimalEquals" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="BooleanMethodIsAlwaysInverted" enabled="false" level="WARNING" enabled_by_default="false" />
   <inspection_tool class="BusyWait" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="CallToNativeMethodWhileLocked" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="CallToSimpleGetterInClass" enabled="true" level="WARNING" enabled_by_default="true">
@@ -50,7 +51,7 @@
   </inspection_tool>
   <inspection_tool class="DuplicateBooleanBranch" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="DuplicateCondition" enabled="true" level="WARNING" enabled_by_default="true">
-    <option name="ignoreMethodCalls" value="false" />
+    <option name="ignoreSideEffectConditions" value="true" />
   </inspection_tool>
   <inspection_tool class="DynamicRegexReplaceableByCompiledPattern" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="EmptyStatementBody" enabled="true" level="WARNING" enabled_by_default="true">
@@ -130,7 +131,6 @@
   <inspection_tool class="NestedAssignment" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="NestedSynchronizedStatement" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="NestedTryStatement" enabled="true" level="WARNING" enabled_by_default="true" />
-  <inspection_tool class="NonAtomicOperationOnVolatileField" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="NonFinalFieldInImmutable" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="NonShortCircuitBoolean" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="NonSynchronizedMethodOverridesSynchronizedMethod" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -160,6 +160,9 @@
   <inspection_tool class="RawUseOfParameterizedType" enabled="true" level="WARNING" enabled_by_default="true">
     <option name="ignoreTypeCasts" value="true" />
     <option name="ignoreUncompilable" value="true" />
+  </inspection_tool>
+  <inspection_tool class="RedundantThrows" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="IGNORE_ENTRY_POINTS" value="true" />
   </inspection_tool>
   <inspection_tool class="ReturnNull" enabled="true" level="WARNING" enabled_by_default="true">
     <option name="m_reportObjectMethods" value="true" />

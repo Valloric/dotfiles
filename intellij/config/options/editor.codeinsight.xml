@@ -2,6 +2,7 @@
   <component name="CodeInsightSettings">
     <option name="AUTO_POPUP_PARAMETER_INFO" value="false" />
     <option name="COMPLETION_CASE_SENSITIVE" value="2" />
+    <option name="SHOW_SOURCE_INFERRED_ANNOTATIONS" value="false" />
     <option name="OPTIMIZE_IMPORTS_ON_THE_FLY" value="true" />
     <option name="ADD_UNAMBIGIOUS_IMPORTS_ON_THE_FLY" value="true" />
     <EXCLUDED_PACKAGE NAME="com.basistech.com" />
