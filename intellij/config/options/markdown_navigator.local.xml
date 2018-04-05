@@ -1,0 +1,17 @@
+<application>
+  <component name="ApplicationLocal" sharedSettingsMigrated="false">
+    <DocumentSettings showHtmlPreview="false" verbatimLangInjections="true" htmlLangInjections="true" softWraps="0" softWrapAtMargin="true" showEmojiInGutter="false" showBreadcrumbText="true" maxBreadcrumbText="30" previewScrollDelay="500" typingUpdateDelay="500" enableAnnotator="true" hideDisabledButtons="false" hideToolbar="false" disableGifImages="true" codeLikeStyleToggle="true" overrideEditorDragDropHandler="false" toggleStylePunctuations=".,:;!?" htmlMimeMaxImageWidth="100%" htmlMimeFontFamily="" pdfMaxImageWidth="504pt" pdfFontFamily="" detectHtmlOnPaste="false" textSplitLayoutToggle="true" asteriskItalics="true" verticalSplitPreview="false" convertHtmlOnPaste="true" showHeadingID="false" usePasteHandler="true" includeDirsInCompletion="true" showApplyAllIntentionsEverywhere="false" zoomFactor="1.0" syntaxHighlighting="1" />
+    <LicenseInformation licenseType="" showLicenseExpiration="true" showLicenseExpired="true" showFeatureUpdates="true" secureConnection="true">
+      <licenseCode />
+      <activationCode />
+    </LicenseInformation>
+    <Notifications showFeatureUpdates="true" />
+    <DebugSettings debugFormatText="false" debugCombinationColors="false" debugTestFileDirectory="" generateParserExceptions="false" enableJavaFxPreviewDebugging="false" javaFxPreviewResourceUseSerials="true" flexmarkSpecExampleRendering="0" flexmarkSpecExampleRenderHtml="false" parsingTimeout="100" preferencesDialogWidth="1000" preferencesDialogHeight="1000" javaFxPreviewDebugPort="51742" lastSettingsImport="" javaFxPreviewResourceURL="" javaFxPreviewResourceDir="">
+      <javaFxPreviewResourceDirHistory />
+      <debugTestFileDirectoryHistory />
+      <javaFxPreviewResourceURLHistory />
+    </DebugSettings>
+    <FailedInBuild scratchFileServiceFailed="" fxPreviewFailedBuild="" lightParserFailedBuild="" />
+    <WasShown licensedAvailable="true" lastFeatureUpdateVersion="" lastLicensedAvailableVersion="2.5.2" javaFxAvailable="false" jekyllFrontMatter="false" gitHubSyntaxChange="false" />
+  </component>
+</application>
