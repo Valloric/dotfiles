@@ -69,4 +69,7 @@
   <component name="JavaCodeFoldingSettings">
     <option name="collapseOneLineMethods" value="false" />
   </component>
+  <component name="RsCodeFoldingSettings">
+    <option name="collapsibleOneLineMethods" value="false" />
+  </component>
 </application>
