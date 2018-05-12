@@ -2,10 +2,6 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#
 # This theme exists ONLY in our custom fork of oh-my-zsh
 ZSH_THEME="valloric"
 
@@ -23,9 +19,12 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx vundle pip brew)
+plugins=(git osx pip)
 
 source $ZSH/oh-my-zsh.sh
+
+# just in case
+export LANG=en_US.UTF-8
 
 # load company-specific stuff
 local comp_zshrc=$HOME/linkedin/zshrc_linkedin.zsh
