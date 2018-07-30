@@ -16,6 +16,7 @@ declare -a names=(
                   "IdeaIC2017.2"
                   "IdeaIC2017.3"
                   "IdeaIC2018.1"
+                  "IdeaIC2018.2"
                  )
 
 # need to let intellij create these folders in config dir, then delete them,
