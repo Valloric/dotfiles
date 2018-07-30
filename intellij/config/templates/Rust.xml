@@ -53,4 +53,10 @@
       <option name="RUST_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="cold" value="#[cold]&#10;#[inline(never)]" description="cold func" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MARKDOWN" value="true" />
+      <option name="RUST_ITEM" value="true" />
+    </context>
+  </template>
 </templateSet>
