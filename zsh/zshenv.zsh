@@ -7,7 +7,7 @@ export VISUAL="$EDITOR"
 export GIT_EDITOR="$EDITOR"
 
 export P4DIFF="meld"
-export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.cargo/bin
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH:$HOME/.cargo/bin
 
 platform=$(uname)
 
