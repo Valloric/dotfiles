@@ -10,5 +10,6 @@
     <entry key="search.everywhere.configurations" value="false" />
     <entry key="search.everywhere.actions" value="false" />
     <entry key="debugger.watches.in.variables" value="false" />
+    <entry key="ide.svg.icon" value="true" />
   </component>
 </application>
