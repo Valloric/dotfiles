@@ -44,7 +44,6 @@
   <inspection_tool class="ConstantMathCall" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="CovariantCompareTo" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="CovariantEquals" enabled="true" level="WARNING" enabled_by_default="true" />
-  <inspection_tool class="DivideByZero" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="DoubleBraceInitialization" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="DoubleCheckedLocking" enabled="true" level="WARNING" enabled_by_default="true">
     <option name="ignoreOnVolatileVariables" value="false" />
@@ -104,9 +103,6 @@
   <inspection_tool class="LocalVariableHidingMemberVariable" enabled="true" level="WARNING" enabled_by_default="true">
     <option name="m_ignoreInvisibleFields" value="true" />
     <option name="m_ignoreStaticMethods" value="true" />
-  </inspection_tool>
-  <inspection_tool class="LoopConditionNotUpdatedInsideLoop" enabled="true" level="WARNING" enabled_by_default="true">
-    <option name="ignoreIterators" value="false" />
   </inspection_tool>
   <inspection_tool class="MapReplaceableByEnumMap" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="MethodMayBeStatic" enabled="true" level="WARNING" enabled_by_default="true">
@@ -179,9 +175,7 @@
   <inspection_tool class="StringBufferToStringInConcatenation" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="StringConcatenationInFormatCall" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="StringConcatenationInMessageFormatCall" enabled="true" level="WARNING" enabled_by_default="true" />
-  <inspection_tool class="StringConcatenationMissingWhitespace" enabled="true" level="WARNING" enabled_by_default="true">
-    <option name="ignoreNonStringLiterals" value="true" />
-  </inspection_tool>
+  <inspection_tool class="StringConcatenationMissingWhitespace" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="StringEqualsEmptyString" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="StringReplaceableByStringBuffer" enabled="true" level="WARNING" enabled_by_default="true">
     <option name="onlyWarnOnLoop" value="true" />

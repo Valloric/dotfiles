@@ -11,10 +11,12 @@
     <EXCLUDED_PACKAGE NAME="com.basistech.rex-je.com.google" />
     <EXCLUDED_PACKAGE NAME="com.basistech.shaded.dm.com.google" />
     <EXCLUDED_PACKAGE NAME="com.basistech.shaded.dm.com.google.common.base.Optional" />
+    <EXCLUDED_PACKAGE NAME="com.codahale.metrics.Clock" />
     <EXCLUDED_PACKAGE NAME="com.google.api.client.repackaged" />
     <EXCLUDED_PACKAGE NAME="com.google.api.client.util.Clock" />
     <EXCLUDED_PACKAGE NAME="com.google.api.client.util.Preconditions" />
     <EXCLUDED_PACKAGE NAME="com.google.common.base.Optional" />
+    <EXCLUDED_PACKAGE NAME="com.google.common.collect.ImmutableMap" />
     <EXCLUDED_PACKAGE NAME="com.google.gson.internal" />
     <EXCLUDED_PACKAGE NAME="com.google.inject.internal" />
     <EXCLUDED_PACKAGE NAME="com.linkedin.common.Urn" />
@@ -28,7 +30,10 @@
     <EXCLUDED_PACKAGE NAME="com.sun.javafx.collections.MappingChange.Map" />
     <EXCLUDED_PACKAGE NAME="com.sun.javaws.JnlpxArgs.verify" />
     <EXCLUDED_PACKAGE NAME="com.sun.tools.javac.util.List" />
+    <EXCLUDED_PACKAGE NAME="com.sun.xml.internal.xsom.impl.scd.Iterators.Map" />
     <EXCLUDED_PACKAGE NAME="com.yammer.metrics.core.Clock" />
+    <EXCLUDED_PACKAGE NAME="dali.com.google.common.collect.ImmutableList" />
+    <EXCLUDED_PACKAGE NAME="dali.dali_discovery.com.google" />
     <EXCLUDED_PACKAGE NAME="edu.emory.mathcs" />
     <EXCLUDED_PACKAGE NAME="fj.Function" />
     <EXCLUDED_PACKAGE NAME="fj.data" />
@@ -52,8 +57,10 @@
     <EXCLUDED_PACKAGE NAME="org.assertj.core.api.Java6Assertions.assertThat" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.api.Java6Assertions.assertThatThrownBy" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.util.Preconditions" />
+    <EXCLUDED_PACKAGE NAME="org.assertj.core.util.Throwables" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.util.VisibleForTesting" />
     <EXCLUDED_PACKAGE NAME="org.hamcrest.MatcherAssert.assertThat" />
+    <EXCLUDED_PACKAGE NAME="org.jboss.netty.util.internal" />
     <EXCLUDED_PACKAGE NAME="org.joda" />
     <EXCLUDED_PACKAGE NAME="org.junit.Assert.assertThat" />
     <EXCLUDED_PACKAGE NAME="org.junit.Test" />
