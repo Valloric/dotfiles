@@ -14,6 +14,7 @@ declare -a names=(
                   "IntelliJIdeaLI8"
                   "IntelliJIdeaLI9"
                   "IntelliJIdeaLI10"
+                  "IntelliJIdeaLI11"
                   "IdeaIC2017.2"
                   "IdeaIC2017.3"
                   "IdeaIC2018.1"
@@ -22,8 +23,9 @@ declare -a names=(
 
 # 1. Let intellij create these folders in config dir.
 # 2. Delete ONLY THESE FOLDERS from the config dir.
-# 3. Run our setup.sh
-# 4. Start intellij again.
+# 3. Add the new IntelliJ name above, if necessary.
+# 4. Run our setup.sh
+# 5. Start intellij again.
 declare -a folders=(
                   "codestyles"
                   "colors"
