@@ -78,6 +78,11 @@ git config --global stash.showPatch true
 # unstashes them afterwards.
 git config --global rebase.autostash true
 
+# Make --autosquash always-on for rebase commands
+# Autosquash automatically squashes commits that start with "squash!" or
+# "fixup!". See "git rebase" docs for details.
+git config --global rebase.autosquash true
+
 # When editing the commit message, git will now always include a diff of the
 # changes below the message area (the diff does NOT become part of the commit
 # message, it's only there for information).
