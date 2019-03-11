@@ -39,6 +39,7 @@ intellij/config/options/packages.xml
 intellij/config/options/conda_packages.xml
 intellij/config/options/extensionsRootType.xml
 intellij/config/options/li.ldap_users.xml
+intellij/config/options/checkstyle-idea.xml
 intellij/config/fileTemplates/internal/**
 intellij/config/installed.txt
 intellij/config/extensions/**

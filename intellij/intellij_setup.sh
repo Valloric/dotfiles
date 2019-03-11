@@ -15,6 +15,7 @@ declare -a names=(
                   "IntelliJIdeaLI9"
                   "IntelliJIdeaLI10"
                   "IntelliJIdeaLI11"
+                  "IntelliJIdeaLI12"
                   "IdeaIC2017.2"
                   "IdeaIC2017.3"
                   "IdeaIC2018.1"

@@ -32,6 +32,8 @@
     <EXCLUDED_PACKAGE NAME="com.sun.tools.javac.util.List" />
     <EXCLUDED_PACKAGE NAME="com.sun.xml.internal.xsom.impl.scd.Iterators.Map" />
     <EXCLUDED_PACKAGE NAME="com.yammer.metrics.core.Clock" />
+    <EXCLUDED_PACKAGE NAME="dali.bk-shade" />
+    <EXCLUDED_PACKAGE NAME="dali.com" />
     <EXCLUDED_PACKAGE NAME="dali.com.google.common.collect.ImmutableList" />
     <EXCLUDED_PACKAGE NAME="dali.dali_discovery.com.google" />
     <EXCLUDED_PACKAGE NAME="edu.emory.mathcs" />
@@ -59,6 +61,7 @@
     <EXCLUDED_PACKAGE NAME="org.assertj.core.util.Preconditions" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.util.Throwables" />
     <EXCLUDED_PACKAGE NAME="org.assertj.core.util.VisibleForTesting" />
+    <EXCLUDED_PACKAGE NAME="org.eclipse.core.internal" />
     <EXCLUDED_PACKAGE NAME="org.hamcrest.MatcherAssert.assertThat" />
     <EXCLUDED_PACKAGE NAME="org.jboss.netty.util.internal" />
     <EXCLUDED_PACKAGE NAME="org.joda" />

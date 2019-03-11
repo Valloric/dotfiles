@@ -1,4 +1,24 @@
 <application>
+  <component name="AppInspectionProfilesVisibleTreeState">
+    <entry key="val">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="CvsApplicationLevelConfiguration">
     <option name="PATH_TO_PASSWORD_FILE" value="$userdir/.cvspass" />
   </component>
@@ -6,7 +26,58 @@
     <option name="pathToSceneBuilder" value="/opt/SceneBuilder/SceneBuilder" />
     <option name="myPathToSceneBuilder" value="/opt/SceneBuilder/SceneBuilder" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="CREATE_FIELD_FROM_PARAMETER_DECLARE_FINAL" value="true" />
+    <property name="ColorChooser.RecentColors" value="255-216-0-255,,,255-254-183-255,,,236-238-116-255,,,238-238-143-255" />
+    <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.5285714" />
+    <property name="CommitChangeListDialog.SPLITTER_PROPORTION_2" value="0.62393165" />
+    <property name="CommittedChanges.SplitterProportions.0" value="700" />
+    <property name="CommittedChanges.SplitterProportions.1" value="500" />
+    <property name="Copy.OpenInEditor" value="true" />
+    <property name="DeploymentNotificationsComponent.WarnDisplayed.Java7&amp;Windows7FTPIssue" value="false" />
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="ExpandRunDashboardTypesPanel" value="false" />
+    <property name="FileTemplates.SelectedTemplate" value="HTML File" />
+    <property name="FrameworksFinderRecursivePanel[0]" value="0.1633987" />
+    <property name="HbAutoCollapseBlocks" value="disabled" />
+    <property name="HbCommenterLanguageId" value="HTML" />
+    <property name="INSPECTION_FILTER_HISTORY" value="" />
+    <property name="JUnitSupport.hidePassedTests" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="PLUGIN_FILTER" value="maven&#10;ideavi&#10;vim&#10;mark&#10;ideavim" />
+    <property name="SearchEveryWhereHistory" value="testFormatCompanyRelevanceReasonForCompanyRecruit&#10;getfeatures&#10;formatedgeaff&#10;converttopegasus&#10;formatedge" />
+    <property name="SettingsSearchHistory" value="psf" />
+    <property name="ShowDocumentationInToolWindow" value="false" />
+    <property name="TestNGSupport.hideConfig" value="true" />
+    <property name="TestNGSupport.hidePassedTests" value="false" />
+    <property name="android-component-compatibility-check" value="1537911893722" />
+    <property name="build.toolwindow.Sync.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.0" value="300" />
+    <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.1" value="800" />
+    <property name="com.intellij.openapi.roots.ui.configuration.TabbedModuleEditor.selectedEditor" value="Sources" />
+    <property name="decompiler.legal.notice.accepted" value="true" />
+    <property name="defaultJdkConfigured" value="true" />
+    <property name="es6.show.auto.import" value="true" />
+    <property name="export.settings.path" value="$USER_HOME$/settings.jar" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/linrepos/bohemia_trunk/bohemia_trunk.ipr&#10;/home/vmarkovi/linrepos/voyager-api_trunk/voyager-api_trunk.ipr&#10;/home/vmarkovi/linrepos/models_trunk/models_trunk.ipr&#10;/home/vmarkovi/linrepos/models_trunk2/models_trunk2.ipr&#10;/home/vmarkovi/linrepos/models_trunk2/models_trunk.ipr&#10;/home/vmarkovi/linrepos/seas-articles_trunk/seas-articles_trunk.ipr&#10;/home/vmarkovi/linrepos/samza-activity-item-features-partitioner_trunk/samza-activity-item-features-partitioner_trunk.ipr&#10;/home/vmarkovi/linrepos/seas-activities_trunk/seas-activities_trunk.ipr&#10;/home/vmarkovi/repos/caffeine&#10;/home/vmarkovi/linrepos/followfeed-partitioner_trunk/config&#10;/home/vmarkovi/linrepos/followfeed-quasar-models_trunk&#10;/home/vmarkovi/linrepos/fdp-utils_trunk&#10;/home/vmarkovi/linrepos/followfeed-schemas_trunk&#10;/home/vmarkovi/linrepos/followfeed-filters_trunk&#10;/home/vmarkovi/linrepos/timeline-storage_trunk&#10;/home/vmarkovi/linrepos/uscp_trunk&#10;/home/vmarkovi/linrepos/followfeed-int-scripts_trunk&#10;/home/vmarkovi/linrepos/relevance-infra-util_trunk/relevance-infra-util_trunk.ipr&#10;/home/vmarkovi&#10;/home/vmarkovi/linrepos/vector_trunk/vector_trunk.ipr&#10;/home/vmarkovi/repos/jmh-playground&#10;/home/vmarkovi/repos/jmh-playground/jmh-playground.ipr&#10;/home/vmarkovi/linrepos/followfeed-int-test_trunk/followfeed-int-test_trunk.ipr&#10;/home/vmarkovi/linrepos/followfeed-query_trunk/config/app/followfeed-query-war&#10;/home/vmarkovi/linrepos/pegasus_trunk&#10;/home/vmarkovi/linrepos/timeline-storage-utils_trunk&#10;/home/vmarkovi/linrepos/followfeed-tools_trunk&#10;/home/vmarkovi/repos/kafka&#10;/home/vmarkovi/linrepos/followfeed-utils_trunk&#10;/home/vmarkovi/linrepos/followfeed-storage_trunk" />
+    <property name="file.gist.reindex.count" value="48319" />
+    <property name="fileTypeChangedCounter" value="1" />
+    <property name="find.popup.splitter" value="0.5062035" />
+    <property name="ideavim.statistics.timestamp" value="1552326096463" />
+    <property name="installed.kotlin.plugin.version" value="1.3.11-release-IJ2018.3-1" />
+    <property name="last.imported.location" value="$USER_HOME$/linrepos/followfeed-partitioner_trunk" />
+    <property name="lastTip" value="26" />
+    <property name="project.wizard.group" value="JAVA_MODULE" />
+    <property name="quick.doc.font.size" value="MEDIUM" />
+    <property name="search.everywhere.max.popup.width" value="620" />
+    <property name="selected.color.option.type" value="DEFAULT_REASSIGNED_LOCAL_VARIABLE" />
+    <property name="settings.code.style.selected.tab.JAVA" value="Imports" />
+    <property name="ts.lib.d.ts.version" value="3.2.1" />
+    <property name="typescript.show.auto.import" value="true" />
+  </component>
   <component name="RefactoringSettings">
+    <option name="MOVE_PREVIEW_USAGES" value="false" />
     <option name="MOVE_INNER_PREVIEW_USAGES" value="false" />
     <option name="INTRODUCE_FIELD_VISIBILITY" value="private" />
     <option name="INLINE_METHOD_THIS" value="true" />
