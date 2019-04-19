@@ -16,7 +16,7 @@
           </map>
         </option>
       </component>
-      <component name="Encoding" addBOMForNewFiles="with NO BOM">
+      <component name="Encoding">
         <file url="PROJECT" charset="UTF-8" />
       </component>
       <component name="GradleLocalSettings">
@@ -72,14 +72,19 @@
             <option name="GITBOOK_URL_ENCODING" value="false" />
             <option name="GITHUB_LISTS" value="false" />
             <option name="GITHUB_WIKI_LINKS" value="true" />
+            <option name="GITLAB_EXT" value="false" />
+            <option name="GITLAB_MATH_EXT" value="false" />
+            <option name="GITLAB_MERMAID_EXT" value="false" />
+            <option name="HEADER_ID_NON_ASCII_TO_LOWERCASE" value="false" />
             <option name="HEADER_ID_NO_DUPED_DASHES" value="false" />
             <option name="JEKYLL_FRONT_MATTER" value="false" />
+            <option name="MACROS_EXT" value="false" />
             <option name="NO_TEXT_ATTRIBUTES" value="false" />
             <option name="PARSE_HTML_ANCHOR_ID" value="false" />
             <option name="SIM_TOC_BLANK_LINE_SPACER" value="true" />
           </ParserOptions>
         </ParserSettings>
-        <HtmlSettings headerTopEnabled="false" headerBottomEnabled="false" bodyTopEnabled="false" bodyBottomEnabled="false" embedUrlContent="false" addPageHeader="true" embedImages="false" embedHttpImages="false" imageUriSerials="false">
+        <HtmlSettings headerTopEnabled="false" headerBottomEnabled="false" bodyTopEnabled="false" bodyBottomEnabled="false" embedUrlContent="false" addPageHeader="true" embedImages="false" embedHttpImages="false" imageUriSerials="false" addDocTypeHtml="true" noParaTags="false">
           <GeneratorProvider>
             <provider providerId="com.vladsch.idea.multimarkdown.editor.swing.html.generator" providerName="Default Swing HTML Generator" />
           </GeneratorProvider>
@@ -96,7 +101,7 @@
           <cssText />
           <cssUriHistory />
         </CssSettings>
-        <HtmlExportSettings updateOnSave="false" parentDir="" targetDir="" cssDir="" scriptDir="" plainHtml="false" imageDir="" copyLinkedImages="false" imageUniquifyType="0" targetExt="" useTargetExt="false" noCssNoScripts="false" linkToExportedHtml="true" exportOnSettingsChange="true" regenerateOnProjectOpen="false" linkFormatType="HTTP_ABSOLUTE" />
+        <HtmlExportSettings updateOnSave="false" parentDir="" targetDir="" cssDir="" scriptDir="" plainHtml="false" imageDir="" copyLinkedImages="false" imageUniquifyType="0" targetPathType="2" targetExt="" useTargetExt="false" noCssNoScripts="false" useElementStyleAttribute="false" linkToExportedHtml="true" exportOnSettingsChange="true" regenerateOnProjectOpen="false" linkFormatType="HTTP_ABSOLUTE" />
         <LinkMapSettings>
           <textMaps />
         </LinkMapSettings>

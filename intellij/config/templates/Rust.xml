@@ -1,13 +1,17 @@
 <templateSet group="Rust">
-  <template name="loop" value="loop {&#10;  $END$&#10;}" description="infinite loop" toReformat="true" toShortenFQNames="true" />
+  <template name="loop" value="loop {&#10;  $END$&#10;}" description="infinite loop" toReformat="true" toShortenFQNames="true">
+    <context />
+  </template>
   <template name="for" value="for $VAR$ in $ITERABLE$ {&#10;  $END$&#10;}" description="iterate (for ... in ...)" toReformat="true" toShortenFQNames="true">
     <variable name="ITERABLE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="VAR" expression="rustCollectionElementName(ITERABLE)" defaultValue="" alwaysStopAt="true" />
+    <context />
   </template>
   <template name="fori" value="for $INDEX$ in $START$..$STOP$ {&#10;  $END$&#10;}" description="iterate over range (for ... in range)" toReformat="true" toShortenFQNames="true">
     <variable name="START" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
     <variable name="STOP" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="INDEX" expression="rustSuggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <context />
   </template>
   <template name="tf" value="#[test]&#10;fn $NAME$() {&#10;    $END$&#10;}" description="test function" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
@@ -15,20 +19,27 @@
       <option name="RUST_MOD" value="true" />
     </context>
   </template>
-  <template name="tmod" value="#[cfg(test)]&#10;mod tests {&#10;    use super::*;&#10;    &#10;    $END$&#10;}" description="test module" toReformat="true" toShortenFQNames="true" />
-  <template name="main" value="fn main() {&#10;  $END$&#10;}" description="main() function declaration" toReformat="true" toShortenFQNames="true" />
+  <template name="tmod" value="#[cfg(test)]&#10;mod tests {&#10;    use super::*;&#10;    &#10;    $END$&#10;}" description="test module" toReformat="true" toShortenFQNames="true">
+    <context />
+  </template>
+  <template name="main" value="fn main() {&#10;  $END$&#10;}" description="main() function declaration" toReformat="true" toShortenFQNames="true">
+    <context />
+  </template>
   <template name="macro" value="macro_rules! $NAME$ {&#10;  ($MATCHER$) =&gt; {$TRANSCRIBER$};$END$&#10;}" description="macro_rules! declaration" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="MATCHER" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="TRANSCRIBER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
   </template>
   <template name="ifl" value="if let $PATTERN$ = $EXPRESSION$ {&#10;  $END$&#10;}" description="if let ... statement" toReformat="true" toShortenFQNames="true">
     <variable name="EXPRESSION" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="PATTERN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
   </template>
   <template name="ifls" value="if let Some($VAR$) = $EXPRESSION$ {&#10;  $END$&#10;}" description="if let Some(...) statement" toReformat="true" toShortenFQNames="true">
     <variable name="EXPRESSION" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
   </template>
   <template name="at" value="assert_that!($actual$, eq($expected$));" description="assert_that" toReformat="false" toShortenFQNames="true">
     <variable name="actual" expression="" defaultValue="" alwaysStopAt="true" />

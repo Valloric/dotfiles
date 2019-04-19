@@ -26,6 +26,10 @@
     <option name="pathToSceneBuilder" value="/opt/SceneBuilder/SceneBuilder" />
     <option name="myPathToSceneBuilder" value="/opt/SceneBuilder/SceneBuilder" />
   </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontScale" value="1.0833334" />
+    <option name="fontSize" value="12" />
+  </component>
   <component name="PropertiesComponent">
     <property name="CREATE_FIELD_FROM_PARAMETER_DECLARE_FINAL" value="true" />
     <property name="ColorChooser.RecentColors" value="255-216-0-255,,,255-254-183-255,,,236-238-116-255,,,238-238-143-255" />
@@ -51,6 +55,7 @@
     <property name="ShowDocumentationInToolWindow" value="false" />
     <property name="TestNGSupport.hideConfig" value="true" />
     <property name="TestNGSupport.hidePassedTests" value="false" />
+    <property name="TrendingPluginsSearchHistory" value="rust" />
     <property name="android-component-compatibility-check" value="1537911893722" />
     <property name="build.toolwindow.Sync.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
     <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.0" value="300" />
@@ -64,15 +69,17 @@
     <property name="file.gist.reindex.count" value="48319" />
     <property name="fileTypeChangedCounter" value="1" />
     <property name="find.popup.splitter" value="0.5062035" />
-    <property name="ideavim.statistics.timestamp" value="1552326096463" />
-    <property name="installed.kotlin.plugin.version" value="1.3.11-release-IJ2018.3-1" />
+    <property name="ideavim.statistics.timestamp" value="1555647134227" />
+    <property name="installed.kotlin.plugin.version" value="1.3.21-release-IJ2019.1-3" />
     <property name="last.imported.location" value="$USER_HOME$/linrepos/followfeed-partitioner_trunk" />
     <property name="lastTip" value="26" />
+    <property name="org.rust.LAST_UPDATE" value="1555647217529" />
     <property name="project.wizard.group" value="JAVA_MODULE" />
     <property name="quick.doc.font.size" value="MEDIUM" />
     <property name="search.everywhere.max.popup.width" value="620" />
     <property name="selected.color.option.type" value="DEFAULT_REASSIGNED_LOCAL_VARIABLE" />
     <property name="settings.code.style.selected.tab.JAVA" value="Imports" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
     <property name="ts.lib.d.ts.version" value="3.2.1" />
     <property name="typescript.show.auto.import" value="true" />
   </component>

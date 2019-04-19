@@ -12,6 +12,5 @@
     <setting name="Editor.Zoom.smartZooming" value="true" />
     <setting name="Editor.Zoom.prefferedWidth" value="128" />
     <setting name="Editor.Zoom.prefferedHeight" value="128" />
-    <setting name="ExternalEditor.executablePath" value="" />
   </component>
 </application>

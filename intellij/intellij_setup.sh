@@ -11,15 +11,10 @@ then
 fi
 
 declare -a names=(
-                  "IntelliJIdeaLI8"
-                  "IntelliJIdeaLI9"
-                  "IntelliJIdeaLI10"
                   "IntelliJIdeaLI11"
                   "IntelliJIdeaLI12"
-                  "IdeaIC2017.2"
-                  "IdeaIC2017.3"
-                  "IdeaIC2018.1"
                   "IdeaIC2018.2"
+                  "IdeaIC2019.1"
                  )
 
 # 1. Let intellij create these folders in config dir.
