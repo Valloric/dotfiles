@@ -18,9 +18,9 @@ then
   ln -s $script_dir/vim/vimrc.vim ~/.vimrc
 fi
 
-if [[ ! -a ~/.gdbrc ]]
+if [[ ! -a ~/.gdbinit ]]
 then
-  ln -s $script_dir/misc/gdbrc ~/.gdbrc
+  ln -s $script_dir/misc/gdbinit ~/.gdbinit
 fi
 
 if [[ ! -a ~/.gradle/gradle.properties ]]

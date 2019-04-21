@@ -1,0 +1,20 @@
+source ~/dotfiles/misc/gdb-dashboard.gdb
+
+# config for gdb-dashboard
+dashboard -layout assembly source history !expressions !memory !registers !stack !threads
+dashboard source -style context 20
+dashboard assembly -style context 12
+
+# quit without asking for confirmation
+set confirm off
+# disables informational messages
+set verbose off
+
+set print pretty on
+set print object on
+set print static-members on
+set print vtbl on
+set print demangle on
+set demangle-style auto
+set print sevenbit-strings off
+set disassembly-flavor intel
