@@ -69,7 +69,8 @@ git config --global core.excludesfile ~/.gitignore_global
 # Forces the use of SSH instead of HTTPS for any URLs that point to github.
 # This means that if a repo uses "https://github/..." for "origin", we will
 # automatically use SSH. No more password prompts!
-git config --global url.ssh://git@github.com/.insteadOf https://github.com/
+# Off because it messes up Cargo
+#git config --global url.ssh://git@github.com/.insteadOf https://github.com/
 
 # Makes "git stash show" display a diff by default
 git config --global stash.showPatch true
