@@ -15,6 +15,7 @@ declare -a names=(
                   "IntelliJIdeaLI12"
                   "IdeaIC2018.2"
                   "IdeaIC2019.1"
+                  "CLion2019.1"
                  )
 
 # 1. Let intellij create these folders in config dir.

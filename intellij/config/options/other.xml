@@ -32,6 +32,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="CREATE_FIELD_FROM_PARAMETER_DECLARE_FINAL" value="true" />
+    <property name="Cargo TestSupport.hidePassedTests" value="false" />
+    <property name="Cargo TestSupport.scrollToSource" value="true" />
+    <property name="Cargo TestSupport.scrollToStackTrace" value="true" />
+    <property name="Cargo TestSupport.selectFirtsDefect" value="true" />
     <property name="ColorChooser.RecentColors" value="255-216-0-255,,,255-254-183-255,,,236-238-116-255,,,238-238-143-255,,,64-50-50-255,,,46-32-32-255,,,65-51-51-255,,,55-41-41-255,,,255-183-83-255,,,255-224-117-255,,,255-198-127-255,,,255-249-125-255,,,255-236-164-255,,,255-223-159-255,,,255-208-153-255" />
     <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.5285714" />
     <property name="CommitChangeListDialog.SPLITTER_PROPORTION_2" value="0.62393165" />

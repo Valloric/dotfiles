@@ -1,6 +1,11 @@
 <application>
   <component name="ProjectManager">
     <defaultProject>
+      <component name="CMakeSettings">
+        <configurations>
+          <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+        </configurations>
+      </component>
       <component name="CheckStyle-IDEA">
         <option name="configuration">
           <map>

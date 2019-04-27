@@ -56935,13 +56935,18 @@
     <option name="XML_TAG_NAME" baseAttributes="DEFAULT_KEYWORD" />
     <option name="org.rust.MUT_BINDING">
       <value>
-        <option name="FOREGROUND" value="ffdbcb" />
+        <option name="FOREGROUND" value="ffd099" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="org.rust.MUT_PARAMETER">
       <value>
-        <option name="FOREGROUND" value="ffdbcb" />
+        <option name="FOREGROUND" value="ffd099" />
+      </value>
+    </option>
+    <option name="org.rust.UNSAFE_CODE">
+      <value>
+        <option name="BACKGROUND" value="372929" />
       </value>
     </option>
   </attributes>
