@@ -22,7 +22,14 @@ window:
   # Values for `decorations`:
   #     - full: Borders and title bar
   #     - none: Neither borders nor title bar
-  decorations: full
+  decorations: none
+
+  startup_mode: Maximized
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 0
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 2
@@ -51,7 +58,7 @@ font:
     style: Italic
 
   # Point size of the font
-  size: 11.0
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -66,18 +73,8 @@ font:
     x: 0
     y: 0
 
-  # Scale the font size based on the monitor's DPI. This will lead to bigger text on HiDPI
-  # screens and make reading text a little easier.
-  # On X11 it is possible to change the DPI for each instance of alacritty by using
-  # `WINIT_HIDPI_FACTOR=1.0 alacritty` to scale the font.
-  scale_with_dpi: true
-
 # Should display the render timer
 render_timer: false
-
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
 
 # Colors (xterm theme + custom)
 colors:
@@ -155,23 +152,22 @@ selection:
   # When set to `true`, selected text will be copied to both the primary and
   # the selection clipboard. Otherwise, it will only be copied to the selection
   # clipboard.
-  save_to_clipboard: false
+  save_to_clipboard: true
 
 dynamic_title: true
 
-hide_cursor_when_typing: false
+cursor:
+  # Cursor style
+  #
+  # Values for `style`:
+  #   - ▇ Block
+  #   - _ Underline
+  #   - | Beam
+  style: Block
 
-# Cursor style
-#
-# Values for 'cursor_style':
-#   - Block
-#   - Underline
-#   - Beam
-cursor_style: Block
-
-# If this is `true`, the cursor will be rendered as a hollow box when the
-# window is not focused.
-unfocused_hollow_cursor: true
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  unfocused_hollow: true
 
 # Live config reload (changes require restart)
 live_config_reload: true
