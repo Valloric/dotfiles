@@ -72,6 +72,11 @@ then
   ln -s $script_dir/bin/git-wip-check.sh ~/bin/git-wip-check
 fi
 
+if [[ ! -a ~/bin/valgrind ]]
+then
+  ln -s $script_dir/bin/valgrind.sh ~/bin/valgrind
+fi
+
 # Naturally, macvim needs to be installed for this to work
 if [[ $(uname) == *Darwin* ]]
 then
