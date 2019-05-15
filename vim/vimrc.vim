@@ -364,12 +364,11 @@ endif
 
 " Sets a font for the GUI
 if has("gui_gtk2")
-  set guifont=Consolas\ For\ Powerline\ 11
+  set guifont=Consolas\ For\ Powerline\ 14
 elseif has("gui_macvim")
-  " My Mac has a fairly high DPI so the font needs to be bigger
   set guifont=Consolas\ For\ Powerline:h14
 elseif has("gui_win32")
-  set guifont=Consolas\ For\ Powerline:h11
+  set guifont=Consolas\ For\ Powerline:h14
 end
 
 " Sometimes, $MYVIMRC does not get set even though the vimrc is sourced
