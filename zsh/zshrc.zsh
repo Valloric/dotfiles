@@ -74,5 +74,9 @@ export FZF_DEFAULT_OPTS="
 # needed for gpg-agent to work right
 export GPG_TTY=$(tty)
 
+# if at google, do google things
+[ -f "$HOME/google/zsh_google.zsh" ] && source "$HOME/google/zsh_google.zsh"
+
 # added by travis gem
 [ -f /home/valloric/.travis/travis.sh ] && source /home/valloric/.travis/travis.sh
+
