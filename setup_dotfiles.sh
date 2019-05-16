@@ -77,6 +77,11 @@ then
   ln -s $script_dir/bin/valgrind.sh ~/bin/valgrind
 fi
 
+if [[ ! -a ~/.hgrc ]]
+then
+  ln -s $script_dir/mercurial/hgrc.ini ~/.hgrc
+fi
+
 # Naturally, macvim needs to be installed for this to work
 if [[ $(uname) == *Darwin* ]]
 then
