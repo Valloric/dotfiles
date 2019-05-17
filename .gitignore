@@ -54,3 +54,10 @@ intellij/config/li-options-backup/**
 intellij/config/migration/**
 intellij/config/old.c.kdbx
 intellij/config/pdb.pwd
+intellij/config/clion64.vmoptions
+intellij/config/codestyles/GoogleStyle.xml
+intellij/config/options/code.style.schemes
+intellij/config/options/g3plugins.global.settings.xml
+intellij/config/options/prodaccess.xml
+intellij/config/options/proxy.settings.xml
+intellij/config/pac.js
