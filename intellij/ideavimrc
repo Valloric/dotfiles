@@ -35,6 +35,9 @@ nmap <leader>ns :action GotoSymbol<cr>
 nmap <leader>nm :action FileStructurePopup<cr>
 nmap <leader>d :action ShowErrorDescription<cr>
 
+" Switches between .cc and .h file!
+nmap <leader>s :action GotoRelated<cr>
+
 " IdeaVim uses 'a' for alt instead of Vim's 'm'
 nmap <a-j> 15gj
 nmap <a-k> 15gk
