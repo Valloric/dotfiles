@@ -6,6 +6,10 @@
   <action id="Generate">
     <keyboard-shortcut first-keystroke="alt i" />
   </action>
+  <action id="GotoSymbol">
+    <keyboard-shortcut first-keystroke="shift ctrl alt n" />
+    <keyboard-shortcut first-keystroke="alt s" />
+  </action>
   <action id="ReformatCode">
     <keyboard-shortcut first-keystroke="ctrl alt r" />
   </action>

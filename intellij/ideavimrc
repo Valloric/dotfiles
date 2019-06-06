@@ -34,6 +34,7 @@ nmap <leader>c :action GotoClass<cr>
 nmap <leader>ns :action GotoSymbol<cr>
 nmap <leader>nm :action FileStructurePopup<cr>
 nmap <leader>d :action ShowErrorDescription<cr>
+nmap == :action ReformatCode<cr>
 
 " Switches between .cc and .h file!
 nmap <leader>s :action GotoRelated<cr>

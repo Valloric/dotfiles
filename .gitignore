@@ -61,5 +61,8 @@ intellij/config/options/g3plugins.global.settings.xml
 intellij/config/options/prodaccess.xml
 intellij/config/options/proxy.settings.xml
 intellij/config/pac.js
-intellij/config/options/blaze.wizard.settings.xml
 intellij/config/options/code.search.notification.xml
+intellij/config/options/blaze.wizard.settings.xml
+intellij/config/options/blaze.test.flags.xml
+intellij/config/options/blaze.user.settings.xml
+intellij/config/templates/C_C__.xml
