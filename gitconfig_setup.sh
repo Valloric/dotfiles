@@ -29,6 +29,11 @@ git config --global alias.rb "rebase"
 
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
+# Pipes "git status" through LESS
+# Can set "pager.<tool>" to enable the pager for other commands.
+# Also, can use "git --paginate <tool>" to make pagination per-invocation.
+git config --global pager.status true
+
 git config --global color.ui true
 
 git config --global diff.tool kdiff3
