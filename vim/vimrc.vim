@@ -38,7 +38,7 @@ Plugin 'Valloric/xmledit'
 Plugin 'YankRing.vim'
 " Seems more active than tpope/vim-surround
 Plugin 'anyakichi/vim-surround'
-Plugin 'bufkill.vim'
+" Plugin 'bufkill.vim'
 Plugin 'cespare/vim-toml'
 " Has *terrible* path ranking, switching back to Command-T
 " Plugin 'ctrlpvim/ctrlp.vim'
@@ -46,11 +46,14 @@ Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'gmarik/vundle'
 Plugin 'godlygeek/tabular'
 " For markdown preview; call :Preview to open rendered in browser
-Plugin 'greyblake/vim-preview'
+" Plugin 'greyblake/vim-preview'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'helino/vim-json'
 Plugin 'honza/vim-snippets'
+" Yet another markdown preview plugin
+" After install, needs: mkdp#util#install()
+Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'majutsushi/tagbar'
 Plugin 'matchit.zip'
 Plugin 'mattn/emmet-vim'
@@ -61,14 +64,19 @@ Plugin 'othree/eregex.vim'
 Plugin 'othree/html5.vim'
 Plugin 'python.vim'
 Plugin 'python_match.vim'
+Plugin 'prabirshrestha/async.vim'
+Plugin 'prabirshrestha/vim-lsp'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
 Plugin 'sjl/gundo.vim'
 " Problems with fugitive, re-evalute when upstream fixes the issue
 " Plugin 'sjl/splice.vim'
 Plugin 'skammer/vim-css-color'
 " Requires extra binaries; see docs
-Plugin 'suan/vim-instant-markdown'
+" Plugin 'suan/vim-instant-markdown'
+" For higlighting the word under the cursor
+Plugin 't9md/vim-quickhl'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
@@ -115,7 +123,7 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " for testing out custom vim scripts
-set rtp+=$HOME/vim_test,$HOME/vim_test/after,$HOME/repos/YouCompleteMe
+set rtp+=$HOME/vim_test,$HOME/vim_test/after
 
 " Home away from home. We store some config files and snippets here and the
 " whole dotfiles dir is a git repo. Should be the last entry in rtp (for
@@ -358,13 +366,15 @@ else
   " We never maximize in macvim. We rely on it remembering the window size
   " itself.
   if !has("gui_macvim")
-    au vimrc GUIEnter * set lines=999 columns=999
+    " NOTE: Needs 'sudo apt install wmctrl' to work!
+    au vimrc GUIEnter * call system(
+          \ 'wmctrl -i -b add,maximized_vert,maximized_horz -r ' . v:windowid )
   endif
 endif
 
 " Sets a font for the GUI
-if has("gui_gtk2")
-  set guifont=Consolas\ For\ Powerline\ 14
+if has("gui_gtk2") || has("gui_gtk3")
+  set guifont=Consolas\ For\ Powerline\ 10
 elseif has("gui_macvim")
   set guifont=Consolas\ For\ Powerline:h14
 elseif has("gui_win32")
@@ -537,7 +547,7 @@ vnoremap Q gq
 nnoremap Q gqap
 
 " This is quit all
-noremap <Leader>q :qa<cr>
+noremap <leader>q :qa<cr>
 
 " key bindings for quickly moving between windows
 " h left, l right, k up, j down
@@ -557,7 +567,7 @@ noremap <c-k> 15gk
 
 " Switches to the previous buffer that was shown in the current window, but also
 " closes the current buffer before switching to the previous one
-noremap <leader>bq <c-^> :bd #<cr>
+" noremap <leader>bq <c-^> :bd #<cr>
 
 " Switch to the directory of the open buffer
 noremap <leader>cd :cd %:p:h<cr>
@@ -580,6 +590,9 @@ noremap <leader>su z=
 " such an operation.
 vnoremap < <gv
 vnoremap > >gv
+
+noremap <leader>b <c-o>
+noremap <leader>f <c-i>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -616,13 +629,13 @@ let g:CommandTWildIgnore=&wildignore
 " MacVim doesn't use tab focus to switch from command-t input field to the file
 " list, so using j and k for next and prev screws everything up. But it does
 " work on linux so let's use it there.
-if has("gui_gtk2")
-    let g:CommandTSelectNextMap = [ '<down>' ]
-    let g:CommandTSelectPrevMap = [ '<up>' ]
+if has("gui_gtk2") || has("gui_gtk3")
+  let g:CommandTSelectNextMap = [ '<down>' ]
+  let g:CommandTSelectPrevMap = [ '<up>' ]
 endif
 
 nnoremap <leader>t :CommandT<cr>
-nnoremap <leader>n :CommandTBuffer<cr>
+nnoremap <leader>n :CommandTMRU<cr>
 nnoremap <leader>' :CommandTFlush<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -690,12 +703,12 @@ let g:session_directory       = '~/tmp/vim/sessions'
 
 " looks at the current line and the lines above and below it and aligns all the
 " equals signs; useful for when we have several lines of declarations
-nnoremap <Leader>a= :Tabularize /=<CR>
-vnoremap <Leader>a= :Tabularize /=<CR>
-nnoremap <Leader>a/ :Tabularize /\/\//l2c1l0<CR>
-vnoremap <Leader>a/ :Tabularize /\/\//l2c1l0<CR>
-nnoremap <Leader>a, :Tabularize /,/l0r1<CR>
-vnoremap <Leader>a, :Tabularize /,/l0r1<CR>
+nnoremap <leader>a= :Tabularize /=<CR>
+vnoremap <leader>a= :Tabularize /=<CR>
+nnoremap <leader>a/ :Tabularize /\/\//l2c1l0<CR>
+vnoremap <leader>a/ :Tabularize /\/\//l2c1l0<CR>
+nnoremap <leader>a, :Tabularize /,/l0r1<CR>
+vnoremap <leader>a, :Tabularize /,/l0r1<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                UltiSnips                                "
@@ -719,9 +732,9 @@ let g:snips_author                 = 'Strahinja Val Markovic'
 "                               easymotion                                "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:EasyMotion_leader_key = '<Leader>e'
+let g:EasyMotion_leader_key = '<leader>e'
 
-" Provides the equivalent of <Leader>s, which is forwards/backwards search for a
+" Provides the equivalent of <leader>s, which is forwards/backwards search for a
 " character.
 " has to be 'nmap', 'noremap' doesn't work
 nmap s <Plug>(easymotion-s)
@@ -744,7 +757,9 @@ let g:PreviewMarkdownFences = 1
 "                                ack.vim                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if executable('ag')
+if executable('ripgrep')
+  let g:ackprg = 'rg --vimgrep --no-heading'
+elseif executable('ag')
   let g:ackprg = "ag --nocolor --nogroup --column"
 elseif executable('ack-grep')
   let g:ackprg = "ack-grep --nocolor --nogroup --column"
@@ -780,8 +795,8 @@ let g:fuf_mrufile_maxItem = 1000
 let g:fuf_mrucmd_maxItem  = 400
 let g:fuf_file_exclude    = '\v\~$|\.(o|exe|dll|bak|class|meta|lock|orig|jar|swp)$|/test/data\.|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
 
-nnoremap <Leader>fm :FufMruFile<CR>
-nnoremap <Leader>fc :FufMruCmd<CR>
+" nnoremap <leader>fm :FufMruFile<CR>
+" nnoremap <leader>fc :FufMruCmd<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                fswitch                                  "
@@ -790,18 +805,19 @@ nnoremap <Leader>fc :FufMruCmd<CR>
 " A "companion" file is a .cpp file to an .h file and vice versa
 
 " Opens the companion file in the current window
-nnoremap <Leader>sh :FSHere<cr>
+" Can be used to switch between header and source file, for example.
+nnoremap <leader>sh :FSHere<cr>
 
 " Opens the companion file in the window to the left (window needs to exist)
 " This is actually a duplicate of the :FSLeft command which for some reason
 " doesn't work.
-nnoremap <Leader>sl :call FSwitch('%', 'wincmd l')<cr>
+nnoremap <leader>sl :call FSwitch('%', 'wincmd l')<cr>
 
 " Same as above, only opens it in window to the right
-nnoremap <Leader>sr :call FSwitch('%', 'wincmd r')<cr>
+nnoremap <leader>sr :call FSwitch('%', 'wincmd r')<cr>
 
 " Creates a new window on the left and opens the companion file in it
-nnoremap <Leader>sv :FSSplitLeft<cr>
+nnoremap <leader>sv :FSSplitLeft<cr>
 
 " This handles c++ files with the ".cc" extension.
 augroup googleccfiles
@@ -831,10 +847,17 @@ au vimrc FileType gitcommit setlocal spell! spelllang=en_us
 
 let g:tagbar_left = 1
 let g:tagbar_sort = 0
+let g:tagbar_width = 60
+
 if has("gui_macvim")
   let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 endif
 
+" *OpenAutoClose is meant to be used for the usecase of 'open Tagbar, move
+" cursor there, move to entry, press enter, close window'. Differs from the
+" *Toggle version by moving the cursor to the window and closing the window once
+" an entry is selected.
+nnoremap <F3> :TagbarOpenAutoClose<cr>
 nnoremap <F4> :TagbarToggle<cr><c-w>=
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -899,6 +922,9 @@ let g:ycm_extra_conf_globlist = ['~/repos/*']
 let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
 let g:ycm_rust_src_path = $HOME . '/repos/rust/src'
 
+let g:ycm_max_num_candidates = 10
+let g:ycm_max_num_identifier_candidates = 10
+
 nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>pd :YcmCompleter GoToDefinition<CR>
@@ -910,6 +936,9 @@ nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'tomorrow'
+" Removes the function name from the statusline; this helps prevent filename
+" truncation.
+let g:airline#extensions#tagbar#enabled = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            vim-indent-guides                            "
@@ -946,6 +975,28 @@ let g:instant_markdown_autostart = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:ophigh_filetypes_to_ignore = { "spansdl": 1 }
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                              vim-quickhl                                "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Doesn't work, so we do it manually with an au event
+" let g:quickhl_cword_enable_at_startup = 1
+
+au vimrc BufEnter * :QuickhlCwordEnable
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               NERDTree                                  "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <F2> :NERDTree<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                           markdown-preview                              "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" :MarkdownPreview - to open a browser tab that auto-updates
+" :MarkdownPreviewStop - to stop the bg server
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
