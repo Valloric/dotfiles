@@ -80,10 +80,11 @@
     <property name="project.wizard.group" value="JAVA_MODULE" />
     <property name="quick.doc.font.size" value="MEDIUM" />
     <property name="search.everywhere.max.popup.width" value="620" />
-    <property name="selected.color.option.type" value="org.rust.MUT_PARAMETER" />
+    <property name="selected.color.option.type" value="OC.TEMPLATE_VALUE" />
     <property name="settings.code.style.selected.tab.JAVA" value="Imports" />
     <property name="tasks.pass.word.conversion.enforced" value="true" />
     <property name="ts.lib.d.ts.version" value="3.2.1" />
     <property name="typescript.show.auto.import" value="true" />
+    <property name="vcs.history.diff.splitter.proportion" value="0.68297535" />
   </component>
 </application>
