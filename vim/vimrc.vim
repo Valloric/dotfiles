@@ -2,14 +2,8 @@
 "                                preamble                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set nocompatible
-
-" Needed for vundle, will be turned on after vundle inits
-filetype off
-
-" Setup vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Setup vim-plug
+call plug#begin('~/.vim/plugged')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                          Vundle configuration                           "
@@ -18,80 +12,79 @@ call vundle#begin()
 " vundle will add the plugin folders to the runtimepath only after it has seen
 " the plugin's Plugin command.
 
-Plugin 'FSwitch'
-Plugin 'FuzzyFinder'
-Plugin 'JesseKPhillips/d.vim'
-Plugin 'L9'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-airline/vim-airline'
-Plugin 'Raimondi/delimitMate'
-Plugin 'Rename'
-Plugin 'SirVer/ultisnips'
-Plugin 'Valloric/ListToggle'
-Plugin 'Valloric/MatchTagAlways'
-Plugin 'Valloric/Vim-Jinja2-Syntax'
-Plugin 'Valloric/python-indent'
-Plugin 'Valloric/vim-operator-highlight'
-Plugin 'Valloric/vim-valloric-colorscheme'
-Plugin 'Valloric/xmledit'
-Plugin 'YankRing.vim'
+Plug 'vim-scripts/FSwitch'
+Plug 'vim-scripts/FuzzyFinder'
+Plug 'JesseKPhillips/d.vim'
+Plug 'vim-scripts/L9'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'Raimondi/delimitMate'
+Plug 'vim-scripts/Rename'
+Plug 'SirVer/ultisnips'
+Plug 'Valloric/ListToggle'
+Plug 'Valloric/MatchTagAlways'
+Plug 'Valloric/Vim-Jinja2-Syntax'
+Plug 'Valloric/python-indent'
+Plug 'Valloric/vim-operator-highlight'
+Plug 'Valloric/vim-valloric-colorscheme'
+Plug 'Valloric/xmledit'
+Plug 'vim-scripts/YankRing.vim'
 " Seems more active than tpope/vim-surround
-Plugin 'anyakichi/vim-surround'
-" Plugin 'bufkill.vim'
-Plugin 'cespare/vim-toml'
+Plug 'anyakichi/vim-surround'
+" Plug 'bufkill.vim'
+Plug 'cespare/vim-toml'
 " Has *terrible* path ranking, switching back to Command-T
-" Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'dart-lang/dart-vim-plugin'
-Plugin 'gmarik/vundle'
-Plugin 'godlygeek/tabular'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'gmarik/vundle'
+Plug 'godlygeek/tabular'
 " For markdown preview; call :Preview to open rendered in browser
-" Plugin 'greyblake/vim-preview'
-Plugin 'groenewege/vim-less'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'helino/vim-json'
-Plugin 'honza/vim-snippets'
+" Plug 'greyblake/vim-preview'
+Plug 'groenewege/vim-less'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'elzr/vim-json'
+Plug 'honza/vim-snippets'
 " Yet another markdown preview plugin
 " After install, needs: mkdp#util#install()
-Plugin 'iamcco/markdown-preview.nvim'
-Plugin 'majutsushi/tagbar'
-Plugin 'matchit.zip'
-Plugin 'mattn/emmet-vim'
-Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'mileszs/ack.vim'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'othree/eregex.vim'
-Plugin 'othree/html5.vim'
-Plugin 'python.vim'
-Plugin 'python_match.vim'
-Plugin 'prabirshrestha/async.vim'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'rust-lang/rust.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'sjl/gundo.vim'
+Plug 'iamcco/markdown-preview.nvim'
+Plug 'majutsushi/tagbar'
+Plug 'vim-scripts/matchit.zip'
+Plug 'mattn/emmet-vim'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'mileszs/ack.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'othree/eregex.vim'
+Plug 'othree/html5.vim'
+Plug 'vim-scripts/python.vim'
+Plug 'vim-scripts/python_match.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'sjl/gundo.vim'
 " Problems with fugitive, re-evalute when upstream fixes the issue
-" Plugin 'sjl/splice.vim'
-Plugin 'skammer/vim-css-color'
+" Plug 'sjl/splice.vim'
+Plug 'skammer/vim-css-color'
 " Requires extra binaries; see docs
-" Plugin 'suan/vim-instant-markdown'
+" Plug 'suan/vim-instant-markdown'
 " For higlighting the word under the cursor
-Plugin 't9md/vim-quickhl'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tomtom/tlib_vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-repeat'
+Plug 't9md/vim-quickhl'
+Plug 'tomtom/tcomment_vim'
+Plug 'tomtom/tlib_vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-repeat'
 " requires compilation
-Plugin 'wincent/Command-T'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-notes'
-Plugin 'xolox/vim-pyref'
-Plugin 'xolox/vim-session'
+Plug 'wincent/Command-T'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
+Plug 'xolox/vim-pyref'
+Plug 'xolox/vim-session'
 
-
-call vundle#end()
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           pre-filetype tweaks                           "
@@ -121,9 +114,6 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            General settings                             "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" for testing out custom vim scripts
-set rtp+=$HOME/vim_test,$HOME/vim_test/after
 
 " Home away from home. We store some config files and snippets here and the
 " whole dotfiles dir is a git repo. Should be the last entry in rtp (for
