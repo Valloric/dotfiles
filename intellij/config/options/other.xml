@@ -49,11 +49,14 @@
     <property name="FrameworksFinderRecursivePanel[0]" value="0.1633987" />
     <property name="HbAutoCollapseBlocks" value="disabled" />
     <property name="HbCommenterLanguageId" value="HTML" />
+    <property name="INHERITORS_AND_CATEGORIES.file.structure.state" value="true" />
     <property name="INSPECTION_FILTER_HISTORY" value="" />
+    <property name="InstalledPluginsSearchHistory" value="git" />
     <property name="JUnitSupport.hidePassedTests" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="PLUGIN_FILTER" value="maven&#10;ideavi&#10;vim&#10;mark&#10;ideavim" />
+    <property name="PluginConfigurable.selectionTab" value="1" />
     <property name="SearchEveryWhereHistory" value="testFormatCompanyRelevanceReasonForCompanyRecruit&#10;getfeatures&#10;formatedgeaff&#10;converttopegasus&#10;formatedge" />
     <property name="SettingsSearchHistory" value="psf" />
     <property name="ShowDocumentationInToolWindow" value="false" />
@@ -61,6 +64,9 @@
     <property name="TestNGSupport.hidePassedTests" value="false" />
     <property name="TrendingPluginsSearchHistory" value="rust" />
     <property name="android-component-compatibility-check" value="1537911893722" />
+    <property name="bazel.binary.path" value="bazel" />
+    <property name="blaze.binary.path" value="/usr/bin/blaze" />
+    <property name="blaze.edit.project.view.control.last.project.location" value="$USER_HOME$/ClionProjects" />
     <property name="build.toolwindow.Sync.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
     <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.0" value="300" />
     <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.1" value="800" />
@@ -80,11 +86,10 @@
     <property name="project.wizard.group" value="JAVA_MODULE" />
     <property name="quick.doc.font.size" value="MEDIUM" />
     <property name="search.everywhere.max.popup.width" value="620" />
-    <property name="selected.color.option.type" value="OC.TEMPLATE_VALUE" />
     <property name="settings.code.style.selected.tab.JAVA" value="Imports" />
+    <property name="settings.code.style.selected.tab.ObjectiveC" value="Tabs and Indents" />
     <property name="tasks.pass.word.conversion.enforced" value="true" />
     <property name="ts.lib.d.ts.version" value="3.2.1" />
     <property name="typescript.show.auto.import" value="true" />
-    <property name="vcs.history.diff.splitter.proportion" value="0.68297535" />
   </component>
 </application>

@@ -25,12 +25,19 @@
         <entry key="com.intellij.codeInsight.daemon.impl.IconLineMarkerProvider" value="true" />
         <entry key="com.intellij.codeInsight.daemon.impl.RecursiveCallLineMarkerProvider" value="true" />
         <entry key="com.intellij.execution.lineMarker.RunLineMarkerProvider" value="true" />
+        <entry key="com.intellij.lang.javascript.highlighting.JSRecursiveCallLineMarkerProvider" value="true" />
         <entry key="com.intellij.sql.editor.SqlLineMarkerProvider" value="true" />
+        <entry key="com.intellij.ui.ColorLineMarkerProvider" value="false" />
+        <entry key="com.intellij.ws.http.request.codeInsight.HttpRequestDiffLineMarkerProvider" value="true" />
         <entry key="java.implemented" value="true" />
         <entry key="java.implementing" value="true" />
         <entry key="java.lambda" value="false" />
         <entry key="java.overridden" value="true" />
         <entry key="java.overriding" value="true" />
+        <entry key="js.implemented" value="true" />
+        <entry key="js.implementing" value="true" />
+        <entry key="js.overridden" value="true" />
+        <entry key="js.overriding" value="true" />
         <entry key="org.jetbrains.kotlin.idea.spring.lineMarking.KotlinSpringModelDependenciesLineMarkerProvider" value="true" />
       </map>
     </option>

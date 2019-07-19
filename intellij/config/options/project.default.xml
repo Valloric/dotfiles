@@ -21,7 +21,7 @@
           </map>
         </option>
       </component>
-      <component name="Encoding">
+      <component name="Encoding" addBOMForNewFiles="with NO BOM">
         <file url="PROJECT" charset="UTF-8" />
       </component>
       <component name="GradleLocalSettings">
@@ -172,7 +172,7 @@
           </profile-state>
         </entry>
       </component>
-      <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8.0_172" project-jdk-type="JavaSDK" />
+      <component name="ProjectRootManager" version="2" project-jdk-name="1.8.0_172" project-jdk-type="JavaSDK" />
       <component name="PropertiesComponent">
         <property name="last_opened_file_path" value="$USER_HOME$/bin/git" />
         <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -180,7 +180,7 @@
         <property name="project.structure.last.edited" value="SDKs" />
         <property name="project.structure.proportion" value="0.15" />
         <property name="project.structure.side.proportion" value="0.2" />
-        <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+        <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
       </component>
       <component name="RunManager">
         <configuration default="true" type="Applet" factoryName="Applet">
@@ -217,9 +217,6 @@
         <option name="vmParameters" value="-Dplay.version=2.4 -DartifactoryUrl=http://dev-artifactory.corp.linkedin.com:8081/artifactory -Dsbt.boot.properties=/home/vmarkovi/.sbt/liplay/sbt.boot.properties -Dplay.home=/home/vmarkovi/.sbt/liplay/framework -Dsbt.parser.simple=true" />
       </component>
       <component name="SpellCheckerSettings" BundledDictionaries="0" Dictionaries="0" Folder0="$APPLICATION_CONFIG_DIR$/li-spelling" Folders="1" />
-      <component name="VcsContentAnnotationSettings">
-        <option name="myLimit" value="2678400000" />
-      </component>
       <component name="masterDetails">
         <states>
           <state key="GlobalLibrariesConfigurable.UI">

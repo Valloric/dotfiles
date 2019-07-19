@@ -3,110 +3,16 @@
     <option name="deletedKeys">
       <list>
         <TemplateKey>
-          <option name="groupName" value="plain" />
-          <option name="key" value="St" />
+          <option name="groupName" value="Gcl Templates For Completion (Hidden)" />
+          <option name="key" value="gcl_import" />
         </TemplateKey>
         <TemplateKey>
-          <option name="groupName" value="plain" />
-          <option name="key" value="prsf" />
+          <option name="groupName" value="Gcl Templates For Completion (Hidden)" />
+          <option name="key" value="gcl_declare_objtype" />
         </TemplateKey>
         <TemplateKey>
           <option name="groupName" value="Rust" />
           <option name="key" value="tfn" />
-        </TemplateKey>
-        <TemplateKey>
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_package" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_import" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_break" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_continue" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_const" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_for" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_if" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_switch" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_case" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_default" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_func" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_anonymous_func" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_anonymous_func_call" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_anonymous_struct" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_var" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_type" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="type_qf" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="struct_type_qf" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="go_lang_var_qf" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="global_var_qf" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="global_const_qf" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="add_return" />
-        </TemplateKey>
-        <TemplateKey>
-          <option name="groupName" value="GoHiddenTemplate" />
-          <option name="key" value="introduce_field" />
         </TemplateKey>
       </list>
     </option>
