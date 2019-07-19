@@ -18,6 +18,12 @@ then
   ln -s $script_dir/vim/vimrc.vim ~/.vimrc
 fi
 
+mkdir -p $HOME/.config/nvim
+if [[ ! -a ~/.config/nvim/init.vim ]]
+then
+  ln -s $script_dir/nvim/init.vim ~/.config/nvim/init.vim
+fi
+
 if [[ ! -a ~/.gdbinit ]]
 then
   ln -s $script_dir/misc/gdbinit ~/.gdbinit
