@@ -257,13 +257,13 @@ set colorcolumn=+1
 " options for formatting text; see :h formatoptions
 set formatoptions=tcroqnj
 
-if v:version >= 704
-  " The new Vim regex engine is currently slooooow as hell which makes syntax
-  " highlighting slow, which introduces typing latency.
-  " Consider removing this in the future when the new regex engine becomes
-  " faster.
-  set regexpengine=1
-endif
+" Post Vim 7.4, the "new" regexpengine (value 2) is the default and is slower
+" than the "old" enginer (value 1), which means syntax highlighting is slow.
+" Benchmarked on Vim 8.1.1576 with https://gist.github.com/glts/5646749 and the
+" new engine is now faster in almost all benchmarks! So we use value 0, which
+" usually picks the new engine unless it detects it would be slower, and then it
+" falls back to the old engine.
+set regexpengine=0
 
 " The alt (option) key on macs now behaves like the 'meta' key. This means we
 " can now use <m-x> or similar as maps. This is buffer local, and it can easily
@@ -288,6 +288,12 @@ else
   set clipboard+=unnamed
 endif
 
+" Auto saving! Having used Intellij IDEA, autosave is the only way to go
+set autowriteall
+au FocusLost * silent! wa
+
+" When opening a file, go to the last position we were on
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " UltiSnips is missing a setf trigger for snippets on BufEnter
 autocmd vimrc BufEnter *.snippets setf snippets
@@ -365,11 +371,20 @@ endif
 " Sets a font for the GUI
 if has("gui_gtk2") || has("gui_gtk3")
   set guifont=Consolas\ For\ Powerline\ 10
+" For neovim-gtk
+elseif exists('g:GtkGuiLoaded')
+  call rpcnotify(1, 'Gui', 'Font', 'Consolas For Powerline 10')
 elseif has("gui_macvim")
   set guifont=Consolas\ For\ Powerline:h14
 elseif has("gui_win32")
   set guifont=Consolas\ For\ Powerline:h14
 end
+
+" For neovim-gtk
+if exists('g:GtkGuiLoaded')
+  " Disable the ugly custom completion menu
+  call rpcnotify(1, 'Gui', 'Option', 'Popupmenu', 0)
+endif
 
 " Sometimes, $MYVIMRC does not get set even though the vimrc is sourced
 " properly. So far, I've only seen this on Linux machines on rare occasions.
@@ -608,6 +623,7 @@ else
 endif
 
 let g:CommandTTraverseSCM = 'pwd'
+let g:CommandTHighlightColor = 'CursorLine'
 
 set wildignore+=*.o,*.obj,.git,*.pyc,*.so,blaze*,READONLY,llvm,Library*
 set wildignore+=CMakeFiles,packages/*,**/packages/*,**/node_modules/*

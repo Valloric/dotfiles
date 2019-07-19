@@ -83,6 +83,11 @@ then
   ln -s $script_dir/bin/valgrind.sh ~/bin/valgrind
 fi
 
+if [[ ! -a ~/bin/gnvim ]]
+then
+  ln -s $script_dir/bin/gnvim.sh ~/bin/gnvim
+fi
+
 if [[ ! -a ~/.hgrc ]]
 then
   ln -s $script_dir/mercurial/hgrc.ini ~/.hgrc
