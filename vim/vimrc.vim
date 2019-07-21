@@ -2,6 +2,9 @@
 "                                preamble                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+let google_path = $HOME . '/google/google_vim_settings.vim'
+let at_google = filereadable( google_path )
+
 " Setup vim-plug
 call plug#begin('~/.vim/plugged')
 
@@ -83,6 +86,10 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 Plug 'xolox/vim-pyref'
 Plug 'xolox/vim-session'
+
+if !at_google
+  Plug 'ycm-core/YouCompleteMe'
+endif
 
 call plug#end()
 
@@ -330,9 +337,6 @@ autocmd vimrc FileType rust
       \ set shiftwidth=2 |
       \ set softtabstop=2 |
       \ set textwidth=80
-
-let google_path = $HOME . '/google/google_vim_settings.vim'
-let at_google = filereadable( google_path )
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           More involved tweaks                          "
