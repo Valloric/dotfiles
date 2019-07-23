@@ -767,7 +767,7 @@ let g:PreviewMarkdownFences = 1
 "                                ack.vim                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if executable('ripgrep')
+if executable('rg')
   let g:ackprg = 'rg --vimgrep --no-heading'
 elseif executable('ag')
   let g:ackprg = "ag --nocolor --nogroup --column"
