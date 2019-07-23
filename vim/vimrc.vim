@@ -449,7 +449,7 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 " cindent is a bit too smart for its own good and triggers in text files when
 " you're typing inside parens and then hit enter; it aligns the text with the
 " opening paren and we do NOT want this in text files!
-autocmd vimrc FileType text,markdown,gitcommit set nocindent
+autocmd vimrc FileType text,markdown,gitcommit,hgcommit set nocindent
 
 autocmd vimrc FileType markdown setlocal spell! spelllang=en_us
 
@@ -934,6 +934,21 @@ let g:ycm_rust_src_path = $HOME . '/repos/rust/src'
 
 let g:ycm_max_num_candidates = 10
 let g:ycm_max_num_identifier_candidates = 10
+
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar': 1,
+      \ 'notes': 1,
+      \ 'markdown': 1,
+      \ 'netrw': 1,
+      \ 'unite': 1,
+      \ 'text': 1,
+      \ 'vimwiki': 1,
+      \ 'pandoc': 1,
+      \ 'infolog': 1,
+      \ 'mail': 1,
+      \ 'hgcommit': 1,
+      \ 'gitcommit': 1
+      \}
 
 nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
 nnoremap <leader>g :YcmCompleter GoTo<CR>
