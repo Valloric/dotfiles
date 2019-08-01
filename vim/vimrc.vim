@@ -45,6 +45,11 @@ Plug 'godlygeek/tabular'
 " For markdown preview; call :Preview to open rendered in browser
 " Plug 'greyblake/vim-preview'
 Plug 'groenewege/vim-less'
+Plug '~/.fzf'
+" Requires fzf installed in ~/.fzf
+" Also works nicer if 'bat' is installed (for file preview syntax highlight)
+" See our zshrc for our fzf default options
+Plug 'junegunn/fzf.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'elzr/vim-json'
 Plug 'honza/vim-snippets'
@@ -644,9 +649,17 @@ if has("gui_gtk2") || has("gui_gtk3")
   let g:CommandTSelectPrevMap = [ '<up>' ]
 endif
 
-nnoremap <leader>t :CommandT<cr>
-nnoremap <leader>n :CommandTMRU<cr>
-nnoremap <leader>' :CommandTFlush<cr>
+" Trying out fzf, might go back to Command-T
+" nnoremap <leader>t :CommandT<cr>
+" nnoremap <leader>n :CommandTMRU<cr>
+" nnoremap <leader>' :CommandTFlush<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                fzf.vim                                  "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <leader>t :Files<cr>
+nnoremap <leader>n :History<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 ctrlp                                   "
