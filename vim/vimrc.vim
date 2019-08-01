@@ -112,7 +112,7 @@ let xml_use_xhtml = 1
 " We reset the vimrc augroup. Autocommands are added to this group throughout
 " the file
 augroup vimrc
-  autocmd!
+  au!
 augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -239,7 +239,7 @@ set tags=./tags;/
 
 " turns off all error bells, visual or otherwise
 set noerrorbells visualbell t_vb=
-autocmd vimrc GUIEnter * set visualbell t_vb=
+au vimrc GUIEnter * set visualbell t_vb=
 
 " Switch syntax highlighting on, when the terminal has colors
 if &t_Co > 2 || has("gui_running")
@@ -311,37 +311,26 @@ au FocusGained * :checktime
 " When opening a file, go to the last position we were on
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-" UltiSnips is missing a setf trigger for snippets on BufEnter
-autocmd vimrc BufEnter *.snippets setf snippets
-
-" .tpl files are HTML for us
-autocmd vimrc BufEnter *.tpl setf html
-
-" .acl files are YAML
-autocmd vimrc BufEnter *.acl setf yaml
-
-" .gradle files are Groovy
-autocmd vimrc BufEnter *.gradle setf groovy
-
-" .pdsc files are JSON
-autocmd vimrc BufEnter *.pdsc setf json
-
-" .conf files are conf
-autocmd vimrc BufEnter *.conf setf conf
+au vimrc BufEnter *.snippets setf snippets
+au vimrc BufEnter *.tpl setf html
+au vimrc BufEnter *.acl setf yaml
+au vimrc BufEnter *.gradle setf groovy
+au vimrc BufEnter *.pdsc setf json
+au vimrc BufEnter *.conf setf conf
 
 " In UltiSnips snippet files, we want actual tabs instead of spaces for indents.
 " US will use those tabs and convert them to spaces if expandtab is set when the
 " user wants to insert the snippet.
-autocmd vimrc FileType snippets set noexpandtab
+au vimrc FileType snippets set noexpandtab
 
 " The stupid python filetype plugin overrides our settings!
-autocmd vimrc FileType python
+au vimrc FileType python
       \ set tabstop=2 |
       \ set shiftwidth=2 |
       \ set softtabstop=2
 
 " The stupid rust filetype plugin overrides our settings!
-autocmd vimrc FileType rust
+au vimrc FileType rust
       \ set tabstop=2 |
       \ set shiftwidth=2 |
       \ set softtabstop=2 |
@@ -370,7 +359,7 @@ endfun
 
 " Automatically delete trailing DOS-returns and whitespace on file open and
 " write.
-autocmd vimrc BufRead,BufWritePre,FileWritePre * call s:TrimWhitespace()
+au vimrc BufRead,BufWritePre,FileWritePre * call s:TrimWhitespace()
 
 " this maximizes the gvim window on startup
 if has("gui_win32")
@@ -411,7 +400,7 @@ if has("unix") && strlen($MYVIMRC) < 1
 endif
 
 " Highlight Class and Function names
-function! s:HighlightFunctionsAndClasses()
+fun! s:HighlightFunctionsAndClasses()
   syn match cCustomFunc      "\w\+\s*\((\)\@="
   syn match cCustomClass     "\w\+\s*\(::\)\@="
 
@@ -420,7 +409,7 @@ function! s:HighlightFunctionsAndClasses()
 endfunction
 
 " Highlight Class and Function names, D specific
-function! s:HighlightDFunctionsAndClasses()
+fun! s:HighlightDFunctionsAndClasses()
   syn match cCustomDFunc     "\w\+\s*\(!.\{-}(\)\@="
   syn match cCustomDFuncUFCS ".\w\+\s*\(!.\{-}\)\@="
 
@@ -436,7 +425,7 @@ au vimrc Syntax d call s:HighlightDFunctionsAndClasses()
 
 
 " TODO: split this into separate plugin
-function! VisualSearch(direction) range
+fun! VisualSearch(direction) range
     let l:saved_reg = @"
     execute "normal! vgvy"
 
@@ -463,10 +452,11 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 " cindent is a bit too smart for its own good and triggers in text files when
 " you're typing inside parens and then hit enter; it aligns the text with the
 " opening paren and we do NOT want this in text files!
-autocmd vimrc FileType text,markdown,gitcommit,hgcommit set nocindent
+au vimrc FileType text,markdown,gitcommit,hgcommit set nocindent
 
-autocmd vimrc FileType markdown setlocal spell! spelllang=en_us
+au vimrc FileType markdown setlocal spell! spelllang=en_us
 
+" Open epub files as if they were zip files (because they are)
 au vimrc BufReadCmd *.epub call zip#Browse( expand( "<amatch>" ) )
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -716,8 +706,8 @@ nnoremap <leader>r :YRShow<CR>
 " this makes Y yank from the cursor to the end of the line, which makes more
 " sense than the default of yanking the whole current line (we can use yy for
 " that)
-function! YRRunAfterMaps()
-    nnoremap Y   :<C-U>YRYankCount 'y$'<CR>
+fun! YRRunAfterMaps()
+  nnoremap Y :<C-U>YRYankCount 'y$'<CR>
 endfunction
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
