@@ -304,6 +304,10 @@ endif
 set autowriteall
 au FocusLost * silent! wa
 
+" Makes neovim GUI's implement 'autoread' like gvim does. See:
+"   https://github.com/neovim/neovim/issues/1936
+au FocusGained * :checktime
+
 " When opening a file, go to the last position we were on
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
