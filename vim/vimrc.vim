@@ -490,7 +490,9 @@ vnoremap / /\v
 " file.
 " NOTE: We're using %S here instead of %s; the capital S version comes from the
 " eregex.vim plugin and uses Perl-style regular expressions.
-vnoremap <C-r> "hy:%S/<C-r>h//c<left><left>
+" NOTE: `/cm` means: c for confirm match, m for multiline regex. For details,
+" see :h eregex-option
+vnoremap <C-r> "hy:%S/<C-r>h//cm<left><left><left>
 
 " Fast saving
 nnoremap <leader>w :w!<cr>
