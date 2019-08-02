@@ -659,6 +659,11 @@ endif
 "                                fzf.vim                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" This hides the dumb "N/M" propt which shows num match/num total entries
+let $FZF_DEFAULT_OPTS .= '--color pointer:0,bg+:-1,info:0,prompt:0 --inline-info'
+" This hides the current folder prefix to file search
+let g:fzf_files_options = ['--prompt', '> ']
+
 nnoremap <leader>t :Files<cr>
 nnoremap <leader>n :History<cr>
 
