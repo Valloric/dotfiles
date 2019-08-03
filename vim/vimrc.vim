@@ -359,7 +359,7 @@ endfun
 
 " Automatically delete trailing DOS-returns and whitespace on file open and
 " write.
-au vimrc BufRead,BufWritePre,FileWritePre * call s:TrimWhitespace()
+au vimrc BufRead,BufWritePre,FileWritePre * silent! call s:TrimWhitespace()
 
 " this maximizes the gvim window on startup
 if has("gui_win32")
