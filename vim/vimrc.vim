@@ -19,7 +19,7 @@ Plug 'vim-scripts/FSwitch'
 Plug 'vim-scripts/FuzzyFinder'
 Plug 'JesseKPhillips/d.vim'
 Plug 'vim-scripts/L9'
-Plug 'Lokaltog/vim-easymotion'
+" Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
 Plug 'Raimondi/delimitMate'
@@ -52,6 +52,7 @@ Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'elzr/vim-json'
+Plug 'justinmk/vim-sneak'
 Plug 'honza/vim-snippets'
 " Yet another markdown preview plugin
 " After install, needs: mkdp#util#install()
@@ -766,7 +767,26 @@ let g:EasyMotion_leader_key = '<leader>e'
 " Provides the equivalent of <leader>s, which is forwards/backwards search for a
 " character.
 " has to be 'nmap', 'noremap' doesn't work
-nmap s <Plug>(easymotion-s)
+" Off because trying out vim-sneak
+" nmap s <Plug>(easymotion-s)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 sneak                                   "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" s<char><char> jumps to first instance of '<char><char>' and labels others.
+" S<char>char> is reverse search
+" <tab> labels the next set of matches (if they're unlabeled).
+let g:sneak#label = 1
+let g:sneak#s_next = 1
+
+" Enables single-char sneak with f, F etc. Does NOT invoke label mode; repeat
+" f to move forward, F to move back. Simial for t/T.
+" Needs plain 'map' commands to work.
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              vim-preview                                "
