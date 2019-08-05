@@ -62,13 +62,28 @@ export DISPLAY=":0"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # FZF setup; https://github.com/junegunn/fzf
+# Also run `cargo install bat` for syntax highlighted file preview!
 export FZF_DEFAULT_OPTS="
---extended-exact
 --color fg:252,bg:233,hl:67,fg+:252,bg+:235,hl+:81
 --color info:144,prompt:161,spinner:135,pointer:135,marker:118
+--preview '[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500'
 "
 
+# Use fd (https://github.com/sharkdp/fd) instead of the default find
+# command for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" . "$1"
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 [ -f ~/.LESS_TERMCAP ] && source ~/.LESS_TERMCAP
 
 # needed for gpg-agent to work right
