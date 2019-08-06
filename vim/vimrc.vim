@@ -72,7 +72,9 @@ Plug 'vim-scripts/python_match.vim'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'rust-lang/rust.vim'
-Plug 'scrooloose/syntastic'
+" No async support? Using ALE now.
+" Plug 'scrooloose/syntastic'
+Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdtree'
 Plug 'sjl/gundo.vim'
 " Problems with fugitive, re-evalute when upstream fixes the issue
@@ -950,9 +952,12 @@ let g:notes_directories = ['~/notes']
 "                                syntastic                                "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" OBSOLETE, but let's keep it for now just in case. See ALE below.
+
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_always_populate_loc_list = 1
+" Note: Overriden in google vim settings
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args = '--max-line-length=80 ' .
       \ '--max-complexity=10 --ignore=E111,E114,E121,E125,E126,E127,E128,E129,' .
@@ -962,6 +967,25 @@ let g:syntastic_mode_map = {
        \ "mode": "active",
        \ "active_filetypes": [],
        \ "passive_filetypes": ["dart", "html"] }
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                  ALE                                    "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Unlike syntastic, ALE supports async linting.
+" NOTE: Fills Vim's location list with errors/warnings, NOT the quickfix list!
+
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+
+" Note: Overriden in google vim settings
+let g:ale_linters = {
+\   'python': ['flake8'],
+\}
+let g:ale_python_flake8_options = '--max-line-length=80 ' .
+      \ '--max-complexity=10 --ignore=E111,E114,E121,E125,E126,E127,E128,E129,' .
+      \ 'E131,E133,E201,E202,E203,E211,E221,E222,E241,E251,E261,E303,E402,W503'
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              YouCompleteMe                              "
