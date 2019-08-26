@@ -982,10 +982,18 @@ let g:syntastic_mode_map = {
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚠'
 
+" We turn off everything except on-save because the other options add visible
+" latency (at least for Markdown, haven't investigated further).
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_save = 1
+
 " Note: Overriden in google vim settings
 let g:ale_linters = {
 \   'python': ['flake8'],
+\   'cpp': [],
 \}
+
 let g:ale_python_flake8_options = '--max-line-length=80 ' .
       \ '--max-complexity=10 --ignore=E111,E114,E121,E125,E126,E127,E128,E129,' .
       \ 'E131,E133,E201,E202,E203,E211,E221,E222,E241,E251,E261,E303,E402,W503'
