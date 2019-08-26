@@ -274,6 +274,10 @@ set colorcolumn=+1
 " options for formatting text; see :h formatoptions
 set formatoptions=tcroqnj
 
+" This limits the size of the max number of items to show in Vim's popup menu
+" (which is used by YouCompleteMe).
+set pumheight=10
+
 " Post Vim 7.4, the "new" regexpengine (value 2) is the default and is slower
 " than the "old" enginer (value 1), which means syntax highlighting is slow.
 " Benchmarked on Vim 8.1.1576 with https://gist.github.com/glts/5646749 and the
@@ -997,7 +1001,7 @@ let g:ycm_extra_conf_globlist = ['~/repos/*']
 let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
 let g:ycm_rust_src_path = $HOME . '/repos/rust/src'
 
-let g:ycm_max_num_candidates = 10
+" Also see the 'pumheight' vim option!
 let g:ycm_max_num_identifier_candidates = 10
 
 let g:ycm_filetype_blacklist = {
