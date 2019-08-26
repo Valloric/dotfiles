@@ -37,8 +37,6 @@ Plug 'vim-scripts/YankRing.vim'
 Plug 'anyakichi/vim-surround'
 " Plug 'bufkill.vim'
 Plug 'cespare/vim-toml'
-" A better version of CamelCaseMotion, text objects work consistently
-Plug 'chaoren/vim-wordmotion'
 " Has *terrible* path ranking, switching back to Command-T
 " Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dart-lang/dart-vim-plugin'
@@ -1093,18 +1091,13 @@ au vimrc BufEnter * :QuickhlCwordEnable
 
 nnoremap <F2> :NERDTree<cr>
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                           markdown-preview                              "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " :MarkdownPreview - to open a browser tab that auto-updates
 " :MarkdownPreviewStop - to stop the bg server
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             vim-wordmotion                              "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Makes w, b, e etc word motions stop at CamelCaseBoundaries and
-" snake_case_boundaries, which is extremely useful for source code.
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              VIMRC OVERRIDE                             "
