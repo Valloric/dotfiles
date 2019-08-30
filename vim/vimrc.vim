@@ -1009,6 +1009,7 @@ let g:ycm_rust_src_path = $HOME . '/repos/rust/src'
 
 " Also see the 'pumheight' vim option!
 let g:ycm_max_num_identifier_candidates = 10
+let g:ycm_clangd_uses_ycmd_caching = 1
 
 let g:ycm_filetype_blacklist = {
       \ 'tagbar': 1,
