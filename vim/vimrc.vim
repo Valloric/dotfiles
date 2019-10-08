@@ -89,7 +89,8 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-repeat'
 " requires compilation
-Plug 'wincent/Command-T'
+" Using fzf now!
+" Plug 'wincent/Command-T'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 Plug 'xolox/vim-pyref'
@@ -752,17 +753,14 @@ vnoremap <leader>a, :Tabularize /,/l0r1<CR>
 
 " we can't use <tab> as our snippet key since we use that with YouCompleteMe
 let g:UltiSnipsSnippetsDir         = $HOME . '/dotfiles/vim/UltiSnips'
-if has("gui_macvim")
-  " Ctrl conflicts with "Dvorak-Qwerty Command"
-  let g:UltiSnipsExpandTrigger       = "<m-s>"
-else
-  " Alt conflicts with Xmonad
-  let g:UltiSnipsExpandTrigger       = "<c-s>"
-endif
+let g:UltiSnipsExpandTrigger       = "<m-s>"
 let g:UltiSnipsListSnippets        = "<c-m-s>"
 let g:UltiSnipsJumpForwardTrigger  = "<right>"
 let g:UltiSnipsJumpBackwardTrigger = "<left>"
 let g:snips_author                 = 'Strahinja Val Markovic'
+
+" NOTE: To get a snippet to expand in-word (for instance, within parens), add
+" the letter "i" after the snippet header. Ex: snippet ss "std::string" i
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               easymotion                                "
@@ -956,7 +954,7 @@ let g:notes_directories = ['~/notes']
 
 " OBSOLETE, but let's keep it for now just in case. See ALE below.
 
-let g:syntastic_error_symbol = '✗'
+let g:syntastic_error_symbol = '🛑'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_always_populate_loc_list = 1
 " Note: Overriden in google vim settings
@@ -1030,6 +1028,10 @@ nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>pd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
+
+" Using <space> at the end to make it more visible and prevent trimming
+nnoremap <f6> :YcmCompleter RefactorRename<space>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                Airline                                  "
