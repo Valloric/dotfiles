@@ -52,30 +52,42 @@ for ( ${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2} ) {
 }
 endsnippet
 
-snippet ss "std::string"
+snippet ss "std::string" i
 std::string $0
 endsnippet
 
-snippet ssr "std::string"
-const std::string &$0
-endsnippet
-
-snippet sv "std::vector"
-std::vector< ${1:std::string} > $2
-endsnippet
-
-snippet svr "std::vector"
-const std::vector< ${1:std::string} > &$2
-endsnippet
-
-snippet sd "std::"
-std::
-endsnippet
-
-snippet cr "const type&"
+snippet cr "const type&" i
 const ${1:type} &${2:var}
 endsnippet
 
-snippet cs "const string&"
-const string &$0
+snippet cs "const string&" i
+const std::string &$0
+endsnippet
+
+snippet sv "absl::string_view" i
+absl::string_view $0
+endsnippet
+
+snippet so "util::StatusOr" i
+util::StatusOr<$1> $2
+endsnippet
+
+snippet st "util::Status" i
+util::Status $0
+endsnippet
+
+snippet ve "std::vector" i
+std::vector< ${1:std::string} > $2
+endsnippet
+
+snippet cv "const std::vector<>&" i
+const std::vector< ${1:std::string} > &$2
+endsnippet
+
+snippet ca "const auto&" i
+const auto& $0
+endsnippet
+
+snippet sd "std::" i
+std::
 endsnippet
