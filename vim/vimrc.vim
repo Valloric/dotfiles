@@ -388,7 +388,7 @@ if has("gui_gtk2") || has("gui_gtk3")
   set guifont=Consolas\ For\ Powerline\ 10
 " For neovim-gtk
 elseif exists('g:GtkGuiLoaded')
-  call rpcnotify(1, 'Gui', 'Font', 'Consolas For Powerline 10')
+  call rpcnotify(1, 'Gui', 'Font', 'Consolas For Powerline 12')
 elseif has("gui_macvim")
   set guifont=Consolas\ For\ Powerline:h14
 elseif has("gui_win32")
