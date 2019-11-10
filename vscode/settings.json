@@ -35,7 +35,7 @@
                 },
                 {
                     "scope": [
-                        "keyword.operator"
+                        "keyword.operator", "punctuation"
                     ],
                     "settings": {
                         "foreground": "#00f2ff"
@@ -99,6 +99,7 @@
         "typescript",
         "yaml"
     ],
+    "spellright.notificationClass": "warning", 
     "todo-tree.filtering.useBuiltInExcludes": true,
     "todo-tree.highlights.enabled": true,
     "vim.easymotion": true,
@@ -320,6 +321,7 @@
         }
     ],
     "vsicons.dontShowNewVersionMessage": true,
+    "window.openFilesInNewWindow": "on",
     "window.newWindowDimensions": "fullscreen",
     "window.restoreFullscreen": true,
     "window.restoreWindows": "none",
