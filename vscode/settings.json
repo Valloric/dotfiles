@@ -1,9 +1,7 @@
 {
-    "editor.fontSize": 15, 
     "files.autoSave": "onWindowChange",
     "editor.fontFamily": "Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.tabSize": 2,
-    "editor.wordWrap": "wordWrapColumn",
     "editor.rulers": [
         80
     ],
@@ -20,10 +18,10 @@
     "workbench.activityBar.visible": false,
     "window.restoreFullscreen": true,
     "window.titleBarStyle": "custom",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "window.newWindowDimensions": "fullscreen",
     // Will preserve fullscreen state (among other things) across restarts
-    "window.restoreWindows": "all",
+    "window.restoreWindows": "none",
     "git.defaultCloneDirectory": "~/repos",
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "vim.easymotion": true,
@@ -182,21 +180,50 @@
         {
             "before": [
                 "<leader>",
-                "d"
+                "b"
             ],
-            "after": [
-                "d",
-                "d"
+            "commands": [
+                "workbench.action.navigateBack", 
             ]
         },
         {
             "before": [
-                "<C-n>"
+                "<leader>",
+                "f"
             ],
             "commands": [
-                ":nohl"
+                "workbench.action.navigateForward", 
             ]
-        }
+        },
+        // Switch between .h/.cc for C++
+        {
+            "before": [
+                "<leader>",
+                "s", 
+                "h"
+            ],
+            "commands": [
+                "togglehs.toggleHS", 
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g", 
+            ],
+            "commands": [
+                "editor.action.revealDefinition", 
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.quit", 
+            ]
+        },
     ],
     "vim.leader": "<space>",
     "vim.handleKeys": {
@@ -204,6 +231,9 @@
         "<C-f>": false,
         "<C-q>": false,
         "<C-t>": false,
+        "<C-e>": false,
+        "<C-v>": false,
+        "<C-c>": false,
         "<C-b>": false
     },
     "editor.lineNumbers": "off",
@@ -212,4 +242,22 @@
     "editor.folding": false,
     "workbench.editor.restoreViewState": false,
     "files.simpleDialog.enable": true,
+    "editor.renderWhitespace": "none",
+    "editor.fontSize": 13,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "python.jediEnabled": false,
+    "workbench.iconTheme": "vscode-icons",
+    "cSpell.userWords": [
+        "ycmd"
+    ],
+    "vsicons.dontShowNewVersionMessage": true,
+    "extensions.ignoreRecommendations": false,
+    "editor.suggestSelection": "first",
+    // We don't care about the open tabs ffs
+    "explorer.openEditors.visible": 0
 }
