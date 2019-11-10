@@ -1,0 +1,215 @@
+{
+    "editor.fontSize": 15, 
+    "files.autoSave": "onWindowChange",
+    "editor.fontFamily": "Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.tabSize": 2,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.rulers": [
+        80
+    ],
+    "editor.cursorSurroundingLines": 2,
+    "editor.cursorSurroundingLinesStyle": "all",
+    "editor.tabCompletion": "on",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "editor.suggest.localityBonus": true,
+    "editor.suggest.maxVisibleSuggestions": 10,
+    "workbench.activityBar.visible": false,
+    "window.restoreFullscreen": true,
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 0,
+    "window.newWindowDimensions": "fullscreen",
+    // Will preserve fullscreen state (among other things) across restarts
+    "window.restoreWindows": "all",
+    "git.defaultCloneDirectory": "~/repos",
+    "merge-conflict.autoNavigateNextConflict.enabled": true,
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ",",
+                "."
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ",",
+                "."
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+        // Fast jump up
+        {
+            "before": [
+                "<c-k>"
+            ],
+            "after": [
+                "1",
+                "5",
+                "g",
+                "k"
+            ]
+        },
+        // Fast jump down
+        {
+            "before": [
+                "<c-j>"
+            ],
+            "after": [
+                "1",
+                "5",
+                "g",
+                "j"
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Insert empty line below
+        {
+            "before": [
+                "z", "j"
+            ],
+            "after": [
+                "o",
+                "<Esc>",
+                "k"
+            ]
+        },
+        // Insert empty line above
+        {
+            "before": [
+                "z", "k"
+            ],
+            "after": [
+                "O",
+                "<Esc>",
+                "j"
+            ]
+        },
+        // Fast jump up
+        {
+            "before": [
+                "<c-k>"
+            ],
+            "after": [
+                "1",
+                "5",
+                "g",
+                "k"
+            ]
+        },
+        // Fast jump down
+        {
+            "before": [
+                "<c-j>"
+            ],
+            "after": [
+                "1",
+                "5",
+                "g",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                ";"
+            ],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.quickOpen", 
+            ]
+        },
+        // Navigate to left/right/up/down split pane
+        {
+            "before": [
+                "<leader>",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.navigateDown", 
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "k"
+            ],
+            "commands": [
+                "workbench.action.navigateUp", 
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.navigateRight", 
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.navigateLeft", 
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "d",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-q>": false,
+        "<C-t>": false,
+        "<C-b>": false
+    },
+    "editor.lineNumbers": "off",
+    "files.hotExit": "off",
+    "workbench.editor.showTabs": false,
+    "editor.folding": false,
+    "workbench.editor.restoreViewState": false,
+    "files.simpleDialog.enable": true,
+}

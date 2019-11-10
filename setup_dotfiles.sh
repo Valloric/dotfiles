@@ -72,7 +72,6 @@ fi
 # -p says to create the dir if it doesn't exist already
 mkdir -p $HOME/bin
 
-
 if [[ ! -a ~/bin/git-wip-check ]]
 then
   ln -s $script_dir/bin/git-wip-check.sh ~/bin/git-wip-check
@@ -129,3 +128,4 @@ $script_dir/compton/compton_setup.sh
 $script_dir/emacs/emacs_setup.sh
 $script_dir/gpg/gpg_setup.sh
 $script_dir/sublime-text/sublime_setup.sh
+$script_dir/vscode/vscode_setup.sh
