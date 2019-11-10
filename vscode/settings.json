@@ -27,6 +27,32 @@
             "textMateRules": [
                 {
                     "scope": [
+                        "variable"
+                    ],
+                    "settings": {
+                        "foreground": "#ffffff"
+                    }
+                },
+                {
+                    "scope": [
+                        "variable.other.property",
+                        "variable.other.object.property"
+                    ],
+                    "settings": {
+                        "foreground": "#d1baec"
+                    }
+                },
+                {
+                    "scope": [
+                        "constant",
+                        "constant.language"
+                    ],
+                    "settings": {
+                        "foreground": "#9876aa"
+                    }
+                },
+                {
+                    "scope": [
                         "meta.attribute"
                     ],
                     "settings": {
@@ -35,7 +61,7 @@
                 },
                 {
                     "scope": [
-                        "keyword.operator", "punctuation"
+                        "keyword.operator", "punctuation", "meta.brace"
                     ],
                     "settings": {
                         "foreground": "#00f2ff"
@@ -94,12 +120,12 @@
         "html",
         "java",
         "less",
-        "python",
         "sql",
         "typescript",
-        "yaml"
+        "yaml",
+        "python"
     ],
-    "spellright.notificationClass": "warning", 
+    "spellright.notificationClass": "warning",
     "todo-tree.filtering.useBuiltInExcludes": true,
     "todo-tree.highlights.enabled": true,
     "vim.easymotion": true,
@@ -245,7 +271,7 @@
                 "workbench.action.navigateForward"
             ]
         },
-        // Switch between source/header 
+        // Switch between source/header
         {
             "before": [
                 "<leader>",
@@ -321,7 +347,7 @@
         }
     ],
     "vsicons.dontShowNewVersionMessage": true,
-    "window.openFilesInNewWindow": "on",
+    "window.openFilesInNewWindow": "default",
     "window.newWindowDimensions": "fullscreen",
     "window.restoreFullscreen": true,
     "window.restoreWindows": "none",
