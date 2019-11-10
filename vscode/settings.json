@@ -1,296 +1,54 @@
 {
-    "files.autoSave": "onWindowChange",
-    "editor.fontSize": 13,
-    "editor.fontFamily": "Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.tabSize": 2,
-    "editor.rulers": [
-        80
-    ],
-    "editor.cursorSurroundingLines": 2,
-    "editor.cursorSurroundingLinesStyle": "all",
-    "editor.tabCompletion": "on",
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": false,
-        "strings": false
-    },
-    "editor.suggest.localityBonus": true,
-    "editor.suggest.maxVisibleSuggestions": 10,
-    "workbench.activityBar.visible": false,
-    "window.restoreFullscreen": true,
-    "window.titleBarStyle": "custom",
-    "window.zoomLevel": 1,
-    "window.newWindowDimensions": "fullscreen",
-    // Will preserve fullscreen state (among other things) across restarts
-    "window.restoreWindows": "none",
-    "git.defaultCloneDirectory": "~/repos",
-    "merge-conflict.autoNavigateNextConflict.enabled": true,
-    "vim.easymotion": true,
-    "vim.sneak": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.insertModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                ",",
-                "."
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                ",",
-                "."
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        },
-        // Fast jump up
-        {
-            "before": [
-                "<c-k>"
-            ],
-            "after": [
-                "1",
-                "5",
-                "g",
-                "k"
-            ]
-        },
-        // Fast jump down
-        {
-            "before": [
-                "<c-j>"
-            ],
-            "after": [
-                "1",
-                "5",
-                "g",
-                "j"
-            ]
-        },
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        // Insert empty line below
-        {
-            "before": [
-                "z",
-                "j"
-            ],
-            "after": [
-                "o",
-                "<Esc>",
-                "k"
-            ]
-        },
-        // Insert empty line above
-        {
-            "before": [
-                "z",
-                "k"
-            ],
-            "after": [
-                "O",
-                "<Esc>",
-                "j"
-            ]
-        },
-        // Fast jump up
-        {
-            "before": [
-                "<c-k>"
-            ],
-            "after": [
-                "1",
-                "5",
-                "g",
-                "k"
-            ]
-        },
-        // Fast jump down
-        {
-            "before": [
-                "<c-j>"
-            ],
-            "after": [
-                "1",
-                "5",
-                "g",
-                "j"
-            ]
-        },
-        {
-            "before": [
-                ";"
-            ],
-            "commands": [
-                "workbench.action.showCommands",
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "t"
-            ],
-            "commands": [
-                "workbench.action.quickOpen",
-            ]
-        },
-        // Navigate to left/right/up/down split pane
-        {
-            "before": [
-                "<leader>",
-                "j"
-            ],
-            "commands": [
-                "workbench.action.navigateDown",
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "k"
-            ],
-            "commands": [
-                "workbench.action.navigateUp",
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "l"
-            ],
-            "commands": [
-                "workbench.action.navigateRight",
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "h"
-            ],
-            "commands": [
-                "workbench.action.navigateLeft",
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "b"
-            ],
-            "commands": [
-                "workbench.action.navigateBack",
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "f"
-            ],
-            "commands": [
-                "workbench.action.navigateForward",
-            ]
-        },
-        // Switch between .h/.cc for C++
-        {
-            "before": [
-                "<leader>",
-                "s",
-                "h"
-            ],
-            "commands": [
-                "togglehs.toggleHS",
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "g",
-            ],
-            "commands": [
-                "editor.action.revealDefinition",
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "q"
-            ],
-            "commands": [
-                "workbench.action.closeWindow",
-            ]
-        },
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-f>": false,
-        "<C-q>": false,
-        "<C-t>": false,
-        "<C-e>": false,
-        "<C-v>": false,
-        "<C-c>": false,
-        "<C-w>": false,
-        "<C-o>": false,
-        "<C-b>": false
-    },
-    "editor.lineNumbers": "off",
-    "files.hotExit": "off",
-    "workbench.editor.showTabs": false,
-    "editor.folding": false,
-    "workbench.editor.restoreViewState": false,
-    "files.simpleDialog.enable": true,
-    "editor.renderWhitespace": "none",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "python.jediEnabled": false,
-    "workbench.iconTheme": "vscode-icons",
     "cSpell.userWords": [
         "ycmd"
     ],
-    "vsicons.dontShowNewVersionMessage": true,
-    "extensions.ignoreRecommendations": false,
-    "editor.suggestSelection": "first",
-    // We don't care about the open tabs ffs
-    "explorer.openEditors.visible": 0,
-    "todo-tree.highlights.enabled": true,
-    "todo-tree.filtering.useBuiltInExcludes": true,
-    "workbench.colorCustomizations": {
-        "editor.background": "#000000",
-        "editor.foreground": "#ffffff"
+    "editor.cursorSurroundingLines": 2,
+    "editor.cursorSurroundingLinesStyle": "all",
+    "editor.folding": false,
+    "editor.fontFamily": "Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 13,
+    "editor.lineNumbers": "off",
+    "editor.quickSuggestions": {
+        "comments": false,
+        "other": true,
+        "strings": false
     },
+    "editor.renderWhitespace": "none",
+    "editor.rulers": [
+        80
+    ],
+    "editor.suggest.localityBonus": true,
+    "editor.suggest.maxVisibleSuggestions": 10,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "on",
+    "editor.tabSize": 2,
     "editor.tokenColorCustomizations": {
         "[Default Dark+]": {
             "comments": "#13c100",
-            "types": "#aa00ff",
             "functions": "#ffa600",
             "numbers": "#9876aa",
             "textMateRules": [
                 {
-                    "scope": ["meta.attribute"],
+                    "scope": [
+                        "meta.attribute"
+                    ],
                     "settings": {
                         "foreground": "#aa00ff"
                     }
                 },
                 {
-                    "scope": ["keyword.operator"],
+                    "scope": [
+                        "keyword.operator"
+                    ],
                     "settings": {
                         "foreground": "#00f2ff"
                     }
                 },
                 {
-                    "scope": ["keyword", "keyword.control"],
+                    "scope": [
+                        "keyword",
+                        "keyword.control"
+                    ],
                     "settings": {
                         "foreground": "#3664ff"
                     }
@@ -300,8 +58,249 @@
                     "settings": {
                         "foreground": "#aa00ff"
                     }
-                },
+                }
             ],
+            "types": "#aa00ff"
         }
     },
+    // Removes open tabs list in Explorer
+    "explorer.openEditors.visible": 0,
+    "extensions.ignoreRecommendations": false,
+    "files.autoSave": "onWindowChange",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.project": true,
+        "**/.settings": true
+    },
+    "files.hotExit": "off",
+    "files.simpleDialog.enable": true,
+    "git.defaultCloneDirectory": "~/repos",
+    "merge-conflict.autoNavigateNextConflict.enabled": true,
+    "python.jediEnabled": false,
+    "todo-tree.filtering.useBuiltInExcludes": true,
+    "todo-tree.highlights.enabled": true,
+    "vim.easymotion": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-b>": false,
+        "<C-c>": false,
+        "<C-e>": false,
+        "<C-f>": false,
+        "<C-o>": false,
+        "<C-q>": false,
+        "<C-t>": false,
+        "<C-v>": false,
+        "<C-w>": false
+    },
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "after": [
+                "<Esc>"
+            ],
+            "before": [
+                ",",
+                "."
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "after": [
+                "o",
+                "<Esc>",
+                "k"
+            ],
+            "before": [
+                "z",
+                "j"
+            ]
+        },
+        {
+            "after": [
+                "O",
+                "<Esc>",
+                "j"
+            ],
+            "before": [
+                "z",
+                "k"
+            ]
+        },
+        {
+            "after": [
+                "1",
+                "5",
+                "g",
+                "k"
+            ],
+            "before": [
+                "<c-k>"
+            ]
+        },
+        {
+            "after": [
+                "1",
+                "5",
+                "g",
+                "j"
+            ],
+            "before": [
+                "<c-j>"
+            ]
+        },
+        {
+            "before": [
+                ";"
+            ],
+            "commands": [
+                "workbench.action.showCommands"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.navigateDown"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "k"
+            ],
+            "commands": [
+                "workbench.action.navigateUp"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.navigateRight"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.navigateLeft"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "b"
+            ],
+            "commands": [
+                "workbench.action.navigateBack"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.navigateForward"
+            ]
+        },
+        // Switch between source/header
+        {
+            "before": [
+                "<leader>",
+                "s",
+                "h"
+            ],
+            "commands": [
+                "togglehs.toggleHS"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g"
+            ],
+            "commands": [
+                "editor.action.revealDefinition"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.closeWindow"
+            ]
+        }
+    ],
+    "vim.sneak": true,
+    "vim.useCtrlKeys": true,
+    "vim.useSystemClipboard": true,
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "after": [
+                "<Esc>"
+            ],
+            "before": [
+                ",",
+                "."
+            ]
+        },
+        {
+            "after": [
+                "1",
+                "5",
+                "g",
+                "k"
+            ],
+            "before": [
+                "<c-k>"
+            ]
+        },
+        {
+            "after": [
+                "1",
+                "5",
+                "g",
+                "j"
+            ],
+            "before": [
+                "<c-j>"
+            ]
+        }
+    ],
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.newWindowDimensions": "fullscreen",
+    "window.restoreFullscreen": true,
+    "window.restoreWindows": "none",
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 1,
+    "workbench.activityBar.visible": false,
+    "workbench.colorCustomizations": {
+        "editor.background": "#000000",
+        "editor.foreground": "#ffffff"
+    },
+    "workbench.editor.restoreViewState": false,
+    "workbench.editor.showTabs": false,
+    "workbench.iconTheme": "vscode-icons"
 }
