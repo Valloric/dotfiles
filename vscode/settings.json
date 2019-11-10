@@ -1,7 +1,4 @@
 {
-    "cSpell.userWords": [
-        "ycmd"
-    ],
     "editor.cursorSurroundingLines": 2,
     "editor.cursorSurroundingLinesStyle": "all",
     "editor.folding": false,
@@ -54,7 +51,10 @@
                     }
                 },
                 {
-                    "scope": "storage.type",
+                    "scope": [
+                        "storage.type",
+                        "storage.class"
+                    ],
                     "settings": {
                         "foreground": "#aa00ff"
                     }
@@ -78,6 +78,27 @@
     "git.defaultCloneDirectory": "~/repos",
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "python.jediEnabled": false,
+    "spellright.language": [
+        "en_US"
+    ],
+    "spellright.documentTypes": [
+        "plaintext",
+        "markdown",
+        "latex",
+        "rust",
+        "c",
+        "cpp",
+        "css",
+        "git-commit",
+        "go",
+        "html",
+        "java",
+        "less",
+        "python",
+        "sql",
+        "typescript",
+        "yaml"
+    ],
     "todo-tree.filtering.useBuiltInExcludes": true,
     "todo-tree.highlights.enabled": true,
     "vim.easymotion": true,
@@ -223,7 +244,7 @@
                 "workbench.action.navigateForward"
             ]
         },
-        // Switch between source/header
+        // Switch between source/header 
         {
             "before": [
                 "<leader>",
@@ -251,7 +272,16 @@
             "commands": [
                 "workbench.action.closeWindow"
             ]
-        }
+        },
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
     ],
     "vim.sneak": true,
     "vim.useCtrlKeys": true,
