@@ -221,7 +221,7 @@
                 "q"
             ],
             "commands": [
-                "workbench.action.quit", 
+                "workbench.action.closeWindow", 
             ]
         },
     ],
@@ -234,6 +234,7 @@
         "<C-e>": false,
         "<C-v>": false,
         "<C-c>": false,
+        "<C-w>": false,
         "<C-b>": false
     },
     "editor.lineNumbers": "off",
