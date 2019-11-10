@@ -1,5 +1,6 @@
 {
     "files.autoSave": "onWindowChange",
+    "editor.fontSize": 13,
     "editor.fontFamily": "Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.tabSize": 2,
     "editor.rulers": [
@@ -80,7 +81,8 @@
         // Insert empty line below
         {
             "before": [
-                "z", "j"
+                "z",
+                "j"
             ],
             "after": [
                 "o",
@@ -91,7 +93,8 @@
         // Insert empty line above
         {
             "before": [
-                "z", "k"
+                "z",
+                "k"
             ],
             "after": [
                 "O",
@@ -137,7 +140,7 @@
                 "t"
             ],
             "commands": [
-                "workbench.action.quickOpen", 
+                "workbench.action.quickOpen",
             ]
         },
         // Navigate to left/right/up/down split pane
@@ -147,7 +150,7 @@
                 "j"
             ],
             "commands": [
-                "workbench.action.navigateDown", 
+                "workbench.action.navigateDown",
             ]
         },
         {
@@ -156,7 +159,7 @@
                 "k"
             ],
             "commands": [
-                "workbench.action.navigateUp", 
+                "workbench.action.navigateUp",
             ]
         },
         {
@@ -165,7 +168,7 @@
                 "l"
             ],
             "commands": [
-                "workbench.action.navigateRight", 
+                "workbench.action.navigateRight",
             ]
         },
         {
@@ -174,7 +177,7 @@
                 "h"
             ],
             "commands": [
-                "workbench.action.navigateLeft", 
+                "workbench.action.navigateLeft",
             ]
         },
         {
@@ -183,7 +186,7 @@
                 "b"
             ],
             "commands": [
-                "workbench.action.navigateBack", 
+                "workbench.action.navigateBack",
             ]
         },
         {
@@ -192,27 +195,27 @@
                 "f"
             ],
             "commands": [
-                "workbench.action.navigateForward", 
+                "workbench.action.navigateForward",
             ]
         },
         // Switch between .h/.cc for C++
         {
             "before": [
                 "<leader>",
-                "s", 
+                "s",
                 "h"
             ],
             "commands": [
-                "togglehs.toggleHS", 
+                "togglehs.toggleHS",
             ]
         },
         {
             "before": [
                 "<leader>",
-                "g", 
+                "g",
             ],
             "commands": [
-                "editor.action.revealDefinition", 
+                "editor.action.revealDefinition",
             ]
         },
         {
@@ -221,7 +224,7 @@
                 "q"
             ],
             "commands": [
-                "workbench.action.closeWindow", 
+                "workbench.action.closeWindow",
             ]
         },
     ],
@@ -235,6 +238,7 @@
         "<C-v>": false,
         "<C-c>": false,
         "<C-w>": false,
+        "<C-o>": false,
         "<C-b>": false
     },
     "editor.lineNumbers": "off",
@@ -244,7 +248,6 @@
     "workbench.editor.restoreViewState": false,
     "files.simpleDialog.enable": true,
     "editor.renderWhitespace": "none",
-    "editor.fontSize": 13,
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -260,5 +263,45 @@
     "extensions.ignoreRecommendations": false,
     "editor.suggestSelection": "first",
     // We don't care about the open tabs ffs
-    "explorer.openEditors.visible": 0
+    "explorer.openEditors.visible": 0,
+    "todo-tree.highlights.enabled": true,
+    "todo-tree.filtering.useBuiltInExcludes": true,
+    "workbench.colorCustomizations": {
+        "editor.background": "#000000",
+        "editor.foreground": "#ffffff"
+    },
+    "editor.tokenColorCustomizations": {
+        "[Default Dark+]": {
+            "comments": "#13c100",
+            "types": "#aa00ff",
+            "functions": "#ffa600",
+            "numbers": "#9876aa",
+            "textMateRules": [
+                {
+                    "scope": ["meta.attribute"],
+                    "settings": {
+                        "foreground": "#aa00ff"
+                    }
+                },
+                {
+                    "scope": ["keyword.operator"],
+                    "settings": {
+                        "foreground": "#00f2ff"
+                    }
+                },
+                {
+                    "scope": ["keyword", "keyword.control"],
+                    "settings": {
+                        "foreground": "#3664ff"
+                    }
+                },
+                {
+                    "scope": "storage.type",
+                    "settings": {
+                        "foreground": "#aa00ff"
+                    }
+                },
+            ],
+        }
+    },
 }
