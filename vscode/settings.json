@@ -24,7 +24,7 @@
         "[Default Dark+]": {
             "comments": "#13c100",
             "functions": "#ffa600",
-            "numbers": "#9876aa",
+            "numbers": "#fffb00",
             "textMateRules": [
                 {
                     "scope": [
@@ -49,7 +49,7 @@
                         "constant.language"
                     ],
                     "settings": {
-                        "foreground": "#9876aa"
+                        "foreground": "#fffb00",
                     }
                 },
                 {
