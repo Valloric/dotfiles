@@ -1,4 +1,5 @@
 {
+    "clangd.semanticHighlighting": false,
     "editor.cursorSurroundingLines": 2,
     "editor.cursorSurroundingLinesStyle": "all",
     "editor.folding": false,
@@ -61,7 +62,9 @@
                 },
                 {
                     "scope": [
-                        "keyword.operator", "punctuation", "meta.brace"
+                        "keyword.operator",
+                        "punctuation",
+                        "meta.brace"
                     ],
                     "settings": {
                         "foreground": "#00f2ff"
@@ -102,6 +105,13 @@
     "files.hotExit": "off",
     "files.simpleDialog.enable": true,
     "git.defaultCloneDirectory": "~/repos",
+    // Configures the linkme extension to go/foo, b/123 etc work as links
+    "linkme.rules": [
+        {
+            "pattern": "([a-z]{1,4})/([^)]+)",
+            "url": "http://\\1/\\2"
+        }
+    ],
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "python.jediEnabled": false,
     "spellright.language": [
@@ -130,6 +140,8 @@
     "todo-tree.highlights.enabled": true,
     "vim.easymotion": true,
     "vim.handleKeys": {
+        "<C-j>": true,
+        "<C-k>": true,
         "<C-a>": false,
         "<C-b>": false,
         "<C-c>": false,
