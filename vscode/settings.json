@@ -73,7 +73,8 @@
                 {
                     "scope": [
                         "keyword",
-                        "keyword.control"
+                        "keyword.control", 
+                        "keyword.other.using"
                     ],
                     "settings": {
                         "foreground": "#3664ff"
@@ -85,7 +86,7 @@
                         "storage.class"
                     ],
                     "settings": {
-                        "foreground": "#aa00ff"
+                        "foreground": "#6d4dfd"
                     }
                 }
             ],
