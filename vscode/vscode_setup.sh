@@ -16,7 +16,6 @@ fi
 declare -a extensions=(
   ban.spellright
   bbenoist.togglehs
-  CoenraadS.bracket-pair-colorizer-2
   DavidAnson.vscode-markdownlint
   DevonDCarew.bazel-code
   foxundermoon.shell-format
