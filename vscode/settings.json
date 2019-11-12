@@ -1,6 +1,4 @@
 {
-    "bracket-pair-colorizer-2.showHorizontalScopeLine": false,
-    "bracket-pair-colorizer-2.showVerticalScopeLine": false,
     "clangd.semanticHighlighting": false,
     "diffEditor.renderSideBySide": false,
     "editor.cursorSurroundingLines": 2,
