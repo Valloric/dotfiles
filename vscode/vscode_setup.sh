@@ -16,16 +16,19 @@ fi
 declare -a extensions=(
   ban.spellright
   bbenoist.togglehs
+  CoenraadS.bracket-pair-colorizer-2
   DavidAnson.vscode-markdownlint
+  DevonDCarew.bazel-code
   foxundermoon.shell-format
-  Gruntfuggly.todo-tree
   llvm-vs-code-extensions.vscode-clangd
   mrcrowl.hg
   ms-python.python
+  ragnoroct.linkme
   richie5um2.vscode-sort-json
   rust-lang.rust
   vscode-icons-team.vscode-icons
   vscodevim.vim
+  zxh404.vscode-proto3
 )
 
 for i in ${extensions[@]}; do

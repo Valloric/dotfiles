@@ -1,5 +1,8 @@
 {
+    "bracket-pair-colorizer-2.showHorizontalScopeLine": false,
+    "bracket-pair-colorizer-2.showVerticalScopeLine": false,
     "clangd.semanticHighlighting": false,
+    "diffEditor.renderSideBySide": false,
     "editor.cursorSurroundingLines": 2,
     "editor.cursorSurroundingLinesStyle": "all",
     "editor.folding": false,
@@ -41,6 +44,14 @@
                     ],
                     "settings": {
                         "foreground": "#d1baec"
+                    }
+                },
+                {
+                    "scope": [
+                        "meta.function-call"
+                    ],
+                    "settings": {
+                        "foreground": "#ffa600"
                     }
                 },
                 {
@@ -322,6 +333,15 @@
                 "workbench.action.files.save"
             ]
         },
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
     ],
     "vim.sneak": true,
     "vim.useCtrlKeys": true,
@@ -365,6 +385,7 @@
     "window.restoreFullscreen": true,
     "window.restoreWindows": "none",
     "window.titleBarStyle": "custom",
+    "window.title": "${rootName}${separator}${dirty}${activeEditorShort}", 
     "window.zoomLevel": 1,
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
