@@ -105,6 +105,9 @@
     // Removes open tabs list in Explorer
     "explorer.openEditors.visible": 0,
     "extensions.ignoreRecommendations": false,
+    "files.associations": {
+        "*.sdl": "sql-bigquery"
+    },
     "files.autoSave": "onWindowChange",
     "files.exclude": {
         "**/.classpath": true,
@@ -146,8 +149,6 @@
         "python"
     ],
     "spellright.notificationClass": "warning",
-    "todo-tree.filtering.useBuiltInExcludes": true,
-    "todo-tree.highlights.enabled": true,
     "vim.easymotion": true,
     "vim.handleKeys": {
         "<C-j>": true,
@@ -338,6 +339,26 @@
             ],
             "commands": [
                 "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p", 
+                "d"
+            ],
+            "commands": [
+                "editor.action.peekDefinition"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p", 
+                "r"
+            ],
+            "commands": [
+                "editor.action.peekReferences"
             ]
         },
     ],

@@ -25,6 +25,7 @@ declare -a extensions=(
   ragnoroct.linkme
   richie5um2.vscode-sort-json
   rust-lang.rust
+  shinichi-takii.sql-bigquery
   vscode-icons-team.vscode-icons
   vscodevim.vim
   zxh404.vscode-proto3
