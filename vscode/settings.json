@@ -127,28 +127,6 @@
     ],
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "python.jediEnabled": false,
-    "spellright.language": [
-        "en_US"
-    ],
-    "spellright.documentTypes": [
-        "plaintext",
-        "markdown",
-        "latex",
-        "rust",
-        "c",
-        "cpp",
-        "css",
-        "git-commit",
-        "go",
-        "html",
-        "java",
-        "less",
-        "sql",
-        "typescript",
-        "yaml",
-        "python"
-    ],
-    "spellright.notificationClass": "warning",
     "vim.easymotion": true,
     "vim.handleKeys": {
         "<C-j>": true,
