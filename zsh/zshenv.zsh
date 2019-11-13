@@ -7,7 +7,17 @@ export VISUAL="$EDITOR"
 export GIT_EDITOR="$EDITOR"
 
 export P4DIFF="meld"
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH:$HOME/.cargo/bin
+
+declare -a paths=(
+  $HOME/bin
+  $HOME/.local/bin
+  /usr/local/bin
+  $PATH
+  $HOME/.cargo/bin
+  $HOME/.yarn/bin
+  $HOME/.rvm/bin
+)
+export PATH=${(j/:/)paths}
 
 platform=$(uname)
 
@@ -21,14 +31,4 @@ then
 
   # NPM binaries on PATH as well
   export PATH=/usr/local/share/npm/bin:$PATH
-fi
-
-
-# Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# load company-specific stuff
-local comp_zsh=$HOME/linkedin/zshenv_linkedin.zsh
-if [[ -a $comp_zsh ]] then
-   source $comp_zsh
 fi
