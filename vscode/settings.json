@@ -336,7 +336,7 @@
                 "r"
             ],
             "commands": [
-                "editor.action.peekReferences"
+                "editor.action.referenceSearch.trigger"
             ]
         },
     ],
