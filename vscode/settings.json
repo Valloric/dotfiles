@@ -382,7 +382,7 @@
     "window.restoreFullscreen": true,
     "window.restoreWindows": "none",
     "window.titleBarStyle": "custom",
-    "window.title": "${rootName}${separator}${dirty}${activeEditorShort}", 
+    "window.title": "${rootName}${separator}${dirty}${activeEditorShort}",
     "window.zoomLevel": 1,
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
@@ -391,5 +391,15 @@
     },
     "workbench.editor.restoreViewState": false,
     "workbench.editor.showTabs": false,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "javascript.format.semicolons": "insert",
+    "typescript.format.semicolons": "insert",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode", 
+        "editor.formatOnSave": true
+    }
 }
