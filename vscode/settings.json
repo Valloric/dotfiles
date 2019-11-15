@@ -1,4 +1,12 @@
 {
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
     "clangd.semanticHighlighting": false,
     "diffEditor.renderSideBySide": false,
     "editor.cursorSurroundingLines": 2,
@@ -58,7 +66,7 @@
                         "constant.language"
                     ],
                     "settings": {
-                        "foreground": "#fffb00",
+                        "foreground": "#fffb00"
                     }
                 },
                 {
@@ -102,7 +110,6 @@
             "types": "#aa00ff"
         }
     },
-    // Removes open tabs list in Explorer
     "explorer.openEditors.visible": 0,
     "extensions.ignoreRecommendations": false,
     "files.associations": {
@@ -118,7 +125,7 @@
     "files.hotExit": "off",
     "files.simpleDialog.enable": true,
     "git.defaultCloneDirectory": "~/repos",
-    // Configures the linkme extension to go/foo, b/123 etc work as links
+    "javascript.format.semicolons": "insert",
     "linkme.rules": [
         {
             "pattern": "([a-z]{1,4})/([^)]+)",
@@ -127,15 +134,16 @@
     ],
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "python.jediEnabled": false,
+    "typescript.format.semicolons": "insert",
     "vim.easymotion": true,
     "vim.handleKeys": {
-        "<C-j>": true,
-        "<C-k>": true,
         "<C-a>": false,
         "<C-b>": false,
         "<C-c>": false,
         "<C-e>": false,
         "<C-f>": false,
+        "<C-j>": true,
+        "<C-k>": true,
         "<C-o>": false,
         "<C-q>": false,
         "<C-t>": false,
@@ -272,7 +280,6 @@
                 "workbench.action.navigateForward"
             ]
         },
-        // Switch between source/header
         {
             "before": [
                 "<leader>",
@@ -338,7 +345,7 @@
             "commands": [
                 "editor.action.referenceSearch.trigger"
             ]
-        },
+        }
     ],
     "vim.sneak": true,
     "vim.useCtrlKeys": true,
@@ -377,12 +384,12 @@
         }
     ],
     "vsicons.dontShowNewVersionMessage": true,
-    "window.openFilesInNewWindow": "default",
     "window.newWindowDimensions": "fullscreen",
+    "window.openFilesInNewWindow": "default",
     "window.restoreFullscreen": true,
     "window.restoreWindows": "none",
-    "window.titleBarStyle": "custom",
     "window.title": "${rootName}${separator}${dirty}${activeEditorShort}",
+    "window.titleBarStyle": "custom",
     "window.zoomLevel": 1,
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
@@ -391,15 +398,5 @@
     },
     "workbench.editor.restoreViewState": false,
     "workbench.editor.showTabs": false,
-    "workbench.iconTheme": "vscode-icons",
-    "javascript.format.semicolons": "insert",
-    "typescript.format.semicolons": "insert",
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode", 
-        "editor.formatOnSave": true
-    }
+    "workbench.iconTheme": "vscode-icons"
 }
