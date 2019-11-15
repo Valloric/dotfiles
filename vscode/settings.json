@@ -82,7 +82,7 @@
                 {
                     "scope": [
                         "keyword",
-                        "keyword.control", 
+                        "keyword.control",
                         "keyword.other.using"
                     ],
                     "settings": {
@@ -142,7 +142,7 @@
         "<C-v>": false,
         "<C-w>": false
     },
-    "vim.hlsearch": true,
+    "vim.hlsearch": false,
     "vim.incsearch": true,
     "vim.insertModeKeyBindingsNonRecursive": [
         {
@@ -322,7 +322,7 @@
         {
             "before": [
                 "<leader>",
-                "p", 
+                "p",
                 "d"
             ],
             "commands": [
@@ -332,7 +332,7 @@
         {
             "before": [
                 "<leader>",
-                "p", 
+                "p",
                 "r"
             ],
             "commands": [
