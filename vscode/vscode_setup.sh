@@ -14,7 +14,6 @@ fi
 
 # Get list of installed extensions with code --list-extensions
 declare -a extensions=(
-  ban.spellright
   bbenoist.togglehs
   DavidAnson.vscode-markdownlint
   DevonDCarew.bazel-code
