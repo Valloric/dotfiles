@@ -17,10 +17,12 @@ declare -a extensions=(
   bbenoist.togglehs
   DavidAnson.vscode-markdownlint
   DevonDCarew.bazel-code
+  esbenp.prettier-vscode
   foxundermoon.shell-format
   llvm-vs-code-extensions.vscode-clangd
   mrcrowl.hg
   ms-python.python
+  ms-vscode.vscode-typescript-tslint-plugin
   ragnoroct.linkme
   richie5um2.vscode-sort-json
   rust-lang.rust
