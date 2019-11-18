@@ -1,5 +1,13 @@
 {
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
     "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
@@ -124,6 +132,8 @@
     },
     "files.hotExit": "off",
     "files.simpleDialog.enable": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
     "git.defaultCloneDirectory": "~/repos",
     "javascript.format.semicolons": "insert",
     "linkme.rules": [
@@ -142,6 +152,7 @@
         "<C-c>": false,
         "<C-e>": false,
         "<C-f>": false,
+        "<C-h>": false,
         "<C-j>": true,
         "<C-k>": true,
         "<C-o>": false,
