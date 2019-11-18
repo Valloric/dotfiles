@@ -21,7 +21,10 @@
           </map>
         </option>
       </component>
-      <component name="Encoding" addBOMForNewFiles="with NO BOM">
+      <component name="ClangdSettings">
+        <option name="navigationViaClangd" value="false" />
+      </component>
+      <component name="Encoding">
         <file url="PROJECT" charset="UTF-8" />
       </component>
       <component name="GradleLocalSettings">

@@ -1,6 +1,7 @@
 set ignorecase
 set smartcase
 set scrolloff=3         " 3 lines above/below cursor when scrolling
+set ideajoin
 
 " Integrate with system clipboard
 set clipboard=unnamedplus,unnamed

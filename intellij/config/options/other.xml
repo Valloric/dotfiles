@@ -53,10 +53,10 @@
     <property name="INSPECTION_FILTER_HISTORY" value="" />
     <property name="InstalledPluginsSearchHistory" value="git" />
     <property name="JUnitSupport.hidePassedTests" value="false" />
+    <property name="KEYMAP" value="code search&#10;ctrl-c" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="PLUGIN_FILTER" value="maven&#10;ideavi&#10;vim&#10;mark&#10;ideavim" />
-    <property name="PluginConfigurable.selectionTab" value="1" />
     <property name="SearchEveryWhereHistory" value="testFormatCompanyRelevanceReasonForCompanyRecruit&#10;getfeatures&#10;formatedgeaff&#10;converttopegasus&#10;formatedge" />
     <property name="SettingsSearchHistory" value="psf" />
     <property name="ShowDocumentationInToolWindow" value="false" />
