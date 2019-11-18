@@ -401,7 +401,7 @@
     "window.restoreWindows": "none",
     "window.title": "${rootName}${separator}${dirty}${activeEditorShort}",
     "window.titleBarStyle": "custom",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
         "editor.background": "#000000",
