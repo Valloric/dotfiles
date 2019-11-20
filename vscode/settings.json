@@ -313,6 +313,16 @@
         {
             "before": [
                 "<leader>",
+                "p",
+                "c"
+            ],
+            "commands": [
+                "editor.action.revealDeclaration", 
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "q"
             ],
             "commands": [
@@ -355,6 +365,16 @@
             ],
             "commands": [
                 "editor.action.referenceSearch.trigger"
+            ]
+        }, 
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "s"
+            ],
+            "commands": [
+                "codesearch.openCurrentFile"
             ]
         }
     ],

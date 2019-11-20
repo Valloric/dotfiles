@@ -57,5 +57,9 @@
   {
     "key": "ctrl+shift+w",
     "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+alt+s",
+    "command": "workbench.action.files.saveAll"
   }
 ]
