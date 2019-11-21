@@ -117,6 +117,7 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "git.defaultCloneDirectory": "~/repos",
+  "git.path": "/usr/bin/git",
   "javascript.format.semicolons": "insert",
   "linkme.rules": [
     {
