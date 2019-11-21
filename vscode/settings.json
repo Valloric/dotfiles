@@ -28,6 +28,7 @@
         "other": true,
         "strings": false
     },
+    "editor.renderFinalNewline": false,
     "editor.renderWhitespace": "none",
     "editor.rulers": [
         80
@@ -121,7 +122,9 @@
     "explorer.openEditors.visible": 0,
     "extensions.ignoreRecommendations": false,
     "files.associations": {
-        "*.sdl": "sql-bigquery"
+        "*.sdl": "sql-bigquery",
+        "*.textproto": "plaintext",
+        "*.pi": "python"
     },
     "files.autoSave": "onWindowChange",
     "files.exclude": {
@@ -131,6 +134,7 @@
         "**/.settings": true
     },
     "files.hotExit": "off",
+    "files.insertFinalNewline": true,
     "files.simpleDialog.enable": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
@@ -317,7 +321,7 @@
                 "c"
             ],
             "commands": [
-                "editor.action.revealDeclaration", 
+                "editor.action.revealDeclaration",
             ]
         },
         {
@@ -366,7 +370,7 @@
             "commands": [
                 "editor.action.referenceSearch.trigger"
             ]
-        }, 
+        },
         {
             "before": [
                 "<leader>",
