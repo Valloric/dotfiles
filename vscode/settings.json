@@ -128,6 +128,7 @@
   "merge-conflict.autoNavigateNextConflict.enabled": true,
   "python.jediEnabled": false,
   "typescript.format.semicolons": "insert",
+  "update.mode": "manual",
   "vim.easymotion": true,
   "vim.handleKeys": {
     "<C-a>": false,
