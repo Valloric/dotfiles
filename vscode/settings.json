@@ -134,6 +134,7 @@
     "<C-a>": false,
     "<C-b>": false,
     "<C-c>": false,
+    "<C-d>": false,
     "<C-e>": false,
     "<C-f>": false,
     "<C-h>": false,
