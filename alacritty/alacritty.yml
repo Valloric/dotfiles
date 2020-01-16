@@ -41,19 +41,19 @@ draw_bold_text_with_bright_colors: true
 font:
   # Normal (roman) font face
   normal:
-    family: Consolas
+    family: JetBrains Mono
     # The `style` can be specified to pick a specific face.
     style: Regular
 
   # Bold font face
   bold:
-    family: Consolas
+    family: JetBrains Mono
     # The `style` can be specified to pick a specific face.
     style: Bold
 
   # Italic font face
   italic:
-    family: Consolas
+    family: JetBrains Mono
     # The `style` can be specified to pick a specific face.
     style: Italic
 
@@ -64,7 +64,7 @@ font:
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
     x: 0
-    y: -1
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,

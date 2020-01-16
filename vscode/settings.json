@@ -20,8 +20,9 @@
   "editor.cursorSurroundingLines": 2,
   "editor.cursorSurroundingLinesStyle": "all",
   "editor.folding": false,
-  "editor.fontFamily": "Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-  "editor.fontSize": 13,
+  "editor.fontFamily": "'JetBrains Mono', Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontSize": 12,
+  "editor.fontLigatures": true,
   "editor.lineNumbers": "off",
   "editor.quickSuggestions": {
     "comments": false,
