@@ -12,7 +12,7 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Create cc_test": {
+	"create cc_test": {
 		"prefix": "test",
 		"body": [
 			"cc_test(",
@@ -26,7 +26,7 @@
       ")",
 		],
 	},
-	"Create cc_library": {
+	"create cc_library": {
 		"prefix": "lib",
 		"body": [
 			"cc_library(",
