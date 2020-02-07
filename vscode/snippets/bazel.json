@@ -25,5 +25,15 @@
       "    ],",
       ")",
 		],
+	},
+	"Create cc_library": {
+		"prefix": "lib",
+		"body": [
+			"cc_library(",
+      "    name = \"${1:foo}\",",
+      "    hdrs = [\"${1:foo}.h\"],",
+      "    srcs = [\"${1:foo}.cc\"],",
+      ")",
+		],
 	}
 }
