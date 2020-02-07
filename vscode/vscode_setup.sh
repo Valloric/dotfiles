@@ -12,6 +12,10 @@ if [[ ! -e $vsc_config_dir/keybindings.json ]]; then
   ln -s $script_dir/keybindings.json $vsc_config_dir/keybindings.json
 fi
 
+if [[ ! -e $vsc_config_dir/snippets ]]; then
+  ln -s $script_dir/snippets $vsc_config_dir/snippets
+fi
+
 # Get list of installed extensions with code --list-extensions
 declare -a extensions=(
   bbenoist.togglehs

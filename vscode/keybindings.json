@@ -61,5 +61,15 @@
   {
     "key": "ctrl+alt+s",
     "command": "workbench.action.files.saveAll"
+  },
+  {
+    "key": "backspace",
+    "command": "extension.vim_backspace",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && !editorHasSelection"
+  },
+  {
+    "key": "backspace",
+    "command": "-extension.vim_backspace",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
   }
 ]
