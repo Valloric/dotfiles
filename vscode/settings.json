@@ -179,6 +179,10 @@
       "before": ["<c-j>"]
     },
     {
+      "after": ["y", "$"],
+      "before": ["Y"]
+    },
+    {
       "before": [";"],
       "commands": ["workbench.action.showCommands"]
     },
