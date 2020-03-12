@@ -385,14 +385,14 @@ endif
 
 " Sets a font for the GUI
 if has("gui_gtk2") || has("gui_gtk3")
-  set guifont=Consolas\ For\ Powerline\ 10
+  set guifont=JetBrains\ Mono:h10
 " For neovim-gtk
 elseif exists('g:GtkGuiLoaded')
-  call rpcnotify(1, 'Gui', 'Font', 'Consolas For Powerline 12')
+  call rpcnotify(1, 'Gui', 'Font', 'JetBrains Mono 12')
 elseif has("gui_macvim")
-  set guifont=Consolas\ For\ Powerline:h14
+  set guifont=JetBrains\ Mono:h14
 elseif has("gui_win32")
-  set guifont=Consolas\ For\ Powerline:h14
+  set guifont=JetBrains\ Mono:h14
 end
 
 " For neovim-gtk
