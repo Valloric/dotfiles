@@ -151,6 +151,7 @@
     "<C-v>": false,
     "<C-w>": false
   },
+  "vim.highlightedyank.enable": true,
   "vim.hlsearch": false,
   "vim.incsearch": true,
   "vim.insertModeKeyBindingsNonRecursive": [
