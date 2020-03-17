@@ -11,6 +11,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "[python]": {
+    "editor.defaultFormatter": "google.g3",
+    "editor.formatOnSave": true
+  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -106,7 +110,8 @@
   "files.associations": {
     "*.pi": "python",
     "*.sdl": "sql-bigquery",
-    "*.textproto": "plaintext"
+    "*.textproto": "plaintext",
+    "BUILD": "bazel"
   },
   "files.autoSave": "onWindowChange",
   "files.exclude": {
