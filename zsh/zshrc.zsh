@@ -62,7 +62,6 @@ export DISPLAY=":0"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # FZF setup; https://github.com/junegunn/fzf
-# Also run `cargo install bat` for syntax highlighted file preview.
 # Also run `cargo install fd-find` for faster file listing.
 export FZF_DEFAULT_OPTS="
 --color fg:252,bg:233,hl:67,fg+:252,bg+:235,hl+:81
@@ -71,6 +70,8 @@ export FZF_DEFAULT_OPTS="
 
 # Use 'fd' for file finding, it's faster
 export FZF_DEFAULT_COMMAND='fd --type f'
+
+# Also run `cargo install bat` for syntax highlighted file preview.
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND
 --preview '[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500'
 "
