@@ -12,6 +12,12 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"const std::string&": {
+		"prefix": "cs",
+		"body": [
+			"const std::string& $0",
+		]
+	},
 	"unnamed namespace": {
 		"prefix": "uns",
 		"body": [
