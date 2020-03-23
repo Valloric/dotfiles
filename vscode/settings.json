@@ -140,6 +140,7 @@
   "typescript.format.semicolons": "insert",
   "update.mode": "manual",
   "vim.easymotion": true,
+  "vim.easymotionMarkerFontFamily": "'JetBrains Mono', Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-b>": false,
