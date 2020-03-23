@@ -12,10 +12,28 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"class": {
+		"prefix": "class",
+		"body": [
+			"class ${1:Name} {",
+			" public:",
+			"  ${1:Name}();",
+			"  $0",
+			"",
+			" private:",
+			"};"
+		]
+	},
 	"const std::string&": {
 		"prefix": "cs",
 		"body": [
 			"const std::string& $0",
+		]
+	},
+	"const std::vector&": {
+		"prefix": "cv",
+		"body": [
+			"const std::vector<${1:type}>& $0",
 		]
 	},
 	"unnamed namespace": {
