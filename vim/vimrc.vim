@@ -385,7 +385,7 @@ endif
 
 " Sets a font for the GUI
 if has("gui_gtk2") || has("gui_gtk3")
-  set guifont=JetBrains\ Mono:h10
+  set guifont=JetBrains\ Mono\ 11
 " For neovim-gtk
 elseif exists('g:GtkGuiLoaded')
   call rpcnotify(1, 'Gui', 'Font', 'JetBrains Mono 12')
