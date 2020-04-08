@@ -137,6 +137,8 @@
   "merge-conflict.autoNavigateNextConflict.enabled": true,
   "problems.showCurrentInStatus": true,
   "python.jediEnabled": false,
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length", "80"],
   "typescript.format.semicolons": "insert",
   "update.mode": "manual",
   "vim.easymotion": true,
