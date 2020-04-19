@@ -228,8 +228,9 @@
       "commands": ["togglehs.toggleHS"]
     },
     {
+      "after": ["g", "d"],
       "before": ["<leader>", "g"],
-      "commands": ["editor.action.revealDefinition"]
+      "doc": "this is go-to-definition; interacts with vsvim jump list better"
     },
     {
       "before": ["<leader>", "p", "c"],
