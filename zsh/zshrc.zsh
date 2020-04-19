@@ -26,12 +26,6 @@ source $ZSH/oh-my-zsh.sh
 # just in case
 export LANG=en_US.UTF-8
 
-# load company-specific stuff
-local comp_zshrc=$HOME/linkedin/zshrc_linkedin.zsh
-if [[ -a $comp_zshrc ]] then
-  source $comp_zshrc
-fi
-
 # This turns off zsh's "helpful" autocorrect feature
 unsetopt correct_all
 
