@@ -277,6 +277,8 @@
       "before": ["<c-j>"]
     }
   ],
+  "git.detectSubmodules": false,
+  "git.detectSubmodulesLimit": 9999,
   "vsicons.dontShowNewVersionMessage": true,
   "window.newWindowDimensions": "fullscreen",
   "window.openFilesInNewWindow": "default",
