@@ -20,6 +20,7 @@
     "editor.formatOnSave": true
   },
   "clangd.semanticHighlighting": false,
+  "clangd.arguments": ["-function-arg-placeholders=false"],
   "diffEditor.renderSideBySide": false,
   "editor.cursorSurroundingLines": 2,
   "editor.cursorSurroundingLinesStyle": "all",
