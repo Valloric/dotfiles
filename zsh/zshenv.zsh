@@ -1,10 +1,11 @@
 # Configs that need to also be available to non-interactive shells (like PATH)
 # should go here not in zshrc!
 
-export EDITOR="gvim -f"
+export EDITOR="nvim -f"
 export SVN_EDITOR="$EDITOR"
 export VISUAL="$EDITOR"
 export GIT_EDITOR="$EDITOR"
+export HGEDITOR="$EDITOR"
 
 export P4DIFF="meld"
 
