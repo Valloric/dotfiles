@@ -25,6 +25,7 @@ window:
   decorations: none
 
   startup_mode: Maximized
+  dynamic_title: true
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -55,7 +56,7 @@ font:
     style: Italic
 
   # Point size of the font
-  size: 13.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -127,7 +128,7 @@ colors:
 #
 # To completely disable the visual bell, set its duration to 0.
 #
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 75
 
@@ -151,7 +152,6 @@ selection:
   # clipboard.
   save_to_clipboard: true
 
-dynamic_title: true
 
 cursor:
   # Cursor style
