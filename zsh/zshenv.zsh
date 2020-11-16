@@ -8,6 +8,8 @@ export GIT_EDITOR="$EDITOR"
 export HGEDITOR="$EDITOR"
 
 export P4DIFF="meld"
+# GC time for unused Mosh sessions. Value is 3 days in seconds.
+export MOSH_SERVER_NETWORK_TMOUT="259200" 
 
 declare -a paths=(
   $HOME/bin
