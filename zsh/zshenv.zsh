@@ -15,6 +15,7 @@ declare -a paths=(
   $HOME/bin
   $HOME/.local/bin
   /usr/local/bin
+  /snap/bin
   $PATH
   $HOME/.cargo/bin
   $HOME/.yarn/bin
