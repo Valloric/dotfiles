@@ -15,7 +15,7 @@
 	"create cc_test": {
 		"prefix": "test",
 		"body": [
-			"cc_test(",
+			"cc_hermetic_test(",
       "    name = \"${1:foo}_test\",",
       "    srcs = [\"${1:foo}_test.cc\"],",
       "    args = [\"--suppress_failure_output\"],",
