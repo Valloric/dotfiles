@@ -308,5 +308,9 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  "python.languageServer": "Microsoft",
+  "[cpp]": {
+    "editor.defaultFormatter": "google.g3"
+  },
 }
