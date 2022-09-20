@@ -20,6 +20,7 @@ declare -a paths=(
   $HOME/.cargo/bin
   $HOME/.yarn/bin
   $HOME/.rvm/bin
+  /opt/homebrew/bin
 )
 export PATH=${(j/:/)paths}
 

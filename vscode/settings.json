@@ -1,4 +1,7 @@
 {
+  "[cpp]": {
+    "editor.defaultFormatter": "google.g3"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -131,6 +134,7 @@
   "files.simpleDialog.enable": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
+  "files.refactoring.autoSave": true,
   "git.defaultCloneDirectory": "~/repos",
   "git.detectSubmodules": false,
   "git.detectSubmodulesLimit": 9999,
@@ -310,7 +314,7 @@
   },
   "workbench.iconTheme": "vscode-icons",
   "python.languageServer": "Microsoft",
-  "[cpp]": {
-    "editor.defaultFormatter": "google.g3"
-  },
+  "workbench.iconTheme": "vscode-icons",
+  "editor.inlayHints.enabled": false,
+  "workbench.editor.untitled.hint": "hidden"
 }
