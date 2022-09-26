@@ -32,10 +32,10 @@
   "editor.fontFamily": "'JetBrains Mono', Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "editor.fontSize": 12,
+  "editor.inlayHints.enabled": "off",
   "editor.insertSpaces": true,
   "editor.lineNumbers": "off",
   "editor.matchBrackets": "near",
-  "editor.stickyScroll.enabled": true,
   "editor.quickSuggestions": {
     "comments": false,
     "other": true,
@@ -44,6 +44,7 @@
   "editor.renderFinalNewline": false,
   "editor.renderWhitespace": "none",
   "editor.rulers": [80],
+  "editor.stickyScroll.enabled": true,
   "editor.suggest.insertMode": "replace",
   "editor.suggest.localityBonus": true,
   "editor.suggestSelection": "first",
@@ -131,10 +132,10 @@
   },
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
+  "files.refactoring.autoSave": true,
   "files.simpleDialog.enable": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "files.refactoring.autoSave": true,
   "git.defaultCloneDirectory": "~/repos",
   "git.detectSubmodules": false,
   "git.detectSubmodulesLimit": 9999,
@@ -155,8 +156,10 @@
   "python.formatting.blackArgs": ["--line-length", "80"],
   "python.formatting.provider": "black",
   "python.jediEnabled": false,
+  "python.languageServer": "Default",
   "python.showStartPage": false,
   "search.quickOpen.history.filterSortOrder": "recency",
+  "terminal.integrated.smoothScrolling": true,
   "typescript.format.semicolons": "insert",
   "update.mode": "manual",
   "vim.easymotion": true,
@@ -301,7 +304,7 @@
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${dirty}${activeEditorShort}",
   "window.titleBarStyle": "custom",
-  "terminal.integrated.smoothScrolling": true,
+  "window.zoomLevel": 1,
   "workbench.activityBar.visible": false,
   "workbench.colorCustomizations": {
     "editor.background": "#000000",
@@ -309,12 +312,9 @@
   },
   "workbench.editor.restoreViewState": false,
   "workbench.editor.showTabs": false,
+  "workbench.editor.untitled.hint": "hidden",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "workbench.iconTheme": "vscode-icons",
-  "python.languageServer": "Default",
-  "window.zoomLevel": 1,
-  "editor.inlayHints.enabled": "off",
-  "workbench.editor.untitled.hint": "hidden"
+  "workbench.iconTheme": "vscode-icons"
 }
