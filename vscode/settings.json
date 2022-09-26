@@ -23,7 +23,6 @@
     "editor.formatOnSave": true
   },
   "clangd.arguments": ["-function-arg-placeholders=false"],
-  "clangd.semanticHighlighting": false,
   "diffEditor.renderSideBySide": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.cursorStyle": "line",
@@ -36,6 +35,7 @@
   "editor.insertSpaces": true,
   "editor.lineNumbers": "off",
   "editor.matchBrackets": "near",
+  "editor.stickyScroll.enabled": true,
   "editor.quickSuggestions": {
     "comments": false,
     "other": true,
@@ -301,7 +301,7 @@
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${dirty}${activeEditorShort}",
   "window.titleBarStyle": "custom",
-  "window.zoomLevel": 0,
+  "terminal.integrated.smoothScrolling": true,
   "workbench.activityBar.visible": false,
   "workbench.colorCustomizations": {
     "editor.background": "#000000",
@@ -313,8 +313,8 @@
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.iconTheme": "vscode-icons",
-  "python.languageServer": "Microsoft",
-  "workbench.iconTheme": "vscode-icons",
-  "editor.inlayHints.enabled": false,
+  "python.languageServer": "Default",
+  "window.zoomLevel": 1,
+  "editor.inlayHints.enabled": "off",
   "workbench.editor.untitled.hint": "hidden"
 }
