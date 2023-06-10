@@ -15,8 +15,9 @@
     "editor.formatOnSave": true
   },
   "[python]": {
-    "editor.defaultFormatter": "google.g3",
-    "editor.formatOnSave": true
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -31,7 +32,6 @@
   "editor.folding": false,
   "editor.fontFamily": "'JetBrains Mono', Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
-  "editor.fontSize": 12,
   "editor.inlayHints.enabled": "off",
   "editor.insertSpaces": true,
   "editor.lineNumbers": "off",
@@ -41,7 +41,7 @@
     "other": true,
     "strings": false
   },
-  "editor.renderFinalNewline": false,
+  "editor.renderFinalNewline": "off",
   "editor.renderWhitespace": "none",
   "editor.rulers": [80],
   "editor.stickyScroll.enabled": true,
@@ -304,7 +304,6 @@
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${dirty}${activeEditorShort}",
   "window.titleBarStyle": "custom",
-  "window.zoomLevel": 1,
   "workbench.activityBar.visible": false,
   "workbench.colorCustomizations": {
     "editor.background": "#000000",
@@ -312,9 +311,10 @@
   },
   "workbench.editor.restoreViewState": false,
   "workbench.editor.showTabs": false,
-  "workbench.editor.untitled.hint": "hidden",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
+  "workbench.iconTheme": "vscode-icons",
+  "python.languageServer": "Default",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" 
   },
   "workbench.iconTheme": "vscode-icons"
 }
