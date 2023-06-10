@@ -314,7 +314,7 @@
   "workbench.iconTheme": "vscode-icons",
   "python.languageServer": "Default",
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode" 
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.iconTheme": "vscode-icons"
 }

@@ -43,7 +43,7 @@ declare -a extensions=(
 )
 
 for i in ${extensions[@]}; do
-  code --install-extension --force $i &
+  code --install-extension $i --force &
 done
 
 declare vsc_dicts_dir="$vsc_root_dir/Dictionaries"
