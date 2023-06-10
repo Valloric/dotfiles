@@ -24,18 +24,15 @@ fi
 
 # Get list of installed extensions with code --list-extensions
 declare -a extensions=(
-  bbenoist.togglehs
   DavidAnson.vscode-markdownlint
   DevonDCarew.bazel-code
-  esbenp.prettier-vscode
   foxundermoon.shell-format
   llvm-vs-code-extensions.vscode-clangd
-  mrcrowl.hg
   ms-python.python
-  ms-vscode.vscode-typescript-tslint-plugin
+  ms-python.vscode-pylance
   ragnoroct.linkme
   richie5um2.vscode-sort-json
-  rust-lang.rust
+  rust-lang.rust-analyzer
   shinichi-takii.sql-bigquery
   vscode-icons-team.vscode-icons
   vscodevim.vim
