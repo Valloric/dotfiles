@@ -90,8 +90,8 @@ _fzf_compgen_dir() {
 # needed for gpg-agent to work right
 export GPG_TTY=$(tty)
 
-# if at google, do google things
-[ -f "$HOME/google/zsh_google.zsh" ] && source "$HOME/google/zsh_google.zsh"
+# if at corp, do corp things
+[ -f "$HOME/corp/zsh_corp.zsh" ] && source "$HOME/corp/zsh_corp.zsh"
 
 # added by travis gem
 [ -f /home/valloric/.travis/travis.sh ] && source /home/valloric/.travis/travis.sh
