@@ -89,7 +89,8 @@ fi
 
 if [[ ! -a ~/.hgrc ]]
 then
-  ln -s $script_dir/mercurial/hgrc.ini ~/.hgrc
+  ln -s $script_dir/mercurial/hgrc.local ~/.hgrc
+  ln -s $script_dir/mercurial/hgrc.local ~/.hgrc.override
 fi
 
 # Naturally, macvim needs to be installed for this to work

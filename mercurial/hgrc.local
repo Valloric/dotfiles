@@ -1,9 +1,10 @@
 [ui]
-merge = meld
+username = Val Markovic <val@markovic.io>
 
 [extensions]
 extdiff=
-pager=
+# Doesn't work well with company-internal hg
+#pager=
 
 [extdiff]
 cmd.dc=icdiff
@@ -38,4 +39,4 @@ uc = upload chain
 ut = upload tree
 
 # Show changes from last commit (like log -p) with difftastic.
-dp = dft -r .^ -r .
+dp = df -r .^ -r .
