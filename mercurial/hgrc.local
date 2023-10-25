@@ -1,10 +1,8 @@
 [ui]
-username = Val Markovic <val@markovic.io>
+username = Val Markovic <vmk@meta.com>
 
 [extensions]
 extdiff=
-# Doesn't work well with company-internal hg
-#pager=
 
 [extdiff]
 cmd.dc=icdiff
@@ -18,9 +16,15 @@ cmd.df = difft
 opts.df = --missing-as-empty
 
 [pager]
-pager=less
-# Use pager for these commands only. Add any commands you use here.
-attend=dc,diff,xl,ll,cls,help,status
+# Explanation: https://explainshell.com/explain?cmd=less+-FRX
+pager=less -FRX
+#add commands that should NOT use the pager here, comma separated
+#ignore = 
+
+[committemplate]
+title=T
+testplan=buck build
+fbtags=publish_when_ready,accept2ship
 
 [google]
 motd.hide=evolvedefaultschange
@@ -30,13 +34,9 @@ changes.autoresolve=true
 warn-revset-operators=false
 
 [alias]
-sa = sync --all
-# Format more stuff
-fix = fix --format defaults,gcl,py
-# Shorthand for refresh (no new CLs, only update)
-rf = upload --all --will-update-only
-uc = upload chain
-ut = upload tree
+s = ssl
+fs = fssl
+dc = dc --pager=yes
 
 # Show changes from last commit (like log -p) with difftastic.
 dp = df -r .^ -r .
