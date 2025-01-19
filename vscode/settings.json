@@ -317,5 +317,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.iconTheme": "vscode-icons",
-  "editor.fontSize": 13
+  "editor.fontSize": 12,
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false
 }
