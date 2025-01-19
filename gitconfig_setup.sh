@@ -22,8 +22,8 @@ git config --global alias.sub submodule
 git config --global alias.unstage "reset HEAD"
 git config --global alias.unstash "stash pop"
 git config --global alias.dst "diff --staged"
-git config --global alias.dc "!git --paginate difftool --extcmd='icdiff --recursive --no-bold --tabsize=2'"
-git config --global alias.dcs "!git --paginate difftool --staged --extcmd='icdiff --recursive --no-bold --tabsize=2'"
+git config --global alias.dc "!git --paginate -c diff.external=difft diff"
+git config --global alias.dcs "!git --paginate -c diff.external=difft diff --staged"
 git config --global alias.cp "cherry-pick"
 git config --global alias.rb "rebase"
 
