@@ -151,6 +151,9 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
   "extensions.ignoreRecommendations": false,
   "files.associations": {
     "*.pi": "python",
