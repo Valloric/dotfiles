@@ -24,10 +24,16 @@ fi
 
 # Get list of installed extensions with code --list-extensions
 declare -a extensions=(
+  BazelBuild.vscode-bazel
+  bbenoist.togglehs
+  coolbear.systemd-unit-file
   DavidAnson.vscode-markdownlint
-  DevonDCarew.bazel-code
+  esbenp.prettier-vscode
   foxundermoon.shell-format
   llvm-vs-code-extensions.vscode-clangd
+  ms-azuretools.vscode-docker
+  ms-python.black-formatter
+  ms-python.debugpy
   ms-python.python
   ms-python.vscode-pylance
   ragnoroct.linkme
