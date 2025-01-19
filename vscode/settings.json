@@ -1,6 +1,6 @@
 {
   "[cpp]": {
-    "editor.defaultFormatter": "google.g3"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
