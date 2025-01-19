@@ -15,14 +15,22 @@
     "editor.formatOnSave": true
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.wordWrapColumn": 80,
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "black-formatter.args": [
+    "--line-length=80 "
+  ], 
   "clangd.arguments": ["-function-arg-placeholders=false"],
   "diffEditor.renderSideBySide": false,
   "editor.bracketPairColorization.enabled": true,
@@ -153,11 +161,6 @@
     "jupyter-notebook": "left"
   },
   "problems.showCurrentInStatus": true,
-  "python.formatting.blackArgs": ["--line-length", "80"],
-  "python.formatting.provider": "black",
-  "python.jediEnabled": false,
-  "python.languageServer": "Default",
-  "python.showStartPage": false,
   "search.quickOpen.history.filterSortOrder": "recency",
   "terminal.integrated.smoothScrolling": true,
   "typescript.format.semicolons": "insert",
@@ -313,11 +316,7 @@
   "workbench.editor.showTabs": false,
   "workbench.iconTheme": "vscode-icons",
   "python.languageServer": "Default",
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.iconTheme": "vscode-icons",
   "editor.fontSize": 12,
   "workbench.layoutControl.enabled": false,
-  "window.commandCenter": false
+  "window.commandCenter": false,
 }
