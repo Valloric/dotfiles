@@ -1,0 +1,4 @@
+# fixing garbage chars on paste into terminal
+#  https://askubuntu.com/a/1396240
+"\C-v": ""
+set enable-bracketed-paste off
