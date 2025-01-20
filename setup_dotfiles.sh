@@ -3,6 +3,7 @@
 # get the dir of the current script
 script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
+mkdir -p $HOME/.config
 if [[ ! -a ~/.zshrc ]]
 then
   ln -s $script_dir/zsh/zshrc.zsh ~/.zshrc
@@ -96,6 +97,12 @@ fi
 if [[ ! -a ~/.inputrc ]]
 then
   ln -s $script_dir/misc/inputrc ~/.inputrc
+fi
+
+if [[ ! -a ~/.config/ghostty/config ]]
+then
+  mkdir -p ~/.config/ghostty
+  ln -s $script_dir/misc/ghostty-config ~/.config/ghostty/config
 fi
 
 # Naturally, macvim needs to be installed for this to work
