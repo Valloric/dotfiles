@@ -18,24 +18,22 @@
     "editor.formatOnSave": true
   },
   "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+    },
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.rulers": [
-      80
-    ],
+    "editor.rulers": [80],
     "editor.wordWrapColumn": 80
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "black-formatter.args": [
-    "--line-length=80 "
-  ],
-  "clangd.arguments": [
-    "-function-arg-placeholders=false"
-  ],
+  "black-formatter.args": ["--line-length=80 "],
+  "clangd.arguments": ["-function-arg-placeholders=false"],
   "diffEditor.renderSideBySide": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.cursorStyle": "line",
@@ -56,9 +54,7 @@
   },
   "editor.renderFinalNewline": "off",
   "editor.renderWhitespace": "none",
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "editor.stickyScroll.enabled": true,
   "editor.suggest.insertMode": "replace",
   "editor.suggest.localityBonus": true,
@@ -72,9 +68,7 @@
       "numbers": "#fffb00",
       "textMateRules": [
         {
-          "scope": [
-            "variable"
-          ],
+          "scope": ["variable"],
           "settings": {
             "foreground": "#ffffff"
           }
@@ -89,55 +83,37 @@
           }
         },
         {
-          "scope": [
-            "meta.function-call"
-          ],
+          "scope": ["meta.function-call"],
           "settings": {
             "foreground": "#ffa600"
           }
         },
         {
-          "scope": [
-            "constant",
-            "constant.language"
-          ],
+          "scope": ["constant", "constant.language"],
           "settings": {
             "foreground": "#fffb00"
           }
         },
         {
-          "scope": [
-            "meta.attribute"
-          ],
+          "scope": ["meta.attribute"],
           "settings": {
             "foreground": "#aa00ff"
           }
         },
         {
-          "scope": [
-            "keyword.operator",
-            "punctuation",
-            "meta.brace"
-          ],
+          "scope": ["keyword.operator", "punctuation", "meta.brace"],
           "settings": {
             "foreground": "#00f2ff"
           }
         },
         {
-          "scope": [
-            "keyword",
-            "keyword.control",
-            "keyword.other.using"
-          ],
+          "scope": ["keyword", "keyword.control", "keyword.other.using"],
           "settings": {
             "foreground": "#3664ff"
           }
         },
         {
-          "scope": [
-            "storage.type",
-            "storage.class"
-          ],
+          "scope": ["storage.type", "storage.class"],
           "settings": {
             "foreground": "#6d4dfd"
           }
@@ -192,6 +168,7 @@
   },
   "problems.showCurrentInStatus": true,
   "python.languageServer": "Default",
+  "ruff.nativeServer": "on",
   "search.quickOpen.history.filterSortOrder": "recency",
   "terminal.integrated.smoothScrolling": true,
   "typescript.format.semicolons": "insert",
@@ -218,228 +195,100 @@
   "vim.incsearch": true,
   "vim.insertModeKeyBindingsNonRecursive": [
     {
-      "after": [
-        "<Esc>"
-      ],
-      "before": [
-        ",",
-        "."
-      ]
+      "after": ["<Esc>"],
+      "before": [",", "."]
     }
   ],
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "after": [
-        "o",
-        "<Esc>",
-        "k"
-      ],
-      "before": [
-        "z",
-        "j"
-      ]
+      "after": ["o", "<Esc>", "k"],
+      "before": ["z", "j"]
     },
     {
-      "after": [
-        "O",
-        "<Esc>",
-        "j"
-      ],
-      "before": [
-        "z",
-        "k"
-      ]
+      "after": ["O", "<Esc>", "j"],
+      "before": ["z", "k"]
     },
     {
-      "after": [
-        "1",
-        "5",
-        "g",
-        "k"
-      ],
-      "before": [
-        "<c-k>"
-      ]
+      "after": ["1", "5", "g", "k"],
+      "before": ["<c-k>"]
     },
     {
-      "after": [
-        "1",
-        "5",
-        "g",
-        "j"
-      ],
-      "before": [
-        "<c-j>"
-      ]
+      "after": ["1", "5", "g", "j"],
+      "before": ["<c-j>"]
     },
     {
-      "after": [
-        "y",
-        "$"
-      ],
-      "before": [
-        "Y"
-      ]
+      "after": ["y", "$"],
+      "before": ["Y"]
     },
     {
-      "before": [
-        ";"
-      ],
-      "commands": [
-        "workbench.action.showCommands"
-      ]
+      "before": [";"],
+      "commands": ["workbench.action.showCommands"]
     },
     {
-      "before": [
-        "<leader>",
-        "t"
-      ],
-      "commands": [
-        "workbench.action.quickOpen"
-      ]
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.quickOpen"]
     },
     {
-      "before": [
-        "<leader>",
-        "j"
-      ],
-      "commands": [
-        "workbench.action.navigateDown"
-      ]
+      "before": ["<leader>", "j"],
+      "commands": ["workbench.action.navigateDown"]
     },
     {
-      "before": [
-        "<leader>",
-        "k"
-      ],
-      "commands": [
-        "workbench.action.navigateUp"
-      ]
+      "before": ["<leader>", "k"],
+      "commands": ["workbench.action.navigateUp"]
     },
     {
-      "before": [
-        "<leader>",
-        "l"
-      ],
-      "commands": [
-        "workbench.action.navigateRight"
-      ]
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.navigateRight"]
     },
     {
-      "before": [
-        "<leader>",
-        "h"
-      ],
-      "commands": [
-        "workbench.action.navigateLeft"
-      ]
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.navigateLeft"]
     },
     {
-      "before": [
-        "<leader>",
-        "b"
-      ],
-      "commands": [
-        "extension.vim_ctrl+o"
-      ]
+      "before": ["<leader>", "b"],
+      "commands": ["extension.vim_ctrl+o"]
     },
     {
-      "before": [
-        "<leader>",
-        "f"
-      ],
-      "commands": [
-        "extension.vim_ctrl+i"
-      ]
+      "before": ["<leader>", "f"],
+      "commands": ["extension.vim_ctrl+i"]
     },
     {
-      "before": [
-        "<leader>",
-        "s",
-        "h"
-      ],
-      "commands": [
-        "togglehs.toggleHS"
-      ]
+      "before": ["<leader>", "s", "h"],
+      "commands": ["togglehs.toggleHS"]
     },
     {
-      "after": [
-        "g",
-        "d"
-      ],
-      "before": [
-        "<leader>",
-        "g"
-      ],
+      "after": ["g", "d"],
+      "before": ["<leader>", "g"],
       "doc": "this is go-to-definition; interacts with vsvim jump list better"
     },
     {
-      "before": [
-        "<leader>",
-        "p",
-        "c"
-      ],
-      "commands": [
-        "editor.action.revealDeclaration"
-      ]
+      "before": ["<leader>", "p", "c"],
+      "commands": ["editor.action.revealDeclaration"]
     },
     {
-      "before": [
-        "<leader>",
-        "q"
-      ],
-      "commands": [
-        "workbench.action.closeWindow"
-      ]
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeWindow"]
     },
     {
-      "before": [
-        "<leader>",
-        "w"
-      ],
-      "commands": [
-        "workbench.action.files.save"
-      ]
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
     },
     {
-      "before": [
-        "<leader>",
-        "m"
-      ],
-      "commands": [
-        "editor.action.formatDocument"
-      ]
+      "before": ["<leader>", "m"],
+      "commands": ["editor.action.formatDocument"]
     },
     {
-      "before": [
-        "<leader>",
-        "p",
-        "d"
-      ],
-      "commands": [
-        "editor.action.peekDefinition"
-      ]
+      "before": ["<leader>", "p", "d"],
+      "commands": ["editor.action.peekDefinition"]
     },
     {
-      "before": [
-        "<leader>",
-        "p",
-        "r"
-      ],
-      "commands": [
-        "editor.action.referenceSearch.trigger"
-      ]
+      "before": ["<leader>", "p", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
     },
     {
-      "before": [
-        "<leader>",
-        "c",
-        "s"
-      ],
-      "commands": [
-        "codesearch.openCurrentFile"
-      ]
+      "before": ["<leader>", "c", "s"],
+      "commands": ["codesearch.openCurrentFile"]
     }
   ],
   "vim.sneak": true,
@@ -447,35 +296,16 @@
   "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "after": [
-        "<Esc>"
-      ],
-      "before": [
-        ",",
-        "."
-      ]
+      "after": ["<Esc>"],
+      "before": [",", "."]
     },
     {
-      "after": [
-        "1",
-        "5",
-        "g",
-        "k"
-      ],
-      "before": [
-        "<c-k>"
-      ]
+      "after": ["1", "5", "g", "k"],
+      "before": ["<c-k>"]
     },
     {
-      "after": [
-        "1",
-        "5",
-        "g",
-        "j"
-      ],
-      "before": [
-        "<c-j>"
-      ]
+      "after": ["1", "5", "g", "j"],
+      "before": ["<c-j>"]
     }
   ],
   "vsicons.dontShowNewVersionMessage": true,

@@ -1,4 +1,4 @@
 # This value is in font *points*, not pixels.
 font-size = 10
 window-inherit-font-size = false
-theme = Monokai Remastered
+theme = Adwaita Dark
