@@ -172,7 +172,9 @@
     "jupyter-notebook": "left"
   },
   "problems.showCurrentInStatus": true,
-  "python.languageServer": "Default",
+  "python.analysis.enablePytestSupport": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "python.languageServer": "Pylance",
   "ruff.nativeServer": "on",
   "search.quickOpen.history.filterSortOrder": "recency",
   "terminal.integrated.smoothScrolling": true,
