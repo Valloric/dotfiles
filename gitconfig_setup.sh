@@ -63,6 +63,8 @@ git config --global pull.rebase true
 # This makes sure that push pushes only the current branch, and pushes it to the
 # same branch pull would pull from
 git config --global push.default upstream
+# push, my man, I love you, I really do, but you gotta STFU
+git config --global push.quiet true
 
 # This converts CRLF endings to LF endings on Mac & Lin and also keeps them in
 # the repo, but for Windows checkouts it converts LF to CRLF (and back to LF on
