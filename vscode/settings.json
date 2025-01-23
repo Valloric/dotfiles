@@ -142,9 +142,11 @@
   },
   "files.autoSave": "onWindowChange",
   "files.exclude": {
+    "**/__pycache__ ": true,
     "**/.classpath": true,
     "**/.factorypath": true,
     "**/.project": true,
+    "**/.pytest_cache": true,
     "**/.settings": true
   },
   "files.hotExit": "off",
