@@ -19,15 +19,38 @@ git config --global alias.br "branch -vv"
 git config --global alias.d difftool
 git config --global alias.h help
 git config --global alias.sub submodule
-git config --global alias.unstage "reset HEAD"
+git config --global alias.unstage "restore --staged"
 git config --global alias.unstash "stash pop"
 git config --global alias.dst "diff --staged"
-git config --global alias.dc "!git --paginate -c diff.external=difft diff"
-git config --global alias.dcs "!git --paginate -c diff.external=difft diff --staged"
+# These two aliases use delta, configured below
+git config --global alias.dc "!git --paginate diff"
+git config --global alias.dcs "!git --paginate diff --staged"
 git config --global alias.cp "cherry-pick"
 git config --global alias.rb "rebase"
 
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+
+# Config for git-absorb: https://github.com/tummychow/git-absorb
+# By default it creates the "fixup!"" commits, but doesn't integrate them.
+# To integrate them, use: git absorb --and-rebase
+#
+# 1 fixup commit for all hunks that absorb into the same commit
+git config --global absorb.oneFixupPerCommit true
+# By default, git-absorb will only consider files that you've staged to the
+# index via git add. With, running absorb will stage everything first ONLY if
+# nothing is staged.
+git config --global absorb.autoStageIfNothingStaged true
+
+# Sets up delta: https://github.com/dandavison/delta
+# Install delta with: cargo install git-delta
+# Navigate big diffs with n and N (next and prev file)!
+git config --global core.pager delta
+git config --global interactive.diffFilter 'delta --color-only'
+git config --global delta.navigate true
+git config --global delta.side-by-side true
+
+# Tell git diff algo to do a better job when functions are moved around
+git config --global diff.algorithm histogram
 
 # Pipes "git status" through LESS
 # Can set "pager.<tool>" to enable the pager for other commands.
@@ -44,9 +67,8 @@ git config --global alias.ks "difftool -y -t Kaleidoscope"
 git config --global alias.meld "difftool --tool=meld --dir-diff -y"
 
 # This gives us 'ours', 'base', and 'theirs', instead of just 'ours' and
-# 'theirs'. More details:
-#   http://psung.blogspot.com/2011/02/reducing-merge-headaches-git-meets.html
-git config --global merge.conflictstyle diff3
+# 'theirs'. More details: https://stackoverflow.com/a/71254097
+git config --global merge.conflictStyle zdiff3
 
 # Prevents us from having to do merge resolution for things we've already
 # resolved before; see http://git-scm.com/blog/2010/03/08/rerere.html
@@ -65,6 +87,12 @@ git config --global pull.rebase true
 git config --global push.default upstream
 # push, my man, I love you, I really do, but you gotta STFU
 git config --global push.quiet true
+# When you push a local branch to a remote, it will auto set up the remote
+# tracking branch.
+git config --global push.autoSetupRemote true
+
+# The default branch for new repos is 'main' instead of 'master'
+git config --global init.defaultBranch main
 
 # This converts CRLF endings to LF endings on Mac & Lin and also keeps them in
 # the repo, but for Windows checkouts it converts LF to CRLF (and back to LF on
