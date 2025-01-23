@@ -142,12 +142,12 @@
   },
   "files.autoSave": "onWindowChange",
   "files.exclude": {
-    "**/__pycache__ ": true,
     "**/.classpath": true,
     "**/.factorypath": true,
     "**/.project": true,
     "**/.pytest_cache": true,
-    "**/.settings": true
+    "**/.settings": true,
+    "**/__pycache__ ": true
   },
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
@@ -296,6 +296,26 @@
     {
       "before": ["<leader>", "c", "s"],
       "commands": ["codesearch.openCurrentFile"]
+    },
+    {
+      "after": [],
+      "before": ["u"],
+      "commands": [
+        {
+          "args": [],
+          "command": "undo"
+        }
+      ]
+    },
+    {
+      "after": [],
+      "before": ["<C-r>"],
+      "commands": [
+        {
+          "args": [],
+          "command": "redo"
+        }
+      ]
     }
   ],
   "vim.sneak": true,
