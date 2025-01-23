@@ -129,7 +129,7 @@
   "editor.wordWrap": "off",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "explorer.openEditors.visible": 0,
+  "explorer.openEditors.visible": 1,
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
@@ -348,7 +348,6 @@
     "editor.background": "#000000",
     "editor.foreground": "#ffffff"
   },
-  "workbench.editor.restoreViewState": false,
   "workbench.editor.showTabs": false,
   "workbench.iconTheme": "vscode-icons",
   "workbench.layoutControl.enabled": false
