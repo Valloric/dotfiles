@@ -88,6 +88,11 @@ then
   ln -s $script_dir/bin/gnvim.sh ~/bin/gnvim
 fi
 
+if [[ ! -a ~/bin/clipper ]]
+then
+  ln -s $script_dir/bin/clipper ~/bin/clipper
+fi
+
 if [[ ! -a ~/.hgrc ]]
 then
   ln -s $script_dir/mercurial/hgrc.local ~/.hgrc
