@@ -22,8 +22,8 @@
   },
   "[python]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll": true,
-      "source.organizeImports": true
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
     },
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
@@ -142,12 +142,16 @@
   },
   "files.autoSave": "onWindowChange",
   "files.exclude": {
+    "**/__pycache__ ": true,
     "**/.classpath": true,
     "**/.factorypath": true,
+    "**/.mypy_cache": true,
     "**/.project": true,
     "**/.pytest_cache": true,
+    "**/.ruff_cache": true,
     "**/.settings": true,
-    "**/__pycache__ ": true
+    "**/.venv": true,
+    "**/*.egg-info": true
   },
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
@@ -343,12 +347,12 @@
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${dirty}${activeEditorShort}",
   "window.titleBarStyle": "custom",
-  "workbench.activityBar.visible": false,
   "workbench.colorCustomizations": {
     "editor.background": "#000000",
     "editor.foreground": "#ffffff"
   },
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": "single",
   "workbench.iconTheme": "vscode-icons",
-  "workbench.layoutControl.enabled": false
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "hidden"
 }
