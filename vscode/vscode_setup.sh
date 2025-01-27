@@ -24,11 +24,13 @@ fi
 
 # Get list of installed extensions with code --list-extensions
 declare -a extensions=(
-  BazelBuild.vscode-bazel
+  bazelbuild.vscode-bazel
   bbenoist.togglehs
+  charliermarsh.ruff
   coolbear.systemd-unit-file
-  DavidAnson.vscode-markdownlint
+  davidanson.vscode-markdownlint
   esbenp.prettier-vscode
+  formulahendry.auto-close-tag
   foxundermoon.shell-format
   llvm-vs-code-extensions.vscode-clangd
   ms-azuretools.vscode-docker
@@ -40,8 +42,12 @@ declare -a extensions=(
   richie5um2.vscode-sort-json
   rust-lang.rust-analyzer
   shinichi-takii.sql-bigquery
+  tamasfe.even-better-toml
+  visualstudioexptteam.intellicode-api-usage-examples
+  visualstudioexptteam.vscodeintellicode
   vscode-icons-team.vscode-icons
   vscodevim.vim
+  yzhang.markdown-all-in-one
   zxh404.vscode-proto3
 )
 
