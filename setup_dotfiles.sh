@@ -90,7 +90,7 @@ fi
 
 if [[ ! -a ~/bin/clipper ]]
 then
-  ln -s $script_dir/bin/clipper ~/bin/clipper
+  ln -s $script_dir/bin/clipper.sh ~/bin/clipper
 fi
 
 if [[ ! -a ~/.hgrc ]]
