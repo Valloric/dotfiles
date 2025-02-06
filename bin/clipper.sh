@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# clipper - Universal clipboard utility for X11 and Wayland
+# clipper - Universal clipboard utility for X11, Wayland, and macOS
 # Usage: command | clipper
 #        clipper < file
 #        echo "text" | clipper
@@ -25,7 +25,8 @@ install_dependencies() {
     # If we're not in an interactive session, fail immediately
     if ! is_interactive; then
         echo "Error: Required package '$package' is not installed." >&2
-        echo "Please install it with: sudo apt install $package" >&2
+        echo "Please install it manually:" >&2
+        echo "  sudo apt install $package" >&2
         exit 1
     fi
 
@@ -37,7 +38,7 @@ install_dependencies() {
         if command_exists apt; then
             sudo apt install "$package"
         else
-            echo "Package manager 'apt' not found. Please install '$package' manually." >&2
+            echo "No supported package manager found. Please install '$package' manually." >&2
             exit 1
         fi
     else
@@ -46,8 +47,15 @@ install_dependencies() {
     fi
 }
 
-# Detect the display server
-if [ "${XDG_SESSION_TYPE:-x11}" = "wayland" ]; then
+# Detect the operating system and display server
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS clipboard handling (pbcopy is built-in)
+    if [ -p /dev/stdin ]; then
+        cat - | pbcopy
+    else
+        pbcopy
+    fi
+elif [ "${XDG_SESSION_TYPE:-x11}" = "wayland" ]; then
     # Wayland clipboard handling
     if ! command_exists wl-copy; then
         install_dependencies wl-clipboard
