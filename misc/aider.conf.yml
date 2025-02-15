@@ -1,0 +1,11 @@
+model: openrouter/deepseek/deepseek-chat
+# Cheap, fast, pretty good. Exactly what we want for "weak" model.
+weak-model: openrouter/qwen/qwen-2.5-coder-32b-instruct
+cache-prompts: true
+cache-keepalive-pings: 6
+# Don't touch my git "author" field!
+attribute-author: false
+attribute-committer: false
+chat-language: English
+analytics-disable: true
+watch-files: true

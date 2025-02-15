@@ -110,6 +110,12 @@ then
   ln -s $script_dir/misc/ghostty-config ~/.config/ghostty/config
 fi
 
+
+if [[ ! -a ~/.aider.conf.yml ]]
+then
+  ln -s $script_dir/misc/aider.conf.yml ~/.aider.conf.yml
+fi
+
 # Naturally, macvim needs to be installed for this to work
 if [[ $(uname) == *Darwin* ]]
 then
