@@ -1,121 +1,100 @@
 #!/bin/bash
 
 # get the dir of the current script
-script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
 mkdir -p $HOME/.config
-if [[ ! -a ~/.zshrc ]]
-then
+if [[ ! -e ~/.zshrc ]]; then
   ln -s $script_dir/zsh/zshrc.zsh ~/.zshrc
 fi
 
-if [[ ! -a ~/.zshenv ]]
-then
+if [[ ! -e ~/.zshenv ]]; then
   ln -s $script_dir/zsh/zshenv.zsh ~/.zshenv
 fi
 
-if [[ ! -a ~/.vimrc ]]
-then
+if [[ ! -e ~/.vimrc ]]; then
   ln -s $script_dir/vim/vimrc.vim ~/.vimrc
 fi
 
 mkdir -p $HOME/.config/nvim
-if [[ ! -a ~/.config/nvim/init.vim ]]
-then
+if [[ ! -e ~/.config/nvim/init.vim ]]; then
   ln -s $script_dir/nvim/init.vim ~/.config/nvim/init.vim
 fi
 
-if [[ ! -a ~/.gdbinit ]]
-then
+if [[ ! -e ~/.gdbinit ]]; then
   ln -s $script_dir/misc/gdbinit ~/.gdbinit
 fi
 
-if [[ ! -a ~/.gradle/gradle.properties ]]
-then
+if [[ ! -e ~/.gradle/gradle.properties ]]; then
   mkdir -p ~/.gradle
   ln -s $script_dir/gradle/gradle.properties ~/.gradle/gradle.properties
 fi
 
-if [[ ! -a ~/.cgdb/cgdbrc ]]
-then
+if [[ ! -e ~/.cgdb/cgdbrc ]]; then
   mkdir -p ~/.cgdb
   ln -s $script_dir/misc/cgdbrc ~/.cgdb/cgdbrc
 fi
 
-if [[ ! -a ~/.gitignore_global ]]
-then
+if [[ ! -e ~/.gitignore_global ]]; then
   ln -s $script_dir/misc/gitignore_global ~/.gitignore_global
 fi
 
-if [[ ! -a ~/.config/terminator/config ]]
-then
+if [[ ! -e ~/.config/terminator/config ]]; then
   mkdir -p ~/.config/terminator
   ln -s $script_dir/terminator/config ~/.config/terminator/config
 fi
 
-if [[ ! -a ~/.config/redshift.conf ]]
-then
+if [[ ! -e ~/.config/redshift.conf ]]; then
   mkdir -p ~/.config
   ln -s $script_dir/redshift/redshift.conf ~/.config/redshift.conf
 fi
 
-if [[ ! -a ~/.config/alacritty.yml ]]
-then
+if [[ ! -e ~/.config/alacritty.yml ]]; then
   mkdir -p ~/.config
   ln -s $script_dir/alacritty/alacritty.yml ~/.config/alacritty.yml
 fi
 
-if [[ ! -a ~/.flake8rc ]]
-then
+if [[ ! -e ~/.flake8rc ]]; then
   ln -s $script_dir/misc/flake8rc ~/.flake8rc
 fi
 
 # -p says to create the dir if it doesn't exist already
 mkdir -p $HOME/bin
 
-if [[ ! -a ~/bin/git-wip-check ]]
-then
+if [[ ! -e ~/bin/git-wip-check ]]; then
   ln -s $script_dir/bin/git-wip-check.sh ~/bin/git-wip-check
 fi
 
-if [[ ! -a ~/bin/valgrind ]]
-then
+if [[ ! -e ~/bin/valgrind ]]; then
   ln -s $script_dir/bin/valgrind.sh ~/bin/valgrind
 fi
 
-if [[ ! -a ~/bin/gnvim ]]
-then
+if [[ ! -e ~/bin/gnvim ]]; then
   ln -s $script_dir/bin/gnvim.sh ~/bin/gnvim
 fi
 
-if [[ ! -a ~/bin/clipper ]]
-then
+if [[ ! -e ~/bin/clipper ]]; then
   ln -s $script_dir/bin/clipper.sh ~/bin/clipper
 fi
 
-if [[ ! -a ~/.hgrc ]]
-then
+if [[ ! -e ~/.hgrc ]]; then
   ln -s $script_dir/mercurial/hgrc.local ~/.hgrc
   ln -s $script_dir/mercurial/hgrc.local ~/.hgrc.override
 fi
 
-if [[ ! -a ~/.inputrc ]]
-then
+if [[ ! -e ~/.inputrc ]]; then
   ln -s $script_dir/misc/inputrc ~/.inputrc
 fi
 
-if [[ ! -a ~/.config/ghostty/config ]]
-then
+if [[ ! -e ~/.config/ghostty/config ]]; then
   mkdir -p ~/.config/ghostty
   ln -s $script_dir/misc/ghostty-config ~/.config/ghostty/config
 fi
 
 # Naturally, macvim needs to be installed for this to work
-if [[ $(uname) == *Darwin* ]]
-then
+if [[ $(uname) == *Darwin* ]]; then
   # symlinks for mvim
-  if [[ -a ~/bin/mvim ]]
-  then
+  if [[ -e ~/bin/mvim ]]; then
     ln -s ~/bin/mvim ~/bin/gvimdiff
     ln -s ~/bin/mvim ~/bin/vimdiff
     ln -s ~/bin/mvim ~/bin/vim
@@ -128,8 +107,7 @@ then
     ln -s /usr/local/bin/mvim ~/bin/gvim
     ln -s /usr/local/bin/mvim ~/bin/vi
   fi
-elif [[ -a ~/bin/vim ]]
-then
+elif [[ -e ~/bin/vim ]]; then
   ln -s ~/bin/vim ~/bin/gvim
   ln -s ~/bin/vim ~/bin/vi
   ln -s ~/bin/vim ~/bin/gvimdiff
