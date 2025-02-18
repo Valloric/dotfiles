@@ -1,0 +1,11 @@
+- name: openrouter/google/gemini-2.0-flash-001
+  edit_format: diff
+  use_repo_map: true
+
+- name: openrouter/openai/o3-mini
+  edit_format: diff
+  use_repo_map: true
+  use_temperature: false
+  editor_model_name: gpt-4o
+  editor_edit_format: editor-diff
+  system_prompt_prefix: 'Formatting re-enabled. '
