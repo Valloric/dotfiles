@@ -143,8 +143,10 @@
   "files.autoSave": "onWindowChange",
   "files.exclude": {
     "**/__pycache__ ": true,
+    "**/.aider.*": true,
     "**/.classpath": true,
     "**/.factorypath": true,
+    "**/.hypothesis": true,
     "**/.mypy_cache": true,
     "**/.project": true,
     "**/.pytest_cache": true,
