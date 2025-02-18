@@ -1,4 +1,4 @@
-model: openrouter/google/gemini-2.0-flash-001
+model: ds-chat
 # Cheap, fast, pretty good. Exactly what we want for "weak" model.
 weak-model: openrouter/qwen/qwen-2.5-coder-32b-instruct
 cache-prompts: true
@@ -9,3 +9,11 @@ attribute-committer: false
 chat-language: English
 analytics-disable: true
 watch-files: true
+alias:
+  - "fast:openrouter/google/gemini-2.0-flash-001"
+  - "smart:openrouter/openai/o3-mini"
+  - "sonnet:openrouter/anthropic/claude-3.5-sonnet"
+  - "r1:openrouter/deepseek/deepseek-r1"
+  - "qwen:openrouter/qwen/qwen-2.5-coder-32b-instruct"
+  - "qwen:openrouter/qwen/qwen-2.5-coder-32b-instruct"
+  - "ds-chat:openrouter/deepseek/deepseek-chat"
