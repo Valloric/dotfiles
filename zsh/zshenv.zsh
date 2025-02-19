@@ -11,9 +11,12 @@ export P4DIFF="icdiff"
 # GC time for unused Mosh sessions. Value is 3 days in seconds.
 export MOSH_SERVER_NETWORK_TMOUT=259200
 
+# NOTE: See comments in zprofile.zsh to understand how OSX munges our PATH.
 declare -a paths=(
   $HOME/bin
   $HOME/.local/bin
+  /opt/homebrew/bin
+  /opt/homebrew/sbin
   /usr/local/bin
   /snap/bin
   $PATH
@@ -21,7 +24,6 @@ declare -a paths=(
   $HOME/.yarn/bin
   $HOME/.rvm/bin
   $HOME/.npm-global/bin
-  /opt/homebrew/bin
 )
 export PATH=${(j/:/)paths}
 
@@ -31,12 +33,6 @@ if [[ $platform == *Darwin* ]]
 then
   # This makes our PATH visible to GUI apps
   launchctl setenv PATH $PATH
-
-  # Brew paths over system paths
-  export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-  # NPM binaries on PATH as well
-  export PATH=/usr/local/share/npm/bin:$PATH
 else
   export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:$XDG_DATA_DIRS"
 fi

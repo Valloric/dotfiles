@@ -3,15 +3,10 @@
 # get the dir of the current script
 script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
+# Before anything else, set up ZSH
+$script_dir/zsh/zsh_setup.sh
+
 mkdir -p $HOME/.config
-if [[ ! -e ~/.zshrc ]]; then
-  ln -s $script_dir/zsh/zshrc.zsh ~/.zshrc
-fi
-
-if [[ ! -e ~/.zshenv ]]; then
-  ln -s $script_dir/zsh/zshenv.zsh ~/.zshenv
-fi
-
 if [[ ! -e ~/.vimrc ]]; then
   ln -s $script_dir/vim/vimrc.vim ~/.vimrc
 fi
