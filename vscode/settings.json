@@ -142,7 +142,7 @@
   },
   "files.autoSave": "onWindowChange",
   "files.exclude": {
-    "**/__pycache__ ": true,
+    "**/*.egg-info": true,
     "**/.aider.*": true,
     "**/.classpath": true,
     "**/.factorypath": true,
@@ -153,7 +153,7 @@
     "**/.ruff_cache": true,
     "**/.settings": true,
     "**/.venv": true,
-    "**/*.egg-info": true
+    "**/__pycache__ ": true
   },
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
@@ -349,6 +349,7 @@
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${dirty}${activeEditorShort}",
   "window.titleBarStyle": "custom",
+  "workbench.activityBar.location": "bottom",
   "workbench.colorCustomizations": {
     "editor.background": "#000000",
     "editor.foreground": "#ffffff"
@@ -356,5 +357,5 @@
   "workbench.editor.showTabs": "single",
   "workbench.iconTheme": "vscode-icons",
   "workbench.layoutControl.enabled": false,
-  "workbench.activityBar.location": "hidden"
+  "workbench.startupEditor": "none"
 }
