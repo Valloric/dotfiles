@@ -178,12 +178,14 @@
     "jupyter-notebook": "left"
   },
   "problems.showCurrentInStatus": true,
+  "python.analysis.autoImportCompletions": true,
   "python.analysis.enablePytestSupport": true,
   "python.analysis.typeCheckingMode": "standard",
   "python.languageServer": "Pylance",
   "ruff.nativeServer": "on",
   "search.quickOpen.history.filterSortOrder": "recency",
   "terminal.integrated.smoothScrolling": true,
+  "testing.automaticallyOpenTestResults": "openOnTestFailure",
   "typescript.format.semicolons": "insert",
   "update.mode": "manual",
   "vim.easymotion": true,
@@ -361,6 +363,5 @@
   "workbench.editor.showTabs": "single",
   "workbench.iconTheme": "vscode-icons",
   "workbench.layoutControl.enabled": false,
-  "workbench.startupEditor": "none",
-  "testing.automaticallyOpenTestResults": "openOnTestFailure"
+  "workbench.startupEditor": "none"
 }
