@@ -17,3 +17,4 @@ alias:
   - "qwen:openrouter/qwen/qwen-2.5-coder-32b-instruct"
   - "qwen:openrouter/qwen/qwen-2.5-coder-32b-instruct"
   - "ds-chat:openrouter/deepseek/deepseek-chat"
+  - "llama-r1:openrouter/deepseek/deepseek-r1-distill-llama-70b"

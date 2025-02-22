@@ -39,5 +39,18 @@
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "supports_tool_choice": true
+  },
+  "openrouter/deepseek/deepseek-r1-distill-llama-70b": {
+    "max_tokens": 131072,
+    "max_input_tokens": 131072,
+    "max_output_tokens": 131072,
+    "input_cost_per_token": 0.00000075,
+    "output_cost_per_token": 0.00000099,
+    "litellm_provider": "openrouter",
+    "mode": "chat",
+    "supports_system_messages": false,
+    "supports_function_calling": false,
+    "supports_response_schema": false,
+    "supports_tool_choice": true
   }
 }
