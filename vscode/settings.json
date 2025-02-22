@@ -357,6 +357,7 @@
   "window.titleBarStyle": "custom",
   "workbench.activityBar.location": "bottom",
   "workbench.colorCustomizations": {
+    "editorGutter.background": "#1b1b1b", 
     "editor.background": "#000000",
     "editor.foreground": "#ffffff"
   },
