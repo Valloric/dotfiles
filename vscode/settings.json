@@ -29,7 +29,8 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.rulers": [80],
-    "editor.wordWrapColumn": 80
+    "editor.wordWrapColumn": 80,
+    "editor.tabSize": 4
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -37,6 +38,7 @@
   },
   "black-formatter.args": ["--line-length=80 "],
   "clangd.arguments": ["-function-arg-placeholders=false"],
+  "debugpy.debugJustMyCode": false,
   "diffEditor.renderSideBySide": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.cursorStyle": "line",
