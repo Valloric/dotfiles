@@ -24,6 +24,7 @@ declare -a paths=(
   $HOME/.yarn/bin
   $HOME/.rvm/bin
   $HOME/.npm-global/bin
+  $HOME/.lmstudio/bin
 )
 export PATH=${(j/:/)paths}
 
