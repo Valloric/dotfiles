@@ -1,3 +1,6 @@
+# NOTE: Secret keys are in ~/.env
+# See https://aider.chat/docs/config/dotenv.html
+
 model: ds-chat
 # Cheap, fast, pretty good. Exactly what we want for "weak" model.
 weak-model: openrouter/qwen/qwen-2.5-coder-32b-instruct
@@ -8,13 +11,14 @@ attribute-author: false
 attribute-committer: false
 chat-language: English
 analytics-disable: true
-watch-files: true
+watch-files: false
+notifications: true
 alias:
+  - "think:gemini/gemini-2.5-pro-exp-03-25"
   - "fast:openrouter/google/gemini-2.0-flash-001"
-  - "smart:openrouter/openai/o3-mini"
-  - "sonnet:openrouter/anthropic/claude-3.5-sonnet"
+  - "ds-chat:openrouter/deepseek/deepseek-chat-v3-0324"
+  - "gem-pro:gemini/gemini-2.5-pro-exp-03-25"
+  - "sonnet:openrouter/anthropic/claude-3.7-sonnet"
   - "r1:openrouter/deepseek/deepseek-r1"
   - "qwen:openrouter/qwen/qwen-2.5-coder-32b-instruct"
-  - "qwen:openrouter/qwen/qwen-2.5-coder-32b-instruct"
-  - "ds-chat:openrouter/deepseek/deepseek-chat"
   - "llama-r1:openrouter/deepseek/deepseek-r1-distill-llama-70b"

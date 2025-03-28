@@ -4,6 +4,9 @@ set -e
 
 script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
+# NOTE: Secret keys are in ~/.env
+# See https://aider.chat/docs/config/dotenv.html
+
 if [[ ! -e ~/.aider.conf.yml ]]; then
   ln -s $script_dir/aider.conf.yml ~/.aider.conf.yml
 fi
