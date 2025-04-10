@@ -7,6 +7,9 @@ export VISUAL="$EDITOR"
 export GIT_EDITOR="$EDITOR"
 export HGEDITOR="$EDITOR"
 
+# Python, my man, please stop littering my repos with pyc files!
+export PYTHONPYCACHEPREFIX=${TMPDIR}
+
 export P4DIFF="icdiff"
 # GC time for unused Mosh sessions. Value is 3 days in seconds.
 export MOSH_SERVER_NETWORK_TMOUT=259200
