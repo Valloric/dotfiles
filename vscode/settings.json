@@ -29,8 +29,8 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.rulers": [80],
-    "editor.wordWrapColumn": 80,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.wordWrapColumn": 80
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -168,6 +168,8 @@
   "git.detectSubmodulesLimit": 9999,
   "git.path": "/usr/bin/git",
   "javascript.format.semicolons": "insert",
+  "julia.enableTelemetry": false,
+  "julia.symbolCacheDownload": true,
   "linkme.rules": [
     {
       "pattern": "([a-z]{1,4})/([^)]+)",
@@ -186,6 +188,7 @@
   "python.languageServer": "Pylance",
   "ruff.nativeServer": "on",
   "search.quickOpen.history.filterSortOrder": "recency",
+  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
   "terminal.integrated.smoothScrolling": true,
   "testing.automaticallyOpenTestResults": "openOnTestFailure",
   "typescript.format.semicolons": "insert",
@@ -359,9 +362,9 @@
   "window.titleBarStyle": "custom",
   "workbench.activityBar.location": "bottom",
   "workbench.colorCustomizations": {
-    "editorGutter.background": "#1b1b1b",
     "editor.background": "#000000",
-    "editor.foreground": "#ffffff"
+    "editor.foreground": "#ffffff",
+    "editorGutter.background": "#1b1b1b"
   },
   "workbench.editor.showTabs": "single",
   "workbench.iconTheme": "vscode-icons",

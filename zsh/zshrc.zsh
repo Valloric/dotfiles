@@ -96,3 +96,12 @@ export GPG_TTY=$(tty)
 
 # added by travis gem
 [ -f /home/valloric/.travis/travis.sh ] && source /home/valloric/.travis/travis.sh
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/valloric/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
