@@ -86,6 +86,11 @@ if [[ ! -e ~/.config/ghostty/config ]]; then
   ln -s $script_dir/misc/ghostty-config ~/.config/ghostty/config
 fi
 
+if [[ ! -e ~/.julia/config/startup.jl ]]; then
+  mkdir -p ~/.julia/config
+  ln -s $script_dir/misc/julia_startup.jl ~/.julia/config/startup.jl
+fi
+
 # Naturally, macvim needs to be installed for this to work
 if [[ $(uname) == *Darwin* ]]; then
   # symlinks for mvim
