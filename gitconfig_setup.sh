@@ -136,6 +136,12 @@ git config --global submodule.fetchJobs 8
 git config --global diff.compactionHeuristic true
 git config --global diff.indentHeuristic on
 
+# Define sqlite3 diff mode using sqlite3 dump command.
+# NOTE: Also needs the following lines in the per-repo .gitattributes file:
+#   *.sqlite3 diff=sqlite3
+#   *.db diff=sqlite3
+git config --global diff.sqlite3.textconv "sh -c 'sqlite3 \$0 .dump'"
+
 # Make git use the system-default web browser.
 if [[ $(uname) == *Darwin* ]]; then
   git config --global web.browser open
