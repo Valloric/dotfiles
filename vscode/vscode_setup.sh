@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Check if the 'code' command exists
+if ! command -v code &> /dev/null
+then
+    echo "The 'code' command (VS Code) was not found on the PATH."
+    echo "Aborting VS Code setup."
+    exit 0
+fi
+
 declare script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 if [[ $(uname) == *Darwin* ]]; then
   declare vsc_root_dir="$HOME/Library/Application Support/Code"
