@@ -107,30 +107,6 @@ if [[ ! -e "$config_dir/tealdeer/config.toml" ]]; then
   ln -s "$script_dir/misc/tealdeer-config.toml" "$config_dir/tealdeer/config.toml"
 fi
 
-# Naturally, macvim needs to be installed for this to work
-if [[ $(uname) == *Darwin* ]]; then
-  # symlinks for mvim
-  if [[ -e ~/bin/mvim ]]; then
-    ln -s ~/bin/mvim ~/bin/gvimdiff
-    ln -s ~/bin/mvim ~/bin/vimdiff
-    ln -s ~/bin/mvim ~/bin/vim
-    ln -s ~/bin/mvim ~/bin/gvim
-    ln -s ~/bin/mvim ~/bin/vi
-  else
-    ln -s /usr/local/bin/mvim ~/bin/gvimdiff
-    ln -s /usr/local/bin/mvim ~/bin/vimdiff
-    ln -s /usr/local/bin/mvim ~/bin/vim
-    ln -s /usr/local/bin/mvim ~/bin/gvim
-    ln -s /usr/local/bin/mvim ~/bin/vi
-  fi
-elif [[ -e ~/bin/vim ]]; then
-  ln -s ~/bin/vim ~/bin/gvim
-  ln -s ~/bin/vim ~/bin/vi
-  ln -s ~/bin/vim ~/bin/gvimdiff
-  ln -s ~/bin/vim ~/bin/vimdiff
-  ln -s ~/bin/vim ~/bin/view
-fi
-
 $script_dir/gitconfig_setup.sh
 $script_dir/tmux/tmux_setup.sh
 $script_dir/urxvt/urxvt_setup.sh
