@@ -6,7 +6,18 @@ script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 # Before anything else, set up ZSH
 $script_dir/zsh/zsh_setup.sh
 
-mkdir -p $HOME/.config
+# Determine config dir based on the OS
+if [[ "$(uname)" == "Darwin" ]]; then
+  # macOS specific configuration directory
+  config_dir="$HOME/Library/Application Support"
+else
+  # Linux uses the XDG Base Directory Specification
+  config_dir="$HOME/.config"
+fi
+
+mkdir -p "$HOME/.config"
+mkdir -p "$config_dir"
+
 if [[ ! -e ~/.vimrc ]]; then
   ln -s $script_dir/vim/vimrc.vim ~/.vimrc
 fi
@@ -89,6 +100,11 @@ fi
 if [[ ! -e ~/.julia/config/startup.jl ]]; then
   mkdir -p ~/.julia/config
   ln -s $script_dir/misc/julia_startup.jl ~/.julia/config/startup.jl
+fi
+
+if [[ ! -e "$config_dir/tealdeer/config.toml" ]]; then
+  mkdir -p "$config_dir/tealdeer"
+  ln -s "$script_dir/misc/tealdeer-config.toml" "$config_dir/tealdeer/config.toml"
 fi
 
 # Naturally, macvim needs to be installed for this to work
