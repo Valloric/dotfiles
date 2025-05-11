@@ -1,0 +1,5 @@
+# Does NOT need a symlink. We set BAT_CONFIG_PATH to this file in
+# dotfiles/zsh/zshenv.zsh
+
+# We don't want to see headers, line numbers, frames and other nonsense
+--decorations=never

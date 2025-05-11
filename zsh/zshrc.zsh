@@ -105,3 +105,8 @@ path=('/Users/valloric/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/valloric/.lmstudio/bin"
+# End of LM Studio CLI section
+

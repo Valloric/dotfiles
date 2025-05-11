@@ -14,6 +14,9 @@ export P4DIFF="icdiff"
 # GC time for unused Mosh sessions. Value is 3 days in seconds.
 export MOSH_SERVER_NETWORK_TMOUT=259200
 
+# Set the config file
+export BAT_CONFIG_PATH="$HOME/dotfiles/misc/batrc"
+
 # NOTE: See comments in zprofile.zsh to understand how OSX munges our PATH.
 declare -a paths=(
   $HOME/bin

@@ -183,6 +183,9 @@ vnoremap > >gv
 " Toggle and untoggle spell checking
 noremap <leader>ss :setlocal spell! spelllang=en_us<cr>
 
+" Y should yank until end of line
+nnoremap Y y$
+
 " spelling shortcuts using <leader>
 " ]s next misspelled word
 " [s previous misspelled word
