@@ -51,12 +51,10 @@ if [[ ! -e ~/.config/terminator/config ]]; then
 fi
 
 if [[ ! -e ~/.config/redshift.conf ]]; then
-  mkdir -p ~/.config
   ln -s $script_dir/redshift/redshift.conf ~/.config/redshift.conf
 fi
 
 if [[ ! -e ~/.config/alacritty.yml ]]; then
-  mkdir -p ~/.config
   ln -s $script_dir/alacritty/alacritty.yml ~/.config/alacritty.yml
 fi
 

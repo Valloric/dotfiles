@@ -7,7 +7,7 @@ platform=$(uname)
 
 if [[ ! -a ~/.ideavimrc ]]
 then
-  ln -s $script_dir/ideavimrc ~/.ideavimrc
+  ln -s "$script_dir/ideavimrc" ~/.ideavimrc
 fi
 
 declare -a names=(
@@ -40,21 +40,23 @@ for name in "${names[@]}"
 do
   if [[ $platform == *Darwin* ]]
   then
-    if [[ ! -a ~/Library/Preferences/$name/codestyles ]]
+    if [[ ! -a "~/Library/Preferences/$name/codestyles" ]]
     then
       for folder in "${folders[@]}"
       do
-        ln -s $script_dir/config/$folder ~/Library/Preferences/$name/$folder
+        mkdir -p "~/Library/Preferences/$name/"
+        ln -s "$script_dir/config/$folder" "~/Library/Preferences/$name/$folder"
       done
     fi
   else
     mkdir -p ~/.$name/config
 
-    if [[ ! -a ~/.$name/config/codestyles ]]
+    if [[ ! -a "~/.$name/config/codestyles" ]]
     then
       for folder in "${folders[@]}"
       do
-        ln -s $script_dir/config/$folder ~/.$name/config/$folder
+        mkdir -p "~/.$name/config/"
+        ln -s "$script_dir/config/$folder" "~/.$name/config/$folder"
       done
     fi
   fi

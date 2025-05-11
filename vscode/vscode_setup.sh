@@ -64,9 +64,12 @@ for i in ${extensions[@]}; do
 done
 
 declare vsc_dicts_dir="$vsc_root_dir/Dictionaries"
-mkdir -p $vsc_dicts_dir
+mkdir -p "$vsc_dicts_dir"
 
 if [[ $(uname) != *Darwin* ]]; then
-  ln -s /usr/share/hunspell/* $vsc_dicts_dir
+  ln -s /usr/share/hunspell/* "$vsc_dicts_dir"
 fi
-ln -s $script_dir/spellright.dict $vsc_dicts_dir
+
+if [[ ! -e $vsc_dicts_dir/spellright.dict ]]; then
+  ln -s $script_dir/spellright.dict "$vsc_dicts_dir"
+fi
