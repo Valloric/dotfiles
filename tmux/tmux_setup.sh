@@ -1,12 +1,8 @@
-cp -f $HOME/dotfiles/tmux/tmux-main.conf ~/.tmux.conf
+#!/usr/bin/env bash
+set -euo pipefail
 
-platform=$(uname)
+readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# we need to configure tmux differently depending on OS
-if [[ $platform == *Darwin* ]]
-then
-  cat $HOME/dotfiles/tmux/tmux-osx.conf >> ~/.tmux.conf
-else
-  cat $HOME/dotfiles/tmux/tmux-linux.conf >> ~/.tmux.conf
+if [[ ! -e "$HOME/.tmux.conf" ]]; then
+  ln -s "$SCRIPT_DIR/tmux.conf" "$HOME/.tmux.conf"
 fi
-
