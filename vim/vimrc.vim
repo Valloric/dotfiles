@@ -204,3 +204,25 @@ augroup gitcommit
     autocmd FileType gitcommit setlocal textwidth=72  " Wrap at 72 chars for git commits
     autocmd FileType gitcommit setlocal colorcolumn=+1 " Show column at 73 for git commits
 augroup END
+
+
+" Filetype detection for systemd and Podman Quadlet unit files
+augroup filetypedetect_systemd
+  autocmd!
+  " Standard systemd unit files
+  autocmd BufRead,BufNewFile
+        \ *.service,*.socket,*.timer,*.mount,*.path,*.slice,
+        \ *.target,*.automount,*.swap,*.netdev,*.network,*.link,
+        \ *.nspawn,*.cgd,*.vlan,*.bridge,*.bond,*.vrf,*.tun,*.tap
+        \ setfiletype systemd
+
+  " Podman Quadlet files
+  autocmd BufRead,BufNewFile
+        \ *.container,*.volume,*.image,*.kube
+        \ setfiletype systemd
+
+  " Path-based detection for unit files without extensions
+  autocmd BufRead,BufNewFile /etc/systemd/system/* setfiletype systemd
+  autocmd BufRead,BufNewFile ~/.config/systemd/user/* setfiletype systemd
+  autocmd BufRead,BufNewFile ~/.config/containers/systemd/* setfiletype systemd
+augroup END
