@@ -196,6 +196,9 @@ noremap <leader>sp [s
 noremap <leader>sa zg
 noremap <leader>su z=
 
+" delete trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
 " Git Commit Message Settings
 augroup gitcommit
     autocmd!
