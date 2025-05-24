@@ -3,3 +3,18 @@
 
 # We don't want to see headers, line numbers, frames and other nonsense
 --decorations=never
+
+# Custom filename-based language recognition for syntax highlighting 
+# Use `bat --list-languages` to see the list of supported languages. The
+# leftmost column shows the name of the language that has to be used after 
+# the colon in --map-syntax.
+--map-syntax='*.conf:INI'
+
+# These are Podman Quadlet files
+--map-syntax='*.container:INI'
+--map-syntax='*.volume:INI'
+--map-syntax='*.network:INI'
+--map-syntax='*.kube:INI'
+--map-syntax='*.image:INI'
+--map-syntax='*.build:INI'
+--map-syntax='*.pod:INI'
