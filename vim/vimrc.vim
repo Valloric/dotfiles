@@ -40,7 +40,7 @@ set noswapfile                 " Don't create swap files
 set autoread                   " Reload files changed outside vim
 set fileformat=unix            " file mode is unix
 set fileformats=unix,dos,mac   " detects unix, dos, mac file formats in that order
-set encoding=utf8              " Set utf8 as standard encoding 
+set encoding=utf8              " Set utf8 as standard encoding
 
 " Indentation
 set autoindent                " Copy indent from current line when starting a new line
@@ -55,7 +55,7 @@ set copyindent                " copy the previous indentation on autoindenting
 " Color and Syntax
 syntax enable                " Enable syntax highlighting
 set background=dark          " Use dark background
-colorscheme slate            
+colorscheme slate
 
 " Performance Settings
 set lazyredraw              " Don't redraw while executing macros
@@ -208,24 +208,13 @@ augroup gitcommit
     autocmd FileType gitcommit setlocal colorcolumn=+1 " Show column at 73 for git commits
 augroup END
 
-
 " Filetype detection for systemd and Podman Quadlet unit files
 augroup filetypedetect_systemd
   autocmd!
-  " Standard systemd unit files
-  autocmd BufRead,BufNewFile
-        \ *.service,*.socket,*.timer,*.mount,*.path,*.slice,
-        \ *.target,*.automount,*.swap,*.netdev,*.network,*.link,
-        \ *.nspawn,*.cgd,*.vlan,*.bridge,*.bond,*.vrf,*.tun,*.tap
-        \ setfiletype systemd
-
-  " Podman Quadlet files
-  autocmd BufRead,BufNewFile
-        \ *.container,*.volume,*.image,*.kube
-        \ setfiletype systemd
-
-  " Path-based detection for unit files without extensions
-  autocmd BufRead,BufNewFile /etc/systemd/system/* setfiletype systemd
-  autocmd BufRead,BufNewFile ~/.config/systemd/user/* setfiletype systemd
-  autocmd BufRead,BufNewFile ~/.config/containers/systemd/* setfiletype systemd
+  autocmd BufRead,BufNewFile *.service,*.socket,*.timer,*.mount,*.path,*.slice,*.target,*.automount,*.swap,*.netdev,*.network,*.link,*.nspawn,*.cgd,*.vlan,*.bridge,*.bond,*.vrf,*.tun,*.tap setfiletype systemd
+  autocmd BufRead,BufNewFile *.container,*.volume,*.image,*.kube setfiletype systemd
+  autocmd BufRead,BufNewFile /etc/systemd/system/*               setfiletype systemd
+  autocmd BufRead,BufNewFile ~/.config/systemd/user/*            setfiletype systemd
+  autocmd BufRead,BufNewFile ~/.config/containers/systemd/*      setfiletype systemd
 augroup END
+
