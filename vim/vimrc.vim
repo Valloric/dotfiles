@@ -196,6 +196,13 @@ noremap <leader>sp [s
 noremap <leader>sa zg
 noremap <leader>su z=
 
+" key bindings for quickly moving between windows
+" h left, l right, k up, j down
+noremap <leader>h <c-w>h
+noremap <leader>l <c-w>l
+noremap <leader>k <c-w>k
+noremap <leader>j <c-w>j
+
 " delete trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
