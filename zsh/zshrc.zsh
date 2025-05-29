@@ -94,22 +94,6 @@ _fzf_compgen_dir() {
 # needed for gpg-agent to work right
 export GPG_TTY=$(tty)
 
-# if at corp, do corp things
-[ -f "$HOME/corp/zsh_corp.zsh" ] && source "$HOME/corp/zsh_corp.zsh"
 
-# added by travis gem
-[ -f /home/valloric/.travis/travis.sh ] && source /home/valloric/.travis/travis.sh
 
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-path=('/Users/valloric/.juliaup/bin' $path)
-export PATH
-
-# <<< juliaup initialize <<<
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/valloric/.lmstudio/bin"
-# End of LM Studio CLI section
 

@@ -26,6 +26,7 @@ declare -a paths=(
   /usr/local/bin
   /snap/bin
   $PATH
+  $HOME/.juliaup/bin
   $HOME/.cargo/bin
   $HOME/.yarn/bin
   $HOME/.rvm/bin
