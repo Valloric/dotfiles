@@ -45,8 +45,11 @@ unset zle_bracketed_paste        # Turn off gargage characters on paste
 # turn off hosts file reading for autocomplete suggestions (sloooow!)
 zstyle ':completion:*' hosts off
 
-# -i turns on "smartcase" search by default
-export LESS="-iR"
+# Configure less with modern defaults:
+# - Case-insensitive search, preserve colors, highlight movement
+# - Detailed prompts, don't clear screen, auto-exit short content
+# - 2-space tabs, wrap lines, mouse support
+export LESS="--ignore-case --raw-control-chars --hilite-unread --long-prompt --no-init --quit-if-one-screen --tabs=2 --mouse --wheel-lines=3 --use-color --incsearch"
 
 # This needs to be set for xclip, GUI emacs etc to work correctly; it informs
 # them which X server to talk to. This should be set by default if everything is
