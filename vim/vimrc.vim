@@ -132,8 +132,10 @@ let &t_EI = "\e[2 q"  " Normal mode - full block
 
 " Key Mappings
 let mapleader = "\<Space>"  " Set space as leader key
-nnoremap <leader>w :w!<CR>  " Quick save
-nnoremap <leader>q :qa<CR>  " Quick quit
+" Quick save
+nnoremap <leader>w :w!<cr>
+" Quick quit
+nnoremap <leader>q :qa<cr>
 
 " with this, we can now type ",." to exit out of insert mode
 " if we really wanted to type ",.", then just type one char, wait half a sec,
@@ -203,8 +205,19 @@ noremap <leader>l <c-w>l
 noremap <leader>k <c-w>k
 noremap <leader>j <c-w>j
 
-" delete trailing whitespace on save
-autocmd BufWritePre * %s/\s\+$//e
+function! TrimTrailingWhitespace()
+  if &modifiable
+    " save the current cursor position and window view
+    let l:save = winsaveview()
+    " delete all trailing whitespace
+    silent! %s/\s\+$//e
+    " restore the cursor position and window view
+    call winrestview(l:save)
+  endif
+endfunction
+
+" Trim trailing whitespace on every file save
+autocmd BufWritePre * silent! call TrimTrailingWhitespace()
 
 " Git Commit Message Settings
 augroup gitcommit
