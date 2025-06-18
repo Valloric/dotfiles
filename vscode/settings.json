@@ -36,6 +36,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "[typst]": {
+    "editor.formatOnSave": true
+  },
   "black-formatter.args": ["--line-length=80 "],
   "clangd.arguments": ["-function-arg-placeholders=false"],
   "debugpy.debugJustMyCode": false,
@@ -222,6 +225,14 @@
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
       "after": ["o", "<Esc>", "k"],
       "before": ["z", "j"]
     },
@@ -369,5 +380,6 @@
   "workbench.editor.showTabs": "single",
   "workbench.iconTheme": "vscode-icons",
   "workbench.layoutControl.enabled": false,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "workbench.editor.empty.hint": "hidden"
 }
