@@ -1,0 +1,13 @@
+[package]
+name = "dl"
+version = "0.1.0"
+entrypoint = "dl.typ"
+authors = ["Val Markovic"]
+license = "MIT"
+description = "DL envelope formatting"
+categories = ["office"]
+
+[template]
+path = "."
+entrypoint = "dl.typ"
+thumbnail = "thumbnail.png"

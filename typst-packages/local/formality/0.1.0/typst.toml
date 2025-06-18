@@ -1,0 +1,13 @@
+[package]
+name = "formality"
+version = "0.1.0"
+entrypoint = "formality.typ"
+authors = ["Val Markovic"]
+license = "MIT"
+description = "Formal old-stlye European letter"
+categories = ["office"]
+
+[template]
+path = "."
+entrypoint = "formality.typ"
+thumbnail = "thumbnail.png"
