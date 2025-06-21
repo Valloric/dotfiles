@@ -29,8 +29,7 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.rulers": [80],
-    "editor.tabSize": 4,
-    "editor.wordWrapColumn": 80
+    "editor.tabSize": 4
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -40,20 +39,23 @@
     "editor.formatOnSave": true
   },
   "black-formatter.args": ["--line-length=80 "],
+  "chat.agent.enabled": false,
+  "chat.commandCenter.enabled": false,
   "clangd.arguments": ["-function-arg-placeholders=false"],
   "debugpy.debugJustMyCode": false,
-  "diffEditor.renderSideBySide": false,
   "editor.bracketPairColorization.enabled": true,
-  "editor.cursorStyle": "line",
   "editor.cursorSurroundingLines": 2,
   "editor.cursorSurroundingLinesStyle": "all",
   "editor.folding": false,
   "editor.fontFamily": "'JetBrains Mono', Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "editor.fontSize": 12,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.inlayHints.enabled": "off",
   "editor.insertSpaces": true,
   "editor.lineNumbers": "off",
+  "editor.linkedEditing": true,
   "editor.matchBrackets": "near",
   "editor.quickSuggestions": {
     "comments": false,
@@ -61,12 +63,10 @@
     "strings": false
   },
   "editor.renderFinalNewline": "off",
-  "editor.renderWhitespace": "none",
   "editor.rulers": [80],
-  "editor.stickyScroll.enabled": true,
   "editor.suggest.insertMode": "replace",
   "editor.suggest.localityBonus": true,
-  "editor.suggestSelection": "first",
+  "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
@@ -131,7 +131,8 @@
     }
   },
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-  "editor.wordWrap": "off",
+  "editor.wordWrap": "bounded",
+  "editor.wrappingIndent": "deepIndent",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 1,
@@ -145,9 +146,10 @@
     "*.textproto": "plaintext",
     "BUILD": "bazel"
   },
-  "files.autoSave": "onWindowChange",
+  "files.autoSave": "onFocusChange",
+  "files.enableTrash": false,
   "files.exclude": {
-    "**/*.egg-info": true,
+    "**/__pycache__ ": true,
     "**/.aider.*": true,
     "**/.classpath": true,
     "**/.factorypath": true,
@@ -158,7 +160,7 @@
     "**/.ruff_cache": true,
     "**/.settings": true,
     "**/.venv": true,
-    "**/__pycache__ ": true
+    "**/*.egg-info": true
   },
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
@@ -170,6 +172,7 @@
   "git.detectSubmodules": false,
   "git.detectSubmodulesLimit": 9999,
   "git.path": "/usr/bin/git",
+  "harper.isolateEnglish": true,
   "javascript.format.semicolons": "insert",
   "julia.enableTelemetry": false,
   "julia.symbolCacheDownload": true,
@@ -191,11 +194,11 @@
   "python.languageServer": "Pylance",
   "ruff.nativeServer": "on",
   "search.quickOpen.history.filterSortOrder": "recency",
+  "telemetry.feedback.enabled": false,
   "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
   "terminal.integrated.smoothScrolling": true,
   "testing.automaticallyOpenTestResults": "openOnTestFailure",
   "typescript.format.semicolons": "insert",
-  "update.mode": "manual",
   "vim.easymotion": true,
   "vim.handleKeys": {
     "<C-a>": false,
@@ -225,12 +228,12 @@
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["j"],
-      "after": ["g", "j"]
+      "after": ["g", "j"],
+      "before": ["j"]
     },
     {
-      "before": ["k"],
-      "after": ["g", "k"]
+      "after": ["g", "k"],
+      "before": ["k"]
     },
     {
       "after": ["o", "<Esc>", "k"],
@@ -364,6 +367,7 @@
     }
   ],
   "vsicons.dontShowNewVersionMessage": true,
+  "window.autoDetectHighContrast": false,
   "window.commandCenter": false,
   "window.newWindowDimensions": "fullscreen",
   "window.openFilesInNewWindow": "default",
@@ -377,9 +381,9 @@
     "editor.foreground": "#ffffff",
     "editorGutter.background": "#1b1b1b"
   },
+  "workbench.editor.empty.hint": "hidden",
   "workbench.editor.showTabs": "single",
   "workbench.iconTheme": "vscode-icons",
   "workbench.layoutControl.enabled": false,
-  "workbench.startupEditor": "none",
-  "workbench.editor.empty.hint": "hidden"
+  "workbench.startupEditor": "none"
 }

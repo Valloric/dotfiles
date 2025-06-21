@@ -2,10 +2,10 @@
 set -euo pipefail
 
 # Check if the 'code' command exists
-if ! command -v code &> /dev/null; then
-    echo "The 'code' command (VS Code) was not found on the PATH."
-    echo "Aborting VS Code setup."
-    exit 0
+if ! command -v code &>/dev/null; then
+  echo "The 'code' command (VS Code) was not found on the PATH."
+  echo "Aborting VS Code setup."
+  exit 0
 fi
 
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -41,20 +41,26 @@ declare -a extensions=(
   charliermarsh.ruff
   coolbear.systemd-unit-file
   davidanson.vscode-markdownlint
+  elijah-potter.harper
   esbenp.prettier-vscode
   formulahendry.auto-close-tag
   foxundermoon.shell-format
+  julialang.language-julia
   llvm-vs-code-extensions.vscode-clangd
+  mechatroner.rainbow-csv
+  ms-azuretools.vscode-containers
   ms-azuretools.vscode-docker
   ms-python.black-formatter
   ms-python.debugpy
   ms-python.python
   ms-python.vscode-pylance
+  myriad-dreamin.tinymist
   ragnoroct.linkme
   richie5um2.vscode-sort-json
   rust-lang.rust-analyzer
   shinichi-takii.sql-bigquery
   tamasfe.even-better-toml
+  tomoki1207.pdf
   visualstudioexptteam.intellicode-api-usage-examples
   visualstudioexptteam.vscodeintellicode
   vscode-icons-team.vscode-icons
@@ -68,7 +74,7 @@ readonly INSTALLED_EXTENSIONS=$(code --list-extensions)
 # Install only missing extensions
 for extension in "${extensions[@]}"; do
   if ! echo "$INSTALLED_EXTENSIONS" | grep -q "^$extension$"; then
-    code --install-extension "$extension" --force &> /dev/null &
+    code --install-extension "$extension" --force &>/dev/null &
   fi
 done
 
