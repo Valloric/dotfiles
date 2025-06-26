@@ -99,7 +99,7 @@ git config --global push.autoSetupRemote true
 # The default branch for new repos is 'main' instead of 'master'
 git config --global init.defaultBranch main
 
-# This converts CRLF endings to LF endings on Mac & Lin and also keeps them in
+# This converts CRLF endings to LF endings on Mac & Lin and keeps them in
 # the repo, but for Windows checkouts it converts LF to CRLF (and back to LF on
 # commits)
 git config --global core.autocrlf input
