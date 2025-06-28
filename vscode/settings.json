@@ -131,7 +131,7 @@
     }
   },
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-  "editor.wordWrap": "bounded",
+  "editor.wordWrap": "on",
   "editor.wrappingIndent": "deepIndent",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -192,6 +192,7 @@
   "python.analysis.enablePytestSupport": true,
   "python.analysis.typeCheckingMode": "standard",
   "python.languageServer": "Pylance",
+  "redhat.telemetry.enabled": false,
   "ruff.nativeServer": "on",
   "search.quickOpen.history.filterSortOrder": "recency",
   "telemetry.feedback.enabled": false,
