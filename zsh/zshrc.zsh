@@ -22,6 +22,11 @@ COMPLETION_WAITING_DOTS="true"
 # Use `als` to print out aliases by group.
 plugins=(aliases git fasd mercurial rust uv systemd command-not-found podman httpie)
 
+# Load custom shell completions; must happen before sourcing oh-my-zsh.sh
+# Custom completions are placed in the ~/.oh-my-zsh/custom/completions folder
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/completions
+autoload -U compinit && compinit
+
 source $ZSH/oh-my-zsh.sh
 
 # just in case
