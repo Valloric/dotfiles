@@ -2,3 +2,7 @@
 font-size = 10
 window-inherit-font-size = false
 theme = Adwaita Dark
+# The first font-family listed has highest priority,
+# the other ones are fallbacks.
+font-family = "JetBrainsMono Nerd Font"
+font-family = "JetBrains Mono"
