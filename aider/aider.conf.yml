@@ -15,7 +15,9 @@ attribute-commit-message-author: false
 chat-language: English
 analytics-disable: true
 watch-files: false
-notifications: true
+notifications: false
+# For the terminal colors
+dark-mode: true
 alias:
   - "ds-chat:openrouter/deepseek/deepseek-chat-v3-0324"
   - "r1:openrouter/deepseek/deepseek-r1-0528"

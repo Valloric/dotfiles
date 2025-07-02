@@ -151,6 +151,7 @@
   "files.exclude": {
     "**/__pycache__ ": true,
     "**/.aider.*": true,
+    "**/.ansible": true,
     "**/.classpath": true,
     "**/.factorypath": true,
     "**/.hypothesis": true,
@@ -193,6 +194,7 @@
   "python.analysis.typeCheckingMode": "standard",
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
+  "ruff.lineLength": 80,
   "ruff.nativeServer": "on",
   "search.quickOpen.history.filterSortOrder": "recency",
   "telemetry.feedback.enabled": false,
@@ -365,6 +367,10 @@
     {
       "after": ["1", "5", "g", "j"],
       "before": ["<c-j>"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.quickOpen"]
     }
   ],
   "vsicons.dontShowNewVersionMessage": true,

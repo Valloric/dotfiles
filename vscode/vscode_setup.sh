@@ -41,7 +41,6 @@ declare -a extensions=(
   charliermarsh.ruff
   coolbear.systemd-unit-file
   davidanson.vscode-markdownlint
-  elijah-potter.harper
   esbenp.prettier-vscode
   formulahendry.auto-close-tag
   foxundermoon.shell-format
@@ -55,7 +54,10 @@ declare -a extensions=(
   ms-python.python
   ms-python.vscode-pylance
   myriad-dreamin.tinymist
+  nefrob.vscode-just-syntax
   ragnoroct.linkme
+  redhat.ansible
+  redhat.vscode-yaml
   richie5um2.vscode-sort-json
   rust-lang.rust-analyzer
   shinichi-takii.sql-bigquery
