@@ -38,6 +38,11 @@
   "[typst]": {
     "editor.formatOnSave": true
   },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "ansible.lightspeed.enabled": false,
+  "ansible.lightspeed.suggestions.enabled": false,
   "black-formatter.args": ["--line-length=80 "],
   "chat.agent.enabled": false,
   "chat.commandCenter.enabled": false,
@@ -147,6 +152,7 @@
     "BUILD": "bazel"
   },
   "files.autoSave": "onFocusChange",
+  "files.defaultLanguage": "${activeEditorLanguage}",
   "files.enableTrash": false,
   "files.exclude": {
     "**/__pycache__ ": true,
@@ -392,5 +398,6 @@
   "workbench.editor.showTabs": "single",
   "workbench.iconTheme": "vscode-icons",
   "workbench.layoutControl.enabled": false,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "yaml.customTags": ["!vault scalar"]
 }
