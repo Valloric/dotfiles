@@ -1,3 +1,0 @@
-[submodule "bin/git-meld"]
-	path = bin/git-meld
-	url = git://github.com/wmanley/git-meld.git
