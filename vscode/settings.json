@@ -149,6 +149,7 @@
     "*.pi": "python",
     "*.sdl": "sql-bigquery",
     "*.textproto": "plaintext",
+    "**/roles/**/*.yml": "ansible",
     "BUILD": "bazel"
   },
   "files.autoSave": "onFocusChange",
