@@ -31,6 +31,9 @@
     "editor.rulers": [80],
     "editor.tabSize": 4
   },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -201,6 +204,14 @@
   "python.analysis.typeCheckingMode": "standard",
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
+  "roo-cline.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
   "ruff.lineLength": 80,
   "ruff.nativeServer": "on",
   "search.quickOpen.history.filterSortOrder": "recency",
