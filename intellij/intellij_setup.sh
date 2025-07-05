@@ -2,22 +2,21 @@
 
 set -e
 
-script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 platform=$(uname)
 
-if [[ ! -a ~/.ideavimrc ]]
-then
-  ln -s "$script_dir/ideavimrc" ~/.ideavimrc
+if [[ ! -e "$HOME/.ideavimrc" ]]; then
+  ln -s "$script_dir/ideavimrc" "$HOME/.ideavimrc"
 fi
 
 declare -a names=(
-                  "IntelliJIdeaLI11"
-                  "IntelliJIdeaLI12"
-                  "IdeaIC2018.2"
-                  "IdeaIC2019.1"
-                  "CLion2018.3"
-                  "CLion2019.1"
-                 )
+  "IntelliJIdeaLI11"
+  "IntelliJIdeaLI12"
+  "IdeaIC2018.2"
+  "IdeaIC2019.1"
+  "CLion2018.3"
+  "CLion2019.1"
+)
 
 # 1. Let intellij create these folders in config dir.
 # 2. Delete ONLY THESE FOLDERS from the config dir.
@@ -25,40 +24,33 @@ declare -a names=(
 # 4. Run our setup.sh
 # 5. Start intellij again.
 declare -a folders=(
-                  "codestyles"
-                  "colors"
-                  "extensions"
-                  "fileTemplates"
-                  "inspection"
-                  "keymaps"
-                  "migration"
-                  "options"
-                  "templates"
-                 )
+  "codestyles"
+  "colors"
+  "extensions"
+  "fileTemplates"
+  "inspection"
+  "keymaps"
+  "migration"
+  "options"
+  "templates"
+)
 
-for name in "${names[@]}"
-do
-  if [[ $platform == *Darwin* ]]
-  then
-    if [[ ! -a "~/Library/Preferences/$name/codestyles" ]]
-    then
-      for folder in "${folders[@]}"
-      do
-        mkdir -p "~/Library/Preferences/$name/"
-        ln -s "$script_dir/config/$folder" "~/Library/Preferences/$name/$folder"
+for name in "${names[@]}"; do
+  if [[ $platform == *Darwin* ]]; then
+    if [[ ! -e "$HOME/Library/Preferences/$name/codestyles" ]]; then
+      for folder in "${folders[@]}"; do
+        mkdir -p "$HOME/Library/Preferences/$name/"
+        ln -s "$script_dir/config/$folder" "$HOME/Library/Preferences/$name/$folder"
       done
     fi
   else
-    mkdir -p ~/.$name/config
+    mkdir -p "$HOME/.$name/config"
 
-    if [[ ! -a "~/.$name/config/codestyles" ]]
-    then
-      for folder in "${folders[@]}"
-      do
-        mkdir -p "~/.$name/config/"
-        ln -s "$script_dir/config/$folder" "~/.$name/config/$folder"
+    if [[ ! -e "$HOME/.$name/config/codestyles" ]]; then
+      for folder in "${folders[@]}"; do
+        mkdir -p "$HOME/.$name/config/"
+        ln -s "$script_dir/config/$folder" "$HOME/.$name/config/$folder"
       done
     fi
   fi
 done
-
