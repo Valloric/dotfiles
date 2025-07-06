@@ -65,6 +65,8 @@
   "editor.lineNumbers": "off",
   "editor.linkedEditing": true,
   "editor.matchBrackets": "near",
+  "editor.minimap.enabled": false,
+  "editor.minimap.maxColumn": 80,
   "editor.quickSuggestions": {
     "comments": false,
     "other": true,
@@ -141,6 +143,7 @@
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "on",
   "editor.wrappingIndent": "deepIndent",
+  "evenBetterToml.formatter.columnWidth": 80,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 1,
@@ -219,6 +222,8 @@
   "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
   "terminal.integrated.smoothScrolling": true,
   "testing.automaticallyOpenTestResults": "openOnTestFailure",
+  "tinymist.formatterPrintWidth": 80,
+  "tinymist.formatterProseWrap": true,
   "typescript.format.semicolons": "insert",
   "vim.easymotion": true,
   "vim.handleKeys": {
@@ -411,5 +416,6 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.layoutControl.enabled": false,
   "workbench.startupEditor": "none",
-  "yaml.customTags": ["!vault scalar"]
+  "yaml.customTags": ["!vault scalar"],
+  "yaml.format.proseWrap": "always"
 }
