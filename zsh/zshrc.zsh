@@ -21,11 +21,14 @@ COMPLETION_WAITING_DOTS="true"
 # to https://github.com/jeffreytse/zsh-vi-mode/issues/325 this prevents
 # insertion of `,`.
 
+# Lazy-load the NVM plugin
+zstyle ':omz:plugins:nvm' lazy yes
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Use `als` to print out aliases by group.
 # NOTE: `zsh-vi-mode` is stored as a git submodule in plugins/custom/zsh-vi-mode
-plugins=(aliases git fasd mercurial rust uv systemd command-not-found podman httpie zsh-vi-mode)
+plugins=(aliases git fasd mercurial rust uv systemd command-not-found podman httpie zsh-vi-mode nvm)
 
 # Load custom shell completions; must happen before sourcing oh-my-zsh.sh
 # Custom completions are placed in the ~/.oh-my-zsh/custom/completions folder
@@ -104,7 +107,3 @@ _fzf_compgen_dir() {
 
 # needed for gpg-agent to work right
 export GPG_TTY=$(tty)
-
-
-
-
