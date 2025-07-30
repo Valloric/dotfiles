@@ -27,6 +27,8 @@ zstyle ':omz:plugins:nvm' lazy yes
 # Fix keybind conflict between fzf and zsh-vi-mode plugins.
 # See https://github.com/jeffreytse/zsh-vi-mode/issues/24
 ZVM_INIT_MODE=sourcing
+# Start zsh-vi-mode in insert mode
+ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
