@@ -18,7 +18,9 @@
     "editor.formatOnSave": true
   },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
   },
   "[python]": {
     "editor.codeActionsOnSave": {
@@ -51,6 +53,7 @@
   "chat.commandCenter.enabled": false,
   "clangd.arguments": ["-function-arg-placeholders=false"],
   "debugpy.debugJustMyCode": false,
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.cursorSurroundingLines": 2,
   "editor.cursorSurroundingLinesStyle": "all",
@@ -155,7 +158,9 @@
     "*.pi": "python",
     "*.sdl": "sql-bigquery",
     "*.textproto": "plaintext",
+    "**/nftables/**/*.conf": "nft",
     "**/roles/**/*.yml": "ansible",
+    "*nftables*.conf": "nft",
     "BUILD": "bazel"
   },
   "files.autoSave": "onFocusChange",

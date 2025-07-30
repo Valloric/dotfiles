@@ -95,5 +95,10 @@
   {
     "key": "alt+cmd+f",
     "command": "-editor.action.startFindReplaceAction"
+  },
+  {
+    "key": "alt+enter",
+    "command": "roo-cline.acceptInput",
+    "when": "view.roo-cline.SidebarProvider.visible"
   }
 ]
