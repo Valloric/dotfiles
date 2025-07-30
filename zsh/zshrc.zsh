@@ -24,11 +24,29 @@ COMPLETION_WAITING_DOTS="true"
 # Lazy-load the NVM plugin
 zstyle ':omz:plugins:nvm' lazy yes
 
+# Fix keybind conflict between fzf and zsh-vi-mode plugins.
+# See https://github.com/jeffreytse/zsh-vi-mode/issues/24
+ZVM_INIT_MODE=sourcing
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Use `als` to print out aliases by group.
 # NOTE: `zsh-vi-mode` is stored as a git submodule in plugins/custom/zsh-vi-mode
-plugins=(aliases git fasd mercurial rust uv systemd command-not-found podman httpie zsh-vi-mode nvm)
+plugins=(
+  aliases
+  command-not-found
+  fasd
+  git
+  httpie
+  mercurial
+  nvm
+  podman
+  rust
+  systemd
+  uv
+  zsh-vi-mode # MUST come BEFORE `fzf` in this list (and ZVM_INIT_MODE=sourcing)
+  fzf
+)
 
 # Load custom shell completions; must happen before sourcing oh-my-zsh.sh
 # Custom completions are placed in the ~/.oh-my-zsh/custom/completions folder
@@ -87,21 +105,6 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND
 --preview '[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500'
 "
-
-# Use fd (https://github.com/sharkdp/fd) instead of the default find
-# command for listing path candidates.
-# - The first argument to the function ($1) is the base path to start traversal
-# - See the source code (completion.{bash,zsh}) for the details.
-_fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
-}
-
-# Use fd to generate the list for directory completion
-_fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
-}
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -f ~/.LESS_TERMCAP ] && source ~/.LESS_TERMCAP
 
