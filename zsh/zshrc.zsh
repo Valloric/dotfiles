@@ -17,10 +17,15 @@ DISABLE_AUTO_TITLE="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
+# Would love to use ZVM_VI_ESCAPE_BINDKEY=",." for zsh-vi-mode config, but due
+# to https://github.com/jeffreytse/zsh-vi-mode/issues/325 this prevents
+# insertion of `,`.
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Use `als` to print out aliases by group.
-plugins=(aliases git fasd mercurial rust uv systemd command-not-found podman httpie)
+# NOTE: `zsh-vi-mode` is stored as a git submodule in plugins/custom/zsh-vi-mode
+plugins=(aliases git fasd mercurial rust uv systemd command-not-found podman httpie zsh-vi-mode)
 
 # Load custom shell completions; must happen before sourcing oh-my-zsh.sh
 # Custom completions are placed in the ~/.oh-my-zsh/custom/completions folder
