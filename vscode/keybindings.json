@@ -98,7 +98,7 @@
   },
   {
     "key": "alt+enter",
-    "command": "roo-cline.acceptInput",
-    "when": "view.roo-cline.SidebarProvider.visible"
+    "command": "kilo-code.acceptInput",
+    "when": "view.kilo-code.SidebarProvider.visible"
   }
 ]

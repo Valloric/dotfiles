@@ -195,6 +195,15 @@
   "javascript.format.semicolons": "insert",
   "julia.enableTelemetry": false,
   "julia.symbolCacheDownload": true,
+  "kilo-code.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "kilo-code.deniedCommands": [],
   "linkme.rules": [
     {
       "pattern": "([a-z]{1,4})/([^)]+)",
@@ -210,6 +219,7 @@
   "python.analysis.autoImportCompletions": true,
   "python.analysis.enablePytestSupport": true,
   "python.analysis.typeCheckingMode": "standard",
+  "python.defaultInterpreterPath": "/bin/python3",
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
   "roo-cline.allowedCommands": [
