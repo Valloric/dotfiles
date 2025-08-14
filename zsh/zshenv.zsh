@@ -17,6 +17,15 @@ export MOSH_SERVER_NETWORK_TMOUT=259200
 # Set the config file
 export BAT_CONFIG_PATH="$HOME/dotfiles/misc/batrc"
 
+# Load our `less` config (all env vars)
+source "$HOME/dotfiles/less/lessrc"
+
+# `groff` is used by `man` and we want it to produce ANSI escape sequences
+# that `less` knows how to render.
+export GROFF_NO_SGR=1
+# `man` now uses our fancy `less` config so we get colors, italic, and bold.
+export MANPAGER="less"
+
 # NOTE: See comments in zprofile.zsh to understand how OSX munges our PATH.
 declare -a paths=(
   $HOME/bin

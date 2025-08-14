@@ -74,16 +74,10 @@ setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
-unset zle_bracketed_paste        # Turn off gargage characters on paste
+unset zle_bracketed_paste        # Turn off garbage characters on paste
 
 # turn off hosts file reading for autocomplete suggestions (sloooow!)
 zstyle ':completion:*' hosts off
-
-# Configure less with modern defaults:
-# - Case-insensitive search, preserve colors, highlight movement
-# - Detailed prompts, don't clear screen, auto-exit short content
-# - 2-space tabs, wrap lines, mouse support
-export LESS="--ignore-case --raw-control-chars --hilite-unread --long-prompt --no-init --quit-if-one-screen --tabs=2 --mouse --wheel-lines=3 --use-color --incsearch"
 
 # This needs to be set for xclip, GUI emacs etc to work correctly; it informs
 # them which X server to talk to. This should be set by default if everything is
@@ -107,8 +101,6 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND
 --preview '[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500'
 "
-
-[ -f ~/.LESS_TERMCAP ] && source ~/.LESS_TERMCAP
 
 # needed for gpg-agent to work right
 export GPG_TTY=$(tty)
