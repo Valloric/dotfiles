@@ -205,6 +205,12 @@ noremap <leader>l <c-w>l
 noremap <leader>k <c-w>k
 noremap <leader>j <c-w>j
 
+" Search and replace with visual selection. After selecting text in visual
+" mode, press Ctrl-r to use it as the search pattern. The cursor will be
+" positioned where you can type the replacement text. You'll be prompted to
+" confirm each replacement.
+vnoremap <C-r> "hy:%s/\V<C-r>h//gc<left><left><left>
+
 function! TrimTrailingWhitespace()
   if &modifiable
     " save the current cursor position and window view
