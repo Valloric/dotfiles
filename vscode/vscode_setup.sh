@@ -44,7 +44,9 @@ declare -a extensions=(
   esbenp.prettier-vscode
   formulahendry.auto-close-tag
   foxundermoon.shell-format
+  hangxingliu.vscode-systemd-support
   julialang.language-julia
+  kilocode.kilo-code
   llvm-vs-code-extensions.vscode-clangd
   mechatroner.rainbow-csv
   ms-azuretools.vscode-containers
@@ -53,8 +55,10 @@ declare -a extensions=(
   ms-python.debugpy
   ms-python.python
   ms-python.vscode-pylance
+  ms-python.vscode-python-envs
   myriad-dreamin.tinymist
   nefrob.vscode-just-syntax
+  ombratteng.nftables
   ragnoroct.linkme
   redhat.ansible
   redhat.vscode-yaml
@@ -62,11 +66,13 @@ declare -a extensions=(
   rust-lang.rust-analyzer
   shinichi-takii.sql-bigquery
   tamasfe.even-better-toml
+  timonwong.shellcheck
   tomoki1207.pdf
   visualstudioexptteam.intellicode-api-usage-examples
   visualstudioexptteam.vscodeintellicode
   vscode-icons-team.vscode-icons
   vscodevim.vim
+  wholroyd.jinja
   yzhang.markdown-all-in-one
   zxh404.vscode-proto3
 )
