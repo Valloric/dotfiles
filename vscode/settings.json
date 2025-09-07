@@ -191,7 +191,6 @@
   "git.detectSubmodules": false,
   "git.detectSubmodulesLimit": 9999,
   "git.path": "/usr/bin/git",
-  "harper.isolateEnglish": true,
   "javascript.format.semicolons": "insert",
   "julia.enableTelemetry": false,
   "julia.symbolCacheDownload": true,
@@ -222,14 +221,6 @@
   "python.defaultInterpreterPath": "/bin/python3",
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
-  "roo-cline.allowedCommands": [
-    "npm test",
-    "npm install",
-    "tsc",
-    "git log",
-    "git diff",
-    "git show"
-  ],
   "ruff.lineLength": 80,
   "ruff.nativeServer": "on",
   "search.quickOpen.history.filterSortOrder": "recency",
