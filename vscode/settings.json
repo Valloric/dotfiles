@@ -417,9 +417,10 @@
     "editor.foreground": "#ffffff",
     "editorGutter.background": "#1b1b1b"
   },
+  "workbench.colorTheme": "Theme Darker",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.showTabs": "single",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.layoutControl.enabled": false,
   "workbench.startupEditor": "none",
   "yaml.customTags": ["!vault scalar"],
