@@ -77,6 +77,14 @@
   },
   "editor.renderFinalNewline": "off",
   "editor.rulers": [80],
+  "editor.semanticHighlighting.enabled": true,
+  "editor.semanticTokenColorCustomizations": {
+    "rules": {
+      "operator": "#FE6F88",
+      "property": "#FFA87E",
+      "variable": "#B7A9F1"
+    }
+  },
   "editor.suggest.insertMode": "replace",
   "editor.suggest.localityBonus": true,
   "editor.suggestSelection": "recentlyUsedByPrefix",
@@ -141,6 +149,30 @@
         }
       ],
       "types": "#aa00ff"
+    },
+    "[Theme*]": {
+      "comments": "#70ba2f",
+      "functions": "#84D6E6",
+      "numbers": "#d8b537",
+      "strings": "#d8b537",
+      "textMateRules": [
+        {
+          "scope": [
+            "keyword.operator", // all operators
+            "keyword.operator.assignment", // specifically '=' and variants
+            "punctuation", // commas, semicolons, etc
+            "meta.brace", // {} () []
+            "punctuation.separator.period", // colons, commas in some langs
+            "punctuation.separator", // colons, commas in some langs
+            "punctuation.definition", // quotes, etc
+            "punctuation.terminator" // semicolons
+          ],
+          "settings": {
+            "foreground": "#FE6F88"
+          }
+        }
+      ],
+      "variables": "#B7A9F1"
     }
   },
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
@@ -218,7 +250,7 @@
   "python.analysis.autoImportCompletions": true,
   "python.analysis.enablePytestSupport": true,
   "python.analysis.typeCheckingMode": "standard",
-  "python.defaultInterpreterPath": "/bin/python3",
+  "python.defaultInterpreterPath": "/bin/python",
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
   "ruff.lineLength": 80,
@@ -402,7 +434,6 @@
       "commands": ["workbench.action.quickOpen"]
     }
   ],
-  "vsicons.dontShowNewVersionMessage": true,
   "window.autoDetectHighContrast": false,
   "window.commandCenter": false,
   "window.newWindowDimensions": "fullscreen",
@@ -413,9 +444,12 @@
   "window.titleBarStyle": "custom",
   "workbench.activityBar.location": "bottom",
   "workbench.colorCustomizations": {
-    "editor.background": "#000000",
-    "editor.foreground": "#ffffff",
-    "editorGutter.background": "#1b1b1b"
+    "editor.background": "#1e1e1e",
+    "editor.foreground": "#f7f6f6",
+    "editor.lineHighlightBackground": "#202020b9",
+    "editor.wordHighlightBackground": "#323232d3",
+    "editor.wordHighlightBorder": "default",
+    "editorGutter.background": "#232323"
   },
   "workbench.colorTheme": "Theme Darker",
   "workbench.editor.empty.hint": "hidden",
