@@ -26,3 +26,5 @@ set -x MANOPT "--no-justification --no-hyphenation"
 set -x MAN_KEEP_FORMATTING 1
 
 # Also see our `man` wrapper function in config.fish
+# This is just a default.
+set -x MANWIDTH 100
