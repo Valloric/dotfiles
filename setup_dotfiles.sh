@@ -9,6 +9,7 @@ if [[ ! -e ~/.config/fish ]]; then
   ln -s $script_dir/fish ~/.config/fish
 fi
 
+
 # Determine config dir based on the OS
 if [[ "$(uname)" == "Darwin" ]]; then
   # macOS specific configuration directory
@@ -20,6 +21,10 @@ fi
 
 mkdir -p "$HOME/.config"
 mkdir -p "$config_dir"
+
+if [[ ! -e "$config_dir/environment.d" ]]; then
+  ln -s "$script_dir/systemd-user/environment.d" "$config_dir/environment.d"
+fi
 
 if [[ ! -e ~/.vimrc ]]; then
   ln -s $script_dir/vim/vimrc.vim ~/.vimrc
