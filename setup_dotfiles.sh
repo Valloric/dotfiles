@@ -3,8 +3,11 @@
 # get the dir of the current script
 script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
-# Before anything else, set up ZSH
-$script_dir/zsh/zsh_setup.sh
+# set up fish shell
+if [[ ! -e ~/.config/fish ]]; then
+  mkdir -p ~/.config/fish
+  ln -s $script_dir/fish ~/.config/fish
+fi
 
 # Determine config dir based on the OS
 if [[ "$(uname)" == "Darwin" ]]; then
@@ -109,7 +112,6 @@ $script_dir/gitconfig_setup.sh
 $script_dir/tmux/tmux_setup.sh
 $script_dir/urxvt/urxvt_setup.sh
 $script_dir/intellij/intellij_setup.sh
-$script_dir/less/less_setup.sh
 $script_dir/compton/compton_setup.sh
 $script_dir/emacs/emacs_setup.sh
 $script_dir/gpg/gpg_setup.sh

@@ -1,3 +1,4 @@
+#!/usr/bin/env fish
 # -----------------------------------------------------------------------------
 # MAN - The Manual
 #
@@ -5,32 +6,23 @@
 # colors, bold, italics etc.
 #
 # NOTE: There's is no such thing as a ".manrc" file that `man` will read by
-# default. We source this file manually in zshenv.
+# default. We add this configuration to config.fish.
 # -----------------------------------------------------------------------------
 
 # `groff` is used by `man` and we want it to produce ANSI escape sequences
 # that `less` knows how to render.
-export GROFF_NO_SGR=1
+set -x GROFF_NO_SGR 1
 
 # Use our configured less directly as the pager
-export MANPAGER="less"
+set -x MANPAGER less
 
 # MANOPT settings (space-separated options)
 #
 # --no-justification turns off the ugly text justification that `man` uses
 # --no-hyphenation turns off the hyphenation too; plain right-ragged text, ty
-export MANOPT="--no-justification --no-hyphenation"
-
+set -x MANOPT "--no-justification --no-hyphenation"
 
 # Preserve formatting when piping
-export MAN_KEEP_FORMATTING=1
+set -x MAN_KEEP_FORMATTING 1
 
-# Prevent output width that is too wide. If the terminal is narrower, it will
-# use the terminal width.
-function set_manwidth {
-  export MANWIDTH=$((COLUMNS > 100 ? 100 : COLUMNS))
-}
-
-# Add the function to the precmd hook, which runs before each prompt. We must
-# set MANWIDTH dynamically because of terminal window resizing.
-precmd_functions+=(set_manwidth)
+# Also see our `man` wrapper function in config.fish

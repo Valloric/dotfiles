@@ -1,3 +1,4 @@
+#!/usr/bin/env fish
 # -----------------------------------------------------------------------------
 # LESS - The Pager
 #
@@ -16,12 +17,12 @@
 # -X: Do not clear the screen on exit
 # --mouse: Enable mouse wheel scrolling
 # --tabs=2: Set tab width to 2 spaces
-export LESS='-RiFX --mouse --tabs=2'
+set -x LESS '-RiFX --mouse --tabs=2'
 
 # Set the prompt style for less.
 # This provides detailed information at the bottom of the screen.
-export LESSSECUREPROMPT='\e[1;31m(press q to quit)\e[0m'
-export LESSPROMPT='?f%f .?ltLine %lt-%lb?L of %L.?pB(%pB%%) .?e(END) ?x- Next: %x.:%SECUREPROMPT'
+set -x LESSSECUREPROMPT "[1;31m(press q to quit)[0m"
+set -x LESSPROMPT '?f%f .?ltLine %lt-%lb?L of %L.?pB(%pB%%) .?e(END) ?x- Next: %x.:%SECUREPROMPT'
 
 # Define colors and text styles using ANSI escape codes for performance.
 # This avoids forking `tput` on every shell startup.
@@ -36,10 +37,10 @@ export LESSPROMPT='?f%f .?ltLine %lt-%lb?L of %L.?pB(%pB%%) .?e(END) ?x- Next: %
 #
 # Colors: 31=red, 32=green, 33=yellow, 34=blue, 35=magenta, 36=cyan
 #
-export LESS_TERMCAP_mb=$'\e[1;31m'      # Start blinking (for prompts)
-export LESS_TERMCAP_md=$'\e[1;36m'      # Start bold (used for manpage titles)
-export LESS_TERMCAP_so=$'\e[1;33;44m'   # Start standout (search results)
-export LESS_TERMCAP_us=$'\e[3;32m'      # Start underline -> RENDER AS ITALIC (green)
-export LESS_TERMCAP_me=$'\e[0m'         # End all modes (bold, standout, underline)
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_ue=$'\e[0m'
+set -x LESS_TERMCAP_mb "[1;31m" # Start blinking (for prompts)
+set -x LESS_TERMCAP_md "[1;36m" # Start bold (used for manpage titles)
+set -x LESS_TERMCAP_so "[1;33;44m" # Start standout (search results)
+set -x LESS_TERMCAP_us "[3;32m" # Start underline -> RENDER AS ITALIC (green)
+set -x LESS_TERMCAP_me "[0m" # End all modes (bold, standout, underline)
+set -x LESS_TERMCAP_se "[0m"
+set -x LESS_TERMCAP_ue "[0m"
