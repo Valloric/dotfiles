@@ -1,4 +1,5 @@
 fish/fish_variables
+fishd.tmp.*
 Support/
 tags
 .tags

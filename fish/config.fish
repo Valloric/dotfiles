@@ -105,6 +105,22 @@ set -gx PYTHONPYCACHEPREFIX "$TMPDIR"
 # GC time for unused Mosh sessions. Value is 3 days in seconds.
 set -gx MOSH_SERVER_NETWORK_TMOUT 259200
 
+##########
+# VI mode
+##########
+
+# Set up vi-mode while preserving default fish shorcuts
+function fish_hybrid_key_bindings
+    for mode in default insert visual
+        fish_default_key_bindings -M $mode
+    end
+    fish_vi_key_bindings --no-erase insert
+end
+set -g fish_key_bindings fish_hybrid_key_bindings
+# Make ,. exit vi insert and visual mode
+bind --mode insert --sets-mode default comma,. repaint-mode
+bind --mode visual --sets-mode default comma,. repaint-mode
+
 ################
 # PATH HANDLING
 ################
