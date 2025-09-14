@@ -212,7 +212,8 @@
     "**/.ruff_cache": true,
     "**/.settings": true,
     "**/.venv": true,
-    "**/*.egg-info": true
+    "**/*.egg-info": true,
+    "**/fishd.tmp.*": true
   },
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
