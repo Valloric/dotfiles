@@ -18,7 +18,7 @@
     "editor.formatOnSave": true
   },
   "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true
   },
@@ -34,7 +34,7 @@
     "editor.tabSize": 4
   },
   "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -51,6 +51,7 @@
   "black-formatter.args": ["--line-length=80 "],
   "chat.agent.enabled": false,
   "chat.commandCenter.enabled": false,
+  "chat.disableAIFeatures": true,
   "clangd.arguments": ["-function-arg-placeholders=false"],
   "debugpy.debugJustMyCode": false,
   "diffEditor.ignoreTrimWhitespace": false,
@@ -227,12 +228,12 @@
   "julia.enableTelemetry": false,
   "julia.symbolCacheDownload": true,
   "kilo-code.allowedCommands": [
-    "npm test",
-    "npm install",
-    "tsc",
     "git log",
     "git diff",
-    "git show"
+    "git show",
+    "npm test",
+    "npm install",
+    "tsc"
   ],
   "kilo-code.deniedCommands": [],
   "linkme.rules": [
