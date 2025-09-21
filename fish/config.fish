@@ -101,6 +101,12 @@ if status is-interactive
     # Load our `less` and `man` configs
     source ~/dotfiles/less/lessrc.fish
     source ~/dotfiles/man/manrc.fish
+
+    if functions -q tide
+        # Avoid tide (fancy prompt) interactive config running on new
+        # machines... or worse, an entirely "invisible" prompt being shown.
+        tide configure --auto --style=Lean --prompt_colors='True color' --show_time='24-hour format' --lean_prompt_height='Two lines' --prompt_connection=Disconnected --prompt_spacing=Compact --icons='Few icons' --transient=No
+    end
 end
 
 # Python, my man, please stop littering my repos with pyc files!

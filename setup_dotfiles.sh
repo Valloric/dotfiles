@@ -3,13 +3,6 @@
 # get the dir of the current script
 script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
-# set up fish shell
-if [[ ! -e ~/.config/fish ]]; then
-  mkdir -p ~/.config/fish
-  ln -s $script_dir/fish ~/.config/fish
-fi
-
-
 # Determine config dir based on the OS
 if [[ "$(uname)" == "Darwin" ]]; then
   # macOS specific configuration directory
@@ -21,6 +14,10 @@ fi
 
 mkdir -p "$HOME/.config"
 mkdir -p "$config_dir"
+
+if [[ ! -e "$config_dir/fish" ]]; then
+  ln -s "$script_dir/fish" "$config_dir/fish"
+fi
 
 if [[ ! -e "$config_dir/environment.d" ]]; then
   ln -s "$script_dir/systemd-user/environment.d" "$config_dir/environment.d"
