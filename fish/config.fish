@@ -102,11 +102,6 @@ if status is-interactive
     source ~/dotfiles/less/lessrc.fish
     source ~/dotfiles/man/manrc.fish
 
-    if functions -q tide
-        # Avoid tide (fancy prompt) interactive config running on new
-        # machines... or worse, an entirely "invisible" prompt being shown.
-        tide configure --auto --style=Lean --prompt_colors='True color' --show_time='24-hour format' --lean_prompt_height='Two lines' --prompt_connection=Disconnected --prompt_spacing=Compact --icons='Few icons' --transient=No
-    end
 end
 
 # Python, my man, please stop littering my repos with pyc files!
@@ -164,4 +159,14 @@ else
     # Fish treats colon-delimited variables like XDG_DATA_DIRS as paths, so we
     # can prepend to it like we do with PATH.
     set -x XDG_DATA_DIRS ~/.local/share/flatpak/exports/share /var/lib/flatpak/exports/share $XDG_DATA_DIRS
+end
+
+##########
+# PLUGINS
+##########
+
+if functions -q tide
+    # Avoid tide (fancy prompt) interactive config running on new
+    # machines... or worse, an entirely "invisible" prompt being shown.
+    tide configure --auto --style=Lean --prompt_colors='True color' --show_time='24-hour format' --lean_prompt_height='Two lines' --prompt_connection=Disconnected --prompt_spacing=Compact --icons='Few icons' --transient=No
 end
