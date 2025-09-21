@@ -69,6 +69,10 @@ end
 # them. Use like so: batn *.txt
 alias batn="bat --style=header,rule --decorations=always" # intentional alias
 
+# Make cp try to use a cheap reflink copy if the underlying filesystem supports
+# it (BTRFS, ZFS, XFS and others).
+alias cp="cp --reflink=auto" # intentional alias
+
 ###########
 # ENV VARS
 ###########
