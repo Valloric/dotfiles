@@ -1,77 +1,78 @@
 #!/usr/bin/env fish
+if status is-interactive
+    # Suppress fish greeting
+    set -g fish_greeting
 
-# Suppress fish greeting
-set -g fish_greeting
+    abbr -a v vim
+    abbr -a c code
+    abbr -a cn "code --new-window"
+    abbr -a cr "code --reuse-window"
 
-abbr -a v vim
-abbr -a c code
-abbr -a cn "code --new-window"
-abbr -a cr "code --reuse-window"
+    abbr -a j just
+    abbr -a y yarn
+    abbr -a p podman
 
-abbr -a j just
-abbr -a y yarn
-abbr -a p podman
+    # We now use this instead of acksed (above)
+    abbr -a fm fastmod
 
-# We now use this instead of acksed (above)
-abbr -a fm fastmod
+    # mercurial aliases
+    # using chg, the C wrapper around hg for faster startup
+    abbr -a h chg
 
-# mercurial aliases
-# using chg, the C wrapper around hg for faster startup
-abbr -a h chg
+    # Using eza as a fancier ls. "ll" shows hidden files as well.
+    alias l="eza --icons=auto --group-directories-first -l" # alias, not abbr
+    alias ll="eza --icons=auto --group-directories-first -la" # alias, not abbr
 
-# Using eza as a fancier ls. "ll" shows hidden files as well.
-alias l="eza --icons=auto --group-directories-first -l" # intentional alias
-alias ll="eza --icons=auto --group-directories-first -la" # intentional alias
+    # systemd aliases
+    abbr -a sc systemctl
+    abbr -a scr 'systemctl daemon-reload'
+    abbr -a scu 'systemctl --user'
+    abbr -a scur 'systemctl --user daemon-reload'
+    abbr -a jc 'journalctl --boot'
+    abbr -a jcs 'journalctl --boot --pager-end --unit'
+    abbr -a jcu 'journalctl --user --boot'
+    abbr -a jcus 'journalctl --user --boot --pager-end --unit'
 
-# systemd aliases
-abbr -a sc systemctl
-abbr -a scr 'systemctl daemon-reload'
-abbr -a scu 'systemctl --user'
-abbr -a scur 'systemctl --user daemon-reload'
-abbr -a jc 'journalctl --boot'
-abbr -a jcs 'journalctl --boot --pager-end --unit'
-abbr -a jcu 'journalctl --user --boot'
-abbr -a jcus 'journalctl --user --boot --pager-end --unit'
+    # rust cargo aliases
+    abbr -a ck "cargo check"
+    abbr -a ct "cargo test"
+    abbr -a cb "cargo build"
+    abbr -a cbr "cargo build --release"
+    abbr -a cf "cargo fmt"
+    abbr -a cc "cargo clippy --all-targets --all-features -- -D warnings"
 
-# rust cargo aliases
-abbr -a ck "cargo check"
-abbr -a ct "cargo test"
-abbr -a cb "cargo build"
-abbr -a cbr "cargo build --release"
-abbr -a cf "cargo fmt"
-abbr -a cc "cargo clippy --all-targets --all-features -- -D warnings"
+    # rustc hacking
+    abbr -a xc "python3 ./x.py check"
+    abbr -a xt "python3 ./x.py test tidy"
+    abbr -a bs1 "python3 ./x.py build --stage 1"
+    abbr -a bsk1 "python3 ./x.py build --stage 1 --keep-stage 1"
+    abbr -a ts1 "python3 ./x.py test --stage 1"
+    abbr -a tsk1 "python3 ./x.py test --stage 1 --keep-stage 1"
 
-# rustc hacking
-abbr -a xc "python3 ./x.py check"
-abbr -a xt "python3 ./x.py test tidy"
-abbr -a bs1 "python3 ./x.py build --stage 1"
-abbr -a bsk1 "python3 ./x.py build --stage 1 --keep-stage 1"
-abbr -a ts1 "python3 ./x.py test --stage 1"
-abbr -a tsk1 "python3 ./x.py test --stage 1 --keep-stage 1"
+    # Create bat->batcat alias only if batcat exists. On debian, `bat` is
+    # installed as `batcat` due to a name conflict.
+    if command -q batcat
+        alias bat="batcat" # alias, not abbr
+    end
 
-# Create bat->batcat alias only if batcat exists. On debian, `bat` is installed
-# as `batcat` due to a name conflict.
-if command -q batcat
-    alias bat="batcat" # intentionally an alias and not an abbr
+    # GLOBAL alias for "pipe to less", which works anywhere on the line. Must be
+    # surrounded by whitespace and not be in quotes to be expanded.
+    if command -q bat
+        abbr -a L --position anywhere --set-cursor '% | bat'
+    else if command -q batcat
+        abbr -a L --position anywhere --set-cursor '% | batcat'
+    else
+        abbr -a L --position anywhere --set-cursor '% | less'
+    end
+
+    # For looking at multiple files in one scrolling view with filenames between
+    # them. Use like so: batn *.txt
+    alias batn="bat --style=header,rule --decorations=always" # alias, not abbr
+
+    # Make cp try to use a cheap reflink copy if the underlying filesystem
+    # supports it (BTRFS, ZFS, XFS and others).
+    alias cp="cp --reflink=auto" # alias, not abbr
 end
-
-# GLOBAL alias for "pipe to less", which works anywhere on the line. Must be
-# surrounded by whitespace and not be in quotes to be expanded.
-if command -q bat
-    abbr -a L --position anywhere --set-cursor '% | bat'
-else if command -q batcat
-    abbr -a L --position anywhere --set-cursor '% | batcat'
-else
-    abbr -a L --position anywhere --set-cursor '% | less'
-end
-
-# For looking at multiple files in one scrolling view with filenames between
-# them. Use like so: batn *.txt
-alias batn="bat --style=header,rule --decorations=always" # intentional alias
-
-# Make cp try to use a cheap reflink copy if the underlying filesystem supports
-# it (BTRFS, ZFS, XFS and others).
-alias cp="cp --reflink=auto" # intentional alias
 
 ###########
 # ENV VARS
@@ -126,17 +127,19 @@ end
 # VI mode
 ##########
 
-# Set up vi-mode while preserving default fish shorcuts
-function fish_hybrid_key_bindings
-    for mode in default insert visual
-        fish_default_key_bindings -M $mode
+if status is-interactive
+    # Set up vi-mode while preserving default fish shorcuts
+    function fish_hybrid_key_bindings
+        for mode in default insert visual
+            fish_default_key_bindings -M $mode
+        end
+        fish_vi_key_bindings --no-erase insert
     end
-    fish_vi_key_bindings --no-erase insert
+    set -g fish_key_bindings fish_hybrid_key_bindings
+    # Make ,. exit vi insert and visual mode
+    bind --mode insert --sets-mode default comma,. repaint-mode
+    bind --mode visual --sets-mode default comma,. repaint-mode
 end
-set -g fish_key_bindings fish_hybrid_key_bindings
-# Make ,. exit vi insert and visual mode
-bind --mode insert --sets-mode default comma,. repaint-mode
-bind --mode visual --sets-mode default comma,. repaint-mode
 
 ################
 # PATH HANDLING
@@ -170,5 +173,6 @@ if test (uname) = Darwin
 else
     # Fish treats colon-delimited variables like XDG_DATA_DIRS as paths, so we
     # can prepend to it like we do with PATH.
-    set -x XDG_DATA_DIRS ~/.local/share/flatpak/exports/share /var/lib/flatpak/exports/share $XDG_DATA_DIRS
+    set -x XDG_DATA_DIRS ~/.local/share/flatpak/exports/share \
+        /var/lib/flatpak/exports/share $XDG_DATA_DIRS
 end
