@@ -1,4 +1,7 @@
+# Has a bunch of local paths that won't work on other machines
 fish/fish_variables
+# Fisher lies, see fish-setup.fish. That has our canonical list of plugins
+fish/fish_plugins
 fishd.tmp.*
 Support/
 tags

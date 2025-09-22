@@ -15,8 +15,15 @@ fi
 mkdir -p "$HOME/.config"
 mkdir -p "$config_dir"
 
-if [[ ! -e "$config_dir/fish" ]]; then
+# If it's not a symbolic link, then it's the skeleton directory fish creates
+# instead of our config.
+if [[ ! -L "$config_dir/fish" ]]; then
+  rm -rf "$config_dir/fish"
   ln -s "$script_dir/fish" "$config_dir/fish"
+
+  if command -v /bin/fish &>/dev/null; then
+    "$script_dir/fish/initial-setup/fish-setup.fish"
+  fi
 fi
 
 if [[ ! -e "$config_dir/environment.d" ]]; then

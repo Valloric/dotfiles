@@ -110,6 +110,18 @@ set -gx PYTHONPYCACHEPREFIX "$TMPDIR"
 # GC time for unused Mosh sessions. Value is 3 days in seconds.
 set -gx MOSH_SERVER_NETWORK_TMOUT 259200
 
+# Set XDG_STATE_HOME so we can use it without having to compute the fallback.
+# See https://specifications.freedesktop.org/basedir-spec/latest/
+set -gx XDG_STATE_HOME $HOME/.local/state
+if ! test -d "$XDG_STATE_HOME"
+    mkdir -p $XDG_STATE_HOME
+end
+
+set -gx XDG_DATA_HOME $HOME/.local/share
+if ! test -d "$XDG_DATA_HOME"
+    mkdir -p $XDG_DATA_HOME
+end
+
 ##########
 # VI mode
 ##########
@@ -159,14 +171,4 @@ else
     # Fish treats colon-delimited variables like XDG_DATA_DIRS as paths, so we
     # can prepend to it like we do with PATH.
     set -x XDG_DATA_DIRS ~/.local/share/flatpak/exports/share /var/lib/flatpak/exports/share $XDG_DATA_DIRS
-end
-
-##########
-# PLUGINS
-##########
-
-if functions -q tide
-    # Avoid tide (fancy prompt) interactive config running on new
-    # machines... or worse, an entirely "invisible" prompt being shown.
-    tide configure --auto --style=Lean --prompt_colors='True color' --show_time='24-hour format' --lean_prompt_height='Two lines' --prompt_connection=Disconnected --prompt_spacing=Compact --icons='Few icons' --transient=No
 end
