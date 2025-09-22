@@ -111,21 +111,6 @@ set -gx PYTHONPYCACHEPREFIX "$TMPDIR"
 # GC time for unused Mosh sessions. Value is 3 days in seconds.
 set -gx MOSH_SERVER_NETWORK_TMOUT 259200
 
-# Set various XDG vars so we can use them without having to compute the
-# fallback. See https://specifications.freedesktop.org/basedir-spec/latest/
-set -gx XDG_STATE_HOME $HOME/.local/state
-set -gx XDG_DATA_HOME $HOME/.local/share
-set -gx XDG_CONFIG_HOME $HOME/.config
-
-begin # using a block to limit scope of `xdgs` below
-    set -l xdgs XDG_STATE_HOME XDG_DATA_HOME XDG_CONFIG_HOME
-    for xdg in xdgs
-        if ! test -d "$$xdg"
-            mkdir -p $$xdg
-        end
-    end
-end
-
 ##########
 # VI mode
 ##########
