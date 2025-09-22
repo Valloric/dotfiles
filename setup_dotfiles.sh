@@ -17,11 +17,12 @@ mkdir -p "$config_dir"
 
 # If it's not a symbolic link, then it's the skeleton directory fish creates
 # instead of our config.
-if [[ ! -L "$config_dir/fish" ]]; then
-  rm -rf "$config_dir/fish"
-  ln -s "$script_dir/fish" "$config_dir/fish"
+# NOTE: Fish _always_ uses ~/.config/fish, even on Mac.
+if [[ ! -L "$HOME/.config/fish" ]]; then
+  rm -rf "$HOME/.config/fish"
+  ln -s "$script_dir/fish" "$HOME/.config/fish"
 
-  if command -v /bin/fish &>/dev/null; then
+  if command -v fish &>/dev/null; then
     "$script_dir/fish/initial-setup/fish-setup.fish"
   fi
 fi
