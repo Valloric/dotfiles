@@ -38,6 +38,7 @@ fi
 declare -a extensions=(
   bazelbuild.vscode-bazel
   bbenoist.togglehs
+  bmalehorn.vscode-fish
   charliermarsh.ruff
   coolbear.systemd-unit-file
   davidanson.vscode-markdownlint
@@ -48,6 +49,7 @@ declare -a extensions=(
   julialang.language-julia
   kilocode.kilo-code
   llvm-vs-code-extensions.vscode-clangd
+  mads-hartmann.bash-ide-vscode
   mechatroner.rainbow-csv
   ms-azuretools.vscode-containers
   ms-azuretools.vscode-docker
@@ -59,12 +61,14 @@ declare -a extensions=(
   myriad-dreamin.tinymist
   nefrob.vscode-just-syntax
   ombratteng.nftables
+  pkief.material-icon-theme
   ragnoroct.linkme
   redhat.ansible
   redhat.vscode-yaml
   richie5um2.vscode-sort-json
   rust-lang.rust-analyzer
   shinichi-takii.sql-bigquery
+  tal7aouy.theme
   tamasfe.even-better-toml
   timonwong.shellcheck
   tomoki1207.pdf
