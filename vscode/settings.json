@@ -61,7 +61,7 @@
   "editor.folding": false,
   "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono', Consolas, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
-  "editor.fontSize": 12,
+  "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.inlayHints.enabled": "off",
@@ -444,6 +444,7 @@
   "window.restoreWindows": "none",
   "window.title": "${rootName}${separator}${dirty}${activeEditorShort}",
   "window.titleBarStyle": "custom",
+  "window.zoomLevel": 0.5,
   "workbench.activityBar.location": "bottom",
   "workbench.colorCustomizations": {
     "editor.background": "#1e1e1e",
