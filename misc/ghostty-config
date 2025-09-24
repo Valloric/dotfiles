@@ -1,8 +1,11 @@
 # This value is in font *points*, not pixels.
-font-size = 10
+font-size = 12
 window-inherit-font-size = false
 theme = Adwaita Dark
 # The first font-family listed has highest priority,
 # the other ones are fallbacks.
 font-family = "JetBrainsMono Nerd Font"
 font-family = "JetBrains Mono"
+
+# Needed for window decorations on Wayland
+window-decoration = client
