@@ -79,6 +79,9 @@ end
 ###########
 
 if status is-interactive
+    # Disables the ugly text underlining for "valid paths"
+    set -g fish_color_valid_path ''
+
     # FZF setup; https://github.com/junegunn/fzf
     # Also install `fd-find` for faster file listing.
     set -x FZF_DEFAULT_OPTS "
