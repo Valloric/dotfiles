@@ -252,7 +252,7 @@
   "python.analysis.autoImportCompletions": true,
   "python.analysis.enablePytestSupport": true,
   "python.analysis.typeCheckingMode": "standard",
-  "python.defaultInterpreterPath": "/bin/python",
+  "python.defaultInterpreterPath": "/bin/python3",
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
   "ruff.lineLength": 80,
