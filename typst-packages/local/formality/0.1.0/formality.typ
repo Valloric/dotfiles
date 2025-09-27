@@ -34,6 +34,7 @@
     paper: "a4",
     // Common margins for EU letters.
     margin: 2.5cm,
+    numbering: "1",
   )
 
   set text(
