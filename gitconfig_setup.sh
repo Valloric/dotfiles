@@ -28,7 +28,8 @@ git config --global alias.cp "cherry-pick"
 git config --global alias.rb "rebase"
 
 # Main log command
-git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset %<|(72,trunc)%s %Cgreen%>(14)%cr %C(bold blue)%an%Creset%C(yellow)%d%Creset' --abbrev-commit --date=relative"
+
 # Log command without pager, with commit ID and first commit line.
 # This is useful when we want to use "git commit --fixup <commit id>", but don't
 # want to have to remember the commit ID!
