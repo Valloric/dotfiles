@@ -1,13 +1,17 @@
 #!/usr/bin/env fish
-# Our abbrs and aliases
+#
+# Our abbrs and aliases.
+# Some are aliases instead of abbrs because I don't want to see the expanded
+# form every time I type in the command.
+
 if ! status is-interactive
     return
 end
 
 abbr -a v vim
 abbr -a c code
-abbr -a cn "code --new-window"
-abbr -a cr "code --reuse-window"
+abbr -a cn code --new-window
+abbr -a cr code --reuse-window
 
 abbr -a j just
 abbr -a y yarn
@@ -26,29 +30,29 @@ alias ll="eza --icons=auto --group-directories-first -la" # alias, not abbr
 
 # systemd aliases
 abbr -a sc sudo systemctl
-abbr -a scr 'systemctl daemon-reload'
-abbr -a scu 'systemctl --user'
-abbr -a scur 'systemctl --user daemon-reload'
-abbr -a jc 'journalctl --boot'
-abbr -a jcs 'journalctl --boot --pager-end --unit'
-abbr -a jcu 'journalctl --user --boot'
-abbr -a jcus 'journalctl --user --boot --pager-end --unit'
+abbr -a scr systemctl daemon-reload
+abbr -a scu systemctl --user
+abbr -a scur systemctl --user daemon-reload
+abbr -a jc journalctl --boot
+abbr -a jcs journalctl --boot --pager-end --unit
+abbr -a jcu journalctl --user --boot
+abbr -a jcus journalctl --user --boot --pager-end --unit
 
 # rust cargo aliases
-abbr -a ck "cargo check"
-abbr -a ct "cargo test"
-abbr -a cb "cargo build"
-abbr -a cbr "cargo build --release"
-abbr -a cf "cargo fmt"
-abbr -a cc "cargo clippy --all-targets --all-features -- -D warnings"
+abbr -a ck cargo check
+abbr -a ct cargo test
+abbr -a cb cargo build
+abbr -a cbr cargo build --release
+abbr -a cf cargo fmt
+abbr -a cc cargo clippy --all-targets --all-features -- -D warnings
 
 # rustc hacking
-abbr -a xc "python3 ./x.py check"
-abbr -a xt "python3 ./x.py test tidy"
-abbr -a bs1 "python3 ./x.py build --stage 1"
-abbr -a bsk1 "python3 ./x.py build --stage 1 --keep-stage 1"
-abbr -a ts1 "python3 ./x.py test --stage 1"
-abbr -a tsk1 "python3 ./x.py test --stage 1 --keep-stage 1"
+abbr -a xc python3 ./x.py check
+abbr -a xt python3 ./x.py test tidy
+abbr -a bs1 python3 ./x.py build --stage 1
+abbr -a bsk1 python3 ./x.py build --stage 1 --keep-stage 1
+abbr -a ts1 python3 ./x.py test --stage 1
+abbr -a tsk1 python3 ./x.py test --stage 1 --keep-stage 1
 
 # Create bat->batcat alias only if batcat exists. On debian, `bat` is
 # installed as `batcat` due to a name conflict.
