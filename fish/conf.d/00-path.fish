@@ -1,4 +1,5 @@
 #!/usr/bin/env fish
+#
 # Use the built-in `fish_add_path` command to safely modify the PATH. It's
 # better than manually constructing the PATH string as it avoids duplicates.
 

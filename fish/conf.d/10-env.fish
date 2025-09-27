@@ -6,7 +6,6 @@ set -gx MOSH_SERVER_NETWORK_TMOUT 259200
 
 if ! status is-interactive
     return
-
 end
 
 # Disables the ugly text underlining for "valid paths"

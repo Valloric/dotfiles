@@ -30,8 +30,12 @@ alias ll="eza --icons=auto --group-directories-first -la" # alias, not abbr
 
 # systemd aliases
 abbr -a sc sudo systemctl
-abbr -a scr systemctl daemon-reload
+abbr -a scc sudo systemctl cat
+abbr -a scs sudo systemctl status
+abbr -a scr sudo systemctl daemon-reload
 abbr -a scu systemctl --user
+abbr -a scus systemctl --user status
+abbr -a scuc systemctl --user cat
 abbr -a scur systemctl --user daemon-reload
 abbr -a jc journalctl --boot
 abbr -a jcs journalctl --boot --pager-end --unit
