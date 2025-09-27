@@ -34,7 +34,7 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset %<|(72
 # This is useful when we want to use "git commit --fixup <commit id>", but don't
 # want to have to remember the commit ID!
 # You can pass "-n <N>" again to see more commits, it will override "-n 5".
-git config --global alias.clg "!git --no-pager log --pretty='%h %s' -n 5"
+git config --global alias.clg "!git --no-pager log --pretty='%Cred%h%Creset %s' -n 5"
 
 # Config for git-absorb: https://github.com/tummychow/git-absorb
 # By default it creates the "fixup!"" commits, but doesn't integrate them.
