@@ -2,6 +2,20 @@
   "[cpp]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[dockercompose]": {
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.insertSpaces": true,
+    "editor.quickSuggestions": {
+      "comments": false,
+      "other": true,
+      "strings": true
+    },
+    "editor.tabSize": 2
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -47,10 +61,6 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "ansible.lightspeed.enabled": false,
-  "tinymist.typstExtraArgs": [
-    "--package-path",
-    "/home/valloric/.local/share/typst/packages"
-  ],
   "ansible.lightspeed.suggestions.enabled": false,
   "black-formatter.args": ["--line-length=80 "],
   "chat.agent.enabled": false,
@@ -268,6 +278,10 @@
   "testing.automaticallyOpenTestResults": "openOnTestFailure",
   "tinymist.formatterPrintWidth": 80,
   "tinymist.formatterProseWrap": true,
+  "tinymist.typstExtraArgs": [
+    "--package-path",
+    "/home/valloric/.local/share/typst/packages"
+  ],
   "typescript.format.semicolons": "insert",
   "vim.easymotion": true,
   "vim.handleKeys": {
