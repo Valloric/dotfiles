@@ -47,6 +47,10 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "ansible.lightspeed.enabled": false,
+  "tinymist.typstExtraArgs": [
+    "--package-path",
+    "/home/valloric/.local/share/typst/packages"
+  ],
   "ansible.lightspeed.suggestions.enabled": false,
   "black-formatter.args": ["--line-length=80 "],
   "chat.agent.enabled": false,
