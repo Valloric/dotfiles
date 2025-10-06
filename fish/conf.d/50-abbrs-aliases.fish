@@ -58,7 +58,7 @@ abbr -a bsk1 python3 ./x.py build --stage 1 --keep-stage 1
 abbr -a ts1 python3 ./x.py test --stage 1
 abbr -a tsk1 python3 ./x.py test --stage 1 --keep-stage 1
 
-# Create bat->batcat alias only if batcat exists. On debian, `bat` is
+# Create bat->batcat alias only if batcat exists. On Debian, `bat` is
 # installed as `batcat` due to a name conflict.
 if command -q batcat
     alias bat="batcat" # alias, not abbr
@@ -77,6 +77,12 @@ end
 # For looking at multiple files in one scrolling view with filenames between
 # them. Use like so: batn *.txt
 alias batn="bat --style=header,rule --decorations=always" # alias, not abbr
+
+
+# Similar to batcat->bat, Debian installs `fd` as `fdfind`.
+if command -q fdfind
+    alias fd="fdfind" # alias, not abbr
+end
 
 # Make cp try to use a cheap reflink copy if the underlying filesystem
 # supports it (BTRFS, ZFS, XFS and others).
