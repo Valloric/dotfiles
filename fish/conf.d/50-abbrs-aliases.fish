@@ -17,6 +17,10 @@ abbr -a j just
 abbr -a y yarn
 abbr -a p podman
 
+# Convenience aliases for copy/pasting from/to the system clipboard.
+alias clipcopy="fish_clipboard_copy" # alias, not abbr
+alias clippaste="fish_clipboard_paste" # alias, not abbr
+
 # We now use this instead of acksed (above)
 abbr -a fm fastmod
 
@@ -77,7 +81,6 @@ end
 # For looking at multiple files in one scrolling view with filenames between
 # them. Use like so: batn *.txt
 alias batn="bat --style=header,rule --decorations=always" # alias, not abbr
-
 
 # Similar to batcat->bat, Debian installs `fd` as `fdfind`.
 if command -q fdfind
