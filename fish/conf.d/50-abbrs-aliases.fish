@@ -29,8 +29,9 @@ abbr -a fm fastmod
 abbr -a h chg
 
 # Using eza as a fancier ls. "ll" shows hidden files as well.
-alias l="eza --icons=auto --group-directories-first -l" # alias, not abbr
-alias ll="eza --icons=auto --group-directories-first -la" # alias, not abbr
+# Both of these are intentionally aliases, not abbrs.
+alias l="eza --icons=auto --group-directories-first --smart-group -lg"
+alias ll="eza --icons=auto --group-directories-first --smart-group -lga"
 
 # systemd aliases
 abbr -a sc sudo systemctl
