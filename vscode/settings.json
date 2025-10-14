@@ -454,6 +454,7 @@
       "commands": ["workbench.action.quickOpen"]
     }
   ],
+  "vsicons.dontShowNewVersionMessage": true,
   "window.autoDetectHighContrast": false,
   "window.commandCenter": false,
   "window.newWindowDimensions": "fullscreen",
