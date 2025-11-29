@@ -28,10 +28,13 @@ abbr -a fm fastmod
 # using chg, the C wrapper around hg for faster startup
 abbr -a h chg
 
-# Using eza as a fancier ls. "ll" shows hidden files as well.
-# Both of these are intentionally aliases, not abbrs.
+# Using eza as a fancier ls.
+# "ll" shows hidden files as well.
+# "lt" shows a tree of files, like `tree` does.
+# All of these are intentionally aliases, not abbrs.
 alias l="eza --icons=auto --group-directories-first --smart-group -lg"
 alias ll="eza --icons=auto --group-directories-first --smart-group -lga"
+alias lt="eza --icons=auto --group-directories-first --smart-group -lg --tree"
 
 # systemd aliases
 abbr -a sc sudo systemctl
