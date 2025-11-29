@@ -4,6 +4,7 @@
 script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
 mkdir -p ~/.gnupg
+chmod u=rwX,go= ~/.gnupg
 
 # Handle gpg.conf
 if [[ ! -e ~/.gnupg/gpg.conf ]]; then
