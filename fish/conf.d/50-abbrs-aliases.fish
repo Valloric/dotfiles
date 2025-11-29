@@ -66,6 +66,12 @@ abbr -a bsk1 python3 ./x.py build --stage 1 --keep-stage 1
 abbr -a ts1 python3 ./x.py test --stage 1
 abbr -a tsk1 python3 ./x.py test --stage 1 --keep-stage 1
 
+# rsync for folder backup
+# -aHAX means preserve _everything_; permissions, ACLs, extended attributes etc.
+# -h for human readable sizes instead of raw byte counts
+# --info=progress2 for a sensible overall progress bar
+abbr -a rbak rsync -aHAXh --info=progress2
+
 # Create bat->batcat alias only if batcat exists. On Debian, `bat` is
 # installed as `batcat` due to a name conflict.
 if command -q batcat
