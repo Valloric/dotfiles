@@ -38,17 +38,19 @@ alias lt="eza --icons=auto --group-directories-first --smart-group -lg --tree"
 
 # systemd aliases
 abbr -a sc sudo systemctl
-abbr -a scc sudo systemctl cat
 abbr -a scs sudo systemctl status
-abbr -a scr sudo systemctl daemon-reload
-abbr -a scu systemctl --user
-abbr -a scus systemctl --user status
-abbr -a scuc systemctl --user cat
-abbr -a scur systemctl --user daemon-reload
-abbr -a jc journalctl --boot
-abbr -a jcs journalctl --boot --pager-end --unit
-abbr -a jcu journalctl --user --boot
-abbr -a jcus journalctl --user --boot --pager-end --unit
+abbr -a scc sudo systemctl cat
+abbr -a scd sudo systemctl daemon-reload
+abbr -a scr 'sudo systemctl daemon-reload && sudo systemctl restart'
+abbr -a scu systemctl -u
+abbr -a scus systemctl -u status
+abbr -a scuc systemctl -u cat
+abbr -a scud systemctl -u daemon-reload
+abbr -a scur 'systemctl -u daemon-reload && systemctl -u restart'
+abbr -a jc journalctl -b
+abbr -a jcs journalctl -b -e -u
+abbr -a jcsf journalctl -b -f -u
+abbr -a jckf journalctl -b -f -k
 
 # rust cargo aliases
 abbr -a ck cargo check
