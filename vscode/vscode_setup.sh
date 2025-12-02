@@ -36,7 +36,6 @@ fi
 
 # Get list of installed extensions with `code --list-extensions`
 declare -a extensions=(
-  bazelbuild.vscode-bazel
   bbenoist.togglehs
   bmalehorn.vscode-fish
   charliermarsh.ruff
@@ -45,14 +44,15 @@ declare -a extensions=(
   esbenp.prettier-vscode
   formulahendry.auto-close-tag
   foxundermoon.shell-format
+  golang.go
   hangxingliu.vscode-systemd-support
   julialang.language-julia
+  kdl-org.kdl
   kilocode.kilo-code
   llvm-vs-code-extensions.vscode-clangd
   mads-hartmann.bash-ide-vscode
   mechatroner.rainbow-csv
   ms-azuretools.vscode-containers
-  ms-azuretools.vscode-docker
   ms-python.black-formatter
   ms-python.debugpy
   ms-python.python
@@ -72,13 +72,10 @@ declare -a extensions=(
   tamasfe.even-better-toml
   timonwong.shellcheck
   tomoki1207.pdf
-  visualstudioexptteam.intellicode-api-usage-examples
-  visualstudioexptteam.vscodeintellicode
   vscode-icons-team.vscode-icons
   vscodevim.vim
   wholroyd.jinja
   yzhang.markdown-all-in-one
-  zxh404.vscode-proto3
 )
 
 readonly INSTALLED_EXTENSIONS=$(code --list-extensions)
