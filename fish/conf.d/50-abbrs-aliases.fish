@@ -42,11 +42,11 @@ abbr -a scs sudo systemctl status
 abbr -a scc sudo systemctl cat
 abbr -a scd sudo systemctl daemon-reload
 abbr -a scr 'sudo systemctl daemon-reload && sudo systemctl restart'
-abbr -a scu systemctl -u
-abbr -a scus systemctl -u status
-abbr -a scuc systemctl -u cat
-abbr -a scud systemctl -u daemon-reload
-abbr -a scur 'systemctl -u daemon-reload && systemctl -u restart'
+abbr -a scu systemctl --user
+abbr -a scus systemctl --user status
+abbr -a scuc systemctl --user cat
+abbr -a scud systemctl --user daemon-reload
+abbr -a scur 'systemctl --user daemon-reload && systemctl --user restart'
 abbr -a jc journalctl -b
 abbr -a jcs journalctl -b -e -u
 abbr -a jcsf journalctl -b -f -u
