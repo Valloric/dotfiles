@@ -50,6 +50,7 @@ abbr -a scur 'systemctl --user daemon-reload && systemctl --user restart'
 abbr -a jc journalctl -b
 abbr -a jcs journalctl -b -e -u
 abbr -a jcsf journalctl -b -f -u
+abbr -a jck journalctl -b -k
 abbr -a jckf journalctl -b -f -k
 
 # rust cargo aliases
