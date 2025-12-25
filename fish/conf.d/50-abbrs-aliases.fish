@@ -101,8 +101,11 @@ if command -q fdfind
 end
 
 # Make cp try to use a cheap reflink copy if the underlying filesystem
-# supports it (BTRFS, ZFS, XFS and others).
-alias cp="cp --reflink=auto" # alias, not abbr
+# supports it (BTRFS, ZFS, XFS and others). But only on Linux, since macOS
+# doesn't support the --reflink option.
+if test (uname) = Linux
+    alias cp="cp --reflink=auto" # alias, not abbr
+end
 
 # Implement !! from bash; `last_history_item` is in functions/
 abbr -a !! --position anywhere --function last_history_item
