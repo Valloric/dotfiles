@@ -1,8 +1,8 @@
 {
   "[caddyfile]": {
+    "editor.formatOnPaste": false,
     "editor.formatOnSave": false,
-    "editor.formatOnType": false,
-    "editor.formatOnPaste": false
+    "editor.formatOnType": false
   },
   "[cpp]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -96,6 +96,7 @@
     "strings": false
   },
   "editor.renderFinalNewline": "off",
+  "editor.renderWhitespace": "all",
   "editor.rulers": [80],
   "editor.semanticHighlighting.enabled": true,
   "editor.semanticTokenColorCustomizations": {
@@ -240,6 +241,7 @@
   "files.simpleDialog.enable": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
+  "git.blame.editorDecoration.enabled": false,
   "git.defaultCloneDirectory": "~/repos",
   "git.detectSubmodules": false,
   "git.detectSubmodulesLimit": 9999,
