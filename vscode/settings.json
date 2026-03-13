@@ -1,11 +1,14 @@
 {
+  "[ansible]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
   "[caddyfile]": {
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false,
-    "editor.formatOnType": false
+    "editor.formatOnType": false,
   },
   "[cpp]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[dockercompose]": {
     "editor.autoIndent": "advanced",
@@ -14,64 +17,64 @@
     "editor.quickSuggestions": {
       "comments": false,
       "other": true,
-      "strings": true
+      "strings": true,
     },
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
   },
   "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnPaste": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit",
-      "source.organizeImports": "explicit"
+      "source.organizeImports": "explicit",
     },
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.rulers": [80],
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
   },
   "[shellscript]": {
-    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode",
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[typst]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "ansible.lightspeed.enabled": false,
   "ansible.lightspeed.suggestions.enabled": false,
   "black-formatter.args": ["--line-length=80 "],
   "chat.agent.enabled": false,
-  "chat.commandCenter.enabled": false,
   "chat.disableAIFeatures": true,
   "clangd.arguments": ["-function-arg-placeholders=false"],
+  "clangd.path": "/home/valloric/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/21.1.8/clangd_21.1.8/bin/clangd",
   "debugpy.debugJustMyCode": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.bracketPairColorization.enabled": true,
@@ -93,7 +96,7 @@
   "editor.quickSuggestions": {
     "comments": false,
     "other": true,
-    "strings": false
+    "strings": false,
   },
   "editor.renderFinalNewline": "off",
   "editor.renderWhitespace": "all",
@@ -103,8 +106,8 @@
     "rules": {
       "operator": "#FE6F88",
       "property": "#FFA87E",
-      "variable": "#B7A9F1"
-    }
+      "variable": "#B7A9F1",
+    },
   },
   "editor.suggest.insertMode": "replace",
   "editor.suggest.localityBonus": true,
@@ -120,56 +123,56 @@
         {
           "scope": ["variable"],
           "settings": {
-            "foreground": "#ffffff"
-          }
+            "foreground": "#ffffff",
+          },
         },
         {
           "scope": [
             "variable.other.property",
-            "variable.other.object.property"
+            "variable.other.object.property",
           ],
           "settings": {
-            "foreground": "#d1baec"
-          }
+            "foreground": "#d1baec",
+          },
         },
         {
           "scope": ["meta.function-call"],
           "settings": {
-            "foreground": "#ffa600"
-          }
+            "foreground": "#ffa600",
+          },
         },
         {
           "scope": ["constant", "constant.language"],
           "settings": {
-            "foreground": "#fffb00"
-          }
+            "foreground": "#fffb00",
+          },
         },
         {
           "scope": ["meta.attribute"],
           "settings": {
-            "foreground": "#aa00ff"
-          }
+            "foreground": "#aa00ff",
+          },
         },
         {
           "scope": ["keyword.operator", "punctuation", "meta.brace"],
           "settings": {
-            "foreground": "#00f2ff"
-          }
+            "foreground": "#00f2ff",
+          },
         },
         {
           "scope": ["keyword", "keyword.control", "keyword.other.using"],
           "settings": {
-            "foreground": "#3664ff"
-          }
+            "foreground": "#3664ff",
+          },
         },
         {
           "scope": ["storage.type", "storage.class"],
           "settings": {
-            "foreground": "#6d4dfd"
-          }
-        }
+            "foreground": "#6d4dfd",
+          },
+        },
       ],
-      "types": "#aa00ff"
+      "types": "#aa00ff",
     },
     "[Theme*]": {
       "comments": "#70ba2f",
@@ -186,15 +189,15 @@
             "punctuation.separator.period", // colons, commas in some langs
             "punctuation.separator", // colons, commas in some langs
             "punctuation.definition", // quotes, etc
-            "punctuation.terminator" // semicolons
+            "punctuation.terminator", // semicolons
           ],
           "settings": {
-            "foreground": "#FE6F88"
-          }
-        }
+            "foreground": "#FE6F88",
+          },
+        },
       ],
-      "variables": "#B7A9F1"
-    }
+      "variables": "#B7A9F1",
+    },
   },
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "on",
@@ -204,23 +207,23 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 1,
   "extensions.experimental.affinity": {
-    "vscodevim.vim": 1
+    "vscodevim.vim": 1,
   },
   "extensions.ignoreRecommendations": false,
   "files.associations": {
+    "**/nftables/**/*.conf": "nft",
+    "**/roles/**/*.yml": "ansible",
     "*.pi": "python",
     "*.sdl": "sql-bigquery",
     "*.textproto": "plaintext",
-    "**/nftables/**/*.conf": "nft",
-    "**/roles/**/*.yml": "ansible",
     "*nftables*.conf": "nft",
-    "BUILD": "bazel"
+    "BUILD": "bazel",
   },
   "files.autoSave": "onFocusChange",
   "files.defaultLanguage": "${activeEditorLanguage}",
   "files.enableTrash": false,
   "files.exclude": {
-    "**/__pycache__ ": true,
+    "**/*.egg-info": true,
     "**/.aider.*": true,
     "**/.ansible": true,
     "**/.classpath": true,
@@ -232,8 +235,8 @@
     "**/.ruff_cache": true,
     "**/.settings": true,
     "**/.venv": true,
-    "**/*.egg-info": true,
-    "**/fishd.tmp.*": true
+    "**/__pycache__ ": true,
+    "**/fishd.tmp.*": true,
   },
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
@@ -255,24 +258,24 @@
     "git show",
     "npm test",
     "npm install",
-    "tsc"
+    "tsc",
   ],
+  "kilo-code.debug": false,
   "kilo-code.deniedCommands": [],
   "linkme.rules": [
     {
       "pattern": "([a-z]{1,4})/([^)]+)",
-      "url": "http://\\1/\\2"
-    }
+      "url": "http://\\1/\\2",
+    },
   ],
   "merge-conflict.autoNavigateNextConflict.enabled": true,
   "notebook.cellToolbarLocation": {
     "default": "right",
-    "jupyter-notebook": "left"
+    "jupyter-notebook": "left",
   },
   "problems.showCurrentInStatus": true,
   "python.analysis.autoImportCompletions": true,
   "python.analysis.enablePytestSupport": true,
-  "python.analysis.typeCheckingMode": "standard",
   "python.defaultInterpreterPath": "/bin/python3",
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
@@ -287,7 +290,7 @@
   "tinymist.formatterProseWrap": true,
   "tinymist.typstExtraArgs": [
     "--package-path",
-    "/home/valloric/.local/share/typst/packages"
+    "/home/valloric/.local/share/typst/packages",
   ],
   "typescript.format.semicolons": "insert",
   "vim.easymotion": true,
@@ -305,7 +308,7 @@
     "<C-q>": false,
     "<C-t>": false,
     "<C-v>": false,
-    "<C-w>": false
+    "<C-w>": false,
   },
   "vim.highlightedyank.enable": true,
   "vim.hlsearch": false,
@@ -313,111 +316,111 @@
   "vim.insertModeKeyBindingsNonRecursive": [
     {
       "after": ["<Esc>"],
-      "before": [",", "."]
-    }
+      "before": [",", "."],
+    },
   ],
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "after": ["g", "j"],
-      "before": ["j"]
+      "before": ["j"],
     },
     {
       "after": ["g", "k"],
-      "before": ["k"]
+      "before": ["k"],
     },
     {
       "after": ["o", "<Esc>", "k"],
-      "before": ["z", "j"]
+      "before": ["z", "j"],
     },
     {
       "after": ["O", "<Esc>", "j"],
-      "before": ["z", "k"]
+      "before": ["z", "k"],
     },
     {
       "after": ["1", "5", "g", "k"],
-      "before": ["<c-k>"]
+      "before": ["<c-k>"],
     },
     {
       "after": ["1", "5", "g", "j"],
-      "before": ["<c-j>"]
+      "before": ["<c-j>"],
     },
     {
       "after": ["y", "$"],
-      "before": ["Y"]
+      "before": ["Y"],
     },
     {
       "before": [";"],
-      "commands": ["workbench.action.showCommands"]
+      "commands": ["workbench.action.showCommands"],
     },
     {
       "before": ["<leader>", "t"],
-      "commands": ["workbench.action.quickOpen"]
+      "commands": ["workbench.action.quickOpen"],
     },
     {
       "before": ["<leader>", "j"],
-      "commands": ["workbench.action.navigateDown"]
+      "commands": ["workbench.action.navigateDown"],
     },
     {
       "before": ["<leader>", "k"],
-      "commands": ["workbench.action.navigateUp"]
+      "commands": ["workbench.action.navigateUp"],
     },
     {
       "before": ["<leader>", "l"],
-      "commands": ["workbench.action.navigateRight"]
+      "commands": ["workbench.action.navigateRight"],
     },
     {
       "before": ["<leader>", "h"],
-      "commands": ["workbench.action.navigateLeft"]
+      "commands": ["workbench.action.navigateLeft"],
     },
     {
       "before": ["<leader>", "b"],
-      "commands": ["extension.vim_ctrl+o"]
+      "commands": ["extension.vim_ctrl+o"],
     },
     {
       "before": ["<leader>", "f", "a"],
-      "commands": ["testing.runAll"]
+      "commands": ["testing.runAll"],
     },
     {
       "before": ["<leader>", "f", "f"],
-      "commands": ["testing.reRunFailTests"]
+      "commands": ["testing.reRunFailTests"],
     },
     {
       "before": ["<leader>", "s", "h"],
-      "commands": ["togglehs.toggleHS"]
+      "commands": ["togglehs.toggleHS"],
     },
     {
       "after": ["g", "d"],
       "before": ["<leader>", "g"],
-      "doc": "this is go-to-definition; interacts with vsvim jump list better"
+      "doc": "this is go-to-definition; interacts with vsvim jump list better",
     },
     {
       "before": ["<leader>", "p", "c"],
-      "commands": ["editor.action.revealDeclaration"]
+      "commands": ["editor.action.revealDeclaration"],
     },
     {
       "before": ["<leader>", "q"],
-      "commands": ["workbench.action.closeWindow"]
+      "commands": ["workbench.action.closeWindow"],
     },
     {
       "before": ["<leader>", "w"],
-      "commands": ["workbench.action.files.save"]
+      "commands": ["workbench.action.files.save"],
     },
     {
       "before": ["<leader>", "m"],
-      "commands": ["editor.action.formatDocument"]
+      "commands": ["editor.action.formatDocument"],
     },
     {
       "before": ["<leader>", "p", "d"],
-      "commands": ["editor.action.peekDefinition"]
+      "commands": ["editor.action.peekDefinition"],
     },
     {
       "before": ["<leader>", "p", "r"],
-      "commands": ["editor.action.referenceSearch.trigger"]
+      "commands": ["editor.action.referenceSearch.trigger"],
     },
     {
       "before": ["<leader>", "c", "s"],
-      "commands": ["codesearch.openCurrentFile"]
+      "commands": ["codesearch.openCurrentFile"],
     },
     {
       "after": [],
@@ -425,9 +428,9 @@
       "commands": [
         {
           "args": [],
-          "command": "undo"
-        }
-      ]
+          "command": "undo",
+        },
+      ],
     },
     {
       "after": [],
@@ -435,10 +438,10 @@
       "commands": [
         {
           "args": [],
-          "command": "redo"
-        }
-      ]
-    }
+          "command": "redo",
+        },
+      ],
+    },
   ],
   "vim.sneak": true,
   "vim.useCtrlKeys": true,
@@ -446,20 +449,20 @@
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "after": ["<Esc>"],
-      "before": [",", "."]
+      "before": [",", "."],
     },
     {
       "after": ["1", "5", "g", "k"],
-      "before": ["<c-k>"]
+      "before": ["<c-k>"],
     },
     {
       "after": ["1", "5", "g", "j"],
-      "before": ["<c-j>"]
+      "before": ["<c-j>"],
     },
     {
       "before": ["<leader>", "t"],
-      "commands": ["workbench.action.quickOpen"]
-    }
+      "commands": ["workbench.action.quickOpen"],
+    },
   ],
   "vsicons.dontShowNewVersionMessage": true,
   "window.autoDetectHighContrast": false,
@@ -478,7 +481,7 @@
     "editor.lineHighlightBackground": "#202020b9",
     "editor.wordHighlightBackground": "#323232d3",
     "editor.wordHighlightBorder": "default",
-    "editorGutter.background": "#232323"
+    "editorGutter.background": "#232323",
   },
   "workbench.colorTheme": "Theme Darker",
   "workbench.editor.empty.hint": "hidden",
@@ -487,5 +490,7 @@
   "workbench.layoutControl.enabled": false,
   "workbench.startupEditor": "none",
   "yaml.customTags": ["!vault scalar"],
-  "yaml.format.proseWrap": "always"
+  "yaml.format.proseWrap": "always",
+  "jjk.enableAnnotations": false,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 }
