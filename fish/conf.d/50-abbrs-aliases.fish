@@ -13,7 +13,8 @@ abbr -a c code
 abbr -a cn code --new-window
 abbr -a cr code --reuse-window
 
-abbr -a j just
+abbr -a j jj
+abbr -a ju just
 abbr -a y yarn
 abbr -a p podman
 

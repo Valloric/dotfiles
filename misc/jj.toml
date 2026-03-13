@@ -1,0 +1,53 @@
+[user]
+name = "Val Markovic"
+email = "val@markovic.io"
+
+[aliases]
+d = ["diff"]
+sh = ["show"]
+sp = ["split"]
+sq = ["squash"]
+ds = ["describe"]
+rb = ["rebase"]
+e = ["edit"]
+an = ["abandon"]
+ab = ["absorb"]
+n = ["new"]
+l = ["log"]
+la = ["log", "-r", "::"]
+rs = ["restore"]
+un = ["undo"]
+re = ["redo"]
+gp = ["git", "push"]
+gf = ["git", "fetch"]
+tug = ["bookmark", "advance"]
+
+[ui]
+default-command = "log"
+diff-formatter = "delta"
+diff-editor = ":builtin"
+merge-editor = "kdiff3"
+
+[working-copy]
+# Convert CRLF to LF when storing files in the repo. Keep LF when checking files
+# out.
+eol-conversion = "input"
+
+[merge-tools]
+delta.diff-args = ["--side-by-side", "$left", "$right", "--width=$width"]
+delta.diff-expected-exit-codes = [0, 1]
+
+[gg.ui]
+# Stop setting gg.ui.recent-workspaces
+track-recent-workspaces = false
+
+[revsets]
+# Make `jj bookmark advance` smarter about default revision to move to
+# TODO: Drop if/when https://github.com/jj-vcs/jj/issues/9055 is resolved.
+bookmark-advance-to = 'closest_pushable(@)'
+
+[revset-aliases]
+# Closest revision that is mutable, described and either non-empty or a merge
+'closest_pushable(to)' = '''
+  heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))
+'''

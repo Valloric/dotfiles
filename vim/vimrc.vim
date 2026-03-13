@@ -234,6 +234,12 @@ augroup gitcommit
     autocmd FileType gitcommit setlocal colorcolumn=+1 " Show column at 73 for git commits
 augroup END
 
+" Force .jjdescription files to be treated like `gitcommit`
+augroup filetypedetect_gitcommit
+  autocmd!
+  autocmd BufRead,BufNewFile *.jjdescription set ft=gitcommit
+augroup END
+
 " Filetype detection for systemd and Podman Quadlet unit files
 augroup filetypedetect_systemd
   autocmd!

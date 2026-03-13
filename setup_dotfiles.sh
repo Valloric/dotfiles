@@ -118,6 +118,11 @@ if [[ ! -e "$config_dir/tealdeer/config.toml" ]]; then
   ln -s "$script_dir/misc/tealdeer-config.toml" "$config_dir/tealdeer/config.toml"
 fi
 
+if [[ ! -e "$config_dir/jj/config.toml" ]]; then
+  mkdir -p "$config_dir/jj"
+  ln -s "$script_dir/misc/jj.toml" "$config_dir/jj/config.toml"
+fi
+
 $script_dir/gitconfig_setup.sh
 $script_dir/tmux/tmux_setup.sh
 $script_dir/urxvt/urxvt_setup.sh
