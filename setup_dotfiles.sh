@@ -123,6 +123,10 @@ if [[ ! -e "$config_dir/jj/config.toml" ]]; then
   ln -s "$script_dir/misc/jj.toml" "$config_dir/jj/config.toml"
 fi
 
+if [[ ! -e "$config_dir/starship.toml" ]]; then
+  ln -s "$script_dir/misc/starship.toml" "$config_dir/starship.toml"
+fi
+
 $script_dir/gitconfig_setup.sh
 $script_dir/tmux/tmux_setup.sh
 $script_dir/urxvt/urxvt_setup.sh

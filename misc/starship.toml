@@ -1,0 +1,95 @@
+# Docs: https://starship.rs/config/
+#
+# Tips:
+#  - `starship explain` shows what part of the prompt came from where
+#  - `starship timings` shows which parts of the prompt are slow
+#  - `starship print-config` shows the full computed config
+
+add_newline = false
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$hg_state\
+${custom.jj}\
+$custom\
+$line_break\
+$jobs\
+$time\
+$status\
+$shell\
+$character"""
+
+[directory]
+# Shorten long paths to N letters per directory, except last few.
+fish_style_pwd_dir_length = 1
+
+# Custom module for jj status. Inspired by examples in:
+#  https://github.com/jj-vcs/jj/wiki/Starship
+#
+# Could be removed if https://github.com/starship/starship/issues/6076 is ever
+# merged and Starship gains native support for jj.
+[custom.jj]
+description = "The current Jujutsu status"
+# Use `sh` to run `command`, it's faster.
+shell = ["sh"]
+# Only run this module in directories that contain a `.jj` folder. Note that
+# this means that you won't get jj info in a nested repo folder, only the top
+# folder. But this is the fastest detection mechanism.
+detect_folders = [".jj"]
+symbol = "🥋 "
+command = '''
+jj log --revisions @ --no-graph --ignore-working-copy --color always --limit 1 --template '
+  separate(" ",
+    change_id.shortest(4),
+    bookmarks,
+    "|",
+    concat(
+      if(conflict, "💥"),
+      if(divergent, "🚧"),
+      if(hidden, "👻"),
+      if(immutable, "🔒"),
+    ),
+    if(!empty,
+      separate(" ",
+        surround(raw_escape_sequence("\x1b[32m"), raw_escape_sequence("\x1b[0m"),
+          if(diff.stat().files().filter(|f| f.status_char() == "A").len() > 0,
+            "+" ++ diff.stat().files().filter(|f| f.status_char() == "A").len()
+          )
+        ),
+        surround(raw_escape_sequence("\x1b[33m"), raw_escape_sequence("\x1b[0m"),
+          if(diff.stat().files().filter(|f| f.status_char() == "M").len() > 0,
+            "~" ++ diff.stat().files().filter(|f| f.status_char() == "M").len()
+          )
+        ),
+        surround(raw_escape_sequence("\x1b[31m"), raw_escape_sequence("\x1b[0m"),
+          if(diff.stat().files().filter(|f| f.status_char() == "D").len() > 0,
+            "-" ++ diff.stat().files().filter(|f| f.status_char() == "D").len()
+          )
+        ),
+        surround(raw_escape_sequence("\x1b[36m"), raw_escape_sequence("\x1b[0m"),
+          if(diff.stat().files().filter(|f| f.status_char() == "C").len() > 0,
+            "→" ++ diff.stat().files().filter(|f| f.status_char() == "C").len()
+          )
+        ),
+        surround(raw_escape_sequence("\x1b[35m"), raw_escape_sequence("\x1b[0m"),
+          if(diff.stat().files().filter(|f| f.status_char() == "R").len() > 0,
+            "»" ++ diff.stat().files().filter(|f| f.status_char() == "R").len()
+          )
+        ),
+      )
+    ),
+    raw_escape_sequence("\x1b[1;32m") ++ if(empty, "(empty)"),
+    raw_escape_sequence("\x1b[1;32m") ++ coalesce(
+      truncate_end(29, description.first_line(), "…"),
+      "(no description set)",
+    ) ++ raw_escape_sequence("\x1b[0m"),
+  )
+'
+'''
