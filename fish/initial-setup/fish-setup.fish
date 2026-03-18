@@ -20,8 +20,7 @@ if test ! -e $__fish_config_dir/fish_plugins
         patrickf1/fzf.fish \
         franciscolourenco/done \
         jorgebucaran/autopair.fish \
-        jhillyerd/plugin-git \
-        ilancosman/tide@v6
+        jhillyerd/plugin-git
 
     source $__fish_config_dir/initial-setup/fisher-copy.fish
     fisher install $actual_fisher_plugins
