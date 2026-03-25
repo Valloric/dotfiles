@@ -21,6 +21,7 @@ re = ["redo"]
 gp = ["git", "push"]
 gf = ["git", "fetch"]
 tug = ["bookmark", "advance"]
+init = ["git", "init"]
 
 [ui]
 default-command = "log"
