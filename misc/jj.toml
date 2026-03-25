@@ -38,6 +38,16 @@ eol-conversion = "input"
 delta.diff-args = ["--side-by-side", "$left", "$right", "--width=$width"]
 delta.diff-expected-exit-codes = [0, 1]
 
+[signing]
+# Sign all commits that we authored when we modify them
+behavior = "own"
+# Enable GPG commit signing
+backend = "gpg"
+
+[git]
+# GPG signing is kinda slow, so only do it on push.
+sign-on-push = true
+
 [gg.ui]
 # Stop setting gg.ui.recent-workspaces
 track-recent-workspaces = false
