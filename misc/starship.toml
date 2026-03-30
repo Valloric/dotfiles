@@ -30,6 +30,20 @@ $character"""
 # Shorten long paths to N letters per directory, except last few.
 fish_style_pwd_dir_length = 1
 
+[hostname]
+# Without space
+ssh_symbol = '🌐'
+# Without ' in'
+format = '[$ssh_symbol$hostname]($style) '
+
+[username]
+# Without space
+format = '[$user]($style)'
+
+[git_branch]
+# Without ' on '
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
 # Custom module for jj status. Inspired by examples in:
 #  https://github.com/jj-vcs/jj/wiki/Starship
 #
