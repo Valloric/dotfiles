@@ -252,16 +252,6 @@
   "javascript.format.semicolons": "insert",
   "julia.enableTelemetry": false,
   "julia.symbolCacheDownload": true,
-  "kilo-code.allowedCommands": [
-    "git log",
-    "git diff",
-    "git show",
-    "npm test",
-    "npm install",
-    "tsc",
-  ],
-  "kilo-code.debug": false,
-  "kilo-code.deniedCommands": [],
   "linkme.rules": [
     {
       "pattern": "([a-z]{1,4})/([^)]+)",
@@ -283,7 +273,11 @@
   "ruff.nativeServer": "on",
   "search.quickOpen.history.filterSortOrder": "recency",
   "telemetry.feedback.enabled": false,
-  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt",
+    "kilo-code.new.agentManagerOpen",
+    "kilo-code.new.agentManager.showTerminal"
+  ],
   "terminal.integrated.smoothScrolling": true,
   "testing.automaticallyOpenTestResults": "openOnTestFailure",
   "tinymist.formatterPrintWidth": 80,
@@ -493,4 +487,5 @@
   "yaml.format.proseWrap": "always",
   "jjk.enableAnnotations": false,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "telemetry.telemetryLevel": "off",
 }
