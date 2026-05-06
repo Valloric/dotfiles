@@ -41,8 +41,9 @@ delta.diff-expected-exit-codes = [0, 1]
 [signing]
 # Sign all commits that we authored when we modify them
 behavior = "own"
-# Enable GPG commit signing
-backend = "gpg"
+# Sign with ssh
+backend = "ssh"
+key = "~/.ssh/id_ed25519.pub"
 
 [git]
 # GPG signing is kinda slow, so only do it on push.
