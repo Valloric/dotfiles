@@ -10,6 +10,7 @@ end
 
 abbr -a v vim
 abbr -a c code
+abbr -a z zed
 abbr -a cn code --new-window
 abbr -a cr code --reuse-window
 
