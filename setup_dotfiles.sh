@@ -136,5 +136,4 @@ fi
 "$script_dir/gpg/gpg_setup.sh"
 "$script_dir/sublime-text/sublime_setup.sh"
 "$script_dir/vscode/vscode_setup.sh"
-"$script_dir/aider/aider_setup.sh"
 "$script_dir/typst-packages/typst-packages-setup.sh"
