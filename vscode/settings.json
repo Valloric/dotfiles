@@ -116,65 +116,6 @@
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
-    "[Default Dark+]": {
-      "comments": "#13c100",
-      "functions": "#ffa600",
-      "numbers": "#fffb00",
-      "textMateRules": [
-        {
-          "scope": ["variable"],
-          "settings": {
-            "foreground": "#ffffff"
-          }
-        },
-        {
-          "scope": [
-            "variable.other.property",
-            "variable.other.object.property"
-          ],
-          "settings": {
-            "foreground": "#d1baec"
-          }
-        },
-        {
-          "scope": ["meta.function-call"],
-          "settings": {
-            "foreground": "#ffa600"
-          }
-        },
-        {
-          "scope": ["constant", "constant.language"],
-          "settings": {
-            "foreground": "#fffb00"
-          }
-        },
-        {
-          "scope": ["meta.attribute"],
-          "settings": {
-            "foreground": "#aa00ff"
-          }
-        },
-        {
-          "scope": ["keyword.operator", "punctuation", "meta.brace"],
-          "settings": {
-            "foreground": "#00f2ff"
-          }
-        },
-        {
-          "scope": ["keyword", "keyword.control", "keyword.other.using"],
-          "settings": {
-            "foreground": "#3664ff"
-          }
-        },
-        {
-          "scope": ["storage.type", "storage.class"],
-          "settings": {
-            "foreground": "#6d4dfd"
-          }
-        }
-      ],
-      "types": "#aa00ff"
-    },
     "[Theme*]": {
       "comments": "#70ba2f",
       "functions": "#84D6E6",
@@ -487,5 +428,7 @@
   "workbench.layoutControl.enabled": false,
   "workbench.startupEditor": "none",
   "yaml.customTags": ["!vault scalar"],
-  "yaml.format.proseWrap": "always"
+  "yaml.format.proseWrap": "always",
+  "kilo-code.new.showTaskTimeline": true,
+  "kilo-code.new.autocomplete.enableAutoTrigger": false
 }
