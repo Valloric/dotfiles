@@ -1,0 +1,266 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "status_bar": {
+    "show_active_file": false
+  },
+  "document_symbols": "on",
+  "code_lens": "on",
+  "line_ending": "prefer_lf",
+  "indent_guides": {
+    "background_coloring": "disabled",
+    "coloring": "indent_aware"
+  },
+  "vim": {
+    "use_smartcase_find": true
+  },
+  "use_smartcase_search": true,
+  "search": {
+    "center_on_match": true,
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  },
+  "cli_default_open_behavior": "new_window",
+  "inlay_hints": {
+    "show_type_hints": false,
+    "show_other_hints": true,
+    "show_parameter_hints": false,
+    "show_value_hints": true,
+    "enabled": true,
+  },
+  "completion_menu_item_kind": "off",
+  "completions": {
+    "words": "fallback",
+  },
+  "buffer_line_height": {
+    "custom": 1.4,
+  },
+  "semantic_tokens": "combined",
+  "selection_highlight": true,
+  "text_rendering_mode": "platform_default",
+  "buffer_font_weight": 400.0,
+  "scrollbar": {
+    "show": "never",
+  },
+  "terminal": {
+    "font_size": 14.0,
+    "scrollbar": {
+      "show": "auto",
+    },
+  },
+  "outline_panel": {
+    "file_icons": true,
+  },
+  "project_panel": {
+    "git_status_indicator": true,
+    "hide_gitignore": true,
+    "folder_icons": true,
+    "dock": "left",
+  },
+  "title_bar": {
+    "show_sign_in": false,
+    "show_branch_status_icon": true,
+  },
+  "toolbar": {
+    "code_actions": true,
+    "agent_review": false,
+  },
+  "auto_signature_help": true,
+  "proxy": "",
+  "disable_ai": true,
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Material Icon Theme",
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "base_keymap": "VSCode",
+  "agent": {
+    "enabled": false,
+    "button": false,
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "tab_bar": {
+    "show": false,
+  },
+  "vertical_scroll_margin": 3.0,
+  "gutter": {
+    "bookmarks": false,
+    "folds": false,
+    "breakpoints": false,
+    "line_numbers": false,
+  },
+  "minimap": {
+    "display_in": "all_editors",
+    "show": "always",
+    "max_width_columns": 80,
+  },
+  "use_system_path_prompts": false,
+  "autosave": "on_focus_change",
+  "buffer_font_fallbacks": ["JetBrains Mono", ".ZedMono"],
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "file_types": {
+    "nft": ["**/nftables/**/*.conf", "*nftables*.conf"],
+    "Bazel": ["BUILD"],
+    "sql-bigquery": ["*.sdl"],
+    "plaintext": ["*.textproto"],
+    "Python": ["*.pi"],
+    "ini": ["*.ini.j2"],
+    "Jinja2": ["j2"],
+    "Ansible": [
+      "**.ansible.yml",
+      "**.ansible.yaml",
+      "**/defaults/*.yml",
+      "**/defaults/*.yaml",
+      "**/meta/*.yml",
+      "**/meta/*.yaml",
+      "**/tasks/*.yml",
+      "**/tasks/*.yaml",
+      "**/handlers/*.yml",
+      "**/handlers/*.yaml",
+      "**/group_vars/*.yml",
+      "**/group_vars/*.yaml",
+      "**/playbooks/*.yaml",
+      "**/playbooks/*.yml",
+      "**playbook*.yaml",
+      "**playbook*.yml",
+    ],
+  },
+  "lsp": {
+    "ansible": {
+      "settings": {
+        "python": {
+          "interpreterPath": ".venv/bin/python",
+        },
+        "validation": {
+          "lint": {
+            "path": ".venv/bin/ansible-lint",
+          },
+        },
+      },
+    },
+  },
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      {
+        "token_type": "operator",
+        "foreground_color": "#FE6F88",
+      },
+      {
+        "token_type": "property",
+        "foreground_color": "#FFA87E",
+      },
+      {
+        "token_type": "variable",
+        "foreground_color": "#B7A9F1",
+      },
+    ],
+  },
+  "theme_overrides": {
+    "VSCode Dark Modern": {
+      "editor.background": "#1e1e1e",
+      "editor.gutter.background": "#232323",
+      "syntax": {
+        // Comments
+        "comment": { "color": "#70ba2f" },
+        "comment.doc": { "color": "#70ba2f" },
+
+        // Functions
+        "function": { "color": "#84D6E6" },
+
+        // Numbers and Strings
+        "number": { "color": "#d8b537" },
+        "string": { "color": "#d8b537" },
+        "string.escape": { "color": "#d8b537" },
+        "string.regex": { "color": "#d8b537" },
+        "string.special": { "color": "#d8b537" },
+        "string.special.symbol": { "color": "#d8b537" },
+        "text.literal": { "color": "#d8b537" },
+
+        // Operators and Punctuation
+        "operator": { "color": "#FE6F88" },
+        "punctuation": { "color": "#FE6F88" },
+        "punctuation.bracket": { "color": "#FE6F88" },
+        "punctuation.delimiter": { "color": "#FE6F88" },
+        "punctuation.list_marker": { "color": "#FE6F88" },
+        "punctuation.special": { "color": "#FE6F88" },
+
+        // Variables
+        "variable": { "color": "#B7A9F1" },
+        "variable.special": { "color": "#B7A9F1" },
+
+        "property": { "color": "#FFA87E" },
+      },
+    },
+  },
+  // The extensions that Zed should automatically install on startup.
+  // You can get the list of installed extensions by listing the
+  //   ~/.local/share/zed/extensions/installed
+  // directory. The names of the directories present are the names of the
+  // installed extensions.
+  "auto_install_extensions": {
+    "ansible": true,
+    "caddyfile": true,
+    "color-highlight": true,
+    "fish": true,
+    "git-firefly": true,
+    "html": true,
+    "ini": true,
+    "jinja2": true,
+    "just": true,
+    "material-icon-theme": true,
+    "toml": true,
+    "vscode-dark-modern": true,
+  },
+  "colorize_brackets": true,
+  "linked_edits": true,
+  "show_whitespaces": "all",
+  "ensure_final_newline_on_save": true,
+  "wrap_guides": [80],
+  "soft_wrap": "editor_width",
+  "hard_tabs": false,
+  "tab_size": 2,
+  "vim_mode": true,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "ui_font_size": 17,
+  "buffer_font_size": 14.0,
+  "buffer_font_features": {
+    // Disable discretionary ligatures ("dlig") which cause "st" and "ct" forms
+    "dlig": false,
+    // Enable all other ligatures and font features
+    "liga": true,
+    "calt": true,
+    "cv01": true,
+    "cv02": true,
+    "cv15": true,
+    "cv19": true,
+    "cv23": true,
+    "cv29": true,
+    "cv31": true,
+    "ss01": true,
+    "ss03": true,
+    "ss05": true,
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Dark",
+    "dark": "VSCode Dark Modern",
+  },
+}

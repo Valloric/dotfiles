@@ -1,0 +1,135 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// The following commands show useful default keymaps:
+// - `zed: open default keymap` shows Zed's default keymap
+// - `vim: open default keymap` shows Zed's Vim emulation default keymap
+[
+  // ==========================================
+  // SHARED NORMAL & VISUAL MODE BINDINGS
+  // ==========================================
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // Exit modes with ", ."
+      ", .": "vim::SwitchToNormalMode",
+
+      // Move up/down 15 visual lines
+      "ctrl-k": ["workspace::SendKeystrokes", "1 5 g k"],
+      "ctrl-j": ["workspace::SendKeystrokes", "1 5 g j"],
+
+      // Global Project Search / Quick Open
+      "space t": "file_finder::Toggle",
+
+      "s": ["vim::PushAddSurrounds", {}],
+      // EasyMotion-like behavior. Present an "overlay" UI for entering a chars
+      // that identify a _word_ on the screen to jump to.
+      "space space w": "vim::HelixJumpToWord",
+
+      // Map several Vim Ctrl keybindings back to Zed's defaults.
+      "ctrl-f": "buffer_search::Deploy", // vim default: page down
+      "ctrl-c": "editor::Copy", // vim default: return to normal mode
+      "ctrl-x": "editor::Cut", // vim default: decrement
+      "ctrl-v": "editor::Paste", // vim default: visual block mode
+      "ctrl-a": "editor::SelectAll", // vim default: increment
+      "ctrl-y": "editor::Undo", // vim default: line up
+      "ctrl-t": "project_symbols::Toggle", // vim default: go to older tag
+      "ctrl-o": "workspace::Open", // vim default: go back
+      "ctrl-s": "workspace::Save", // vim default: show signature
+      "ctrl-b": "workspace::ToggleLeftDock", // vim default: down
+    },
+  },
+
+  // ==========================================
+  // INSERT MODE BINDINGS
+  // ==========================================
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      ", .": "vim::SwitchToNormalMode",
+    },
+  },
+
+  // ==========================================
+  // NORMAL MODE ONLY BINDINGS
+  // ==========================================
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      // Blank line insertions without moving cursor
+      "z j": ["workspace::SendKeystrokes", "o escape k"],
+      "z k": ["workspace::SendKeystrokes", "O escape j"],
+
+      // Yank to end of line
+      "Y": ["workspace::SendKeystrokes", "y $"],
+
+      // Navigation UI & Command Palette
+      ";": "command_palette::Toggle",
+
+      // Pane Split Window Navigation
+      "space j": "workspace::ActivatePaneDown",
+      "space k": "workspace::ActivatePaneUp",
+      "space l": "workspace::ActivatePaneRight",
+      "space h": "workspace::ActivatePaneLeft",
+
+      // Jump List Navigation
+      "space b": "pane::GoBack",
+
+      // Code Intelligence & Editor Actions
+      "space g": "editor::GoToDefinition",
+      "space p c": "editor::GoToDeclaration",
+      "space p d": "editor::Hover",
+      "space p r": "editor::FindAllReferences",
+
+      // Window & File Rules
+      "space q": "workspace::CloseWindow",
+      "space w": "workspace::Save",
+      "space m": "editor::Format",
+
+      // Explicit Undo / Redo
+      "u": "editor::Undo",
+      "ctrl-r": "editor::Redo",
+
+      // Testing Scripts (requires task setups in tasks.json)
+      "space f a": ["task::Spawn", { "task_name": "Run All Tests" }],
+      "space f f": ["task::Spawn", { "task_name": "Run Failing Tests" }],
+    },
+  },
+  // ==========================================
+  // VISUAL MODE ONLY BINDINGS
+  // ==========================================
+  {
+    "context": "vim_mode == visual && !menu",
+    "bindings": {
+      // Change S to add "surrounds" in visual mode.
+      // E.g. select in visual, S" -> text surrounded by "
+      // The equivalent in normal mode: ys<op>"
+      "shift-s": "vim::PushAddSurrounds",
+      // Enter vim-exchange mode.
+      // E.g. Select text, X removes the text, select other text, X again and
+      // now the first and second text were _exchanged_.
+      // The equivalent in normal mode: cx<op> followed by cx<op> again (can be
+      // different operators)
+      "shift-x": "vim::Exchange",
+    },
+  },
+  // MiniQuotes and MiniBrackets implementation. Docs: https://zed.dev/docs/vim
+  //
+  // `cib` is change-inside-brackets: (), [], <>, {}
+  // `ciq` is change-inside-quotes: '', "", ``
+  // Similar for `i` and `a` text objects.
+  //
+  // The Mini* implementation prefers matches on the current line over matching
+  // outside the line, thus `cib` on "foo|bar(zoo)" with | being the caret would
+  // jump _inside_ the parens, clear the contents and leave you in insert mode
+  // even if there exists some outer pair of curly braces.
+  {
+    "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+    "bindings": {
+      "q": "vim::MiniQuotes",
+      "b": "vim::MiniBrackets",
+    },
+  },
+]
