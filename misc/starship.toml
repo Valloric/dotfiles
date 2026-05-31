@@ -10,11 +10,11 @@ format = """
 $username\
 $hostname\
 $directory\
-$git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
-$git_status\
+${custom.git_branch}\
+${custom.git_commit}\
+${custom.git_state}\
+${custom.git_metrics}\
+${custom.git_status}\
 $hg_branch\
 $hg_state\
 ${custom.jj}\
@@ -39,10 +39,6 @@ format = '[$ssh_symbol$hostname]($style) '
 [username]
 # Without space
 format = '[$user]($style)'
-
-[git_branch]
-# Without ' on '
-format = '[$symbol$branch(:$remote_branch)]($style) '
 
 # Custom module for jj status. Inspired by examples in:
 #  https://github.com/jj-vcs/jj/wiki/Starship
@@ -107,3 +103,52 @@ jj log --revisions @ --no-graph --ignore-working-copy --color always --limit 1 -
   )
 '
 '''
+
+# We disable git_status, git_commit, git_metrics and git_branch and replace them
+# with `custom.*` versions so that they don't show up when a `.jj` directory is
+# present (and thus a Jujutsu status is being shown).
+[git_status]
+disabled = true
+
+[custom.git_status]
+when = "! jj --ignore-working-copy root"
+command = "starship module git_status"
+style = "" # This disables the default "(bold green)" style
+description = "Only show git_status if we're not in a jj repo"
+require_repo = true
+shell = ["sh"]
+
+[git_commit]
+disabled = true
+
+[custom.git_commit]
+when = "! jj --ignore-working-copy root"
+command = "starship module git_commit"
+style = ""
+description = "Only show git_commit if we're not in a jj repo"
+require_repo = true
+shell = ["sh"]
+
+[git_metrics]
+disabled = true
+
+[custom.git_metrics]
+when = "! jj --ignore-working-copy root"
+command = "starship module git_metrics"
+description = "Only show git_metrics if we're not in a jj repo"
+style = ""
+require_repo = true
+shell = ["sh"]
+
+[git_branch]
+disabled = true
+# Without ' on '
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[custom.git_branch]
+when = "! jj --ignore-working-copy root"
+command = "starship module git_branch"
+description = "Only show git_branch if we're not in a jj repo"
+style = ""
+require_repo = true
+shell = ["sh"]
