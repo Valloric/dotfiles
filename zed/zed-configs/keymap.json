@@ -13,7 +13,7 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
-      // Exit modes with ", ."
+      // ", ." as custom <escape>
       ", .": "vim::SwitchToNormalMode",
 
       // Move up/down 15 visual lines
@@ -38,18 +38,32 @@
       "ctrl-t": "project_symbols::Toggle", // vim default: go to older tag
       "ctrl-o": "workspace::Open", // vim default: go back
       "ctrl-s": "workspace::Save", // vim default: show signature
-      "ctrl-b": "workspace::ToggleLeftDock", // vim default: down
-    },
+      "ctrl-b": "workspace::ToggleLeftDock" // vim default: down
+    }
   },
 
-  // ==========================================
-  // INSERT MODE BINDINGS
-  // ==========================================
+  // Custom <escape> for special modes
   {
-    "context": "vim_mode == insert",
+    "context": "vim_mode == insert || vim_mode == waiting || vim_mode == replace",
     "bindings": {
-      ", .": "vim::SwitchToNormalMode",
-    },
+      // Must be NormalBefore and not SwitchToNormalMode, otherwise Zed goes
+      // apeshit (infinite loops, other weird bugs etc).
+      ", .": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "vim_mode == operator",
+    "bindings": {
+      // Same behavior as <escape> from default Vim keymap
+      ", .": "vim::ClearOperators"
+    }
+  },
+  {
+    "context": "BufferSearchBar && !in_replace",
+    "bindings": {
+      // Same behavior as <escape> from default Vim keymap
+      ", .": "buffer_search::Dismiss"
+    }
   },
 
   // ==========================================
@@ -59,8 +73,8 @@
     "context": "vim_mode == normal && !menu",
     "bindings": {
       // Blank line insertions without moving cursor
-      "z j": ["workspace::SendKeystrokes", "o escape k"],
-      "z k": ["workspace::SendKeystrokes", "O escape j"],
+      "z j": "vim::InsertEmptyLineBelow",
+      "z k": "vim::InsertEmptyLineAbove",
 
       // Yank to end of line
       "Y": ["workspace::SendKeystrokes", "y $"],
@@ -94,8 +108,8 @@
 
       // Testing Scripts (requires task setups in tasks.json)
       "space f a": ["task::Spawn", { "task_name": "Run All Tests" }],
-      "space f f": ["task::Spawn", { "task_name": "Run Failing Tests" }],
-    },
+      "space f f": ["task::Spawn", { "task_name": "Run Failing Tests" }]
+    }
   },
   // ==========================================
   // VISUAL MODE ONLY BINDINGS
@@ -112,8 +126,8 @@
       // now the first and second text were _exchanged_.
       // The equivalent in normal mode: cx<op> followed by cx<op> again (can be
       // different operators)
-      "shift-x": "vim::Exchange",
-    },
+      "shift-x": "vim::Exchange"
+    }
   },
   // MiniQuotes and MiniBrackets implementation. Docs: https://zed.dev/docs/vim
   //
@@ -129,7 +143,7 @@
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
     "bindings": {
       "q": "vim::MiniQuotes",
-      "b": "vim::MiniBrackets",
-    },
-  },
+      "b": "vim::MiniBrackets"
+    }
+  }
 ]
