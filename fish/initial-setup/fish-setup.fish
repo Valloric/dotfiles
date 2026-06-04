@@ -26,9 +26,3 @@ if test ! -e $__fish_config_dir/fish_plugins
     fisher install $actual_fisher_plugins
     echo "Installed fisher plugins..."
 end
-
-if functions -q tide
-    # Set up tide (fancy prompt) config to avoid interactive setup on new
-    # machines ... or worse, an entirely "invisible" prompt being shown.
-    tide configure --auto --style=Lean --prompt_colors='True color' --show_time='24-hour format' --lean_prompt_height='Two lines' --prompt_connection=Disconnected --prompt_spacing=Compact --icons='Few icons' --transient=No
-end
