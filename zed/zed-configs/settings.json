@@ -8,7 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "status_bar": {
-    "show_active_file": false
+    "show_active_file": true
   },
   "document_symbols": "on",
   "code_lens": "on",
@@ -22,12 +22,13 @@
   },
   "use_smartcase_search": true,
   "search": {
-    "center_on_match": true,
+    "center_on_match": true
   },
   "diagnostics": {
+    "button": true,
     "inline": {
-      "enabled": true,
-    },
+      "enabled": true
+    }
   },
   "cli_default_open_behavior": "new_window",
   "inlay_hints": {
@@ -35,44 +36,46 @@
     "show_other_hints": true,
     "show_parameter_hints": false,
     "show_value_hints": true,
-    "enabled": true,
+    "enabled": true
   },
   "completion_menu_item_kind": "off",
   "completions": {
-    "words": "fallback",
+    "words": "fallback"
   },
   "buffer_line_height": {
-    "custom": 1.4,
+    "custom": 1.4
   },
   "semantic_tokens": "combined",
   "selection_highlight": true,
   "text_rendering_mode": "platform_default",
   "buffer_font_weight": 400.0,
   "scrollbar": {
-    "show": "never",
+    "show": "never"
   },
   "terminal": {
     "font_size": 14.0,
     "scrollbar": {
-      "show": "auto",
-    },
+      "show": "auto"
+    }
   },
   "outline_panel": {
-    "file_icons": true,
+    "file_icons": true
   },
   "project_panel": {
     "git_status_indicator": true,
     "hide_gitignore": true,
     "folder_icons": true,
-    "dock": "left",
+    "dock": "left"
   },
   "title_bar": {
+    "show_menus": false,
+    "show_user_picture": true,
     "show_sign_in": false,
-    "show_branch_status_icon": true,
+    "show_branch_status_icon": true
   },
   "toolbar": {
     "code_actions": true,
-    "agent_review": false,
+    "agent_review": false
   },
   "auto_signature_help": true,
   "proxy": "",
@@ -80,34 +83,34 @@
   "icon_theme": {
     "mode": "system",
     "light": "Zed (Default)",
-    "dark": "Material Icon Theme",
+    "dark": "Material Icon Theme"
   },
   "git": {
     "inline_blame": {
-      "enabled": false,
-    },
+      "enabled": false
+    }
   },
   "base_keymap": "VSCode",
   "agent": {
     "enabled": false,
     "button": false,
     "favorite_models": [],
-    "model_parameters": [],
+    "model_parameters": []
   },
   "tab_bar": {
-    "show": false,
+    "show": false
   },
   "vertical_scroll_margin": 3.0,
   "gutter": {
     "bookmarks": false,
     "folds": false,
     "breakpoints": false,
-    "line_numbers": false,
+    "line_numbers": false
   },
   "minimap": {
     "display_in": "all_editors",
     "show": "always",
-    "max_width_columns": 80,
+    "max_width_columns": 80
   },
   "use_system_path_prompts": false,
   "autosave": "on_focus_change",
@@ -137,38 +140,49 @@
       "**/playbooks/*.yaml",
       "**/playbooks/*.yml",
       "**playbook*.yaml",
-      "**playbook*.yml",
-    ],
+      "**playbook*.yml"
+    ]
   },
   "lsp": {
     "ansible": {
       "settings": {
         "python": {
-          "interpreterPath": ".venv/bin/python",
+          "interpreterPath": ".venv/bin/python"
         },
         "validation": {
           "lint": {
-            "path": ".venv/bin/ansible-lint",
-          },
-        },
-      },
+            "path": ".venv/bin/ansible-lint"
+          }
+        }
+      }
     },
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy"
+        },
+        "cargo": {
+          "allTargets": true,
+          "features": "all"
+        }
+      }
+    }
   },
   "global_lsp_settings": {
     "semantic_token_rules": [
       {
         "token_type": "operator",
-        "foreground_color": "#FE6F88",
+        "foreground_color": "#FE6F88"
       },
       {
         "token_type": "property",
-        "foreground_color": "#FFA87E",
+        "foreground_color": "#FFA87E"
       },
       {
         "token_type": "variable",
-        "foreground_color": "#B7A9F1",
-      },
-    ],
+        "foreground_color": "#B7A9F1"
+      }
+    ]
   },
   "theme_overrides": {
     "VSCode Dark Modern": {
@@ -203,9 +217,9 @@
         "variable": { "color": "#B7A9F1" },
         "variable.special": { "color": "#B7A9F1" },
 
-        "property": { "color": "#FFA87E" },
-      },
-    },
+        "property": { "color": "#FFA87E" }
+      }
+    }
   },
   // The extensions that Zed should automatically install on startup.
   // You can get the list of installed extensions by listing the
@@ -224,7 +238,7 @@
     "just": true,
     "material-icon-theme": true,
     "toml": true,
-    "vscode-dark-modern": true,
+    "vscode-dark-modern": true
   },
   "colorize_brackets": true,
   "linked_edits": true,
@@ -237,7 +251,7 @@
   "vim_mode": true,
   "telemetry": {
     "diagnostics": false,
-    "metrics": false,
+    "metrics": false
   },
   "ui_font_size": 17,
   "buffer_font_size": 14.0,
@@ -256,11 +270,11 @@
     "cv31": true,
     "ss01": true,
     "ss03": true,
-    "ss05": true,
+    "ss05": true
   },
   "theme": {
     "mode": "system",
     "light": "One Dark",
-    "dark": "VSCode Dark Modern",
-  },
+    "dark": "VSCode Dark Modern"
+  }
 }

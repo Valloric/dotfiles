@@ -44,7 +44,9 @@
 
   // Custom <escape> for special modes
   {
-    "context": "vim_mode == insert || vim_mode == waiting || vim_mode == replace",
+    // Intentionally not including `vim_mode == waiting` because it makes
+    // operations like `dt,` pause for possible `,.` sequence.
+    "context": "vim_mode == insert || vim_mode == replace",
     "bindings": {
       // Must be NormalBefore and not SwitchToNormalMode, otherwise Zed goes
       // apeshit (infinite loops, other weird bugs etc).
@@ -88,8 +90,13 @@
       "space l": "workspace::ActivatePaneRight",
       "space h": "workspace::ActivatePaneLeft",
 
+      // Not very useful by itself since we have Zed autosaving, BUT it forces
+      // a refresh of in-editor compiler diagnostics.
+      "space s": "workspace::Save",
+
       // Jump List Navigation
       "space b": "pane::GoBack",
+      "space f": "pane::GoForward",
 
       // Code Intelligence & Editor Actions
       "space g": "editor::GoToDefinition",
@@ -104,11 +111,7 @@
 
       // Explicit Undo / Redo
       "u": "editor::Undo",
-      "ctrl-r": "editor::Redo",
-
-      // Testing Scripts (requires task setups in tasks.json)
-      "space f a": ["task::Spawn", { "task_name": "Run All Tests" }],
-      "space f f": ["task::Spawn", { "task_name": "Run Failing Tests" }]
+      "ctrl-r": "editor::Redo"
     }
   },
   // ==========================================
