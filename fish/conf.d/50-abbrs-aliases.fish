@@ -57,11 +57,14 @@ abbr -a jckf journalctl -b -f -k
 
 # rust cargo aliases
 abbr -a ck cargo check
-abbr -a ct cargo test
+# use `cargo-nextest` instead of `cargo test`
+abbr -a ct cargo nextest run
 abbr -a cb cargo build
 abbr -a cbr cargo build --release
 abbr -a cf cargo fmt
 abbr -a cc cargo clippy --all-targets --all-features -- -D warnings
+# makes clippy apply fixes even with repo pending changes ("dirty" checkout)
+abbr -a ccf cargo clippy --all-targets --all-features --fix --allow-dirty -- -D warnings
 
 # rustc hacking
 abbr -a xc python3 ./x.py check
