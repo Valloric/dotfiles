@@ -256,21 +256,18 @@
   "ui_font_size": 17,
   "buffer_font_size": 14.0,
   "buffer_font_features": {
-    // Disable discretionary ligatures ("dlig") which cause "st" and "ct" forms
+    // Disable Discretionary Ligatures ("dlig") which cause "st" and "ct" forms
     "dlig": false,
-    // Enable all other ligatures and font features
-    "liga": true,
-    "calt": true,
-    "cv01": true,
-    "cv02": true,
-    "cv15": true,
-    "cv19": true,
-    "cv23": true,
-    "cv29": true,
-    "cv31": true,
-    "ss01": true,
-    "ss03": true,
-    "ss05": true
+    // Enable all other ligatures and font features.
+    // See list of OpenType features:
+    //   https://en.wikipedia.org/wiki/List_of_typographic_features
+    // See list of JetBrains Mono OpenType features:
+    //   https://github.com/JetBrains/JetBrainsMono/wiki/OpenType-features
+    // See image comparison for JetBrains Mono OpenType features:
+    //   https://github.com/JetBrains/JetBrainsMono#opentype-features
+    "liga": true, // Standard Ligatures
+    "clig": true, // Contextual Ligatures
+    "calt": true // Contextual Alternates
   },
   "theme": {
     "mode": "system",
