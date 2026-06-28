@@ -1,0 +1,22 @@
+{
+  "Rust Test Module": {
+    "prefix": "modtests",
+    "body": [
+      "#[cfg(test)]",
+      "mod tests {",
+      "  use super::*;",
+      "",
+      "  #[test]",
+      "  fn ${1:basic}() {",
+      "    ${2:todo!()}",
+      "  }",
+      "}"
+    ],
+    "description": "Boilerplate for a Rust test module"
+  },
+  "Rust Test Function": {
+    "prefix": "newtest",
+    "body": ["#[test]", "fn ${1:basic}() {", "  ${2:todo!()}", "}"],
+    "description": "Boilerplate for a Rust test"
+  }
+}
