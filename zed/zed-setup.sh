@@ -11,7 +11,9 @@ if ! command -v zed &>/dev/null; then
   exit 0
 fi
 
-# The `zed-configs` dir is linked directly to `~/.config/zed` so if zed decides
-# to create any new config files, they will automatically end up in our
+# The `~/.config/zed` dir is linked directly to `zed/zed-configs` so if zed
+# decides to create any new config files, they will automatically end up in our
 # dotfiles.
-ln -s "$script_dir/zed-configs" ~/.config/zed
+if [[ ! -e ~/.config/zed ]]; then
+  ln -s "$script_dir/zed-configs" ~/.config/zed
+fi

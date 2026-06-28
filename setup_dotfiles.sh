@@ -118,13 +118,13 @@ if [[ ! -e "$config_dir/tealdeer/config.toml" ]]; then
   ln -s "$script_dir/misc/tealdeer-config.toml" "$config_dir/tealdeer/config.toml"
 fi
 
-if [[ ! -e "$config_dir/jj/config.toml" ]]; then
-  mkdir -p "$config_dir/jj"
-  ln -s "$script_dir/misc/jj.toml" "$config_dir/jj/config.toml"
+if [[ ! -e ~/.config/jj/config.toml ]]; then
+  mkdir -p ~/.config/jj
+  ln -s "$script_dir/misc/jj.toml" ~/.config/jj/config.toml
 fi
 
-if [[ ! -e "$config_dir/starship.toml" ]]; then
-  ln -s "$script_dir/misc/starship.toml" "$config_dir/starship.toml"
+if [[ ! -e ~/.config/starship.toml ]]; then
+  ln -s "$script_dir/misc/starship.toml" ~/.config/starship.toml
 fi
 
 "$script_dir/gitconfig_setup.sh"
