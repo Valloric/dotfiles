@@ -82,10 +82,6 @@ if [[ ! -e ~/bin/git-wip-check ]]; then
   ln -s "$script_dir/bin/git-wip-check.sh" ~/bin/git-wip-check
 fi
 
-if [[ ! -e ~/bin/valgrind ]]; then
-  ln -s "$script_dir/bin/valgrind.sh" ~/bin/valgrind
-fi
-
 if [[ ! -e ~/bin/gnvim ]]; then
   ln -s "$script_dir/bin/gnvim.sh" ~/bin/gnvim
 fi
