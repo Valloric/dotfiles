@@ -1,20 +1,54 @@
-source ~/dotfiles/misc/gdb-dashboard.gdb
+# ====================================================================
+# Custom TUI Layout: Side-by-Side Source and Assembly
+# ====================================================================
 
-# config for gdb-dashboard
-dashboard -layout assembly source history !expressions !memory !registers !stack !threads
-dashboard source -style context 20
-dashboard assembly -style context 12
+# Defines the layout.
+# - `<name> { ... }` declares a new window called <name> with params
+#   in braces
+# - the number after a window is the "weight" of the window and controls
+#   how big it should be compared to other windows
+# - `sidebyside {...} 4 status 0 cmd 1` means "make `sidebyside` use 80% of the
+#   space, `status` 0% of the space, `cmd` 10% of the space"
+tui new-layout sidebyside {-horizontal src 2 asm 3} 4 status 0 cmd 1
+
+# `side` is our shortcut to activate the layout
+define side
+  layout sidebyside
+  # force command window to be smaller
+  winheight cmd 5
+  focus cmd
+end
+
+document side
+  Switches to the custom side-by-side (source/assembly) TUI layout
+  and keeps the focus on the command window for easy command history.
+end
+
+# ====================================================================
 
 # quit without asking for confirmation
 set confirm off
 # disables informational messages
 set verbose off
 
+# disable annoying pagination messages
+set pagination off
+
 set print pretty on
+set print array on
 set print object on
+set print address off
 set print static-members on
 set print vtbl on
 set print demangle on
-set demangle-style auto
+set print asm-demangle on
 set print sevenbit-strings off
+set max-value-size unlimited
+
+set demangle-style auto
 set disassembly-flavor intel
+
+# Enable automatic debuginfod symbol downloading
+set debuginfod enabled on
+# Enable pending breakpoints by default for shared libraries
+set breakpoint pending on
