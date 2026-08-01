@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "markdown_preview_font_size": 17.0,
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "status_bar": {
     "show_active_file": true
@@ -63,6 +64,7 @@
     "file_icons": true
   },
   "project_panel": {
+    "sort_mode": "mixed",
     "git_status_indicator": true,
     "hide_gitignore": true,
     "folder_icons": true,
@@ -159,6 +161,9 @@
     },
     "rust-analyzer": {
       "initialization_options": {
+        "completion": {
+          "hideDeprecated": true
+        },
         "check": {
           "command": "clippy"
         },
