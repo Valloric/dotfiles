@@ -65,6 +65,9 @@ abbr -a cf cargo fmt
 abbr -a cc cargo clippy --all-targets --all-features -- -D warnings
 # makes clippy apply fixes even with repo pending changes ("dirty" checkout)
 abbr -a ccf cargo clippy --all-targets --all-features --fix --allow-dirty -- -D warnings
+abbr -a cr cargo run
+abbr -a crr cargo run --release
+abbr -a cb cargo bench
 
 # rustc hacking
 abbr -a xc python3 ./x.py check
