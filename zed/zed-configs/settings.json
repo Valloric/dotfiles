@@ -42,7 +42,9 @@
   },
   "completion_menu_item_kind": "off",
   "completions": {
-    "words": "fallback"
+    "words": "fallback",
+    // Let's see if this is less annoying than the "replace_suffix" default.
+    "lsp_insert_mode": "replace",
   },
   "buffer_line_height": {
     "custom": 1.4
