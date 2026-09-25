@@ -107,6 +107,7 @@ fi
 if [[ ! -e ~/.julia/config/startup.jl ]]; then
   mkdir -p ~/.julia/config
   ln -s "$script_dir/misc/julia_startup.jl" ~/.julia/config/startup.jl
+  ln -s "$script_dir/misc/julia_faces.toml" ~/.julia/config/faces.toml
 fi
 
 if [[ ! -e "$config_dir/tealdeer/config.toml" ]]; then
